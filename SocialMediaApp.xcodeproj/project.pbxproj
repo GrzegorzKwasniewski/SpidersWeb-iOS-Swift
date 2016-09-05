@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		55D3EF9B7162D2D066869B05 /* Pods_SocialMediaAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */; };
 		713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E51D7D713F00AF79C3 /* AppDelegate.swift */; };
-		713B12E81D7D713F00AF79C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E71D7D713F00AF79C3 /* ViewController.swift */; };
+		713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E71D7D713F00AF79C3 /* SignInVC.swift */; };
 		713B12EB1D7D713F00AF79C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713B12E91D7D713F00AF79C3 /* Main.storyboard */; };
 		713B12ED1D7D713F00AF79C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713B12EC1D7D713F00AF79C3 /* Assets.xcassets */; };
 		713B12F01D7D713F00AF79C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713B12EE1D7D713F00AF79C3 /* LaunchScreen.storyboard */; };
@@ -45,7 +45,7 @@
 		5C4B31E556B31AEC95DCE060 /* Pods-SocialMediaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppTests/Pods-SocialMediaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		713B12E21D7D713F00AF79C3 /* SocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713B12E51D7D713F00AF79C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		713B12E71D7D713F00AF79C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		713B12E71D7D713F00AF79C3 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		713B12EA1D7D713F00AF79C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		713B12EC1D7D713F00AF79C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713B12EF1D7D713F00AF79C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		713B13171D7D82D900AF79C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				713B12E71D7D713F00AF79C3 /* ViewController.swift */,
+				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713B12E81D7D713F00AF79C3 /* ViewController.swift in Sources */,
+				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
