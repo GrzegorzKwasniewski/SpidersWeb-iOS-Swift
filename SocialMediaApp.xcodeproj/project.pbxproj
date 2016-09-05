@@ -126,13 +126,10 @@
 		713B12E41D7D713F00AF79C3 /* SocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
-				713B12E51D7D713F00AF79C3 /* AppDelegate.swift */,
-				713B12E71D7D713F00AF79C3 /* ViewController.swift */,
-				713B12E91D7D713F00AF79C3 /* Main.storyboard */,
-				713B12EC1D7D713F00AF79C3 /* Assets.xcassets */,
-				713B12EE1D7D713F00AF79C3 /* LaunchScreen.storyboard */,
-				713B12F11D7D713F00AF79C3 /* Info.plist */,
-				713B13131D7D733700AF79C3 /* GoogleService-Info.plist */,
+				713B13171D7D82D900AF79C3 /* Controller */,
+				713B13161D7D82CB00AF79C3 /* View */,
+				713B13151D7D82C300AF79C3 /* Model */,
+				713B13181D7D844800AF79C3 /* Defaults */,
 			);
 			path = SocialMediaApp;
 			sourceTree = "<group>";
@@ -153,6 +150,41 @@
 				713B13071D7D713F00AF79C3 /* Info.plist */,
 			);
 			path = SocialMediaAppUITests;
+			sourceTree = "<group>";
+		};
+		713B13151D7D82C300AF79C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		713B13161D7D82CB00AF79C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				713B12E91D7D713F00AF79C3 /* Main.storyboard */,
+				713B12EE1D7D713F00AF79C3 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		713B13171D7D82D900AF79C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				713B12E71D7D713F00AF79C3 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		713B13181D7D844800AF79C3 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				713B12E51D7D713F00AF79C3 /* AppDelegate.swift */,
+				713B12EC1D7D713F00AF79C3 /* Assets.xcassets */,
+				713B12F11D7D713F00AF79C3 /* Info.plist */,
+				713B13131D7D733700AF79C3 /* GoogleService-Info.plist */,
+			);
+			name = Defaults;
 			sourceTree = "<group>";
 		};
 		C7F5CD63918F0EBC28ED6835 /* Pods */ = {
