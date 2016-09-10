@@ -59,20 +59,26 @@
                                 <state key="normal" title="Facebook Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6E0-cC-sLQ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7wz-IH-g4h">
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2O-Oz-nkZ" customClass="NoBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SJZ-Sz-bXo" customClass="NoBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghF-dF-bGy" customClass="ShadowButton" customModule="SocialMediaApp" customModuleProvider="target">
                                         <color key="backgroundColor" red="1" green="0.57500080752480587" blue="0.37630486163964627" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwj-Rx-gLQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -98,6 +104,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="7wz-IH-g4h" secondAttribute="trailing" constant="30" id="zOc-fS-Usm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="F2O-Oz-nkZ" id="7QP-hB-H5V"/>
+                        <outlet property="passwordField" destination="SJZ-Sz-bXo" id="Hnu-D3-81K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
