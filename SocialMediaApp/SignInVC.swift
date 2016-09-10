@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -24,12 +25,18 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     print("README: Email user authenticated with Firebase")
+                    if let firebaseUser = user {
+                        self.completeSignIn(id: firebaseUser.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("README: Unable to authenticate with Firebasr using email")
                         } else {
                             print("README: Created user with new email")
+                            if let firebaseUser = user {
+                                self.completeSignIn(id: firebaseUser.uid)
+                            }
                         }
                     })
                 }
@@ -57,12 +64,13 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.stringForKey(KEY_UID) {
+            print("SEGUE: Perform from viewDidAppear")
+            performSegue(withIdentifier: "goToFeedVC", sender: nil)
+        }
     }
     
     func firebaseAuth(_ credential: FIRAuthCredential) {
@@ -71,10 +79,20 @@ class SignInVC: UIViewController {
                 print("README: Unable to authenticate with Firebase. ERROR: \(error)")
             } else {
                 print("README: Succesfuly authenticeted with Firebase")
+                // store user UID using Keychains
+                if let firebaseUser = user {
+                    self.completeSignIn(id: firebaseUser.uid)
+                }
             }
         })
     }
-
+    
+    func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
+        print("KEYCHAIN: Data was saved to Keychain - \(keychainResult)")
+        print("SEGUE: Perform")
+        performSegue(withIdentifier: "goToFeedVC", sender: nil)
+    }
 
 }
 

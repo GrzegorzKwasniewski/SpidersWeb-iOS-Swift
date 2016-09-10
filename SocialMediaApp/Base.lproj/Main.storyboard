@@ -107,11 +107,45 @@
                     <connections>
                         <outlet property="emailField" destination="F2O-Oz-nkZ" id="7QP-hB-H5V"/>
                         <outlet property="passwordField" destination="SJZ-Sz-bXo" id="Hnu-D3-81K"/>
+                        <segue destination="S2H-kN-Dui" kind="show" identifier="goToFeedVC" id="ohh-SW-jvt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="rtU-gN-cyc">
+            <objects>
+                <viewController id="S2H-kN-Dui" customClass="FeedVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pVz-iy-omd"/>
+                        <viewControllerLayoutGuide type="bottom" id="BiG-80-VYM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZUT-84-hjO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lly-sH-zz8">
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="For tests only">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forTestsOnlyAction:" destination="S2H-kN-Dui" eventType="touchUpInside" id="h7v-b9-b1t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.74988971500000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lly-sH-zz8" firstAttribute="centerY" secondItem="ZUT-84-hjO" secondAttribute="centerY" id="gom-Oe-Ps9"/>
+                            <constraint firstItem="lly-sH-zz8" firstAttribute="centerX" secondItem="ZUT-84-hjO" secondAttribute="centerX" id="xda-IK-ADX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ans-iS-Ymu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.60000000000002" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
