@@ -1,15 +1,15 @@
 //
-//  CustomView.swift
+//  CircleView.swift
 //  SocialMediaApp
 //
-//  Created by Grzegorz Kwaśniewski on 06/09/16.
+//  Created by Grzegorz Kwaśniewski on 11/09/16.
 //  Copyright © 2016 Grzegorz Kwaśniewski. All rights reserved.
 //
 
 import UIKit
 
-class ShadowView: UIView {
-
+class CircleView: UIImageView {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,7 +17,12 @@ class ShadowView: UIView {
         layer.opacity = 0.8
         layer.shadowRadius = 5.0
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        layer.cornerRadius = 2.0
+        
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        //layer.cornerRadius = self.frame.width / 2
+    }
 }
