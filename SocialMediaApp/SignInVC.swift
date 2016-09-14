@@ -13,9 +13,8 @@ import Firebase
 import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
-    
+        
     @IBOutlet var emailField: NoBorderTextField!
-    
     @IBOutlet var passwordField: NoBorderTextField!
     
     // password need to have at least six characters
@@ -66,15 +65,6 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // we set observer to listen for changes on POSTS end point
-        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for snap in snapshots {
-                    print("SNAP: \(snap)")
-                }
-            }
-        })
         
     }
     
