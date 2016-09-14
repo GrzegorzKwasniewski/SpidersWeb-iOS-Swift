@@ -66,6 +66,16 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // we set observer to listen for changes on POSTS end point
+        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    print("SNAP: \(snap)")
+                }
+            }
+        })
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
