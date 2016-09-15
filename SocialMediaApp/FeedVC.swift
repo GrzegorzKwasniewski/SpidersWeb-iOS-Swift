@@ -46,9 +46,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
-        print("README: \(post.postID)")
-        return tableView.dequeueReusableCell(withIdentifier: "CellFeed") as! CellFeed
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CellFeed") as? CellFeed {
+            cell.configureCell(post: posts[indexPath.row])
+            return cell
+        } else {
+            return CellFeed()
+        }
     }
 
     @IBAction func forTestsOnlyAction(_ sender: AnyObject) {
