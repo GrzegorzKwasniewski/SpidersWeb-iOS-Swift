@@ -10,19 +10,26 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var posts = [Post]()
+    var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var selectImageButton: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
         tableView.delegate = self
         tableView.dataSource = self
         
         // we set observer to listen for changes on POSTS end point
         DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+            self.posts = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots {
                     print("SNAP: \(snap)")
@@ -52,6 +59,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } else {
             return CellFeed()
         }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+                selectImageButton.image = image
+        } else {
+            print("Valid image was not selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addPhotoAction(_ sender: AnyObject) {
+        present(imagePicker, animated: true, completion: nil)
     }
 
     @IBAction func forTestsOnlyAction(_ sender: AnyObject) {

@@ -136,7 +136,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-Ri-DFE">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="courses-icon-10" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-Ri-DFE">
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="I2x-6m-Ex3"/>
@@ -161,11 +161,15 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HJJ-H3-Ejt">
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S2B-1V-ZmN">
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="courses-icon-10" translatesAutoresizingMaskIntoConstraints="NO" id="S2B-1V-ZmN" customClass="CircleView" customModule="SocialMediaApp" customModuleProvider="target">
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="8XI-nF-hmM"/>
                                                     <constraint firstAttribute="height" constant="49" id="Hn1-nN-ZbH"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="1kC-a2-nER" appends="YES" id="7aG-Ek-cBz"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwZ-sA-re8">
                                                 <nil key="textColor"/>
@@ -303,17 +307,26 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="selectImageButton" destination="S2B-1V-ZmN" id="f6p-0t-iLp"/>
                         <outlet property="tableView" destination="0OZ-Jh-vLf" id="edi-4i-BJk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ans-iS-Ymu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="EMA-Vc-dvW">
+                <tapGestureRecognizer id="EMA-Vc-dvW" userLabel="Sign Out Button">
                     <connections>
                         <action selector="forTestsOnlyAction:" destination="S2H-kN-Dui" id="n0D-Od-gcr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1kC-a2-nER" userLabel="Add Image Button">
+                    <connections>
+                        <action selector="addPhotoAction:" destination="S2H-kN-Dui" id="m4c-HQ-skc"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="989.60000000000002" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="courses-icon-10" width="1200" height="1238"/>
+    </resources>
 </document>
