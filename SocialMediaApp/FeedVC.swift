@@ -15,9 +15,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     var posts = [Post]()
     var imagePicker = UIImagePickerController()
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectImageButton: UIImageView!
+    @IBOutlet weak var captionLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,12 +73,43 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-                selectImageButton.image = image
+            selectImageButton.image = image
+            imageSelected = true
         } else {
             print("Valid image was not selected")
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func addPostAction(_ sender: AnyObject) {
+        guard let caption = captionLabel.text, caption != "" else {
+            print("README: You need to enter caption")
+            return
+        }
+        
+        guard let image = selectImageButton.image, imageSelected == true else {
+            print("README: You must selcet an image")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.2) {
+            let imageUid = NSUUID().uuidString
+            // it' good to tell Firebase what data we want to store
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imageUid).put(imageData, metadata: metaData, completion: { (metadata, error) in
+                if error != nil {
+                    print("REDAME: There was an error when uploading image to Firebase")
+                } else {
+                    // give response to the user
+                    print("README: Imge sucessfully uploaded to Firebase storage")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                }
+            })
+        }
+    }
+    
     
     @IBAction func addPhotoAction(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
