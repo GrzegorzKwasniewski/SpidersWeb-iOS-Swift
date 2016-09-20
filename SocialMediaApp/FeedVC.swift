@@ -80,6 +80,25 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    func postToFirebase(imageUrl: String) {
+        //  check this for validation - don't force unwrap caption
+        let post: Dictionary<String, AnyObject> = [
+            "caption": captionLabel.text! as NSString,
+            "imageUrl": imageUrl as NSString,
+            "likes": 0 as NSNumber
+        ]
+        
+        // referance for POSTS end point
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId() // generate uniqe ID
+        firebasePost.setValue(post)
+        
+        captionLabel.text = ""
+        imageSelected = false
+        selectImageButton.image = UIImage(named: "courses-icon-10")
+        
+        tableView.reloadData()
+    }
 
     @IBAction func addPostAction(_ sender: AnyObject) {
         guard let caption = captionLabel.text, caption != "" else {
@@ -105,6 +124,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     // give response to the user
                     print("README: Imge sucessfully uploaded to Firebase storage")
                     let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadUrl {
+                        self.postToFirebase(imageUrl: url)
+                    }
                 }
             })
         }
