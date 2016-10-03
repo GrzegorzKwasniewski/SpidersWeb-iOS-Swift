@@ -10,13 +10,17 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import GoogleSignIn
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         
     @IBOutlet var emailField: NoBorderTextField!
     @IBOutlet var passwordField: NoBorderTextField!
     
+    @IBAction func googleSignInButton(_ sender: AnyObject) {
+        GIDSignIn.sharedInstance().signIn()
+    }
     // password need to have at least six characters
     // check for internet connection first
     @IBAction func signInAction(_ sender: AnyObject) {
@@ -63,9 +67,25 @@ class SignInVC: UIViewController {
         }
     }
     
+    // [START headless_google_auth]
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        if let error = error {
+            print("README: Error when sign in with Google")
+            return
+        }
+        
+        let authentication = user.authentication
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
+                                                          accessToken: (authentication?.accessToken)!)
+        firebaseAuth(credential)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // TEST ONLY
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -11,6 +11,7 @@ target 'SocialMediaApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
 
