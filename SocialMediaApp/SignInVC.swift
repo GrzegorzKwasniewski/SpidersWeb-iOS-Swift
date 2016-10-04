@@ -12,11 +12,26 @@ import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 import SwiftKeychainWrapper
+import TwitterKit
 
 class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         
     @IBOutlet var emailField: NoBorderTextField!
     @IBOutlet var passwordField: NoBorderTextField!
+    
+    
+    @IBAction func twitterSignInButton(_ sender: AnyObject) {
+        Twitter.sharedInstance().logIn() { (session, error) in
+            if let session = session {
+                // [START headless_twitter_auth]
+                let credential = FIRTwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
+                // [END headless_twitter_auth]
+                self.firebaseAuth(credential)
+            } else {
+                print("README: Error while authenticating with Twitter")
+            }
+        }
+    }
     
     @IBAction func googleSignInButton(_ sender: AnyObject) {
         GIDSignIn.sharedInstance().signIn()
@@ -82,7 +97,7 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TEST ONLY
+
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self

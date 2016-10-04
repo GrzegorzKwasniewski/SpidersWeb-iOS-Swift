@@ -21,13 +21,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-f5-mXm" customClass="ShadowView" customModule="SocialMediaApp" customModuleProvider="target">
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMd-SQ-yst" customClass="GIDSignInButton">
-                                        <frame key="frameInset" minX="67" minY="4" width="240" height="128"/>
+                                        <frame key="frameInset" minY="4" width="131" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="googleSignInButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="c6x-FY-OW0"/>
                                         </connections>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-PR-H9b">
+                                        <frame key="frameInset" minX="248" minY="44" width="119" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="twitterSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MP5-Hh-NTV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38912160289999997" green="0.76355937169999999" blue="0.01468383407" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>

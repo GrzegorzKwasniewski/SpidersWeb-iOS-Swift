@@ -14,6 +14,8 @@ target 'SocialMediaApp' do
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
+  pod 'TwitterKit'
+  pod 'Fabric'
 
   target 'SocialMediaAppTests' do
     inherit! :search_paths

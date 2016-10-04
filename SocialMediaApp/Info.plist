@@ -2,6 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Fabric</key>
+    <dict>
+        <key>APIKey</key>
+        <string>fc4a9cf76294124cdca0ae420b501f6ab8816aef</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict>
+                    <key>consumerKey</key>
+                    <string>eshfjyVLEWEAvgEvVH6ekc2R2</string>
+                    <key>consumerSecret</key>
+                    <string>umDBO8kX4hm96TOm4ZXcVAZOuLyHbFIekyGV2i8E6vcUcJRpJV</string>
+                </dict>
+                <key>KitName</key>
+                <string>Twitter</string>
+            </dict>
+        </array>
+    </dict>
+    <key>consumerSecret</key>
+    <string>umDBO8kX4hm96TOm4ZXcVAZOuLyHbFIekyGV2i8E6vcUcJRpJV</string>
+    <key>consumerKey</key>
+    <string>eshfjyVLEWEAvgEvVH6ekc2R2</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -30,6 +53,14 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.276259248106-9bv1tfc8jkgn0jpr179kgk0rpk18pag7</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>twitterkit-eshfjyVLEWEAvgEvVH6ekc2R2</string>
 			</array>
 		</dict>
 	</array>
