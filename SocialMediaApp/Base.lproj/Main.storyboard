@@ -20,22 +20,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-f5-mXm" customClass="ShadowView" customModule="SocialMediaApp" customModuleProvider="target">
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMd-SQ-yst" customClass="GIDSignInButton">
-                                        <frame key="frameInset" minY="4" width="131" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-PR-H9b" userLabel="Twitter Login Button">
+                                        <frame key="frameInset" minX="128" minY="79" width="119" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Twitter Login"/>
+                                        <connections>
+                                            <action selector="twitterSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MP5-Hh-NTV"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMd-SQ-yst" userLabel="Google Login Button" customClass="GIDSignInButton">
+                                        <frame key="frameInset" minX="122" minY="41" width="131" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="googleSignInButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="c6x-FY-OW0"/>
                                         </connections>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-PR-H9b">
-                                        <frame key="frameInset" minX="248" minY="44" width="119" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="twitterSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MP5-Hh-NTV"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38912160289999997" green="0.76355937169999999" blue="0.01468383407" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -67,7 +67,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHm-P1-tph" customClass="RoundButton" customModule="SocialMediaApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHm-P1-tph" userLabel="Facebook Login Button" customClass="RoundButton" customModule="SocialMediaApp" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="SOL-lO-uKg"/>
@@ -153,7 +153,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="courses-icon-10" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-Ri-DFE">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="21" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-Ri-DFE" userLabel="Back Button">
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="I2x-6m-Ex3"/>
@@ -163,11 +163,25 @@
                                             <outletCollection property="gestureRecognizers" destination="EMA-Vc-dvW" appends="YES" id="Bhe-Vm-7Ln"/>
                                         </connections>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzB-ec-d4H">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="108" id="DQr-We-Xhw"/>
+                                            <constraint firstAttribute="height" constant="30" id="LEQ-Oc-cHh"/>
+                                        </constraints>
+                                        <state key="normal" title="Settings Button"/>
+                                        <connections>
+                                            <segue destination="fUf-KF-t9b" kind="popoverPresentation" popoverAnchorView="vzB-ec-d4H" id="nLB-Ki-qWp">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vzB-ec-d4H" secondAttribute="trailing" constant="8" id="AYm-5A-1WN"/>
                                     <constraint firstItem="kjs-Ri-DFE" firstAttribute="leading" secondItem="uFG-y9-Q92" secondAttribute="leading" constant="8" id="BmU-Fg-ehk"/>
                                     <constraint firstAttribute="height" constant="65" id="KbN-xU-Ybv"/>
+                                    <constraint firstItem="vzB-ec-d4H" firstAttribute="top" secondItem="uFG-y9-Q92" secondAttribute="top" constant="17" id="Omw-Fa-kuG"/>
                                     <constraint firstItem="9IU-Vi-VH1" firstAttribute="top" secondItem="uFG-y9-Q92" secondAttribute="top" constant="17" id="hWy-0Z-7kD"/>
                                     <constraint firstItem="9IU-Vi-VH1" firstAttribute="centerX" secondItem="uFG-y9-Q92" secondAttribute="centerX" id="pSH-rj-tiS"/>
                                     <constraint firstItem="kjs-Ri-DFE" firstAttribute="top" secondItem="uFG-y9-Q92" secondAttribute="top" constant="4" id="suO-dc-wYy"/>
@@ -346,8 +360,61 @@
             </objects>
             <point key="canvasLocation" x="989.60000000000002" y="123.68815592203899"/>
         </scene>
+        <!--User SettingsVC-->
+        <scene sceneID="v6B-r5-poy">
+            <objects>
+                <viewController id="fUf-KF-t9b" customClass="UserSettingsVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tma-Kd-ixj"/>
+                        <viewControllerLayoutGuide type="bottom" id="xYO-BU-wPQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C8B-fE-6ea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC1-Wv-cDU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3dM-rD-2LX"/>
+                                    <constraint firstAttribute="width" constant="46" id="6zI-Ey-Dz9"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="BackButton:" destination="fUf-KF-t9b" eventType="touchUpInside" id="F66-BJ-18S"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtd-xA-htU">
+                                <frame key="frameInset" minX="16" minY="98" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHD-BD-o2H">
+                                <frame key="frameInset" minX="235" minY="93" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="changeUserName:" destination="fUf-KF-t9b" eventType="touchUpInside" id="6GJ-ik-67P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38912160289999997" green="0.76355937169999999" blue="0.01468383407" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EC1-Wv-cDU" firstAttribute="top" secondItem="tma-Kd-ixj" secondAttribute="bottom" id="Rwi-Bs-473"/>
+                            <constraint firstItem="EC1-Wv-cDU" firstAttribute="leading" secondItem="C8B-fE-6ea" secondAttribute="leadingMargin" id="oN0-D6-Bku"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNameLabel" destination="Rtd-xA-htU" id="Gj1-K2-lfL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGT-S8-F4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="123.68815592203899"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="21" width="56" height="58"/>
         <image name="courses-icon-10" width="1200" height="1238"/>
     </resources>
 </document>
