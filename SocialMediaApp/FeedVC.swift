@@ -16,7 +16,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     var imagePicker = UIImagePickerController()
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
-    
+        
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectImageButton: UIImageView!
     @IBOutlet weak var captionLabel: UITextField!

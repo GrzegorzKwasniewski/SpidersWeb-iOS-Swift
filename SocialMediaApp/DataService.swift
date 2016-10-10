@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import SwiftKeychainWrapper
 
 // get url for databse from plist file - https://socialmediaapp-fcfde.firebaseio.com/
 let DB_BASE = FIRDatabase.database().reference()
@@ -35,6 +36,14 @@ class DataService {
     
     var REF_USERS: FIRDatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_USER_CURRENT: FIRDatabaseReference {
+        let uid = KeychainWrapper.stringForKey(KEY_UID)
+        //let uid = KeychainWrapper.set(KEY_UID)
+        //let uid = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID)
+        let user = REF_USERS.child(uid!)
+        return user
     }
     
     var REF_POST_IMAGES: FIRStorageReference {
