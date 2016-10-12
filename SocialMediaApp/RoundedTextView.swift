@@ -10,12 +10,13 @@ import UIKit
 
 class RoundedTextView: UITextView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.borderColor = UIColor(red: 126/255, green: 211/255, blue: 33/255, alpha: 1).cgColor
+        layer.borderWidth = 1.0
+        layer.cornerRadius = 5.0
+        layer.backgroundColor = UIColor.clear.cgColor
     }
-    */
 
 }

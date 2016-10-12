@@ -8,14 +8,21 @@
 
 import UIKit
 
-class TapImageView: UIView {
+class TapImageView: UIImageView {
+    
+    @IBInspectable var functionName: String = "userSettings"
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userSettings))
+        tap.numberOfTapsRequired = 1
+        self.addGestureRecognizer(tap)
+        self.isUserInteractionEnabled = true
     }
-    */
+    
+    func userSettings(sender: UITapGestureRecognizer) {
+        print("README: TAP")
+    }
 
 }

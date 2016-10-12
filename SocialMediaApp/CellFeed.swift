@@ -57,9 +57,9 @@ class CellFeed: UITableViewCell {
         
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
-                self.likeImage.image = UIImage(named: "empty-heart")
+                self.likeImage.image = UIImage(named: "like-button-no")
             } else {
-                self.likeImage.image = UIImage(named: "filled-heart")
+                self.likeImage.image = UIImage(named: "like-button-yes")
             }
         })
     }
@@ -77,4 +77,6 @@ class CellFeed: UITableViewCell {
             }
         })
     }
+    
+    
 }

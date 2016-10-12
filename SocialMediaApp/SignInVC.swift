@@ -16,8 +16,8 @@ import TwitterKit
 
 class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         
-    @IBOutlet var emailField: NoBorderTextField!
-    @IBOutlet var passwordField: NoBorderTextField!
+    @IBOutlet var emailField: RoundedBorderTextField!
+    @IBOutlet var passwordField: RoundedBorderTextField!
     
     
     @IBAction func twitterSignInButton(_ sender: AnyObject) {

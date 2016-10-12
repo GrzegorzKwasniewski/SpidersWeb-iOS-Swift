@@ -95,7 +95,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         captionLabel.text = ""
         imageSelected = false
-        selectImageButton.image = UIImage(named: "courses-icon-10")
+        selectImageButton.image = UIImage(named: "add-image")
         
         tableView.reloadData()
     }
@@ -137,6 +137,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
     }
 
+    @IBAction func goToUserSettings(_ sender: AnyObject) {
+        performSegue(withIdentifier: "userSettings", sender: nil)
+    }
+    
     @IBAction func forTestsOnlyAction(_ sender: AnyObject) {
         let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
         print("KEYCHAIN: Keychain was removed - \(keychainResult)")

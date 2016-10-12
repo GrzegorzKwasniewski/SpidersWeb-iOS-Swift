@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoBorderTextField: UITextField {
+class RoundedBorderTextField: UITextField {
 
     override func awakeFromNib() {
         super.awakeFromNib()
