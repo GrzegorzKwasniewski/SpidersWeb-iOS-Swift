@@ -48,26 +48,32 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if let currentUser = user {
-                // TO SET LATER let currentUserEmail = currentUser.email, let currentUserPhotoUrl = currentUser.photoURL
+                // TO SET LATER let currentUserEmail = currentUser.email
                 let currentUserUid = currentUser.uid
                 guard let currentUserName = currentUser.displayName, let currentUserPhotoUrl = currentUser.photoURL else { print("README: Can't get user data from Firebase")
                     return
                 }
-                let ref = FIRStorage.storage().reference(forURL: "https:/\(currentUserPhotoUrl.path)")
-                ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
-                    if error != nil {
-                        print("README: Unable to dwonload image from Firebase storage - error \(error)")
-                    } else {
-                        print("README: Image downloaded from Firebase storage")
-                        if let imageData = data {
-                            if let imageFromData = UIImage(data: imageData) {
-                                self.profileImage.image = imageFromData
-                                //FeedVC.imageCache.setObject(imageFromData, forKey: post.imageUrl as NSString)
+                
+                let photoUrlForFirebase = "\(currentUserPhotoUrl)"
+                
+                if let userImageFromCache = FeedVC.imageCache.object(forKey: photoUrlForFirebase as NSString) {
+                    self.profileImage.image = userImageFromCache
+                } else {
+                    let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
+                    ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
+                        if error != nil {
+                            print("README: Unable to dwonload image from Firebase storage - error \(error)")
+                        } else {
+                            print("README: Image downloaded from Firebase storage")
+                            if let imageData = data {
+                                if let imageFromData = UIImage(data: imageData) {
+                                    self.profileImage.image = imageFromData
+                                    FeedVC.imageCache.setObject(imageFromData, forKey: photoUrlForFirebase as NSString)
+                                }
                             }
                         }
-                    }
-                })
-
+                    })
+                }
                 self.userNameLabel.text = currentUserName
             } else {
                 print("REDAME: There's no user signed in")
@@ -97,7 +103,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                         print("README: Imge sucessfully uploaded to Firebase storage")
                         let downloadUrl = metadata?.downloadURL()?.absoluteString
                         if let url = downloadUrl {
-                            self.assignAvataToFirebaseUser(imageUrl: url)
+                            self.assignAvatarToFirebaseUser(imageUrl: url)
                         }
                     }
                 })
@@ -108,11 +114,11 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
-    func assignAvataToFirebaseUser(imageUrl: String) {
+    func assignAvatarToFirebaseUser(imageUrl: String) {
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if let currentUser = user {
                 let changeRequest = currentUser.profileChangeRequest()
-                changeRequest.photoURL = URL(fileURLWithPath: imageUrl)
+                changeRequest.photoURL = URL(string: imageUrl)
                 changeRequest.commitChanges { error in
                     if let error = error {
                         print("README: Error while trying to change user data")
