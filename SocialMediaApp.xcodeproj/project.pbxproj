@@ -173,16 +173,16 @@
 		713B13161D7D82CB00AF79C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				713B13191D7EBD5700AF79C3 /* ShadowView.swift */,
-				713B131E1D7EC1E100AF79C3 /* RoundButton.swift */,
-				713B13221D7EC94800AF79C3 /* ShadowButton.swift */,
-				713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */,
-				71CE62501D858C66002C5B0B /* CircleView.swift */,
 				71CE62521D8692C5002C5B0B /* CellFeed.swift */,
+				71CE62501D858C66002C5B0B /* CircleView.swift */,
 				71A9EAE51DAA6887003B08BD /* ProfileImage.swift */,
-				71FE20921DAD32D50036FE9F /* TapImageView.swift */,
+				713B131E1D7EC1E100AF79C3 /* RoundButton.swift */,
+				713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */,
 				71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */,
 				71EF4ABD1DAE5AAC00076B56 /* RoundedTextView.swift */,
+				713B13221D7EC94800AF79C3 /* ShadowButton.swift */,
+				713B13191D7EBD5700AF79C3 /* ShadowView.swift */,
+				71FE20921DAD32D50036FE9F /* TapImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

@@ -82,8 +82,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     func postToFirebase(imageUrl: String) {
-        //  check this for validation - don't force unwrap caption
         let post: Dictionary<String, AnyObject> = [
+            // Caption is valideted when sending post - but not secure
             "caption": captionLabel.text! as NSString,
             "imageUrl": imageUrl as NSString,
             "likes": 0 as NSNumber

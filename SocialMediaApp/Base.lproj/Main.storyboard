@@ -473,11 +473,15 @@
                                     <constraint firstItem="EC1-Wv-cDU" firstAttribute="leading" secondItem="fO1-W4-8yw" secondAttribute="leading" constant="8" id="hr0-Sg-1kQ"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="bYS-vx-Gtg"/>
                                     <constraint firstAttribute="width" constant="144" id="vgO-qi-9pg"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K4f-jE-hrK" appends="YES" id="NpA-nz-JJ6"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -506,10 +510,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="profileImage" destination="i0W-0E-JRQ" id="HXI-oY-EcQ"/>
                         <outlet property="userNameLabel" destination="ASj-g7-9dK" id="63A-vF-iMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGT-S8-F4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="K4f-jE-hrK" userLabel="Select Avatar Button">
+                    <connections>
+                        <action selector="selectAvatarAction:" destination="fUf-KF-t9b" id="5ZO-IW-Gd5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1728" y="123"/>
         </scene>
