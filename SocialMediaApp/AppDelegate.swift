@@ -8,6 +8,10 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+import FBSDKLoginKit
+import TwitterKit
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        
+        FIRDatabase.database().persistenceEnabled = true
+                
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        Fabric.with([Twitter.self])
+        
+        let key = Bundle.main.object(forInfoDictionaryKey: "consumerKey"),
+        secret = Bundle.main.object(forInfoDictionaryKey: "consumerSecret")
+        if let key = key as? String, let secret = secret as? String
+            , !key.isEmpty && !secret.isEmpty {
+            Twitter.sharedInstance().start(withConsumerKey: key, consumerSecret: secret)
+        }
+
+        
         return true
     }
 
@@ -42,7 +61,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+//        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?, annotation: nil)
+//    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
+        -> Bool {
+            
+            if Twitter.sharedInstance().application(application, open:url, options: options) {
+                return true
+            }
+            
+            return self.application(application,
+                                    open: url,
+                                    sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?,
+                                    annotation: [:])
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if GIDSignIn.sharedInstance().handle(url,
+                                             sourceApplication: sourceApplication,
+                                             annotation: annotation) {
+            return true
+        }
+        return FBSDKApplicationDelegate.sharedInstance().application(application,
+                                                                     open: url,
+                                                                     sourceApplication: sourceApplication,
+                                                                     annotation: annotation)
+    }
 
 }
 
