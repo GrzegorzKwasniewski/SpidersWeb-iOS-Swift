@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import KRProgressHUD
 
 class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -44,6 +45,8 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        KRProgressHUD.show()
+        
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
@@ -53,12 +56,14 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
+                    KRProgressHUD.dismiss()
                 }
             } else {
                 DispatchQueue.main.async {
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
+                    KRProgressHUD.dismiss()
                 }
             }
         }
