@@ -56,8 +56,64 @@ class DataService {
     }
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
-        // if user don't exists Firebase will create one create user with proper uid
+        // if user don't exists Firebase will create one with proper uid
         REF_USERS.child(uid).updateChildValues(userData) // if users exists data will not overriden
     }
-
+    
+    func getFirebaseDBUserData(firebaseUser: @escaping (FirebaseUser, Bool) -> Void) {
+        
+        var currentUserUid: String!
+        var userName: String!
+        var userEmail: String!
+        var userImage: UIImage!
+        //var userPhotoUrl: URL?
+        
+        if let currentUser = FIRAuth.auth()?.currentUser {
+            currentUserUid = currentUser.uid
+            
+            if let currentUserName = currentUser.displayName {
+                userName = currentUserName
+                print("README here: \(userName)")
+            } else {
+                userName = "Not specified"
+            }
+            
+            if let currentUserEmail = currentUser.email {
+                userEmail = currentUserEmail
+            } else {
+                userEmail = "Not specified"
+            }
+            
+            if let currentUserPhotoUrl = currentUser.photoURL {
+                let photoUrlForFirebase = "\(currentUserPhotoUrl)"
+                
+                if let userImageFromCache = FeedVC.imageCache.object(forKey: photoUrlForFirebase as NSString) {
+                    userImage = userImageFromCache
+                    firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
+                    print("README 1: \(userImage)")
+                } else {
+                    let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
+                    ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
+                        if error != nil {
+                            print("README: Unable to dwonload image from Firebase storage - error \(error)")
+                        } else {
+                            print("README: Image downloaded from Firebase storage")
+                            if let imageData = data {
+                                if let imageFromData = UIImage(data: imageData) {
+                                    userImage = imageFromData
+                                    firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
+                                    FeedVC.imageCache.setObject(imageFromData, forKey: photoUrlForFirebase as NSString)
+                                }
+                            }
+                        }
+                    })
+                }
+            } else {
+                userImage = UIImage(named: "profile-picture")
+                print("README 3: \(userImage)")
+            }
+        } else {
+            print("REDAME: There's no user signed in")
+        }
+    }
 }

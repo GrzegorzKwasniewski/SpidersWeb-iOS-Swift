@@ -46,37 +46,16 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let currentUser = user {
-                // TO SET LATER let currentUserEmail = currentUser.email
-                let currentUserUid = currentUser.uid
-                guard let currentUserName = currentUser.displayName, let currentUserPhotoUrl = currentUser.photoURL else { print("README: Can't get user data from Firebase")
-                    return
+        DataService.ds.getFirebaseDBUserData { (firebaseUser, succes) in
+            if succes {
+                DispatchQueue.main.async {
+                    self.profileImage.image = firebaseUser.image
+                    self.userNameLabel.text = firebaseUser.display_name
                 }
-                
-                let photoUrlForFirebase = "\(currentUserPhotoUrl)"
-                
-                if let userImageFromCache = FeedVC.imageCache.object(forKey: photoUrlForFirebase as NSString) {
-                    self.profileImage.image = userImageFromCache
-                } else {
-                    let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
-                    ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
-                        if error != nil {
-                            print("README: Unable to dwonload image from Firebase storage - error \(error)")
-                        } else {
-                            print("README: Image downloaded from Firebase storage")
-                            if let imageData = data {
-                                if let imageFromData = UIImage(data: imageData) {
-                                    self.profileImage.image = imageFromData
-                                    FeedVC.imageCache.setObject(imageFromData, forKey: photoUrlForFirebase as NSString)
-                                }
-                            }
-                        }
-                    })
-                }
-                self.userNameLabel.text = currentUserName
             } else {
-                print("REDAME: There's no user signed in")
+                DispatchQueue.main.async {
+                    self.profileImage.image = UIImage(named: "profile-picture")
+                }
             }
         }
     }
