@@ -28,6 +28,7 @@ class CellFeed: UITableViewCell {
         tap.numberOfTapsRequired = 1
         likeImage.addGestureRecognizer(tap)
         likeImage.isUserInteractionEnabled = true
+        
     }
     
     func configureCell(post: Post, image: UIImage? = nil) {
@@ -35,6 +36,20 @@ class CellFeed: UITableViewCell {
         likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postID)
         self.caption.text = post.caption
         self.likesLabel.text = String(post.likes)
+        
+        DataService.ds.getFirebaseDBUserData { (firebaseUser, succes) in
+            if succes {
+                DispatchQueue.main.async {
+                    self.userImage.image = firebaseUser.image
+                    self.userNameLabel.text = firebaseUser.display_name
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.userImage.image = firebaseUser.image
+                    self.userNameLabel.text = firebaseUser.display_name
+                }
+            }
+        }
         
         if image != nil {
             self.postImage.image = image

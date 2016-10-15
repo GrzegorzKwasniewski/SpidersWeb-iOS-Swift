@@ -248,7 +248,7 @@
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AKA-q5-7d5">
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture" translatesAutoresizingMaskIntoConstraints="NO" id="Rry-q4-sWb" userLabel="SmallPicture" customClass="CircleView" customModule="SocialMediaApp" customModuleProvider="target">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture" translatesAutoresizingMaskIntoConstraints="NO" id="Rry-q4-sWb" userLabel="SmallPicture" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="59" id="EaS-iZ-bOk"/>
                                                                                 <constraint firstAttribute="height" constant="59" id="i6Z-XM-9v9"/>
@@ -473,7 +473,7 @@
                                     <constraint firstItem="EC1-Wv-cDU" firstAttribute="leading" secondItem="fO1-W4-8yw" secondAttribute="leading" constant="8" id="hr0-Sg-1kQ"/>
                                 </constraints>
                             </view>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="bYS-vx-Gtg"/>
@@ -511,6 +511,7 @@
                     </view>
                     <connections>
                         <outlet property="profileImage" destination="i0W-0E-JRQ" id="HXI-oY-EcQ"/>
+                        <outlet property="userEmail" destination="1xr-qk-HM8" id="qIs-ep-L0f"/>
                         <outlet property="userNameLabel" destination="ASj-g7-9dK" id="63A-vF-iMh"/>
                     </connections>
                 </viewController>

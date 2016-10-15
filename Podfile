@@ -16,6 +16,7 @@ target 'SocialMediaApp' do
   pod 'SwiftKeychainWrapper'
   pod 'TwitterKit'
   pod 'Fabric'
+  pod 'KRProgressHUD'
 
   target 'SocialMediaAppTests' do
     inherit! :search_paths

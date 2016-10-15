@@ -14,8 +14,9 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     var imagePicker = UIImagePickerController()
     
     
-    @IBOutlet var profileImage: ProfileImage!
-    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet weak var profileImage: ProfileImage!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userEmail: UILabel!
     
     @IBAction func changeUserName(_ sender: AnyObject) {
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
@@ -51,10 +52,13 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 DispatchQueue.main.async {
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
+                    self.userEmail.text = firebaseUser.email
                 }
             } else {
                 DispatchQueue.main.async {
-                    self.profileImage.image = UIImage(named: "profile-picture")
+                    self.profileImage.image = firebaseUser.image
+                    self.userNameLabel.text = firebaseUser.display_name
+                    self.userEmail.text = firebaseUser.email
                 }
             }
         }

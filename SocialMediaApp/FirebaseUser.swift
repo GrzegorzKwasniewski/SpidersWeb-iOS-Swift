@@ -37,6 +37,8 @@ class FirebaseUser {
         return _photo_url
     }
     
+    init() {}
+    
     init(userUid uid: String, userDisplayName name: String, userEmail email: String, userImage image: UIImage) {
         _uid = uid
         _display_name = name

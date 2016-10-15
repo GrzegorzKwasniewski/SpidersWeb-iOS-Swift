@@ -90,7 +90,6 @@ class DataService {
                 if let userImageFromCache = FeedVC.imageCache.object(forKey: photoUrlForFirebase as NSString) {
                     userImage = userImageFromCache
                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
-                    print("README 1: \(userImage)")
                 } else {
                     let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
                     ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
@@ -110,10 +109,11 @@ class DataService {
                 }
             } else {
                 userImage = UIImage(named: "profile-picture")
-                print("README 3: \(userImage)")
+                firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
             }
         } else {
             print("REDAME: There's no user signed in")
+            firebaseUser(FirebaseUser(), false)
         }
     }
 }

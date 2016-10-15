@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KRProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SocialMediaApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>002A79E870219FA26D9FCCF693E84BD3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0EB19C1377A747F81110D44E2D5FCF78</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5F2CE7FB1196B45BEB8372F1416CF9BF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>600AA0A795E6BC9EF871A7575A200AC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C805ED4D3452370975790CDDACABE583</key>
+		<key>D0457ED885F32D54B5D1A7393C9D7E09</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D79B199085D278F773EE8FDC60DBBF76</key>
+		<key>E14C6B36A09DCEC8087F7648514A59EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
