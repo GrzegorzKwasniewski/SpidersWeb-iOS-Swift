@@ -24,7 +24,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let currentUser = user {
                 let changeRequest = currentUser.profileChangeRequest()
                 changeRequest.displayName = "Jane Q. User"
-                //changeRequest.photoURL = NSURL(string: "https://example.com/jane-q-user/profile.jpg")
                 changeRequest.commitChanges { error in
                     if let error = error {
                         print("README: Error while trying to change user data")
@@ -44,6 +43,8 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("README: \(DataService.ds.REF_USER_CURRENT)")
         
         KRProgressHUD.show()
         

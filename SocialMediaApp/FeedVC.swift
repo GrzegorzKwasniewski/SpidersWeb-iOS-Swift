@@ -25,6 +25,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("README: \(DataService.ds.REF_USER_CURRENT)")
+        
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
@@ -46,6 +48,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             }
             self.tableView.reloadData()
         })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,6 +78,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }
     }
     
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            posts.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+//    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             selectImageButton.image = image
@@ -93,6 +106,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         // referance for POSTS end point
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId() // generate uniqe ID
         firebasePost.setValue(post)
+        
+        // assign post current user
+        let currentUserPosts = DataService.ds.REF_USER_CURRENT.child("posts")
+        currentUserPosts.setValue([firebasePost.key: true])
+        print("README: \(firebasePost.key)")
+        print("README: Assign to user")
         
         captionLabel.text = ""
         imageSelected = false
