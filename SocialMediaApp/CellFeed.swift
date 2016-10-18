@@ -37,19 +37,19 @@ class CellFeed: UITableViewCell {
         self.caption.text = post.caption
         self.likesLabel.text = String(post.likes)
         
-        DataService.ds.getFirebaseDBUserData { (firebaseUser, succes) in
-            if succes {
-                DispatchQueue.main.async {
-                    self.userImage.image = firebaseUser.image
-                    self.userNameLabel.text = firebaseUser.display_name
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self.userImage.image = firebaseUser.image
-                    self.userNameLabel.text = firebaseUser.display_name
-                }
-            }
-        }
+//        DataService.ds.getFirebaseDBUserData { (firebaseUser, succes) in
+//            if succes {
+//                DispatchQueue.main.async {
+//                    self.userImage.image = firebaseUser.image
+//                    self.userNameLabel.text = firebaseUser.display_name
+//                }
+//            } else {
+//                DispatchQueue.main.async {
+//                    self.userImage.image = firebaseUser.image
+//                    self.userNameLabel.text = firebaseUser.display_name
+//                }
+//            }
+//        }
         
         if image != nil {
             self.postImage.image = image

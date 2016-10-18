@@ -100,16 +100,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     func postToFirebase(imageUrl: String) {
-//        
-//        var userUid = ""
-//        
-//        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-//            if let currentFirebaseUser = user {
-//                userUid = currentFirebaseUser.uid
-//            } else {
-//                // No user is signed in.
-//            }
-//        }
         
         let post: Dictionary<String, AnyObject> = [
             // Caption is valideted when sending post - but not secure
