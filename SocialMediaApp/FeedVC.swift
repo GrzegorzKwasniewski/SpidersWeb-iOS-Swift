@@ -13,9 +13,11 @@ import KRProgressHUD
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    
+    var currentUserUid = String()
     var posts = [Post]()
     var imagePicker = UIImagePickerController()
-    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
         
     @IBOutlet weak var tableView: UITableView!
@@ -25,8 +27,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("README: \(DataService.ds.REF_USER_CURRENT)")
-        
+        if let currentFirebaseUser = FIRAuth.auth()?.currentUser {
+            currentUserUid = currentFirebaseUser.uid
+        }
+                
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
@@ -96,22 +100,32 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     func postToFirebase(imageUrl: String) {
+//        
+//        var userUid = ""
+//        
+//        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+//            if let currentFirebaseUser = user {
+//                userUid = currentFirebaseUser.uid
+//            } else {
+//                // No user is signed in.
+//            }
+//        }
+        
         let post: Dictionary<String, AnyObject> = [
             // Caption is valideted when sending post - but not secure
             "caption": captionLabel.text! as NSString,
             "imageUrl": imageUrl as NSString,
-            "likes": 0 as NSNumber
+            "likes": 0 as NSNumber,
+            "userUid": currentUserUid as NSString
         ]
         
         // referance for POSTS end point
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId() // generate uniqe ID
         firebasePost.setValue(post)
         
-        // assign post current user
-        let currentUserPosts = DataService.ds.REF_USER_CURRENT.child("posts")
-        currentUserPosts.setValue([firebasePost.key: true])
-        print("README: \(firebasePost.key)")
-        print("README: Assign to user")
+        // assign post to current user
+//        let currentUserPosts = DataService.ds.REF_USER_CURRENT.child("posts")
+//        currentUserPosts.updateChildValues([firebasePost.key: true])
         
         captionLabel.text = ""
         imageSelected = false

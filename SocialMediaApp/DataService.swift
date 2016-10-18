@@ -85,9 +85,11 @@ class DataService {
             }
             
             if let currentUserPhotoUrl = currentUser.photoURL {
+                print("CHECKUSERID \(currentUserUid)")
+                //print("USERPHOTO \(currentUserPhotoUrl)")
                 let photoUrlForFirebase = "\(currentUserPhotoUrl)"
                 
-                if let userImageFromCache = FeedVC.imageCache.object(forKey: photoUrlForFirebase as NSString) {
+                if let userImageFromCache = FeedVC.imageCache.object(forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString) {
                     userImage = userImageFromCache
                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
                 } else {
@@ -101,7 +103,7 @@ class DataService {
                                 if let imageFromData = UIImage(data: imageData) {
                                     userImage = imageFromData
                                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
-                                    FeedVC.imageCache.setObject(imageFromData, forKey: photoUrlForFirebase as NSString)
+                                    FeedVC.imageCache.setObject(imageFromData, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
                                 }
                             }
                         }

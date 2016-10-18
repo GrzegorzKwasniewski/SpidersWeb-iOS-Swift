@@ -43,9 +43,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("README: \(DataService.ds.REF_USER_CURRENT)")
-        
+                
         KRProgressHUD.show()
         
         imagePicker.delegate = self

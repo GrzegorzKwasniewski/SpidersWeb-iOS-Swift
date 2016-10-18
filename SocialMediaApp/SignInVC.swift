@@ -51,6 +51,7 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("README: Unable to authenticate with Firebasr using email")
+                            print("README: \(error)")
                         } else {
                             print("README: Created user with new email")
                             if let firebaseUser = user {
