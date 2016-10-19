@@ -37,19 +37,31 @@ class CellFeed: UITableViewCell {
         self.caption.text = post.caption
         self.likesLabel.text = String(post.likes)
         
-//        DataService.ds.getFirebaseDBUserData { (firebaseUser, succes) in
-//            if succes {
-//                DispatchQueue.main.async {
-//                    self.userImage.image = firebaseUser.image
-//                    self.userNameLabel.text = firebaseUser.display_name
-//                }
-//            } else {
-//                DispatchQueue.main.async {
-//                    self.userImage.image = firebaseUser.image
-//                    self.userNameLabel.text = firebaseUser.display_name
-//                }
-//            }
-//        }
+        DataService.ds.REF_USERS.observe(.value, with: {(snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let snapDictionary = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key // in this case it's user UID
+                        if key == post.userUid {
+                            let userName = snapDictionary["userName"] as! String
+                            var photoData: NSData!
+                            let userPhotoUrl: URL!
+                            
+                            if let photoUrl = snapDictionary["photoUrl"] {
+                                userPhotoUrl = URL(string: String(describing: photoUrl))
+                                photoData = NSData(contentsOf: userPhotoUrl)
+                                let userImage = UIImage(data: photoData as Data)
+                                self.userImage.image = userImage
+                            } else {
+                                self.userImage.image = UIImage(named: "profile-picture")
+                            }
+
+                            self.userNameLabel.text = userName
+                        }
+                    }
+                }
+            }
+        })
         
         if image != nil {
             self.postImage.image = image
@@ -82,11 +94,11 @@ class CellFeed: UITableViewCell {
     func likeTapped(sender: UITapGestureRecognizer) {
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
-                self.likeImage.image = UIImage(named: "filled-heart")
+                self.likeImage.image = UIImage(named: "like-button-yes")
                 self.post.adjustLikes(addLike: true)
                 self.likesRef.setValue(true)
             } else {
-                self.likeImage.image = UIImage(named: "empty-heart")
+                self.likeImage.image = UIImage(named: "like-button-no")
                 self.post.adjustLikes(addLike: false)
                 self.likesRef.removeValue()
             }

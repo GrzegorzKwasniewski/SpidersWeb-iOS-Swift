@@ -66,7 +66,6 @@ class DataService {
         var userName: String!
         var userEmail: String!
         var userImage: UIImage!
-        //var userPhotoUrl: URL?
         
         if let currentUser = FIRAuth.auth()?.currentUser {
             currentUserUid = currentUser.uid
@@ -85,8 +84,6 @@ class DataService {
             }
             
             if let currentUserPhotoUrl = currentUser.photoURL {
-                print("CHECKUSERID \(currentUserUid)")
-                //print("USERPHOTO \(currentUserPhotoUrl)")
                 let photoUrlForFirebase = "\(currentUserPhotoUrl)"
                 
                 if let userImageFromCache = FeedVC.imageCache.object(forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString) {
