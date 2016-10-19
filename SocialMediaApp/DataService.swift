@@ -107,7 +107,7 @@ class DataService {
                     })
                 }
             } else {
-                userImage = UIImage(named: "profile-picture")
+                userImage = UIImage(named: DEFAULT_AVATAR)
                 firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
             }
         } else {

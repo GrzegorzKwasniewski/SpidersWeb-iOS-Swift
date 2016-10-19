@@ -118,4 +118,13 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
+    
+    @IBAction func changeUserData(_ sender: AnyObject) {
+            let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpView") as! PopUpView
+            self.addChildViewController(popUpView)
+            popUpView.view.frame = self.view.frame
+            self.view.addSubview(popUpView.view)
+            popUpView.didMove(toParentViewController: self)
+    }
+    
 }
