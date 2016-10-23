@@ -15,7 +15,7 @@ class PopUpView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("README: I'm here")
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.0)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         showAnimate()
     }
     
