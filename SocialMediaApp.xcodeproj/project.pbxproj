@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		55D3EF9B7162D2D066869B05 /* Pods_SocialMediaAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */; };
 		7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */; };
+		7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */; };
+		7127F7841DBF96B700446302 /* LeftSlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */; };
 		712C33561DA2A481006DD610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712C33551DA2A481006DD610 /* Assets.xcassets */; };
 		713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E51D7D713F00AF79C3 /* AppDelegate.swift */; };
 		713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E71D7D713F00AF79C3 /* SignInVC.swift */; };
@@ -59,6 +61,8 @@
 		53FBE88AB9872EA5ABE20FFB /* Pods-SocialMediaAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C4B31E556B31AEC95DCE060 /* Pods-SocialMediaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppTests/Pods-SocialMediaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
+		7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuContainerVC.swift; sourceTree = "<group>"; };
+		7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideMenuVC.swift; sourceTree = "<group>"; };
 		712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialMediaApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		712C33551DA2A481006DD610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713B12E21D7D713F00AF79C3 /* SocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +203,8 @@
 				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
 				71578F321D841DA5004B56AE /* FeedVC.swift */,
 				7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */,
+				7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */,
+				7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -545,9 +551,11 @@
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
+				7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */,
 				71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */,
 				71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */,
 				71578F331D841DA5004B56AE /* FeedVC.swift in Sources */,
+				7127F7841DBF96B700446302 /* LeftSlideMenuVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
 				71A2E6EB1DB795AE009061D4 /* PopUpView.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,

@@ -45,13 +45,24 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                     print("README: Email user authenticated with Firebase")
                     if let firebaseUser = user {
                         var firebaseUserName = ""
+                        var userPhotoUrl: String!
+                        
                         if let userName = firebaseUser.displayName {
                             firebaseUserName = userName
+                        } else {
+                            firebaseUserName = "New user"
                         }
+                        
+                        if let photoUrl = firebaseUser.photoURL {
+                            userPhotoUrl = "\(photoUrl)"
+                        } else {
+                            userPhotoUrl = defaultAvatarUrl
+                        }
+                        
                         let userData: Dictionary<String, String> = [
                             "provider": firebaseUser.providerID,
                             "userName": firebaseUserName,
-                            "photoUrl": String(describing: firebaseUser.photoURL!)
+                            "photoUrl": userPhotoUrl
                         ]
                         self.completeSignIn(id: firebaseUser.uid, userData: userData)
                     }
