@@ -164,17 +164,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
 
     @IBAction func goToUserSettings(_ sender: AnyObject) {
-        print("README: To ja 3")
         if let slideMenuController = self.slideMenuController() {
             slideMenuController.openLeft()
         } else {
-            print("README: To ja 2")
+            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
         }
-        //performSegue(withIdentifier: "userSettings", sender: nil)
     }
     
     @IBAction func forTestsOnlyAction(_ sender: AnyObject) {
-        print("README: Halo")
         let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
         print("KEYCHAIN: Keychain was removed - \(keychainResult)")
         try! FIRAuth.auth()?.signOut()

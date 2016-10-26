@@ -143,8 +143,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-K4-qyC">
+                                <frame key="frameInset" minX="38" minY="222" width="44" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb4-Yq-h6W">
-                                <frame key="frameInset" minX="94" minY="146" width="46" height="30"/>
+                                <frame key="frameInset" minX="37" minY="155" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -157,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyL-57-i0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="-539"/>
+            <point key="canvasLocation" x="168.80000000000001" y="-539.28035982008998"/>
         </scene>
         <!--Slide Menu ContainerVC-->
         <scene sceneID="FIT-n8-YWT">
@@ -519,7 +523,7 @@
                                     <constraint firstItem="EC1-Wv-cDU" firstAttribute="leading" secondItem="fO1-W4-8yw" secondAttribute="leading" constant="8" id="hr0-Sg-1kQ"/>
                                 </constraints>
                             </view>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="bYS-vx-Gtg"/>
@@ -590,7 +594,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf8-a7-wzF">
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf8-a7-wzF">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Give me Your new name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOA-B6-Gho">
                                         <frame key="frameInset" minX="8" minY="50" width="224" height="21"/>
@@ -609,8 +613,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="FML-Od-ucg"/>
-                                    <constraint firstAttribute="height" constant="215" id="eYN-bQ-hRO"/>
+                                    <constraint firstAttribute="width" constant="343" id="FML-Od-ucg"/>
+                                    <constraint firstAttribute="height" constant="627" id="eYN-bQ-hRO"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adQ-hu-HB5">

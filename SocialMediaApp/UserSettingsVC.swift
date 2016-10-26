@@ -43,9 +43,15 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        KRProgressHUD.show()
         
+        //KRProgressHUD.show()
+        
+        let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpView") as! PopUpView
+        self.addChildViewController(popUpView)
+        popUpView.view.frame = self.view.frame
+        self.view.addSubview(popUpView.view)
+        popUpView.didMove(toParentViewController: self)
+
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
@@ -55,17 +61,23 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    KRProgressHUD.dismiss()
+                    popUpView.dissmisView(self)
+                    //KRProgressHUD.dismiss()
                 }
             } else {
                 DispatchQueue.main.async {
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    KRProgressHUD.dismiss()
+                    popUpView.dissmisView(self)
+                    //KRProgressHUD.dismiss()
                 }
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //KRProgressHUD.show()
     }
     
     @IBAction func selectAvatarAction(_ sender: AnyObject) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 import SlideMenuControllerSwift
 
 class LeftSlideMenuVC: UIViewController {
@@ -16,12 +17,6 @@ class LeftSlideMenuVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     @IBAction func goToUserSettings(_ sender: AnyObject) {
         if let slideMenuController = self.slideMenuController() {
@@ -29,18 +24,8 @@ class LeftSlideMenuVC: UIViewController {
                 let mainViewController = controller
                 slideMenuController.changeMainViewController(mainViewController, close: true)
             }
-
+        }  else {
+            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
