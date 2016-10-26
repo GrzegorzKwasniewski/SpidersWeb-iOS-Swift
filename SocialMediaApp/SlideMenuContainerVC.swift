@@ -12,6 +12,7 @@ import SlideMenuControllerSwift
 class SlideMenuContainerVC: SlideMenuController {
     
     override func awakeFromNib() {
+        print("README: To ja")
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "Main") {
             self.mainViewController = controller
         }

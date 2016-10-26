@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class LeftSlideMenuVC: UIViewController {
 
@@ -21,6 +22,16 @@ class LeftSlideMenuVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func goToUserSettings(_ sender: AnyObject) {
+        if let slideMenuController = self.slideMenuController() {
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "userSettings") {
+                let mainViewController = controller
+                slideMenuController.changeMainViewController(mainViewController, close: true)
+            }
+
+        }
+    }
 
     /*
     // MARK: - Navigation

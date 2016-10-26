@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 import KRProgressHUD
+import SlideMenuControllerSwift
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -23,6 +24,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectImageButton: UIImageView!
     @IBOutlet weak var captionLabel: UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +57,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -162,10 +164,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
 
     @IBAction func goToUserSettings(_ sender: AnyObject) {
-        performSegue(withIdentifier: "userSettings", sender: nil)
+        print("README: To ja 3")
+        if let slideMenuController = self.slideMenuController() {
+            slideMenuController.openLeft()
+        } else {
+            print("README: To ja 2")
+        }
+        //performSegue(withIdentifier: "userSettings", sender: nil)
     }
     
     @IBAction func forTestsOnlyAction(_ sender: AnyObject) {
+        print("README: Halo")
         let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
         print("KEYCHAIN: Keychain was removed - \(keychainResult)")
         try! FIRAuth.auth()?.signOut()

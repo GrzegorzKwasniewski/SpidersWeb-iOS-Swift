@@ -124,7 +124,7 @@
                     <connections>
                         <outlet property="emailField" destination="F2O-Oz-nkZ" id="7QP-hB-H5V"/>
                         <outlet property="passwordField" destination="SJZ-Sz-bXo" id="Hnu-D3-81K"/>
-                        <segue destination="S2H-kN-Dui" kind="show" identifier="goToFeedVC" id="ohh-SW-jvt"/>
+                        <segue destination="8gy-5K-IRc" kind="show" identifier="goToFeedVC" id="UKc-wV-PUn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,6 +142,16 @@
                     <view key="view" contentMode="scaleToFill" id="oqk-2s-3Ow">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb4-Yq-h6W">
+                                <frame key="frameInset" minX="94" minY="146" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToUserSettings:" destination="acG-ae-k6w" eventType="touchUpInside" id="RpM-1S-F46"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.38912160289999997" green="0.76355937169999999" blue="0.01468383407" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
@@ -454,10 +464,10 @@
             </objects>
             <point key="canvasLocation" x="964" y="122.78860569715144"/>
         </scene>
-        <!--User SettingsVC-->
+        <!--userSettings-->
         <scene sceneID="v6B-r5-poy">
             <objects>
-                <viewController id="fUf-KF-t9b" customClass="UserSettingsVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userSettings" title="userSettings" id="fUf-KF-t9b" customClass="UserSettingsVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tma-Kd-ixj"/>
                         <viewControllerLayoutGuide type="bottom" id="xYO-BU-wPQ"/>
