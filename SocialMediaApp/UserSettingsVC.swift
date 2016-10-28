@@ -61,7 +61,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    popUpView.dissmisView(self)
+                    popUpView.removeAnimate()
                     //KRProgressHUD.dismiss()
                 }
             } else {
@@ -69,7 +69,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    popUpView.dissmisView(self)
+                    popUpView.removeAnimate()
                     //KRProgressHUD.dismiss()
                 }
             }

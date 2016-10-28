@@ -11,17 +11,20 @@ import UIKit
 
 class PopUpView: UIViewController {
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.view.layer.borderColor = UIColor.white.cgColor
+        self.view.layer.borderWidth = 1.0
+        self.view.layer.cornerRadius = 5.0
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("README: I'm here")
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         showAnimate()
-    }
-    
-    
-    @IBAction func dissmisView(_ sender: AnyObject) {
-        removeAnimate()
     }
     
     func showAnimate() {
