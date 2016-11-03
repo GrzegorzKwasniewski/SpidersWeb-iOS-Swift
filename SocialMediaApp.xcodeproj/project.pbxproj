@@ -33,6 +33,8 @@
 		71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62521D8692C5002C5B0B /* CellFeed.swift */; };
 		71CE62561D882D6A002C5B0B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* DataService.swift */; };
 		71CE62581D893323002C5B0B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62571D893323002C5B0B /* Post.swift */; };
+		71DEBBA11DCBC47B001A8588 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
+		71EB434B1DCBBE0C00142783 /* FirebaseLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EB434A1DCBBE0C00142783 /* FirebaseLoginDelegate.swift */; };
 		71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */; };
 		71EF4ABE1DAE5AAC00076B56 /* RoundedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4ABD1DAE5AAC00076B56 /* RoundedTextView.swift */; };
 		71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F9541DB12517009D8A60 /* FirebaseUser.swift */; };
@@ -95,6 +97,8 @@
 		71CE62521D8692C5002C5B0B /* CellFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellFeed.swift; sourceTree = "<group>"; };
 		71CE62551D882D6A002C5B0B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		71CE62571D893323002C5B0B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLogin.swift; sourceTree = "<group>"; };
+		71EB434A1DCBBE0C00142783 /* FirebaseLoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLoginDelegate.swift; sourceTree = "<group>"; };
 		71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedContentView.swift; sourceTree = "<group>"; };
 		71EF4ABD1DAE5AAC00076B56 /* RoundedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextView.swift; sourceTree = "<group>"; };
 		71F1F9541DB12517009D8A60 /* FirebaseUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseUser.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		713B12E41D7D713F00AF79C3 /* SocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				71EB43491DCBBDF000142783 /* Delegates */,
 				718BA3BF1DC8BDE900E764C0 /* Extensions */,
 				712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */,
 				71CE62541D882D2E002C5B0B /* Services */,
@@ -254,8 +259,17 @@
 				71CE62551D882D6A002C5B0B /* DataService.swift */,
 				718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */,
 				718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */,
+				71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		71EB43491DCBBDF000142783 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				71EB434A1DCBBE0C00142783 /* FirebaseLoginDelegate.swift */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		C7F5CD63918F0EBC28ED6835 /* Pods */ = {
@@ -560,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DEBBA11DCBC47B001A8588 /* EmailLogin.swift in Sources */,
 				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
 				7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */,
 				718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */,
@@ -581,6 +596,7 @@
 				71578F331D841DA5004B56AE /* FeedVC.swift in Sources */,
 				7127F7841DBF96B700446302 /* LeftSlideMenuVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
+				71EB434B1DCBBE0C00142783 /* FirebaseLoginDelegate.swift in Sources */,
 				71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,
 				713B13231D7EC94800AF79C3 /* ShadowButton.swift in Sources */,

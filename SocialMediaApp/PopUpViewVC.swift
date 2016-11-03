@@ -9,20 +9,11 @@
 import Foundation
 import UIKit
 
-class PopUpView: UIViewController {
+class PopUpViewVC: UIViewController {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
         
-        self.view.layer.borderColor = UIColor.white.cgColor
-        self.view.layer.borderWidth = 1.0
-        self.view.layer.cornerRadius = 5.0
-
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         //showAnimate()
     }
     

@@ -14,13 +14,15 @@ import GoogleSignIn
 import SwiftKeychainWrapper
 import TwitterKit
 
-class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, FirebaseLoginDelegate {
         
     @IBOutlet var emailField: RoundedBorderTextField!
     @IBOutlet var passwordField: RoundedBorderTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FirebaseLogin.login.delegate = self
+        EmailLogin.login.delegate = self
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
@@ -34,16 +36,7 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     }
     
     @IBAction func twitterSignInButton(_ sender: AnyObject) {
-        Twitter.sharedInstance().logIn() { (session, error) in
-            if let session = session {
-                // [START headless_twitter_auth]
-                let credential = FIRTwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
-                // [END headless_twitter_auth]
-                self.firebaseAuth(credential)
-            } else {
-                print("README: Error while authenticating with Twitter")
-            }
-        }
+        TwitterLogin.login.loginWithTwitter()
     }
     
     @IBAction func googleSignInButton(_ sender: AnyObject) {
@@ -73,78 +66,10 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         })
     }
     
-    func completeSignIn(id: String, userData: Dictionary<String, String>) {
-        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-        let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
-        print("KEYCHAIN: Data was saved to Keychain - \(keychainResult)")
-        print("SEGUE: Perform")
-        performSegue(withIdentifier: "goToFeedVC", sender: nil)
-    }
-    
     // password need to have at least six characters
     // check for internet connection first
     @IBAction func signInAction(_ sender: AnyObject) {
-        if let email = emailField.text, let password = passwordField.text {
-            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-                if error == nil {
-                    print("README: Email user authenticated with Firebase")
-                    if let firebaseUser = user {
-                        var firebaseUserName = ""
-                        var userPhotoUrl: String!
-                        
-                        if let userName = firebaseUser.displayName {
-                            firebaseUserName = userName
-                        } else {
-                            firebaseUserName = "New user"
-                        }
-                        
-                        if let photoUrl = firebaseUser.photoURL {
-                            userPhotoUrl = "\(photoUrl)"
-                        } else {
-                            userPhotoUrl = defaultAvatarUrl
-                        }
-                        
-                        let userData: Dictionary<String, String> = [
-                            "provider": firebaseUser.providerID,
-                            "userName": firebaseUserName,
-                            "photoUrl": userPhotoUrl
-                        ]
-                        self.completeSignIn(id: firebaseUser.uid, userData: userData)
-                    }
-                } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-                        if error != nil {
-                            print("README: Unable to authenticate with Firebasr using email")
-                        } else {
-                            print("README: Created user with new email")
-                            if let firebaseUser = user {
-                                var firebaseUserName = ""
-                                var userPhotoUrl: String!
-                                
-                                if let userName = firebaseUser.displayName {
-                                    firebaseUserName = userName
-                                } else {
-                                    firebaseUserName = "New user"
-                                }
-                                
-                                if let photoUrl = firebaseUser.photoURL {
-                                    userPhotoUrl = "\(photoUrl)"
-                                } else {
-                                    userPhotoUrl = defaultAvatarUrl
-                                }
-                                
-                                let userData: Dictionary<String, String> = [
-                                    "provider": firebaseUser.providerID,
-                                    "userName": firebaseUserName,
-                                    "photoUrl": userPhotoUrl
-                                ]
-                                self.completeSignIn(id: firebaseUser.uid, userData: userData)
-                            }
-                        }
-                    })
-                }
-            })
-        }
+        EmailLogin.login.signInWithEmail(emailField: emailField, passwordField: passwordField)
     }
     
     @IBAction func facebookButtonAction(_ sender: AnyObject) {
@@ -176,6 +101,14 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
                                                           accessToken: (authentication?.accessToken)!)
         firebaseAuth(credential)
+    }
+    
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
+        print("KEYCHAIN: Data was saved to Keychain - \(keychainResult)")
+        print("SEGUE: Perform")
+        performSegue(withIdentifier: "goToFeedVC", sender: nil)
     }
 
 }

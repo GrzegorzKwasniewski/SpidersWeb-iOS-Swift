@@ -15,7 +15,9 @@ import SwiftKeychainWrapper
 import TwitterKit
 
 class FirebaseLogin {
+    
     static let login = FirebaseLogin()
+    weak var delegate: FirebaseLoginDelegate?
     
     func firebaseAuthentication(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
@@ -34,7 +36,7 @@ class FirebaseLogin {
                         "userName": firebaseUserName,
                         "photoUrl": String(describing: firebaseUser.photoURL)
                     ]
-                    self.completeSignIn(id: firebaseUser.uid, userData: userData)
+                    self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
                 }
             }
         })
