@@ -12,6 +12,7 @@ import KRProgressHUD
 
 class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var popUpView = PopUpViewVC()
     var imagePicker = UIImagePickerController()
     
     
@@ -44,13 +45,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //KRProgressHUD.show()
-        
-        let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpView") as! PopUpView
-        self.addChildViewController(popUpView)
-        popUpView.view.frame = self.view.frame
-        self.view.addSubview(popUpView.view)
-        popUpView.didMove(toParentViewController: self)
+        popUpView = instantiatePopUpView()
 
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
@@ -61,23 +56,20 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    popUpView.removeAnimate()
-                    //KRProgressHUD.dismiss()
+                    self.popUpView.removeAnimate()
                 }
             } else {
                 DispatchQueue.main.async {
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    popUpView.removeAnimate()
-                    //KRProgressHUD.dismiss()
+                    self.popUpView.removeAnimate()
                 }
             }
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //KRProgressHUD.show()
     }
     
     @IBAction func selectAvatarAction(_ sender: AnyObject) {
@@ -132,7 +124,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func changeUserData(_ sender: AnyObject) {
-            let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpView") as! PopUpView
+            let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpView") as! PopUpViewVC
             self.addChildViewController(popUpView)
             popUpView.view.frame = self.view.frame
             self.view.addSubview(popUpView.view)

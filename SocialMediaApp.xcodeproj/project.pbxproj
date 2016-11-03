@@ -23,7 +23,11 @@
 		713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */; };
 		713B13231D7EC94800AF79C3 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13221D7EC94800AF79C3 /* ShadowButton.swift */; };
 		71578F331D841DA5004B56AE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71578F321D841DA5004B56AE /* FeedVC.swift */; };
-		71A2E6EB1DB795AE009061D4 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6EA1DB795AE009061D4 /* PopUpView.swift */; };
+		718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */; };
+		718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C01DC8BE3D00E764C0 /* VCExt.swift */; };
+		718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */; };
+		718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */; };
+		71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */; };
 		71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		71CE62511D858C66002C5B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
 		71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62521D8692C5002C5B0B /* CellFeed.swift */; };
@@ -81,7 +85,11 @@
 		713B13221D7EC94800AF79C3 /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		713B13241D803C8000AF79C3 /* SocialMediaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMediaApp.entitlements; sourceTree = "<group>"; };
 		71578F321D841DA5004B56AE /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
-		71A2E6EA1DB795AE009061D4 /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		718BA3C01DC8BE3D00E764C0 /* VCExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExt.swift; sourceTree = "<group>"; };
+		718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
+		718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLogin.swift; sourceTree = "<group>"; };
+		71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewVC.swift; sourceTree = "<group>"; };
 		71A9EAE51DAA6887003B08BD /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		71CE62501D858C66002C5B0B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		71CE62521D8692C5002C5B0B /* CellFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellFeed.swift; sourceTree = "<group>"; };
@@ -158,6 +166,7 @@
 		713B12E41D7D713F00AF79C3 /* SocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				718BA3BF1DC8BDE900E764C0 /* Extensions */,
 				712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */,
 				71CE62541D882D2E002C5B0B /* Services */,
 				713B13241D803C8000AF79C3 /* SocialMediaApp.entitlements */,
@@ -192,7 +201,7 @@
 				713B13221D7EC94800AF79C3 /* ShadowButton.swift */,
 				713B13191D7EBD5700AF79C3 /* ShadowView.swift */,
 				71FE20921DAD32D50036FE9F /* TapImageView.swift */,
-				71A2E6EA1DB795AE009061D4 /* PopUpView.swift */,
+				718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -205,6 +214,7 @@
 				7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */,
 				7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */,
 				7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */,
+				71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -230,10 +240,20 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		718BA3BF1DC8BDE900E764C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				718BA3C01DC8BE3D00E764C0 /* VCExt.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		71CE62541D882D2E002C5B0B /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				71CE62551D882D6A002C5B0B /* DataService.swift */,
+				718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */,
+				718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -540,7 +560,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
 				7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */,
+				718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */,
 				71EF4ABE1DAE5AAC00076B56 /* RoundedTextView.swift in Sources */,
 				71CE62511D858C66002C5B0B /* CircleView.swift in Sources */,
 				71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */,
@@ -551,13 +573,15 @@
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
+				718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */,
 				7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */,
 				71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */,
+				718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */,
 				71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */,
 				71578F331D841DA5004B56AE /* FeedVC.swift in Sources */,
 				7127F7841DBF96B700446302 /* LeftSlideMenuVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
-				71A2E6EB1DB795AE009061D4 /* PopUpView.swift in Sources */,
+				71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,
 				713B13231D7EC94800AF79C3 /* ShadowButton.swift in Sources */,
 				713B131D1D7EBE2D00AF79C3 /* Constants.swift in Sources */,

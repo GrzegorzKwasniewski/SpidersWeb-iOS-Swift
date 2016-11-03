@@ -16,6 +16,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
+    var popUpView = PopUpViewVC()
     var currentUserUid = String()
     var posts = [Post]()
     var imagePicker = UIImagePickerController()
@@ -28,6 +29,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //popUpView = instantiatePopUpView()
+        
         
         if let currentFirebaseUser = FIRAuth.auth()?.currentUser {
             currentUserUid = currentFirebaseUser.uid
@@ -46,7 +50,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 for snap in snapshots {
                     print("SNAP: \(snap)")
                     if let snapDictionary = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key // it default property from Firebase
+                        let key = snap.key // it's default property from Firebase
                         let post = Post(postID: key, postData: snapDictionary)
                         self.posts.append(post)
                     }
@@ -83,13 +87,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             return CellFeed()
         }
     }
-    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            posts.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
