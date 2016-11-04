@@ -11,15 +11,16 @@ import Firebase
 import TwitterKit
 
 class TwitterLogin {
-    static let login = TwitterLogin()
     
-    func loginWithTwitter() {
+    static let sharedInstance = TwitterLogin()
+    
+    func signInWithTwitter() {
         Twitter.sharedInstance().logIn() { (session, error) in
             if let session = session {
                 // [START headless_twitter_auth]
                 let credential = FIRTwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
                 // [END headless_twitter_auth]
-                FirebaseLogin.login.firebaseAuthentication(credential)
+                FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
             } else {
                 print("README: Error while authenticating with Twitter")
             }

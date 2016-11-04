@@ -6,7 +6,7 @@
 //  Copyright © 2016 Grzegorz Kwaśniewski. All rights reserved.
 //
 
-protocol FirebaseLoginDelegate: class {
+protocol CompleteSignInWthFirebaseDelegate: class {
     
     func completeSignIn(id: String, userData: Dictionary<String, String>)
     

@@ -7,17 +7,12 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 import Firebase
-import GoogleSignIn
-import SwiftKeychainWrapper
-import TwitterKit
 
 class FirebaseLogin {
     
-    static let login = FirebaseLogin()
-    weak var delegate: FirebaseLoginDelegate?
+    static let sharedInstance = FirebaseLogin()
+    weak var delegate: CompleteSignInWthFirebaseDelegate?
     
     func firebaseAuthentication(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in

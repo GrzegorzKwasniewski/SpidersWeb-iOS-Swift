@@ -11,8 +11,8 @@ import Firebase
 
 class EmailLogin {
 
-    static let login = EmailLogin()
-    weak var delegate: FirebaseLoginDelegate?
+    static let sharedInstance = EmailLogin()
+    weak var delegate: CompleteSignInWthFirebaseDelegate?
     
     func signInWithEmail(emailField: UITextField, passwordField: UITextField) {
             if let email = emailField.text, let password = passwordField.text {

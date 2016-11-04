@@ -14,15 +14,15 @@ import GoogleSignIn
 import SwiftKeychainWrapper
 import TwitterKit
 
-class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, FirebaseLoginDelegate {
+class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, CompleteSignInWthFirebaseDelegate {
         
     @IBOutlet var emailField: RoundedBorderTextField!
     @IBOutlet var passwordField: RoundedBorderTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseLogin.login.delegate = self
-        EmailLogin.login.delegate = self
+        FirebaseLogin.sharedInstance.delegate = self
+        EmailLogin.sharedInstance.delegate = self
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
@@ -36,58 +36,21 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, Fireba
     }
     
     @IBAction func twitterSignInButton(_ sender: AnyObject) {
-        TwitterLogin.login.loginWithTwitter()
+        TwitterLogin.sharedInstance.signInWithTwitter()
     }
     
     @IBAction func googleSignInButton(_ sender: AnyObject) {
         GIDSignIn.sharedInstance().signIn()
     }
     
-    func firebaseAuth(_ credential: FIRAuthCredential) {
-        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-            if error != nil {
-                print("README: Unable to authenticate with Firebase. ERROR: \(error)")
-            } else {
-                print("README: Succesfuly authenticeted with Firebase")
-                // store user UID using Keychains
-                if let firebaseUser = user {
-                    var firebaseUserName = ""
-                    if let userName = firebaseUser.displayName {
-                        firebaseUserName = userName
-                    }
-                    let userData: Dictionary<String, String> = [
-                        "provider": credential.provider,
-                        "userName": firebaseUserName,
-                        "photoUrl": String(describing: firebaseUser.photoURL)
-                    ]
-                    self.completeSignIn(id: firebaseUser.uid, userData: userData)
-                }
-            }
-        })
-    }
-    
     // password need to have at least six characters
     // check for internet connection first
     @IBAction func signInAction(_ sender: AnyObject) {
-        EmailLogin.login.signInWithEmail(emailField: emailField, passwordField: passwordField)
+        EmailLogin.sharedInstance.signInWithEmail(emailField: emailField, passwordField: passwordField)
     }
     
     @IBAction func facebookButtonAction(_ sender: AnyObject) {
-        
-        let facebookLogin = FBSDKLoginManager()
-        
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
-            
-            if error != nil {
-                print("README: Can't get data form Facebook. Return ERROR: \(error)")
-            } else if result?.isCancelled == true { // if user deny permissions
-                print("README: User cancelled user authentication")
-            } else {
-                print("README: Successfuly authenticated with Facebook")
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.firebaseAuth(credential)
-            }
-        }
+        FacebookLogin.sharedInstance.signInWithFacebook()
     }
     
     // [START headless_google_auth]
@@ -100,7 +63,7 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, Fireba
         let authentication = user.authentication
         let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
                                                           accessToken: (authentication?.accessToken)!)
-        firebaseAuth(credential)
+        FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
     }
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
