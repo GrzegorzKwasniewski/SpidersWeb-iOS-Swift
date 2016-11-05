@@ -19,28 +19,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var profileImage: ProfileImage!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmail: UILabel!
-    
-    @IBAction func changeUserName(_ sender: AnyObject) {
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let currentUser = user {
-                let changeRequest = currentUser.profileChangeRequest()
-                changeRequest.displayName = "Jane Q. User"
-                changeRequest.commitChanges { error in
-                    if let error = error {
-                        print("README: Error while trying to change user data")
-                    } else {
-                        // Profile updated.
-                    }
-                }
-            } else {
-                print("REDAME: There's no user signed in")
-            }
-        }
-    }
-    
-    @IBAction func BackButton(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +48,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     override func viewDidAppear(_ animated: Bool) {
-    }
-    
-    @IBAction func selectAvatarAction(_ sender: AnyObject) {
-        present(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -123,6 +97,32 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    @IBAction func changeUserName(_ sender: AnyObject) {
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let currentUser = user {
+                let changeRequest = currentUser.profileChangeRequest()
+                changeRequest.displayName = "Jane Q. User"
+                changeRequest.commitChanges { error in
+                    if let error = error {
+                        print("README: Error while trying to change user data")
+                    } else {
+                        // Profile updated.
+                    }
+                }
+            } else {
+                print("REDAME: There's no user signed in")
+            }
+        }
+    }
+    
+    @IBAction func BackButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func selectAvatarAction(_ sender: AnyObject) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     @IBAction func changeUserData(_ sender: AnyObject) {
             let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpView") as! PopUpViewVC
             self.addChildViewController(popUpView)
@@ -130,5 +130,4 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.view.addSubview(popUpView.view)
             popUpView.didMove(toParentViewController: self)
     }
-    
 }

@@ -40,6 +40,7 @@ class EmailLogin {
                                 "userName": firebaseUserName,
                                 "photoUrl": userPhotoUrl
                             ]
+                            
                             self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
                         }
                     } else {
@@ -69,6 +70,7 @@ class EmailLogin {
                                         "userName": firebaseUserName,
                                         "photoUrl": userPhotoUrl
                                     ]
+                                    
                                     self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
                                 }
                             }

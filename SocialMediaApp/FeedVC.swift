@@ -98,6 +98,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
+    // MOVE TO OTHER PLACE
     func postToFirebase(imageUrl: String) {
         
         let post: Dictionary<String, AnyObject> = [
