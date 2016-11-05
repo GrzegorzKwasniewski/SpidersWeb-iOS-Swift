@@ -533,12 +533,12 @@
                                     <outletCollection property="gestureRecognizers" destination="K4f-jE-hrK" appends="YES" id="NpA-nz-JJ6"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WB-N0-3L3">
-                                <frame key="frameInset" minX="129" minY="569" width="117" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lf5-8f-rRy">
+                                <frame key="frameInset" minX="288" minY="326" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change"/>
                                 <connections>
-                                    <action selector="changeUserData:" destination="fUf-KF-t9b" eventType="touchUpInside" id="AjR-dX-lkk"/>
+                                    <action selector="changeUserData:" destination="fUf-KF-t9b" eventType="touchUpInside" id="PSf-r9-Y6n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -582,6 +582,69 @@
             </objects>
             <point key="canvasLocation" x="1727.2" y="122.78860569715144"/>
         </scene>
+        <!--Change User Name Pop UpVC-->
+        <scene sceneID="SiN-3x-fWA">
+            <objects>
+                <viewController storyboardIdentifier="changeUserName" id="KCL-jz-8GO" customClass="ChangeUserNamePopUpVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zg4-1C-5ys"/>
+                        <viewControllerLayoutGuide type="bottom" id="65q-Cm-i7U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oRp-4e-fZi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mcz-w9-Sgl">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-LB-Fb4">
+                                        <frame key="frameInset" minX="42" minY="125" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmM-xC-29V">
+                                        <frame key="frameInset" minX="147" minY="125" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="changeUserName:" destination="KCL-jz-8GO" eventType="touchUpInside" id="WbB-Y6-Rag"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Siz-w4-Zv7"/>
+                                    <constraint firstAttribute="height" constant="180" id="uYl-S0-bir"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is Your new name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-6Q-wKa">
+                                <frame key="frameInset" minX="79" minY="278" width="216" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gef-T5-jfh">
+                                <frame key="frameInset" minX="79" minY="318" width="216" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mcz-w9-Sgl" firstAttribute="centerX" secondItem="oRp-4e-fZi" secondAttribute="centerX" id="NZv-oX-52d"/>
+                            <constraint firstItem="Mcz-w9-Sgl" firstAttribute="centerY" secondItem="oRp-4e-fZi" secondAttribute="centerY" id="qmK-S5-hPo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userName" destination="gef-T5-jfh" id="b21-Hf-f49"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVe-Df-tfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450.4000000000001" y="122.78860569715144"/>
+        </scene>
         <!--Pop Up ViewVC-->
         <scene sceneID="m2f-HV-GKU">
             <objects>
@@ -609,7 +672,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lf-zE-vOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2487.1999999999998" y="122.78860569715144"/>
+            <point key="canvasLocation" x="1727" y="794"/>
         </scene>
     </scenes>
     <resources>

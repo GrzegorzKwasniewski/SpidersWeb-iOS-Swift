@@ -97,24 +97,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    @IBAction func changeUserName(_ sender: AnyObject) {
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let currentUser = user {
-                let changeRequest = currentUser.profileChangeRequest()
-                changeRequest.displayName = "Jane Q. User"
-                changeRequest.commitChanges { error in
-                    if let error = error {
-                        print("README: Error while trying to change user data")
-                    } else {
-                        // Profile updated.
-                    }
-                }
-            } else {
-                print("REDAME: There's no user signed in")
-            }
-        }
-    }
-    
     @IBAction func BackButton(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -124,7 +106,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func changeUserData(_ sender: AnyObject) {
-            let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpView") as! PopUpViewVC
+            let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "changeUserName") as! ChangeUserNamePopUpVC
             self.addChildViewController(popUpView)
             popUpView.view.frame = self.view.frame
             self.view.addSubview(popUpView.view)
