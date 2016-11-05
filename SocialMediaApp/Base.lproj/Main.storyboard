@@ -600,6 +600,9 @@
                                         <frame key="frameInset" minX="42" minY="125" width="62" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="removePopUp:" destination="KCL-jz-8GO" eventType="touchUpInside" id="RUg-OH-tVo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmM-xC-29V">
                                         <frame key="frameInset" minX="147" minY="125" width="46" height="30"/>
