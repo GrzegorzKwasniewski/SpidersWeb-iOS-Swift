@@ -45,9 +45,17 @@ class ChangeUserEmailVC: UIViewController {
         
         user?.updateEmail(self.userEmail.text!) { error in
             if let error = error {
-                print("REDAME: Can't change email")
+                print("README: Can't change email")
+                print("README \(error)")
             } else {
-                print("REDAME: Email have been changed")
+                print("README: Email have been changed")
+                user?.sendEmailVerification() { error in
+                    if let error = error {
+                        print("README: Error while sending veryfication email")
+                    } else {
+                        print("README: Verification email send")
+                    }
+                }
             }
         }
     }
