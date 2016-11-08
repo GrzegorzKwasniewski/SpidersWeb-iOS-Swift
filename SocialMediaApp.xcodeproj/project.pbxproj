@@ -11,6 +11,8 @@
 		7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */; };
 		7111C7E51DCCB3270012D32C /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C7E41DCCB3270012D32C /* FacebookLogin.swift */; };
 		7111C7E71DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C7E61DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift */; };
+		7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C7E81DCDFA080012D32C /* ChangeUserEmailVC.swift */; };
+		7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C7EA1DCDFEED0012D32C /* ReAuthenticateUserVC.swift */; };
 		7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */; };
 		7127F7841DBF96B700446302 /* LeftSlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */; };
 		712C33561DA2A481006DD610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712C33551DA2A481006DD610 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
 		7111C7E41DCCB3270012D32C /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
 		7111C7E61DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeUserNamePopUpVC.swift; sourceTree = "<group>"; };
+		7111C7E81DCDFA080012D32C /* ChangeUserEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeUserEmailVC.swift; sourceTree = "<group>"; };
+		7111C7EA1DCDFEED0012D32C /* ReAuthenticateUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReAuthenticateUserVC.swift; sourceTree = "<group>"; };
 		7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuContainerVC.swift; sourceTree = "<group>"; };
 		7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideMenuVC.swift; sourceTree = "<group>"; };
 		712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialMediaApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -151,6 +155,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7111C7EC1DD07A310012D32C /* PopUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				7111C7E61DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift */,
+				7111C7E81DCDFA080012D32C /* ChangeUserEmailVC.swift */,
+				7111C7EA1DCDFEED0012D32C /* ReAuthenticateUserVC.swift */,
+			);
+			name = PopUpVC;
+			sourceTree = "<group>";
+		};
 		713B12D91D7D713F00AF79C3 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +188,7 @@
 		713B12E41D7D713F00AF79C3 /* SocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				7111C7EC1DD07A310012D32C /* PopUpVC */,
 				71EB43491DCBBDF000142783 /* Delegates */,
 				718BA3BF1DC8BDE900E764C0 /* Extensions */,
 				712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */,
@@ -224,7 +239,6 @@
 				7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */,
 				7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */,
 				71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */,
-				7111C7E61DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -588,6 +602,7 @@
 				71EF4ABE1DAE5AAC00076B56 /* RoundedTextView.swift in Sources */,
 				71CE62511D858C66002C5B0B /* CircleView.swift in Sources */,
 				71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */,
+				7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */,
 				713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */,
 				71CE62581D893323002C5B0B /* Post.swift in Sources */,
 				713B131F1D7EC1E100AF79C3 /* RoundButton.swift in Sources */,
@@ -604,6 +619,7 @@
 				7127F7841DBF96B700446302 /* LeftSlideMenuVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
 				71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
+				7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */,
 				71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,
 				7111C7E71DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift in Sources */,

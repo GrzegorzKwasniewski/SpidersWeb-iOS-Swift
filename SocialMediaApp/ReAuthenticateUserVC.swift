@@ -1,5 +1,5 @@
 //
-//  ChangeUserNamePopUp.swift
+//  ReAuthenticateUserVC.swift
 //  SocialMediaApp
 //
 //  Created by Grzegorz Kwaśniewski on 05/11/16.
@@ -9,15 +9,16 @@
 import UIKit
 import Firebase
 
-class ChangeUserNamePopUpVC: UIViewController {
+class ReAuthenticateUserVC: UIViewController {
     
-    @IBOutlet var userName: UITextField!
+    @IBOutlet var emailField: UITextField!
+    @IBOutlet var passwordField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         showAnimate()
     }
-    
+
     func showAnimate() {
         self.view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
         self.view.alpha = 0.0;
@@ -38,30 +39,30 @@ class ChangeUserNamePopUpVC: UIViewController {
         })
     }
     
-    @IBAction func changeUserName(_ sender: AnyObject) {
+    @IBAction func reAuthenticateUser(_ sender: AnyObject) {
         
-        // Validate user name
+        let user = FIRAuth.auth()?.currentUser
+        var credential: FIRAuthCredential!
         
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let currentUser = user {
-                let changeRequest = currentUser.profileChangeRequest()
-                changeRequest.displayName = self.userName.text
-                changeRequest.commitChanges { error in
-                    if let error = error {
-                        print("README: Error while trying to change user data")
-                    } else {
-                        // inform user about succes of update - supply any additional info like when changes will be visible
-                        // Profile updated.
-                    }
+        if let userEmail = self.emailField.text, let userPassword = self.passwordField.text {
+            credential = FIREmailPasswordAuthProvider.credential(withEmail: userEmail, password: userPassword)
+            user?.reauthenticate(with: credential) { error in
+                if let error = error {
+                    print("README: Can't reauthenticated the user")
+                    print("README: \(error)")
+                    // inform user about an error
+                    // An error happened.
+                } else {
+                    print("README: User reauthenticated")
+                    self.removeAnimate()
                 }
-            } else {
-                print("REDAME: There's no user signed in")
             }
         }
     }
     
-    @IBAction func removePopUp(_ sender: AnyObject) {
+    
+    @IBAction func closePopUpView(_ sender: AnyObject) {
         removeAnimate()
     }
-
+    
 }

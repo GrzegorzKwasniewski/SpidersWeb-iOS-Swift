@@ -1,5 +1,5 @@
 //
-//  ChangeUserNamePopUp.swift
+//  ChangeUserEmailVC.swift
 //  SocialMediaApp
 //
 //  Created by Grzegorz Kwaśniewski on 05/11/16.
@@ -9,15 +9,15 @@
 import UIKit
 import Firebase
 
-class ChangeUserNamePopUpVC: UIViewController {
+class ChangeUserEmailVC: UIViewController {
     
-    @IBOutlet var userName: UITextField!
+    @IBOutlet var userEmail: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         showAnimate()
     }
-    
+
     func showAnimate() {
         self.view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
         self.view.alpha = 0.0;
@@ -38,24 +38,16 @@ class ChangeUserNamePopUpVC: UIViewController {
         })
     }
     
-    @IBAction func changeUserName(_ sender: AnyObject) {
+    @IBAction func changeUserEmail(_ sender: AnyObject) {
+        //var credential: FIRAuthCredential
+
+        let user = FIRAuth.auth()?.currentUser
         
-        // Validate user name
-        
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let currentUser = user {
-                let changeRequest = currentUser.profileChangeRequest()
-                changeRequest.displayName = self.userName.text
-                changeRequest.commitChanges { error in
-                    if let error = error {
-                        print("README: Error while trying to change user data")
-                    } else {
-                        // inform user about succes of update - supply any additional info like when changes will be visible
-                        // Profile updated.
-                    }
-                }
+        user?.updateEmail(self.userEmail.text!) { error in
+            if let error = error {
+                print("REDAME: Can't change email")
             } else {
-                print("REDAME: There's no user signed in")
+                print("REDAME: Email have been changed")
             }
         }
     }
@@ -63,5 +55,5 @@ class ChangeUserNamePopUpVC: UIViewController {
     @IBAction func removePopUp(_ sender: AnyObject) {
         removeAnimate()
     }
-
+    
 }

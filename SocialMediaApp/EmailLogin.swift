@@ -20,6 +20,9 @@ class EmailLogin {
                     if error == nil {
                         print("README: Email user authenticated with Firebase")
                         if let firebaseUser = user {
+                            
+                            // DO I NEED TO PROVIDE ONCE MORE THAT DATA???
+                            
                             var firebaseUserName = ""
                             var userPhotoUrl: String!
                             
