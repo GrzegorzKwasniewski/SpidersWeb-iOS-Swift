@@ -43,6 +43,7 @@ class ChangeUserEmailVC: UIViewController {
 
         let user = FIRAuth.auth()?.currentUser
         
+        // przed updatem przytnij jeszcze białe znaki na końcu i początku
         user?.updateEmail(self.userEmail.text!) { error in
             if let error = error {
                 print("README: Can't change email")
