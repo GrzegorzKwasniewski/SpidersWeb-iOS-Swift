@@ -43,20 +43,29 @@ class ChangeUserEmailVC: UIViewController {
 
         let user = FIRAuth.auth()?.currentUser
         
-        // przed updatem przytnij jeszcze białe znaki na końcu i początku
-        user?.updateEmail(self.userEmail.text!) { error in
-            if let error = error {
-                print("README: Can't change email")
-                print("README \(error)")
-            } else {
-                print("README: Email have been changed")
-                user?.sendEmailVerification() { error in
+        if let email = self.userEmail.text {
+            
+            let newEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            if RegEx.sharedInstance.validteEmailAddress(emailAddress: newEmail) {
+                user?.updateEmail(self.userEmail.text!) { error in
                     if let error = error {
-                        print("README: Error while sending veryfication email")
+                        print("README: Can't change email")
+                        print("README \(error)")
                     } else {
-                        print("README: Verification email send")
+                        print("README: Email have been changed")
+                        user?.sendEmailVerification() { error in
+                            if let error = error {
+                                print("README: Error while sending veryfication email")
+                            } else {
+                                print("README: Verification email send")
+                            }
+                        }
                     }
                 }
+            } else {
+                // show info to the user
+                print("README: This is not valid email")
             }
         }
     }
