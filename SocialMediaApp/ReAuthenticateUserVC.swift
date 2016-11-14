@@ -64,5 +64,4 @@ class ReAuthenticateUserVC: UIViewController {
     @IBAction func closePopUpView(_ sender: AnyObject) {
         removeAnimate()
     }
-    
 }

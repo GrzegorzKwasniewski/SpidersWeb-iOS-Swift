@@ -92,7 +92,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                 }
             } else {
-                print("REDAME: There's no user signed in")
+                print("README: There's no user signed in")
             }
         }
     }
@@ -129,5 +129,17 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         popUpView.didMove(toParentViewController: self)
     }
     
-    
+    @IBAction func resetUserPassword(_ sender: AnyObject) {
+        if let user = FIRAuth.auth()?.currentUser {
+            if let email = user.email {
+                FIRAuth.auth()?.sendPasswordReset(withEmail: email) { error in
+                    if let error = error {
+                        print("README: Can't send reset email")
+                    } else {
+                        print("README: Reset email was sent")
+                    }
+                }
+            }
+        }
+    }
 }
