@@ -7,20 +7,30 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 import SwiftKeychainWrapper
-import TwitterKit
 
-class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, CompleteSignInWthFirebaseDelegate {
+class SignInVC: UIViewController {
         
     @IBOutlet var emailField: RoundedBorderTextField!
     @IBOutlet var passwordField: RoundedBorderTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*let url = URL(string: "http://pbs.twimg.com/profile_images/731965712743403520/aF8xV8lE_normal.jpg")
+        print("README: \(url)")
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if (error != nil) {
+                print("README: \(error)")
+            } else {
+                print("README: \(data)")
+                print("README: \(response)")
+            }
+        }.resume() */
+            
         FirebaseLogin.sharedInstance.delegate = self
         EmailLogin.sharedInstance.delegate = self
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
@@ -52,6 +62,9 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, Comple
     @IBAction func facebookButtonAction(_ sender: AnyObject) {
         FacebookLogin.sharedInstance.signInWithFacebook()
     }
+}
+
+extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
     
     // [START headless_google_auth]
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
@@ -64,6 +77,9 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, Comple
                                                           accessToken: (authentication?.accessToken)!)
         FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
     }
+}
+
+extension SignInVC: CompleteSignInWthFirebaseDelegate {
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
@@ -72,6 +88,5 @@ class SignInVC: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, Comple
         print("SEGUE: Perform")
         performSegue(withIdentifier: "goToFeedVC", sender: nil)
     }
-
 }
 

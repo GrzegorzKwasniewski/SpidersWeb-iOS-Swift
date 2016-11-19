@@ -72,7 +72,6 @@ class DataService {
             
             if let currentUserName = currentUser.displayName {
                 userName = currentUserName
-                print("README here: \(userName)")
             } else {
                 userName = "Not specified"
             }
@@ -84,13 +83,35 @@ class DataService {
             }
             
             if let currentUserPhotoUrl = currentUser.photoURL {
+
                 let photoUrlForFirebase = "\(currentUserPhotoUrl)"
                 
                 if let userImageFromCache = FeedVC.imageCache.object(forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString) {
                     userImage = userImageFromCache
                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
                 } else {
-                    let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
+                    
+                    /*let url = URL(string: "http://pbs.twimg.com/profile_images/731965712743403520/aF8xV8lE_normal.jpg")
+                     print("README: \(url)") */
+                     
+                     URLSession.shared.dataTask(with: currentUserPhotoUrl) { (data, response, error) in
+                     if (error != nil) {
+                     print("README: \(error)")
+                     } else {
+                        print("README: \(data)")
+                        print("README: \(response)")
+                        print("README: Image downloaded from Firebase storage")
+                        if let imageData = data {
+                            if let imageFromData = UIImage(data: imageData) {
+                                userImage = imageFromData
+                                firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
+                                FeedVC.imageCache.setObject(userImage, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
+                            }
+                        }
+                     }
+                     }.resume()
+                    
+                    /*let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
                     ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
                         if error != nil {
                             print("README: Unable to dwonload image from Firebase storage - error \(error)")
@@ -98,13 +119,14 @@ class DataService {
                             print("README: Image downloaded from Firebase storage")
                             if let imageData = data {
                                 if let imageFromData = UIImage(data: imageData) {
+                                    print("README: Here3")
                                     userImage = imageFromData
                                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
-                                    FeedVC.imageCache.setObject(imageFromData, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
+                                    FeedVC.imageCache.setObject(userImage, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
                                 }
                             }
                         }
-                    })
+                    }) */
                 }
             } else {
                 userImage = UIImage(named: DEFAULT_AVATAR)
@@ -114,5 +136,13 @@ class DataService {
             print("REDAME: There's no user signed in")
             firebaseUser(FirebaseUser(), false)
         }
+    }
+    
+    // testing
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
     }
 }

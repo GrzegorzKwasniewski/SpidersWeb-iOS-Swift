@@ -11,6 +11,8 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
+var isFacebook = false
+
 class FacebookLogin {
 
     static let sharedInstance = FacebookLogin()
@@ -28,6 +30,7 @@ class FacebookLogin {
             } else {
                 print("README: Successfuly authenticated with Facebook")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                isFacebook = true
                 FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
             }
         }
