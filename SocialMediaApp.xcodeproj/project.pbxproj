@@ -14,6 +14,7 @@
 		7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C7E81DCDFA080012D32C /* ChangeUserEmailVC.swift */; };
 		7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C7EA1DCDFEED0012D32C /* ReAuthenticateUserVC.swift */; };
 		7111C80C1DD4DC530012D32C /* RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C80B1DD4DC530012D32C /* RegEx.swift */; };
+		7111C8251DE1BB8B0012D32C /* ChangeUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C8241DE1BB8B0012D32C /* ChangeUserSettings.swift */; };
 		7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */; };
 		7127F7841DBF96B700446302 /* LeftSlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */; };
 		712C33561DA2A481006DD610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712C33551DA2A481006DD610 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		7111C7E81DCDFA080012D32C /* ChangeUserEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeUserEmailVC.swift; sourceTree = "<group>"; };
 		7111C7EA1DCDFEED0012D32C /* ReAuthenticateUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReAuthenticateUserVC.swift; sourceTree = "<group>"; };
 		7111C80B1DD4DC530012D32C /* RegEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegEx.swift; sourceTree = "<group>"; };
+		7111C8241DE1BB8B0012D32C /* ChangeUserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeUserSettings.swift; sourceTree = "<group>"; };
 		7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuContainerVC.swift; sourceTree = "<group>"; };
 		7127F7831DBF96B700446302 /* LeftSlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideMenuVC.swift; sourceTree = "<group>"; };
 		712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialMediaApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */,
 				7111C7E41DCCB3270012D32C /* FacebookLogin.swift */,
 				7111C80B1DD4DC530012D32C /* RegEx.swift */,
+				7111C8241DE1BB8B0012D32C /* ChangeUserSettings.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
+				7111C8251DE1BB8B0012D32C /* ChangeUserSettings.swift in Sources */,
 				718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */,
 				7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */,
 				71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */,

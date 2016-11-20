@@ -39,34 +39,17 @@ class ChangeUserEmailVC: UIViewController {
     }
     
     @IBAction func changeUserEmail(_ sender: AnyObject) {
-        //var credential: FIRAuthCredential
-
-        let user = FIRAuth.auth()?.currentUser
+        let changeUserSettings = ChangeUserSettings()
         
-        if let email = self.userEmail.text {
-            
-            let newEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            if RegEx.sharedInstance.validteEmailAddress(emailAddress: newEmail) {
-                user?.updateEmail(self.userEmail.text!) { error in
-                    if let error = error {
-                        print("README: Can't change email")
-                        print("README \(error)")
-                    } else {
-                        print("README: Email have been changed")
-                        user?.sendEmailVerification() { error in
-                            if let error = error {
-                                print("README: Error while sending veryfication email")
-                            } else {
-                                print("README: Verification email send")
-                            }
-                        }
-                    }
-                }
+        if let newUserEmail = self.userEmail.text {
+            if !newUserEmail.isEmpty {
+                changeUserSettings.changeUserEmail(userNewEmail: newUserEmail)
             } else {
-                // show info to the user
-                print("README: This is not valid email")
+                print("README: New user email filed is empty1")
             }
+        } else {
+            // info user that field can't be empty
+            print("README: New user email filed is empty2")
         }
     }
     

@@ -20,8 +20,8 @@ class RegEx {
             
             regEx? = try NSRegularExpression(pattern: regExPattern, options: .caseInsensitive)
             
-        } catch {
-            
+        } catch let error {
+            print("README: Error while validating Regex \(error)")
         }
 
         let range = NSMakeRange(0, emailAddress.characters.count)

@@ -98,7 +98,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func BackButton(_ sender: AnyObject) {
-        //self.dismiss(animated: true, completion: nil)
         if let slideMenuController = self.slideMenuController() {
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "Main") {
                 let mainViewController = controller
