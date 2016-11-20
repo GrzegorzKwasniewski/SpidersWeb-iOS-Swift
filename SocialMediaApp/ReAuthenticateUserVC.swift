@@ -21,21 +21,16 @@ class ReAuthenticateUserVC: UIViewController {
     
     @IBAction func reAuthenticateUser(_ sender: AnyObject) {
         
-        let user = FIRAuth.auth()?.currentUser
-        var credential: FIRAuthCredential!
+        let changeUserSettings = ChangeUserSettings()
         
-        if let userEmail = self.emailField.text, let userPassword = self.passwordField.text {
-            credential = FIREmailPasswordAuthProvider.credential(withEmail: userEmail, password: userPassword)
-            user?.reauthenticate(with: credential) { error in
-                if let error = error {
-                    print("README: Can't reauthenticated the user")
-                    print("README: \(error)")
-                    // inform user about an error
-                    // An error happened.
-                } else {
-                    print("README: User reauthenticated")
-                    self.removeAnimate()
-                }
+        changeUserSettings.reAuthenticateUserWithEmail(email: self.emailField.text!, password: self.passwordField.text!) { (success) in
+            if (success) {
+                print("README: User reauthenticated")
+                self.removeAnimate()
+            } else {
+                print("README: Can't reauthenticated the user")
+                // inform user about an error
+                // An error happened.
             }
         }
     }

@@ -11,6 +11,22 @@ import Firebase
 
 class ChangeUserSettings {
     
+    func reAuthenticateUserWithEmail(email: String, password: String, completion: @escaping (Bool) -> Void) {
+        
+        let user = FIRAuth.auth()?.currentUser
+        // is it safe???
+        var credential: FIRAuthCredential!
+
+        credential = FIREmailPasswordAuthProvider.credential(withEmail: email, password: password)
+        user?.reauthenticate(with: credential) { error in
+            if let error = error {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
     func changeUserEmail(userNewEmail: String) {
         
         if let currentuser = FIRAuth.auth()?.currentUser {
