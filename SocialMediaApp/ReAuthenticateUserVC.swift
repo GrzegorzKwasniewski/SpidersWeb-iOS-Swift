@@ -23,15 +23,23 @@ class ReAuthenticateUserVC: UIViewController {
         
         let changeUserSettings = ChangeUserSettings()
         
-        changeUserSettings.reAuthenticateUserWithEmail(email: self.emailField.text!, password: self.passwordField.text!) { (success) in
-            if (success) {
-                print("README: User reauthenticated")
-                self.removeAnimate()
+        if let userEmail = emailField.text, let userPassword = passwordField.text {
+            if !userEmail.isEmpty && !userPassword.isEmpty {
+                changeUserSettings.reAuthenticateUserWithEmail(email: userEmail, password: userPassword) { (success) in
+                    if (success) {
+                        print("README: User reauthenticated")
+                        self.removeAnimate()
+                    } else {
+                        print("README: Can't reauthenticated the user")
+                        // inform user about an error
+                        // An error happened.
+                    }
+                }
             } else {
-                print("README: Can't reauthenticated the user")
-                // inform user about an error
-                // An error happened.
+                print("REDAME: Try to reAuth but fields are empty1")
             }
+        } else {
+            print("REDAME: Try to reAuth but fields are empty2")
         }
     }
     

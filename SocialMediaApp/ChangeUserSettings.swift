@@ -27,11 +27,37 @@ class ChangeUserSettings {
         }
     }
     
+    func changeUserDisplayName(newDisplayName: String, completion: @escaping (Bool) -> Void) {
+        
+        if RegEx.sharedInstance.validteString(emailAddress: newDisplayName, typeOfString: .userDisplayName) {
+            
+            FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+                if let currentUser = user {
+                    let changeRequest = currentUser.profileChangeRequest()
+                    changeRequest.displayName = newDisplayName
+                    changeRequest.commitChanges { error in
+                        if let error = error {
+                            print("README: Error while trying to change user data")
+                            completion(false)
+                        } else {
+                            // inform user about succes of update - supply any additional info like when changes will be visible
+                            // Profile updated.
+                            completion(true)
+                        }
+                    }
+                } else {
+                    print("REDAME: There's no user signed in")
+                    completion(false)
+                }
+            }
+        }
+    }
+    
     func changeUserEmail(userNewEmail: String) {
         
         if let currentuser = FIRAuth.auth()?.currentUser {
             let newEmail = userNewEmail.trimmingCharacters(in: .whitespacesAndNewlines)
-            if RegEx.sharedInstance.validteEmailAddress(emailAddress: newEmail) {
+            if RegEx.sharedInstance.validteString(emailAddress: newEmail, typeOfString: .emailAddress) {
                 currentuser.updateEmail(userNewEmail) { error in
                     if let error = error {
                         print("README: Can't change email")

@@ -8,12 +8,26 @@
 
 import Foundation
 
+enum TypeOfStringToValidate {
+    case emailAddress
+    case userDisplayName
+}
+
 class RegEx {
 
     static let sharedInstance = RegEx()
     
-    func validteEmailAddress(emailAddress: String) -> Bool {
-        let regExPattern = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+    func validteString(emailAddress: String, typeOfString: TypeOfStringToValidate) -> Bool {
+        
+        var regExPattern = String()
+        
+        switch typeOfString {
+        case .emailAddress:
+            regExPattern = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        case .userDisplayName:
+            regExPattern = "^[a-z][A-Z]{0,10}$"
+        }
+        
         var regEx:NSRegularExpression?
         
         do {

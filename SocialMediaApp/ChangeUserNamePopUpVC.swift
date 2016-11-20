@@ -22,21 +22,24 @@ class ChangeUserNamePopUpVC: UIViewController {
         
         // Validate user name
         
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let currentUser = user {
-                let changeRequest = currentUser.profileChangeRequest()
-                changeRequest.displayName = self.userName.text
-                changeRequest.commitChanges { error in
-                    if let error = error {
-                        print("README: Error while trying to change user data")
+        let changeUserSettings = ChangeUserSettings()
+        
+        if let userName = userName.text {
+            if !userName.isEmpty {
+                changeUserSettings.changeUserDisplayName(newDisplayName: userName) { (success) in
+                    if (success) {
+                        print("README: User display name was changed")
+                        self.removeAnimate()
                     } else {
-                        // inform user about succes of update - supply any additional info like when changes will be visible
-                        // Profile updated.
+                        print("README: Can't change user display name")
+                        // inform user about an error
                     }
                 }
             } else {
-                print("REDAME: There's no user signed in")
+                print("REDAME: Try to change user display name but fields are empty1")
             }
+        } else {
+            print("REDAME: Try to change user display name but fields are empty2")
         }
     }
     
