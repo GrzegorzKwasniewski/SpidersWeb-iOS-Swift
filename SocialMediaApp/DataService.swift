@@ -90,14 +90,12 @@ class DataService {
                     userImage = userImageFromCache
                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
                 } else {
-                    
-                    /*let url = URL(string: "http://pbs.twimg.com/profile_images/731965712743403520/aF8xV8lE_normal.jpg")
-                     print("README: \(url)") */
                      
                      URLSession.shared.dataTask(with: currentUserPhotoUrl) { (data, response, error) in
                         if (error != nil) {
                             userImage = UIImage(named: DEFAULT_AVATAR)
                             firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
+                            
                         } else {
                             print("README: Image downloaded from auth provider")
                             if let imageData = data {
