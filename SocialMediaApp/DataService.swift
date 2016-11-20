@@ -95,21 +95,20 @@ class DataService {
                      print("README: \(url)") */
                      
                      URLSession.shared.dataTask(with: currentUserPhotoUrl) { (data, response, error) in
-                     if (error != nil) {
-                     print("README: \(error)")
-                     } else {
-                        print("README: \(data)")
-                        print("README: \(response)")
-                        print("README: Image downloaded from Firebase storage")
-                        if let imageData = data {
-                            if let imageFromData = UIImage(data: imageData) {
-                                userImage = imageFromData
-                                firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
-                                FeedVC.imageCache.setObject(userImage, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
+                        if (error != nil) {
+                            userImage = UIImage(named: DEFAULT_AVATAR)
+                            firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
+                        } else {
+                            print("README: Image downloaded from auth provider")
+                            if let imageData = data {
+                                if let imageFromData = UIImage(data: imageData) {
+                                    userImage = imageFromData
+                                    firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
+                                    FeedVC.imageCache.setObject(userImage, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
+                                    }
+                                }
                             }
-                        }
-                     }
-                     }.resume()
+                        } .resume()
                     
                     /*let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
                     ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
@@ -143,6 +142,6 @@ class DataService {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             completion(data, response, error)
-            }.resume()
+        }.resume()
     }
 }
