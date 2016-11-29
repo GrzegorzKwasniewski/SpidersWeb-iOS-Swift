@@ -13,16 +13,19 @@ class ChangeUserSettings {
     
     func reAuthenticateUserWithEmail(email: String, password: String, completion: @escaping (Bool) -> Void) {
         
-        let user = FIRAuth.auth()?.currentUser
         // is it safe???
         var credential: FIRAuthCredential!
-
-        credential = FIREmailPasswordAuthProvider.credential(withEmail: email, password: password)
-        user?.reauthenticate(with: credential) { error in
-            if let error = error {
-                completion(false)
-            } else {
-                completion(true)
+        
+        if let currentUser = FIRAuth.auth()?.currentUser {
+            credential = FIREmailPasswordAuthProvider.credential(withEmail: email, password: password)
+            currentUser.reauthenticate(with: credential) { error in
+                if let error = error {
+                    print("README: Error while trying to reauthenticate user")
+                    print("README: \(error)")
+                    completion(false)
+                } else {
+                    completion(true)
+                }
             }
         }
     }
@@ -30,25 +33,23 @@ class ChangeUserSettings {
     func changeUserDisplayName(newDisplayName: String, completion: @escaping (Bool) -> Void) {
         
         if RegEx.sharedInstance.validteString(emailAddress: newDisplayName, typeOfString: .userDisplayName) {
-            
-            FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-                if let currentUser = user {
-                    let changeRequest = currentUser.profileChangeRequest()
-                    changeRequest.displayName = newDisplayName
-                    changeRequest.commitChanges { error in
-                        if let error = error {
-                            print("README: Error while trying to change user data")
-                            completion(false)
-                        } else {
-                            // inform user about succes of update - supply any additional info like when changes will be visible
-                            // Profile updated.
-                            completion(true)
-                        }
+            if let currentUser = FIRAuth.auth()?.currentUser {
+                let changeRequest = currentUser.profileChangeRequest()
+                changeRequest.displayName = newDisplayName
+                changeRequest.commitChanges { error in
+                    if let error = error {
+                        print("README: Error while trying to change user data")
+                        print("README \(error)")
+                        completion(false)
+                    } else {
+                        // inform user about succes of update - supply any additional info like when changes will be visible
+                        // Profile updated.
+                        completion(true)
                     }
-                } else {
-                    print("REDAME: There's no user signed in")
-                    completion(false)
                 }
+            } else {
+                print("REDAME: There's no user signed in")
+                completion(false)
             }
         }
     }
@@ -78,6 +79,7 @@ class ChangeUserSettings {
         user.sendEmailVerification() { error in
             if let error = error {
                 print("README: Error while sending veryfication email")
+                print("README \(error)")
             } else {
                 print("README: Verification email send")
             }

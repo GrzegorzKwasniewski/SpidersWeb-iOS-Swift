@@ -36,10 +36,10 @@ class ReAuthenticateUserVC: UIViewController {
                     }
                 }
             } else {
-                print("REDAME: Try to reAuth but fields are empty1")
+                print("README: Try to reAuth but fields are empty1")
             }
         } else {
-            print("REDAME: Try to reAuth but fields are empty2")
+            print("README: Try to reAuth but fields are empty2")
         }
     }
     

@@ -20,8 +20,6 @@ class ChangeUserNamePopUpVC: UIViewController {
     
     @IBAction func changeUserName(_ sender: AnyObject) {
         
-        // Validate user name
-        
         let changeUserSettings = ChangeUserSettings()
         
         if let userName = userName.text {
@@ -36,10 +34,10 @@ class ChangeUserNamePopUpVC: UIViewController {
                     }
                 }
             } else {
-                print("REDAME: Try to change user display name but fields are empty1")
+                print("README: Try to change user display name but fields are empty1")
             }
         } else {
-            print("REDAME: Try to change user display name but fields are empty2")
+            print("README: Try to change user display name but fields are empty2")
         }
     }
     

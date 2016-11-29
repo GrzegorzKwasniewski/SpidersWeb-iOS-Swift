@@ -113,11 +113,11 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func changeUserData(_ sender: AnyObject) {
-            let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "changeUserName") as! ChangeUserNamePopUpVC
-            self.addChildViewController(popUpView)
-            popUpView.view.frame = self.view.frame
-            self.view.addSubview(popUpView.view)
-            popUpView.didMove(toParentViewController: self)
+        let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "changeUserName") as! ChangeUserNamePopUpVC
+        self.addChildViewController(popUpView)
+        popUpView.view.frame = self.view.frame
+        self.view.addSubview(popUpView.view)
+        popUpView.didMove(toParentViewController: self)
     }
     
     @IBAction func reAuth(_ sender: AnyObject) {

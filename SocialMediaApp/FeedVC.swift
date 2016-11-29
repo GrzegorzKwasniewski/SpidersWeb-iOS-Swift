@@ -171,7 +171,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBAction func forTestsOnlyAction(_ sender: AnyObject) {
         let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
-        print("KEYCHAIN: Keychain was removed - \(keychainResult)")
+        print("README: Keychain was removed - \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
         self.dismiss(animated: true, completion: nil)
     }
