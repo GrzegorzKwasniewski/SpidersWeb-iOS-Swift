@@ -32,7 +32,7 @@ class ChangeUserSettings {
     
     func changeUserDisplayName(newDisplayName: String, completion: @escaping (Bool) -> Void) {
         
-        if RegEx.sharedInstance.validteString(emailAddress: newDisplayName, typeOfString: .userDisplayName) {
+        if RegEx.sharedInstance.validteString(stringToValidate: newDisplayName, typeOfString: .userDisplayName) {
             if let currentUser = FIRAuth.auth()?.currentUser {
                 let changeRequest = currentUser.profileChangeRequest()
                 changeRequest.displayName = newDisplayName
@@ -58,7 +58,7 @@ class ChangeUserSettings {
         
         if let currentuser = FIRAuth.auth()?.currentUser {
             let newEmail = userNewEmail.trimmingCharacters(in: .whitespacesAndNewlines)
-            if RegEx.sharedInstance.validteString(emailAddress: newEmail, typeOfString: .emailAddress) {
+            if RegEx.sharedInstance.validteString(stringToValidate: newEmail, typeOfString: .emailAddress) {
                 currentuser.updateEmail(userNewEmail) { error in
                     if let error = error {
                         print("README: Can't change email")
