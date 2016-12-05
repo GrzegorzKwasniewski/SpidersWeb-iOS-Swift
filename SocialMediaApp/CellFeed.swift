@@ -29,6 +29,8 @@ class CellFeed: UITableViewCell {
         likeImage.addGestureRecognizer(tap)
         likeImage.isUserInteractionEnabled = true
         
+        userImage.alpha = 0.0
+        
     }
     
     func configureCell(post: Post, image: UIImage? = nil) {
@@ -52,8 +54,14 @@ class CellFeed: UITableViewCell {
                                 photoData = NSData(contentsOf: userPhotoUrl)
                                 let userImage = UIImage(data: photoData as Data)
                                 self.userImage.image = userImage
+                                UIView.animate(withDuration: 0.2, animations: {
+                                    self.userImage.alpha = 1.0
+                                })
                             } else {
                                 self.userImage.image = UIImage(named: "profile-picture")
+                                UIView.animate(withDuration: 0.2, animations: {
+                                    self.userImage.alpha = 1.0
+                                })
                             }
 
                             self.userNameLabel.text = userName
@@ -104,6 +112,4 @@ class CellFeed: UITableViewCell {
             }
         })
     }
-    
-    
 }

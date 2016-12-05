@@ -30,9 +30,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //popUpView = instantiatePopUpView()
-        
-        
         if let currentFirebaseUser = FIRAuth.auth()?.currentUser {
             currentUserUid = currentFirebaseUser.uid
         }
