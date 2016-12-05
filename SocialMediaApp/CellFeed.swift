@@ -30,6 +30,7 @@ class CellFeed: UITableViewCell {
         likeImage.isUserInteractionEnabled = true
         
         userImage.alpha = 0.0
+        postImage.alpha = 0.0
         
     }
     
@@ -73,6 +74,9 @@ class CellFeed: UITableViewCell {
         
         if image != nil {
             self.postImage.image = image
+            UIView.animate(withDuration: 0.2, animations: {
+                self.postImage.alpha = 1.0
+            })
         } else {
             let ref = FIRStorage.storage().reference(forURL: post.imageUrl as String)
             ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
@@ -83,6 +87,9 @@ class CellFeed: UITableViewCell {
                     if let imageData = data {
                         if let imageFromData = UIImage(data: imageData) {
                             self.postImage.image = imageFromData
+                            UIView.animate(withDuration: 0.2, animations: {
+                                self.postImage.alpha = 1.0
+                            })
                             FeedVC.imageCache.setObject(imageFromData, forKey: post.imageUrl as NSString)
                         }
                     }
