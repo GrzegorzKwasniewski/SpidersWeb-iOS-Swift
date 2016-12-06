@@ -73,8 +73,7 @@ extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
             return
         }
         let authentication = user.authentication
-        let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
-                                                          accessToken: (authentication?.accessToken)!)
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
         FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
     }
 }

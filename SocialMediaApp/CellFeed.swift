@@ -31,7 +31,7 @@ class CellFeed: UITableViewCell {
         
         userImage.alpha = 0.0
         postImage.alpha = 0.0
-        userNameLabel.bounds.size.width = 0
+        userNameLabel.alpha = 0.0
         
     }
     
@@ -68,7 +68,7 @@ class CellFeed: UITableViewCell {
 
                             self.userNameLabel.text = userName
                             UIView.animate(withDuration: 0.2, animations: {
-                                self.userNameLabel.bounds.size.width = 120
+                                self.userNameLabel.alpha = 1.0
                             })
                         }
                     }

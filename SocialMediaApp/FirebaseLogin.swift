@@ -20,21 +20,25 @@ class FirebaseLogin {
                 print("README: Unable to authenticate with Firebase. ERROR: \(error)")
             } else {
                 print("README: Succesfuly authenticeted with Firebase")
-                // store user UID using Keychains
                 if let firebaseUser = user {
                     
                 var firebaseUserName = ""
+                var firebaseUserPhotoUrl = URL(fileURLWithPath: "")
                     
                 if let userName = firebaseUser.displayName {
                     firebaseUserName = userName
+                }
+                    
+                if let userPhotoUrl = firebaseUser.photoURL {
+                    firebaseUserPhotoUrl = userPhotoUrl
                 }
 
                 let userData: Dictionary<String, String> = [
                         "provider": credential.provider,
                         "userName": firebaseUserName,
-                        "photoUrl": String(describing: firebaseUser.photoURL)
+                        "photoUrl": String(describing: firebaseUserPhotoUrl)
                     ]
-                        
+                    
                 self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
                 }
             }

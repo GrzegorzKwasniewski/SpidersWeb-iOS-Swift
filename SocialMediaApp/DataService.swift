@@ -57,7 +57,8 @@ class DataService {
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
         // if user don't exists Firebase will create one with proper uid
-        REF_USERS.child(uid).updateChildValues(userData) // if users exists data will not overriden
+        // if users exists data will not be overriden
+        REF_USERS.child(uid).updateChildValues(userData)
     }
     
     func getFirebaseDBUserData(firebaseUser: @escaping (FirebaseUser, Bool) -> Void) {
