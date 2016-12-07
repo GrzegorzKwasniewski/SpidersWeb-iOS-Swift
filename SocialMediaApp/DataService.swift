@@ -98,33 +98,16 @@ class DataService {
                             firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
                             
                         } else {
-                            print("README: Image downloaded from auth provider")
                             if let imageData = data {
-                                if let imageFromData = UIImage(data: imageData) {
-                                    userImage = imageFromData
-                                    firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
-                                    FeedVC.imageCache.setObject(userImage, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
-                                    }
+                                let keyForStoringInCache = "\(photoUrlForFirebase)\(currentUserUid)" as NSString
+                                
+                                userImage = self.convertToImage(data: imageData)
+                                firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
+                                
+                                self.storeUserImageInCache(userImage: userImage, forKey: keyForStoringInCache)
                                 }
                             }
                         } .resume()
-                    
-                    /*let ref = FIRStorage.storage().reference(forURL: photoUrlForFirebase)
-                    ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
-                        if error != nil {
-                            print("README: Unable to dwonload image from Firebase storage - error \(error)")
-                        } else {
-                            print("README: Image downloaded from Firebase storage")
-                            if let imageData = data {
-                                if let imageFromData = UIImage(data: imageData) {
-                                    print("README: Here3")
-                                    userImage = imageFromData
-                                    firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
-                                    FeedVC.imageCache.setObject(userImage, forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString)
-                                }
-                            }
-                        }
-                    }) */
                 }
             } else {
                 userImage = UIImage(named: DEFAULT_AVATAR)
@@ -142,5 +125,16 @@ class DataService {
             (data, response, error) in
             completion(data, response, error)
         }.resume()
+    }
+    
+    func convertToImage(data: Data) -> UIImage {
+        if let imageFromData = UIImage(data: data) {
+            return imageFromData
+        }
+        return UIImage(named: DEFAULT_AVATAR)!
+    }
+    
+    func storeUserImageInCache(userImage image: UIImage, forKey key: NSString) {
+        FeedVC.imageCache.setObject(image, forKey: key)
     }
 }

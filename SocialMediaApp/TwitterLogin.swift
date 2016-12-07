@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 import TwitterKit
 
-var isTwitter = false
-
 class TwitterLogin {
     
     static let sharedInstance = TwitterLogin()
@@ -22,7 +20,6 @@ class TwitterLogin {
                 // [START headless_twitter_auth]
                 let credential = FIRTwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
                 // [END headless_twitter_auth]
-                isTwitter = true
                 FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
             } else {
                 print("README: Error while authenticating with Twitter")
