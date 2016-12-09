@@ -27,6 +27,12 @@ class DataService {
     private var _REF_POST_IMAGES = STORAGE_BASE.child("posts-pictures")
     private var _REF_USERS_AVATARS = STORAGE_BASE.child("users-avatars")
     
+    private var currentUserUid: String!
+    private var userName: String!
+    private var userEmail: String!
+    private var userImage: UIImage!
+    private var photoUrlForFirebase: String?
+    
     var REF_BASE: FIRDatabaseReference {
         return _REF_BASE
     }
@@ -63,68 +69,66 @@ class DataService {
     
     func getFirebaseDBUserData(firebaseUser: @escaping (FirebaseUser, Bool) -> Void) {
         
-        var currentUserUid: String!
-        var userName: String!
-        var userEmail: String!
-        var userImage: UIImage!
-        
         if let currentUser = FIRAuth.auth()?.currentUser {
+            
             currentUserUid = currentUser.uid
             
-            if let currentUserName = currentUser.displayName {
-                userName = currentUserName
-            } else {
-                userName = "Not specified"
-            }
-            
-            if let currentUserEmail = currentUser.email {
-                userEmail = currentUserEmail
-            } else {
-                userEmail = "Not specified"
-            }
+            setCurrentUserName(name: currentUser.displayName)
+            setCurrentUserEmail(email: currentUser.email)
             
             if let currentUserPhotoUrl = currentUser.photoURL {
-
-                let photoUrlForFirebase = "\(currentUserPhotoUrl)"
                 
-                if let userImageFromCache = FeedVC.imageCache.object(forKey: "\(photoUrlForFirebase)\(currentUserUid)" as NSString) {
+                let keyForStoringInCache = "\(self.photoUrlForFirebase)\(self.currentUserUid)" as NSString
+
+                photoUrlForFirebase = "\(currentUserPhotoUrl)"
+                
+                if let userImageFromCache = FeedVC.imageCache.object(forKey: keyForStoringInCache) {
                     userImage = userImageFromCache
                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
                 } else {
-                     
-                     URLSession.shared.dataTask(with: currentUserPhotoUrl) { (data, response, error) in
-                        if (error != nil) {
-                            userImage = UIImage(named: DEFAULT_AVATAR)
-                            firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
-                            
-                        } else {
-                            if let imageData = data {
-                                let keyForStoringInCache = "\(photoUrlForFirebase)\(currentUserUid)" as NSString
-                                
-                                userImage = self.convertToImage(data: imageData)
-                                firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
-                                
-                                self.storeUserImageInCache(userImage: userImage, forKey: keyForStoringInCache)
-                                }
-                            }
-                        } .resume()
+                    getUserImage(fromUrl: currentUserPhotoUrl, completion: { (userImage) in
+                        
+                        firebaseUser(FirebaseUser(userUid: self.currentUserUid, userDisplayName: self.userName, userEmail: self.userEmail, userImage: userImage), false)
+                        
+                        self.storeUserImageInCache(userImage: userImage, forKey: keyForStoringInCache)
+                    })
                 }
             } else {
                 userImage = UIImage(named: DEFAULT_AVATAR)
                 firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
             }
         } else {
-            print("REDAME: There's no user signed in")
             firebaseUser(FirebaseUser(), false)
         }
     }
     
-    // testing
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-        }.resume()
+    func getUserImage(fromUrl url: URL, completion: @escaping (_ userImage: UIImage) -> Void) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if (error != nil) {
+                completion(UIImage(named: DEFAULT_AVATAR)!)
+            } else {
+                if let imageData = data {
+                    let userImage = self.convertToImage(data: imageData)
+                    completion(userImage)
+                }
+            }
+        } .resume()
+    }
+    
+    func setCurrentUserName(name: String?) {
+        if let currentUserName = name {
+            userName = currentUserName
+        } else {
+            userName = "Not specified"
+        }
+    }
+    
+    func setCurrentUserEmail(email: String?) {
+        if let currentUserEmail = email {
+            userEmail = currentUserEmail
+        } else {
+            userEmail = "Not specified"
+        }
     }
     
     func convertToImage(data: Data) -> UIImage {
