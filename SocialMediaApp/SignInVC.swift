@@ -72,6 +72,7 @@ extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
             print("README: Error when sign in with Google")
             return
         }
+        authProvider = .Google
         let authentication = user.authentication
         let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
         FirebaseLogin.sharedInstance.firebaseAuthentication(credential)

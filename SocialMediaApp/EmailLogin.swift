@@ -18,6 +18,9 @@ class EmailLogin {
             if let email = emailField.text, let password = passwordField.text {
                 FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
+                    
+                    authProvider = .Firebase
+                    
                     print("README: Email user authenticated with Firebase")
                     if let firebaseUser = user {
                         
@@ -47,6 +50,9 @@ class EmailLogin {
                         self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
                     }
                 } else {
+                    
+                    authProvider = .Firebase
+                    
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("README: Unable to authenticate with Firebase using email")

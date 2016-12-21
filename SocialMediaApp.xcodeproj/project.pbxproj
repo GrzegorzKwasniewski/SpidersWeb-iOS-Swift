@@ -33,6 +33,7 @@
 		718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C01DC8BE3D00E764C0 /* VCExt.swift */; };
 		718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */; };
 		718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */; };
+		719BFE761E0AF97A006EB47A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFE751E0AF97A006EB47A /* Globals.swift */; };
 		71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */; };
 		71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		71CE62511D858C66002C5B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
@@ -103,6 +104,7 @@
 		718BA3C01DC8BE3D00E764C0 /* VCExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExt.swift; sourceTree = "<group>"; };
 		718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
 		718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLogin.swift; sourceTree = "<group>"; };
+		719BFE751E0AF97A006EB47A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewVC.swift; sourceTree = "<group>"; };
 		71A9EAE51DAA6887003B08BD /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		71CE62501D858C66002C5B0B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				713B131C1D7EBE2D00AF79C3 /* Constants.swift */,
+				719BFE751E0AF97A006EB47A /* Globals.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				7111C80C1DD4DC530012D32C /* RegEx.swift in Sources */,
 				7111C7E51DCCB3270012D32C /* FacebookLogin.swift in Sources */,
 				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
+				719BFE761E0AF97A006EB47A /* Globals.swift in Sources */,
 				7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */,
 				718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */,
 				71EF4ABE1DAE5AAC00076B56 /* RoundedTextView.swift in Sources */,

@@ -18,6 +18,7 @@ class TwitterLogin {
         Twitter.sharedInstance().logIn() { (session, error) in
             if let session = session {
                 // [START headless_twitter_auth]
+                authProvider = .Twitter
                 let credential = FIRTwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
                 // [END headless_twitter_auth]
                 FirebaseLogin.sharedInstance.firebaseAuthentication(credential)

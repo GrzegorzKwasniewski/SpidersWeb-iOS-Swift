@@ -28,6 +28,7 @@ class FacebookLogin {
             } else if result?.isCancelled == true { // if user deny permissions
                 print("README: User cancelled user authentication")
             } else {
+                authProvider = .Facebook
                 print("README: Successfuly authenticated with Facebook")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 isFacebook = true
