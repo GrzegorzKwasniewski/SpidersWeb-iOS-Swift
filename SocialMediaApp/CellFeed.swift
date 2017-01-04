@@ -41,6 +41,7 @@ class CellFeed: UITableViewCell {
         self.caption.text = post.caption
         self.likesLabel.text = String(post.likes)
         
+        // USER image
         DataService.ds.REF_USERS.observe(.value, with: {(snapshot) in
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots {
@@ -76,6 +77,7 @@ class CellFeed: UITableViewCell {
             }
         })
         
+        // POST image
         if image != nil {
             self.postImage.image = image
             UIView.animate(withDuration: 0.2, animations: {
