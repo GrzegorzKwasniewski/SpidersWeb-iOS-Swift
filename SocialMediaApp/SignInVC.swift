@@ -12,9 +12,6 @@ import GoogleSignIn
 import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
-        
-    @IBOutlet var emailField: RoundedBorderTextField!
-    @IBOutlet var passwordField: RoundedBorderTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +40,8 @@ class SignInVC: UIViewController {
     
     // password need to have at least six characters
     // check for internet connection first
-    @IBAction func signInAction(_ sender: AnyObject) {
+    @IBAction func emailSignInButton(_ sender: AnyObject) {
         performSegue(withIdentifier: "emailSignIn", sender: nil)
-        EmailLogin.sharedInstance.signInWithEmail(emailField: emailField, passwordField: passwordField)
     }
     
     @IBAction func facebookButtonAction(_ sender: AnyObject) {

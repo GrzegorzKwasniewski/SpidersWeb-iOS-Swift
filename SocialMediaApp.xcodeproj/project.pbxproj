@@ -29,6 +29,7 @@
 		713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */; };
 		713B13231D7EC94800AF79C3 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13221D7EC94800AF79C3 /* ShadowButton.swift */; };
 		71578F331D841DA5004B56AE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71578F321D841DA5004B56AE /* FeedVC.swift */; };
+		715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */; };
 		718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */; };
 		718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C01DC8BE3D00E764C0 /* VCExt.swift */; };
 		718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */; };
@@ -100,6 +101,7 @@
 		713B13221D7EC94800AF79C3 /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		713B13241D803C8000AF79C3 /* SocialMediaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMediaApp.entitlements; sourceTree = "<group>"; };
 		71578F321D841DA5004B56AE /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigInWithEmailVC.swift; sourceTree = "<group>"; };
 		718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		718BA3C01DC8BE3D00E764C0 /* VCExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExt.swift; sourceTree = "<group>"; };
 		718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
+				715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */,
 				71578F321D841DA5004B56AE /* FeedVC.swift */,
 				7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */,
 				7127F7811DBF95B500446302 /* SlideMenuContainerVC.swift */,
@@ -616,6 +619,7 @@
 				7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */,
 				713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */,
 				71CE62581D893323002C5B0B /* Post.swift in Sources */,
+				715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */,
 				713B131F1D7EC1E100AF79C3 /* RoundButton.swift in Sources */,
 				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
