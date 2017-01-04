@@ -18,18 +18,6 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*let url = URL(string: "http://pbs.twimg.com/profile_images/731965712743403520/aF8xV8lE_normal.jpg")
-        print("README: \(url)")
-        
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if (error != nil) {
-                print("README: \(error)")
-            } else {
-                print("README: \(data)")
-                print("README: \(response)")
-            }
-        }.resume() */
             
         FirebaseLogin.sharedInstance.delegate = self
         EmailLogin.sharedInstance.delegate = self
@@ -56,6 +44,7 @@ class SignInVC: UIViewController {
     // password need to have at least six characters
     // check for internet connection first
     @IBAction func signInAction(_ sender: AnyObject) {
+        performSegue(withIdentifier: "emailSignIn", sender: nil)
         EmailLogin.sharedInstance.signInWithEmail(emailField: emailField, passwordField: passwordField)
     }
     

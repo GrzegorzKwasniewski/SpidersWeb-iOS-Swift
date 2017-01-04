@@ -26,6 +26,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="YTe-hQ-HIt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql1-Dx-505" customClass="ShadowButton" customModule="SocialMediaApp" customModuleProvider="target">
                                 <frame key="frameInset" minX="92" minY="416" width="190" height="60"/>
@@ -42,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qd4-3i-4EU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546.39999999999998" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-614" y="123"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
@@ -56,118 +59,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-f5-mXm" customClass="ShadowView" customModule="SocialMediaApp" customModuleProvider="target">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-PR-H9b" userLabel="Twitter Login Button">
-                                        <frame key="frameInset" minX="128" minY="79" width="119" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Twitter Login"/>
-                                        <connections>
-                                            <action selector="twitterSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MP5-Hh-NTV"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMd-SQ-yst" userLabel="Google Login Button" customClass="GIDSignInButton">
-                                        <frame key="frameInset" minX="122" minY="41" width="131" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="googleSignInButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="c6x-FY-OW0"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.38912160289999997" green="0.76355937169999999" blue="0.01468383407" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="kcC-Mr-HyF"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nA-DT-Ikk">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If You don't have an account it will be created for You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mii-rP-s4h">
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Mii-rP-s4h" firstAttribute="top" secondItem="3nA-DT-Ikk" secondAttribute="top" constant="8" id="9uj-xS-hJy"/>
-                                    <constraint firstItem="Mii-rP-s4h" firstAttribute="leading" secondItem="3nA-DT-Ikk" secondAttribute="leading" constant="8" id="efI-gc-RXi"/>
-                                    <constraint firstAttribute="trailing" secondItem="Mii-rP-s4h" secondAttribute="trailing" constant="8" id="eq0-Zy-cf0"/>
-                                    <constraint firstAttribute="bottom" secondItem="Mii-rP-s4h" secondAttribute="bottom" constant="8" id="kbm-Ru-k96"/>
-                                    <constraint firstAttribute="height" constant="86" id="nSX-sn-7k2"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-1Q-qcZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Spider Collection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-1Q-qcZ">
+                                <frame key="frameInset" minX="8" minY="80" width="359" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ujV-UF-kaV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHm-P1-tph" userLabel="Facebook Login Button" customClass="RoundButton" customModule="SocialMediaApp" customModuleProvider="target">
-                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHm-P1-tph" userLabel="Facebook Login Button" customClass="ShadowButton" customModule="SocialMediaApp" customModuleProvider="target">
+                                <frame key="frameInset" minX="55" minY="326" width="264" height="47"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="SOL-lO-uKg"/>
+                                    <constraint firstAttribute="height" constant="47" id="SOL-lO-uKg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Facebook Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="SIGN UP VIA FACEBOOOK">
+                                    <color key="titleColor" red="0.16986120343796873" green="0.39987061822108938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.31710706529999999" green="1" blue="0.59212517639999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="facebookButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6E0-cC-sLQ"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7wz-IH-g4h">
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2O-Oz-nkZ" customClass="NoBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SJZ-Sz-bXo" customClass="NoBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghF-dF-bGy" customClass="ShadowButton" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <color key="backgroundColor" red="1" green="0.57500080752480587" blue="0.37630486163964627" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Sign In"/>
-                                        <connections>
-                                            <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwj-Rx-gLQ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7wz-IH-g4h">
+                                <frame key="frameInset" minX="46" minY="422" width="283" height="17"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-PR-H9b" userLabel="Twitter Login Button">
+                                <frame key="frameInset" minX="55" minY="381" width="264" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94560235629072387" green="0.9678528388172809" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SIGN UP VIA TWITTER">
+                                    <color key="titleColor" red="0.16986120339999999" green="0.39987061820000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MP5-Hh-NTV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znr-8P-kQr" userLabel="Twitter Login Button">
+                                <frame key="frameInset" minX="55" minY="436" width="264" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9456023563" green="0.96785283879999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SIGN UP VIA GOOGLE">
+                                    <color key="titleColor" red="0.16986120339999999" green="0.39987061820000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9q-z7-Nb5"/>
+                                    <action selector="twitterSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DzW-aI-SnW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEe-Rj-PJB" userLabel="Twitter Login Button">
+                                <frame key="frameInset" minX="55" minY="495" width="264" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9456023563" green="0.96785283879999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SIGN UP WITH EMAIL">
+                                    <color key="titleColor" red="0.16986120339999999" green="0.39987061820000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJ2-fi-cOi"/>
+                                    <action selector="twitterSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZL-Oy-7bv"/>
+                                    <segue destination="3tq-k7-810" kind="popoverPresentation" identifier="emailSignIn" popoverAnchorView="TEe-Rj-PJB" id="Ls7-OG-IAo">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.32156862745098042" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="CEg-f5-mXm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="06h-we-xdO"/>
-                            <constraint firstAttribute="trailing" secondItem="3nA-DT-Ikk" secondAttribute="trailing" id="3a7-Xb-rWI"/>
                             <constraint firstItem="7wz-IH-g4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vf-4o-JU3"/>
-                            <constraint firstItem="7wz-IH-g4h" firstAttribute="top" secondItem="mHm-P1-tph" secondAttribute="bottom" constant="38" id="DpW-AE-1ic"/>
+                            <constraint firstItem="7wz-IH-g4h" firstAttribute="top" secondItem="mHm-P1-tph" secondAttribute="bottom" constant="49" id="DpW-AE-1ic"/>
                             <constraint firstItem="mHm-P1-tph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KP4-dV-Rww"/>
-                            <constraint firstItem="3nA-DT-Ikk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SG9-cd-3J7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3nA-DT-Ikk" secondAttribute="bottom" id="Sj8-5r-Utm"/>
-                            <constraint firstAttribute="trailing" secondItem="CEg-f5-mXm" secondAttribute="trailing" id="WVq-3O-yEX"/>
                             <constraint firstItem="rrb-1Q-qcZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="YKY-YQ-c9F"/>
-                            <constraint firstItem="CEg-f5-mXm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bfe-3Y-ey1"/>
-                            <constraint firstItem="3nA-DT-Ikk" firstAttribute="top" secondItem="7wz-IH-g4h" secondAttribute="bottom" constant="69" id="fqY-i0-3Ks"/>
                             <constraint firstItem="7wz-IH-g4h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="hIh-E4-ElK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mHm-P1-tph" secondAttribute="trailing" constant="74" id="jTB-CL-aam"/>
-                            <constraint firstItem="mHm-P1-tph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="mD7-TU-BFm"/>
-                            <constraint firstItem="rrb-1Q-qcZ" firstAttribute="top" secondItem="CEg-f5-mXm" secondAttribute="bottom" constant="20" id="szH-g4-IMc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mHm-P1-tph" secondAttribute="trailing" constant="40" id="jTB-CL-aam"/>
+                            <constraint firstItem="mHm-P1-tph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="mD7-TU-BFm"/>
                             <constraint firstAttribute="trailing" secondItem="rrb-1Q-qcZ" secondAttribute="trailing" constant="8" id="teQ-g3-ZUU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7wz-IH-g4h" secondAttribute="trailing" constant="30" id="zOc-fS-Usm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="F2O-Oz-nkZ" id="7QP-hB-H5V"/>
-                        <outlet property="passwordField" destination="SJZ-Sz-bXo" id="Hnu-D3-81K"/>
                         <segue destination="8gy-5K-IRc" kind="show" identifier="goToFeedVC" id="UKc-wV-PUn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="123"/>
+            <point key="canvasLocation" x="168.80000000000001" y="122.78860569715144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jIj-cn-HkC">
+            <objects>
+                <viewController id="3tq-k7-810" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NvX-V4-x8D"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaO-NT-41t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hIX-Lr-7c6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.32156862745098042" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZ3-2Y-N7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="840"/>
         </scene>
         <!--Left Slide MenuVC-->
         <scene sceneID="gJN-vM-RjW">
@@ -504,7 +503,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="964" y="122.78860569715144"/>
+            <point key="canvasLocation" x="929" y="840"/>
         </scene>
         <!--userSettings-->
         <scene sceneID="v6B-r5-poy">
@@ -642,7 +641,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1662" y="123"/>
+            <point key="canvasLocation" x="1652" y="840"/>
         </scene>
         <!--Change User Name Pop UpVC-->
         <scene sceneID="SiN-3x-fWA">
@@ -737,7 +736,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lf-zE-vOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="794"/>
+            <point key="canvasLocation" x="1828" y="123"/>
         </scene>
         <!--Change User EmailVC-->
         <scene sceneID="Caz-RE-AmB">
@@ -803,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1p6-t5-GXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3119" y="123"/>
+            <point key="canvasLocation" x="3070" y="123"/>
         </scene>
         <!--Re Authenticate UserVC-->
         <scene sceneID="CD7-d9-cof">
