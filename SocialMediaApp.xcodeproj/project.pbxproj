@@ -30,6 +30,7 @@
 		713B13231D7EC94800AF79C3 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13221D7EC94800AF79C3 /* ShadowButton.swift */; };
 		71578F331D841DA5004B56AE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71578F321D841DA5004B56AE /* FeedVC.swift */; };
 		715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */; };
+		715F554B1E1D3AEB008DC82B /* SpiderCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */; };
 		718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */; };
 		718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C01DC8BE3D00E764C0 /* VCExt.swift */; };
 		718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */; };
@@ -102,6 +103,7 @@
 		713B13241D803C8000AF79C3 /* SocialMediaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMediaApp.entitlements; sourceTree = "<group>"; };
 		71578F321D841DA5004B56AE /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigInWithEmailVC.swift; sourceTree = "<group>"; };
+		715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVC.swift; sourceTree = "<group>"; };
 		718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		718BA3C01DC8BE3D00E764C0 /* VCExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExt.swift; sourceTree = "<group>"; };
 		718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		713B13171D7D82D900AF79C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */,
 				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
 				715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */,
 				71578F321D841DA5004B56AE /* FeedVC.swift */,
@@ -625,6 +628,7 @@
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
+				715F554B1E1D3AEB008DC82B /* SpiderCollectionVC.swift in Sources */,
 				7111C8251DE1BB8B0012D32C /* ChangeUserSettings.swift in Sources */,
 				718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */,
 				7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */,

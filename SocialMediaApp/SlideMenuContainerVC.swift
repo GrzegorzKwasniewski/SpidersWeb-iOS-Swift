@@ -14,7 +14,7 @@ class SlideMenuContainerVC: SlideMenuController {
     
     override func awakeFromNib() {
         slideMenuController()?.changeLeftViewWidth(100)
-        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "Main") {
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "SpiderCollection") {
             self.mainViewController = controller
         }
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "Left") {
