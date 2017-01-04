@@ -171,25 +171,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OvL-Qs-fDL">
-                                <frame key="frameInset" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvL-Qs-fDL">
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="RY2-fJ-fKq">
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="7qN-WL-1A5"/>
+                                            <constraint firstAttribute="width" constant="53" id="CKs-8t-9nM"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="pfI-5w-Oxj" appends="YES" id="TmE-aH-Gd9"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="2Rq-aR-Lto"/>
+                                    <constraint firstItem="RY2-fJ-fKq" firstAttribute="top" secondItem="OvL-Qs-fDL" secondAttribute="top" constant="30" id="edm-w1-2zn"/>
+                                    <constraint firstAttribute="trailing" secondItem="RY2-fJ-fKq" secondAttribute="trailing" constant="8" id="oK2-uM-Xxo"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HmZ-TG-xR6">
-                                <frame key="frameInset" minY="607" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmZ-TG-xR6">
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9U2-En-BM4"/>
+                                </constraints>
                             </view>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="search for spider" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-9U-l3u">
-                                <frame key="frameInset" minY="60" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" placeholder="search for spider" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-9U-l3u">
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oix-SC-rxY">
-                                <frame key="frameInset" minX="16" minY="114" width="343" height="485"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oix-SC-rxY">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="447" id="WJj-SF-OPB"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jx9-I8-7iK">
                                     <size key="itemSize" width="129" height="81"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -210,9 +225,28 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OvL-Qs-fDL" firstAttribute="top" secondItem="BXp-pg-aLG" secondAttribute="top" id="IzI-iO-a3N"/>
+                            <constraint firstItem="OvL-Qs-fDL" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leading" id="XKC-fh-Rvp"/>
+                            <constraint firstItem="Oix-SC-rxY" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leadingMargin" id="Yb6-kj-RdB"/>
+                            <constraint firstItem="pBw-9U-l3u" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leading" id="bOA-AJ-kv2"/>
+                            <constraint firstAttribute="trailing" secondItem="OvL-Qs-fDL" secondAttribute="trailing" id="e3e-zw-9K8"/>
+                            <constraint firstItem="FBx-eY-eZC" firstAttribute="top" secondItem="HmZ-TG-xR6" secondAttribute="bottom" id="e4b-h6-TBk"/>
+                            <constraint firstItem="HmZ-TG-xR6" firstAttribute="top" secondItem="Oix-SC-rxY" secondAttribute="bottom" constant="8" id="ggz-O2-VlY"/>
+                            <constraint firstAttribute="trailing" secondItem="HmZ-TG-xR6" secondAttribute="trailing" id="gpF-Dr-pOq"/>
+                            <constraint firstAttribute="trailing" secondItem="pBw-9U-l3u" secondAttribute="trailing" id="j5P-YW-gwn"/>
+                            <constraint firstItem="HmZ-TG-xR6" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leading" id="lCw-MI-Det"/>
+                            <constraint firstItem="Oix-SC-rxY" firstAttribute="trailing" secondItem="BXp-pg-aLG" secondAttribute="trailingMargin" id="sUf-FV-rMw"/>
+                            <constraint firstItem="Oix-SC-rxY" firstAttribute="top" secondItem="pBw-9U-l3u" secondAttribute="bottom" constant="23" id="y2R-uA-cLe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6L-x2-nbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pfI-5w-Oxj" userLabel="goToUserSettings">
+                    <connections>
+                        <action selector="goToUserSettings:" destination="XK1-vv-uSi" id="qnw-eW-kmm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="964" y="122.78860569715144"/>
         </scene>
