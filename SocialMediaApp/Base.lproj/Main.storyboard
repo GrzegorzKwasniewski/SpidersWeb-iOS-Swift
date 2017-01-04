@@ -192,6 +192,19 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmZ-TG-xR6">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-8q-HEW">
+                                        <frame key="frameInset" minX="164" minY="15" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="rRl-Im-cEt" kind="show" id="rCR-Dz-SyO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9U2-En-BM4"/>
@@ -309,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZ3-2Y-N7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168.80000000000001" y="839.73013493253382"/>
+            <point key="canvasLocation" x="169" y="824"/>
         </scene>
         <!--Left Slide MenuVC-->
         <scene sceneID="gJN-vM-RjW">
@@ -360,6 +373,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9u2-N7-Afx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="-539"/>
+        </scene>
+        <!--Add SpiderVC-->
+        <scene sceneID="EcW-ug-36J">
+            <objects>
+                <viewController id="rRl-Im-cEt" customClass="AddSpiderVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p7E-e4-DAq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZWL-Ce-tiH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xii-7V-KLu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new spider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFR-ah-J0a">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="8GH-5A-jTn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purple-cartoon-spider" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-rx-cSd" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
+                                <frame key="frameInset" minX="67" minY="81" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxw-wX-NeF">
+                                <frame key="frameInset" minY="415" height="98" maxX="243"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDf-F5-h9r">
+                                <frame key="frameInset" minX="166" minY="297" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.32156862745098042" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZFR-ah-J0a" firstAttribute="top" secondItem="p7E-e4-DAq" secondAttribute="bottom" id="Dw9-sv-Qrb"/>
+                            <constraint firstItem="ZFR-ah-J0a" firstAttribute="leading" secondItem="Xii-7V-KLu" secondAttribute="leadingMargin" constant="60" id="YnQ-If-qWj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZFR-ah-J0a" secondAttribute="trailing" constant="60" id="u0a-9z-sKH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="hxw-wX-NeF" id="P70-2M-2Rb"/>
+                        <outlet property="testLabel" destination="IDf-F5-h9r" id="klo-yE-8ZD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYh-nP-xIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="824.43778110944538"/>
         </scene>
         <!--feedVC-->
         <scene sceneID="rtU-gN-cyc">
@@ -646,7 +714,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="929" y="840"/>
+            <point key="canvasLocation" x="2449" y="802"/>
         </scene>
         <!--userSettings-->
         <scene sceneID="v6B-r5-poy">
@@ -784,7 +852,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1652" y="840"/>
+            <point key="canvasLocation" x="3070" y="802"/>
         </scene>
         <!--Change User Name Pop UpVC-->
         <scene sceneID="SiN-3x-fWA">
