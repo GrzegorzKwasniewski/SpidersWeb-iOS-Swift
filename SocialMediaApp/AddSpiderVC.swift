@@ -11,11 +11,16 @@ import UIKit
 class AddSpiderVC: UIViewController {
     
     @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nameField: RoundedBorderTextField!
+    @IBOutlet weak var commonNameField: RoundedBorderTextField!
+    @IBOutlet weak var speciesField: RoundedBorderTextField!
+    @IBOutlet weak var genusField: RoundedBorderTextField!
+    @IBOutlet weak var countryOriginField: RoundedBorderTextField!
+    @IBOutlet weak var recivedFromField: RoundedBorderTextField!
     
     @IBOutlet weak var testLabel: UILabel!
     
-    var testData = ["Data1", "Data2", "Data3"]
+    var testData = ["Female", "Male", "Unknown"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
