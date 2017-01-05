@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SwiftKeychainWrapper
 import KRProgressHUD
 import SlideMenuControllerSwift
 
@@ -25,5 +27,12 @@ class LeftSlideMenuVC: UIViewController {
         }  else {
             print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
         }
+    }
+    
+    @IBAction func logOutUser() {
+        let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
+        print("README: Keychain was removed - \(keychainResult)")
+        try! FIRAuth.auth()?.signOut()
+        self.dismiss(animated: true, completion: nil)
     }
 }

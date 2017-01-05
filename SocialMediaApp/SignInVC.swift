@@ -34,7 +34,7 @@ class SignInVC: UIViewController {
         TwitterLogin.sharedInstance.signInWithTwitter()
     }
     
-    @IBAction func googleSignInButton(_ sender: AnyObject) {
+    @IBAction func googleSignInButton(_ sender: UIButton) {
         GIDSignIn.sharedInstance().signIn()
     }
     

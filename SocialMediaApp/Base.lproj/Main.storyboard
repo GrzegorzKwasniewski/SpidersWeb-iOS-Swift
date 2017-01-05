@@ -336,16 +336,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-K4-qyC">
-                                <frame key="frameInset" minX="38" minY="222" width="44" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb4-Yq-h6W">
                                 <frame key="frameInset" minX="37" minY="155" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="goToUserSettings:" destination="acG-ae-k6w" eventType="touchUpInside" id="RpM-1S-F46"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc3-Y8-Dc2">
+                                <frame key="frameInset" minX="47" minY="221" width="26" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sign-out"/>
+                                <connections>
+                                    <action selector="logOutUser" destination="acG-ae-k6w" eventType="touchUpInside" id="mvi-ld-xjo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -405,6 +409,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDf-F5-h9r">
+                                <frame key="frameInset" minX="68" minY="436" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-Uf-TuE" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -435,13 +446,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDf-F5-h9r">
-                                <frame key="frameInset" minX="68" minY="436" width="28" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PE-Tr-1cH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gvy-ac-oRE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTesting" destination="rRl-Im-cEt" eventType="touchUpInside" id="PQn-aM-JOm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -461,6 +477,7 @@
                             <constraint firstItem="Ptq-2T-yFM" firstAttribute="centerX" secondItem="Xii-7V-KLu" secondAttribute="centerX" id="NHQ-rd-XlL"/>
                             <constraint firstItem="Dbg-xc-UAk" firstAttribute="top" secondItem="QYI-gi-4mp" secondAttribute="bottom" constant="8" id="Om2-ob-WeF"/>
                             <constraint firstItem="GUy-rx-cSd" firstAttribute="centerX" secondItem="Xii-7V-KLu" secondAttribute="centerX" id="OrH-5c-uT5"/>
+                            <constraint firstItem="4PE-Tr-1cH" firstAttribute="top" secondItem="p7E-e4-DAq" secondAttribute="bottom" constant="8" id="PtQ-DS-MIM"/>
                             <constraint firstItem="Ptq-2T-yFM" firstAttribute="leading" secondItem="Xii-7V-KLu" secondAttribute="leadingMargin" constant="55" id="RJu-uc-GaW"/>
                             <constraint firstItem="ls7-9E-Vju" firstAttribute="top" secondItem="Dbg-xc-UAk" secondAttribute="bottom" constant="8" id="RKy-Wc-XSl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GUy-rx-cSd" secondAttribute="trailing" constant="52" id="Su4-jY-ACN"/>
@@ -470,7 +487,9 @@
                             <constraint firstItem="Dbg-xc-UAk" firstAttribute="leading" secondItem="Xii-7V-KLu" secondAttribute="leadingMargin" constant="55" id="iG8-4M-Uie"/>
                             <constraint firstItem="Mof-Q7-gwT" firstAttribute="leading" secondItem="Xii-7V-KLu" secondAttribute="leadingMargin" constant="55" id="iKq-XZ-5od"/>
                             <constraint firstItem="ls7-9E-Vju" firstAttribute="leading" secondItem="Xii-7V-KLu" secondAttribute="leadingMargin" constant="55" id="lV6-dK-9x8"/>
+                            <constraint firstItem="ZFR-ah-J0a" firstAttribute="leading" secondItem="4PE-Tr-1cH" secondAttribute="trailing" constant="8" id="msc-Jl-XMP"/>
                             <constraint firstItem="ls7-9E-Vju" firstAttribute="centerX" secondItem="Xii-7V-KLu" secondAttribute="centerX" id="s0S-5l-MAN"/>
+                            <constraint firstItem="4PE-Tr-1cH" firstAttribute="leading" secondItem="Xii-7V-KLu" secondAttribute="leadingMargin" constant="6" id="tiz-b8-ET1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZFR-ah-J0a" secondAttribute="trailing" constant="60" id="u0a-9z-sKH"/>
                             <constraint firstItem="QYI-gi-4mp" firstAttribute="top" secondItem="Mof-Q7-gwT" secondAttribute="bottom" constant="8" id="vn0-Dw-nCL"/>
                             <constraint firstItem="eUn-Uf-TuE" firstAttribute="top" secondItem="GUy-rx-cSd" secondAttribute="bottom" constant="41" id="wT9-K5-yOU"/>

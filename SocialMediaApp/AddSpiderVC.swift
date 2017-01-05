@@ -28,7 +28,10 @@ class AddSpiderVC: UIViewController {
         pickerView.dataSource = self
         
         nameField.set(placeHolderString: "name", withColor: UIColor.white)
-        
+    }
+    
+    @IBAction func backButtonTesting() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
