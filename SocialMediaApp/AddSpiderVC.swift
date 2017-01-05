@@ -11,6 +11,8 @@ import UIKit
 class AddSpiderVC: UIViewController {
     
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var nameField: UITextField!
+    
     @IBOutlet weak var testLabel: UILabel!
     
     var testData = ["Data1", "Data2", "Data3"]
@@ -19,6 +21,9 @@ class AddSpiderVC: UIViewController {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        nameField.set(placeHolderString: "name", withColor: UIColor.white)
+        
     }
 }
 

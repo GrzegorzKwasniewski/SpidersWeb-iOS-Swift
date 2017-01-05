@@ -31,6 +31,7 @@
 		71578F331D841DA5004B56AE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71578F321D841DA5004B56AE /* FeedVC.swift */; };
 		715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */; };
 		715F554B1E1D3AEB008DC82B /* SpiderCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */; };
+		715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */; };
 		718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */; };
 		718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C01DC8BE3D00E764C0 /* VCExt.swift */; };
 		718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */; };
@@ -106,6 +107,7 @@
 		71578F321D841DA5004B56AE /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigInWithEmailVC.swift; sourceTree = "<group>"; };
 		715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVC.swift; sourceTree = "<group>"; };
+		715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		718BA3BD1DC8B8D600E764C0 /* PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		718BA3C01DC8BE3D00E764C0 /* VCExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExt.swift; sourceTree = "<group>"; };
 		718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
@@ -274,10 +276,27 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		718BA3BF1DC8BDE900E764C0 /* Extensions */ = {
+		715F554C1E1E3CDA008DC82B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		715F554D1E1E3CE0008DC82B /* VC */ = {
 			isa = PBXGroup;
 			children = (
 				718BA3C01DC8BE3D00E764C0 /* VCExt.swift */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		718BA3BF1DC8BDE900E764C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				715F554C1E1E3CDA008DC82B /* UI */,
+				715F554D1E1E3CE0008DC82B /* VC */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -635,6 +654,7 @@
 				71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */,
 				7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */,
 				713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */,
+				715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */,
 				71CE62581D893323002C5B0B /* Post.swift in Sources */,
 				715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */,
 				713B131F1D7EC1E100AF79C3 /* RoundButton.swift in Sources */,

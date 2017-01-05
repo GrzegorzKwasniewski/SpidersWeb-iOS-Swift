@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 class ShadowButton: UIButton {
     
     @IBInspectable var borderColor: UIColor = UIColor.white
