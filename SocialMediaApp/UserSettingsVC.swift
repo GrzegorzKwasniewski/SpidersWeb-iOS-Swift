@@ -99,7 +99,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func BackButton(_ sender: AnyObject) {
         if let slideMenuController = self.slideMenuController() {
-            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "Main") {
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "SpiderCollection") {
                 let mainViewController = controller
                 slideMenuController.changeMainViewController(mainViewController, close: true)
             }
