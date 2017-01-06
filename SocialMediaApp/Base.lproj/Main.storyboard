@@ -62,8 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Spider Collection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-1Q-qcZ">
-                                <frame key="frameInset" minX="8" minY="80" width="359" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spider Collection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-1Q-qcZ">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ujV-UF-kaV"/>
                                 </constraints>
@@ -71,8 +70,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHm-P1-tph" userLabel="Facebook Login Button" customClass="ShadowButton" customModule="SocialMediaApp" customModuleProvider="target">
-                                <frame key="frameInset" minX="55" minY="326" width="264" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHm-P1-tph" userLabel="Facebook Login Button">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="SOL-lO-uKg"/>
@@ -90,9 +88,6 @@
                                     <action selector="facebookButtonAction:" destination="BYZ-38-t0r" eventType="touchDown" id="daI-oO-Nkm"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="7wz-IH-g4h">
-                                <frame key="frameInset" minX="46" minY="422" width="283" height="17"/>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-PR-H9b" userLabel="Twitter Login Button">
                                 <frame key="frameInset" minX="55" minY="381" width="264" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,8 +118,7 @@
                                     <color key="titleColor" red="0.16986120339999999" green="0.39987061820000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="emailSignInButton:" destination="BYZ-38-t0r" eventType="touchDown" id="Hjy-kt-pJb"/>
-                                    <segue destination="3tq-k7-810" kind="show" id="wGx-Ui-8y3"/>
+                                    <action selector="signInWithEmailButton:" destination="BYZ-38-t0r" eventType="touchDown" id="6q3-Ev-yQ7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdw-hJ-CY7">
@@ -138,19 +132,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.32156862745098042" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="7wz-IH-g4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vf-4o-JU3"/>
-                            <constraint firstItem="7wz-IH-g4h" firstAttribute="top" secondItem="mHm-P1-tph" secondAttribute="bottom" constant="49" id="DpW-AE-1ic"/>
+                            <constraint firstItem="rrb-1Q-qcZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="CkB-Yk-hEC"/>
+                            <constraint firstItem="mHm-P1-tph" firstAttribute="top" secondItem="rrb-1Q-qcZ" secondAttribute="bottom" constant="202" id="J0d-DJ-TgP"/>
                             <constraint firstItem="mHm-P1-tph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KP4-dV-Rww"/>
                             <constraint firstItem="rrb-1Q-qcZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="YKY-YQ-c9F"/>
-                            <constraint firstItem="7wz-IH-g4h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="hIh-E4-ElK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mHm-P1-tph" secondAttribute="trailing" constant="40" id="jTB-CL-aam"/>
                             <constraint firstItem="mHm-P1-tph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="mD7-TU-BFm"/>
                             <constraint firstAttribute="trailing" secondItem="rrb-1Q-qcZ" secondAttribute="trailing" constant="8" id="teQ-g3-ZUU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7wz-IH-g4h" secondAttribute="trailing" constant="30" id="zOc-fS-Usm"/>
                         </constraints>
                     </view>
                     <connections>
                         <segue destination="8gy-5K-IRc" kind="show" identifier="goToSpiderCollection" id="UKc-wV-PUn"/>
+                        <segue destination="3tq-k7-810" kind="show" identifier="signInWithEmail" id="mjp-7V-GpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,6 +174,13 @@
                                             <outletCollection property="gestureRecognizers" destination="pfI-5w-Oxj" appends="YES" id="TmE-aH-Gd9"/>
                                         </connections>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online or offline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llX-ua-Izd">
+                                        <frame key="frameInset" minX="126" minY="31" width="122" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -278,6 +278,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Oix-SC-rxY" id="le3-j6-1Im"/>
                         <outlet property="searchBar" destination="pBw-9U-l3u" id="vAG-Lh-pqi"/>
+                        <segue destination="cV3-Bo-KMB" kind="show" identifier="showSpiderDetails" id="zqw-Nh-Uba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6L-x2-nbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,6 +289,95 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="964" y="122.78860569715144"/>
+        </scene>
+        <!--Spider DetailVC-->
+        <scene sceneID="RMy-sP-jtD">
+            <objects>
+                <viewController id="cV3-Bo-KMB" customClass="SpiderDetailVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KA1-8d-BZr"/>
+                        <viewControllerLayoutGuide type="bottom" id="sXo-nH-j0m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HER-5J-vYw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple-cartoon-spider" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-kd-v3Y" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3iD-zo-04x"/>
+                                    <constraint firstAttribute="width" constant="128" id="IXq-1h-Z6H"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xNj-Ib-in0">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m30-r2-scS" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KbO-NP-RZY"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="common name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-Jn-dvs" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="uta-t8-yGO"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="species" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-zQ-W6k" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="0rp-ht-uRm"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="genus" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DF8-ao-Gjo" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="xN8-FC-4fI"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="country origin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KM8-AE-Tkd" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="whD-Jj-XsP"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="recived from" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnn-dW-HG3" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="M6l-Id-Kh2"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xNj-Ib-in0" secondAttribute="trailing" id="YG7-Jb-MVp"/>
+                            <constraint firstItem="xNj-Ib-in0" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leadingMargin" id="eUv-3h-GFf"/>
+                            <constraint firstItem="wN1-kd-v3Y" firstAttribute="centerX" secondItem="HER-5J-vYw" secondAttribute="centerX" id="i3e-bi-bBn"/>
+                            <constraint firstItem="wN1-kd-v3Y" firstAttribute="top" secondItem="KA1-8d-BZr" secondAttribute="bottom" constant="29" id="ou1-w6-mDS"/>
+                            <constraint firstItem="xNj-Ib-in0" firstAttribute="top" secondItem="wN1-kd-v3Y" secondAttribute="bottom" constant="68" id="qkQ-HA-tWg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="m30-r2-scS" id="6JV-y4-qaH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="URs-3k-dat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="127"/>
         </scene>
         <!--Sig In With EmailVC-->
         <scene sceneID="jIj-cn-HkC">
@@ -991,7 +1081,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1689" y="123"/>
+            <point key="canvasLocation" x="1657" y="-539"/>
         </scene>
         <!--Change User Name Pop UpVC-->
         <scene sceneID="SiN-3x-fWA">
@@ -1086,7 +1176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lf-zE-vOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1806" y="-528"/>
+            <point key="canvasLocation" x="3110" y="-528"/>
         </scene>
         <!--Change User EmailVC-->
         <scene sceneID="Caz-RE-AmB">
@@ -1264,6 +1354,6 @@
         <image name="sign-out" width="26" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LgV-BC-63c"/>
+        <segue reference="UKc-wV-PUn"/>
     </inferredMetricsTieBreakers>
 </document>

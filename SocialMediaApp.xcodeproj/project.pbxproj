@@ -41,6 +41,7 @@
 		719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */; };
 		719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA71E1FD7D3006EB47A /* CellSpider.swift */; };
 		719BFEAA1E201D9B006EB47A /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA91E201D9B006EB47A /* StartVC.swift */; };
+		719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */; };
 		71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */; };
 		71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		71CE62511D858C66002C5B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
@@ -119,6 +120,7 @@
 		719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpiderVC.swift; sourceTree = "<group>"; };
 		719BFEA71E1FD7D3006EB47A /* CellSpider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSpider.swift; sourceTree = "<group>"; };
 		719BFEA91E201D9B006EB47A /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderDetailVC.swift; sourceTree = "<group>"; };
 		71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewVC.swift; sourceTree = "<group>"; };
 		71A9EAE51DAA6887003B08BD /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		71CE62501D858C66002C5B0B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -246,9 +248,10 @@
 			isa = PBXGroup;
 			children = (
 				719BFEA91E201D9B006EB47A /* StartVC.swift */,
-				715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */,
-				719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */,
 				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
+				715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */,
+				719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */,
+				719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */,
 				715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */,
 				71578F321D841DA5004B56AE /* FeedVC.swift */,
 				7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */,
@@ -660,6 +663,7 @@
 				7111C80C1DD4DC530012D32C /* RegEx.swift in Sources */,
 				7111C7E51DCCB3270012D32C /* FacebookLogin.swift in Sources */,
 				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
+				719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */,
 				719BFE761E0AF97A006EB47A /* Globals.swift in Sources */,
 				7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */,
 				718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */,

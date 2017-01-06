@@ -68,6 +68,9 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let spider = spiders[indexPath.row]
+        performSegue(withIdentifier: "showSpiderDetails", sender: spider)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -114,6 +117,7 @@ extension SpiderCollectionVC {
     }
 }
 
+// MARK: Handle UISearchBar
 extension SpiderCollectionVC: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -122,5 +126,19 @@ extension SpiderCollectionVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+    }
+}
+
+// MARK: Handle segue
+extension SpiderCollectionVC {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSpiderDetails" {
+            if let detailsVC = segue.destination as? SpiderDetailVC {
+                if let spider = sender as? Spider {
+                    detailsVC.spider = spider
+                }
+            }
+        }
     }
 }

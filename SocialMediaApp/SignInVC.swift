@@ -30,10 +30,8 @@ class SignInVC: UIViewController {
         GIDSignIn.sharedInstance().signIn()
     }
     
-    // password need to have at least six characters
-    // check for internet connection first
-    @IBAction func emailSignInButton(_ sender: AnyObject) {
-        //performSegue(withIdentifier: "emailSignIn", sender: nil)
+    @IBAction func signInWithEmailButton(_ sender: AnyObject) {
+        performSegue(withIdentifier: "signInWithEmail", sender: nil)
     }
     
     @IBAction func facebookButtonAction(_ sender: AnyObject) {
