@@ -22,7 +22,6 @@ class AddSpiderVC: UIViewController {
     
     var currentUserUid = String()
     var imagePicker = UIImagePickerController()
-    var imageSelected = false
     var testData = ["Female", "Male", "Unknown"]
 
     override func viewDidLoad() {
@@ -35,7 +34,6 @@ class AddSpiderVC: UIViewController {
     }
     
     func setDelegates() {
-        
         pickerView.delegate = self
         pickerView.dataSource = self
         imagePicker.delegate = self
@@ -72,8 +70,7 @@ extension AddSpiderVC {
             return
         }
         
-        guard let image = spiderImage.image, imageSelected == true else {
-            print("README: You must selcet an image")
+        guard let image = spiderImage.image else {
             return
         }
         
@@ -130,7 +127,6 @@ extension AddSpiderVC: UIImagePickerControllerDelegate, UINavigationControllerDe
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             spiderImage.image = image
-            imageSelected = true
         } else {
             print("Valid image was not selected")
         }

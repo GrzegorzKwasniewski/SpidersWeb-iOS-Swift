@@ -10,6 +10,7 @@ import Foundation
 
 class Spider {
 
+    private var _spiderId: String = ""
     private var _name: String = ""
     private var _genus: String = ""
     private var _species: String = ""
@@ -41,6 +42,10 @@ class Spider {
     var pre_molt
     var life_stages
     var notes */
+    
+    var spiderId: String {
+        return _spiderId
+    }
     
     var name: String {
         return _name
@@ -78,7 +83,9 @@ class Spider {
         return _imageUrl
     }
     
-    init(spiderData: Dictionary<String, AnyObject>) {
+    init(spiderId: String, spiderData: Dictionary<String, AnyObject>) {
+        
+        _spiderId = spiderId
         
         if let name = spiderData["name"] as? String {
             _name = name

@@ -225,7 +225,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="spiderCell" id="4So-p3-0XP">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="spiderCell" id="4So-p3-0XP" customClass="CellSpider" customModule="SocialMediaApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="137" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -236,13 +236,27 @@
                                                     <frame key="frameInset" width="93" height="65"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="female_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="0vh-lU-nnt">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="female_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="0vh-lU-nnt">
                                                     <frame key="frameInset" minX="97" minY="8" width="40" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-vG-dYl">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Bwk-vG-dYl" firstAttribute="bottom" secondItem="4So-p3-0XP" secondAttribute="bottomMargin" id="NcQ-DO-RzU"/>
+                                            <constraint firstItem="Bwk-vG-dYl" firstAttribute="leading" secondItem="4So-p3-0XP" secondAttribute="leadingMargin" id="Xdm-14-Xif"/>
+                                            <constraint firstItem="Bwk-vG-dYl" firstAttribute="trailing" secondItem="4So-p3-0XP" secondAttribute="trailingMargin" id="jLU-0C-Ztg"/>
+                                            <constraint firstItem="Bwk-vG-dYl" firstAttribute="top" secondItem="0vh-lU-nnt" secondAttribute="bottom" constant="15" id="xTf-kx-PuZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="spiderImage" destination="zoQ-vT-JjR" id="wLN-cr-5so"/>
+                                            <outlet property="spiderName" destination="Bwk-vG-dYl" id="PBZ-Ih-rpr"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
