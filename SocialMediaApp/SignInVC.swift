@@ -17,7 +17,6 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
             
         FirebaseLogin.sharedInstance.delegate = self
-        EmailLogin.sharedInstance.delegate = self
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
@@ -26,7 +25,7 @@ class SignInVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.stringForKey(KEY_UID) {
             print("SEGUE: Perform from viewDidAppear")
-            performSegue(withIdentifier: "goToFeedVC", sender: nil)
+            performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
         }
     }
     
@@ -41,7 +40,7 @@ class SignInVC: UIViewController {
     // password need to have at least six characters
     // check for internet connection first
     @IBAction func emailSignInButton(_ sender: AnyObject) {
-        performSegue(withIdentifier: "emailSignIn", sender: nil)
+        //performSegue(withIdentifier: "emailSignIn", sender: nil)
     }
     
     @IBAction func facebookButtonAction(_ sender: AnyObject) {
@@ -71,7 +70,7 @@ extension SignInVC: CompleteSignInWthFirebaseDelegate {
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         print("KEYCHAIN: Data was saved to Keychain - \(keychainResult)")
         print("SEGUE: Perform")
-        performSegue(withIdentifier: "goToFeedVC", sender: nil)
+        performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
     }
 }
 

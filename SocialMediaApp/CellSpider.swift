@@ -16,6 +16,13 @@ class CellSpider: UICollectionViewCell {
     
     var spider: Spider!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        spiderImage.alpha = 0.0
+        spiderName.alpha = 1.0
+    }
+    
     func configureCell(spider: Spider, image: UIImage? = nil) {
 
         self.spider = spider
@@ -37,7 +44,7 @@ class CellSpider: UICollectionViewCell {
                     if let imageData = data {
                         if let imageFromData = UIImage(data: imageData) {
                             self.spiderImage.image = imageFromData
-                            UIView.animate(withDuration: 0.2, animations: {
+                            UIView.animate(withDuration: 2.0, animations: {
                                 self.spiderImage.alpha = 1.0
                             })
                             FeedVC.imageCache.setObject(imageFromData, forKey: spider.imageUrl as NSString)

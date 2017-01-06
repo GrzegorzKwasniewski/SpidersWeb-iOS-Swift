@@ -14,22 +14,27 @@ class SpiderCollectionVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var currentUserUid = String()
     var spiders = [Spider]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkForSignInUser()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        searchBar.delegate = self
 
-        getSpidersDataFromFirebase()
         setDelegates()
+        getSpidersDataFromFirebase()
         
         searchBar.returnKeyType = UIReturnKeyType.done
 
     }
     
     func setDelegates() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        searchBar.delegate = self
+
     }
 
     @IBAction func goToUserSettings(_ sender: AnyObject) {
@@ -45,9 +50,26 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "spiderCell", for: indexPath)
+        let spider = spiders[indexPath.row]
         
-        return cell
+        print("README: Hej ho")
+
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "spiderCell", for: indexPath) as? CellSpider {
+            
+            print("README: Not empty cell")
+            
+            if let image = FeedVC.imageCache.object(forKey: spider.imageUrl as NSString) {
+                print("README: Inside Cache")
+                cell.configureCell(spider: spider, image: image)
+                return cell
+            } else {
+                cell.configureCell(spider: spider)
+                return cell
+            }
+        } else {
+            print("README: Empty cell")
+            return CellSpider()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -71,19 +93,31 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
 // MARK: Handle Firebase
 extension SpiderCollectionVC {
     
+    func checkForSignInUser() {
+        if let currentFirebaseUser = FIRAuth.auth()?.currentUser {
+            currentUserUid = currentFirebaseUser.uid
+        }
+    }
+    
     func getSpidersDataFromFirebase() {
-        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+        DataService.ds.REF_SPIDERS.observe(.value, with: {(snapshot) in
             self.spiders = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshots {
                     print("SNAP: \(snap)")
                     if let snapDictionary = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let spider = Spider(spiderId: key, spiderData: snapDictionary)
-                        self.spiders.append(spider)
+                        let userUid = snapDictionary["userUid"]
+                        print("README: \(userUid)")
+                        if userUid!.isEqual(self.currentUserUid) {
+                            let key = snap.key
+                            let spider = Spider(spiderId: key, spiderData: snapDictionary)
+                            self.spiders.append(spider)
+                        }
                     }
                 }
             }
+            print("README: \(self.spiders.count)")
+
             self.collectionView.reloadData()
         })
     }
