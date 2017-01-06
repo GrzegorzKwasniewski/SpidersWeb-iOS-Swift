@@ -18,19 +18,32 @@ class AddSpiderVC: UIViewController {
     @IBOutlet weak var genusField: RoundedBorderTextField!
     @IBOutlet weak var countryOriginField: RoundedBorderTextField!
     @IBOutlet weak var recivedFromField: RoundedBorderTextField!
+    @IBOutlet weak var spiderImage: UIImageView!
     
     var currentUserUid = String()
+    var imagePicker = UIImagePickerController()
+    var imageSelected = false
     var testData = ["Female", "Male", "Unknown"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         checkForSignInUser()
+        setDelegates()
+        
+        nameField.set(placeHolderString: "name", withColor: UIColor.white)
+    }
+    
+    func setDelegates() {
         
         pickerView.delegate = self
         pickerView.dataSource = self
-        
-        nameField.set(placeHolderString: "name", withColor: UIColor.white)
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+    }
+    
+    @IBAction func addSpiderPhoto() {
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func addSpiderToFirebase() {
@@ -53,6 +66,7 @@ extension AddSpiderVC {
 
     func postToFirebase() {
         
+        // TODO: Add progress custom sprogress bar when adding spider
         let post: Dictionary<String, AnyObject> = [
             
             "userUid": currentUserUid as NSString,
@@ -67,8 +81,7 @@ extension AddSpiderVC {
 
         ]
         
-        // referance for SPIDERS end point
-        let firebaseSpider = DataService.ds.REF_SPIDERS.childByAutoId() // generate uniqe ID
+        let firebaseSpider = DataService.ds.REF_SPIDERS.childByAutoId()
         firebaseSpider.setValue(post) { (error, firDatabaseReference) in
             
             if error != nil {
@@ -78,6 +91,20 @@ extension AddSpiderVC {
             }
         }
     }
+}
+
+extension AddSpiderVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            spiderImage.image = image
+            imageSelected = true
+        } else {
+            print("Valid image was not selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+
 }
 
 extension AddSpiderVC: UIPickerViewDelegate, UIPickerViewDataSource {
