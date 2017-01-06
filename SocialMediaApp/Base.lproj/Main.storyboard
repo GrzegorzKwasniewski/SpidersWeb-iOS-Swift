@@ -461,7 +461,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonTesting" destination="rRl-Im-cEt" eventType="touchUpInside" id="PQn-aM-JOm"/>
+                                    <action selector="backButtonTesting:" destination="rRl-Im-cEt" eventType="touchUpInside" id="0Ge-8s-Drn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQl-Zc-2CJ">
@@ -471,7 +471,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addSpiderToFirebase" destination="rRl-Im-cEt" eventType="touchUpInside" id="tVh-S5-DwL"/>
+                                    <action selector="addSpiderToFirebase:" destination="rRl-Im-cEt" eventType="touchUpInside" id="UsD-r3-k8C"/>
                                 </connections>
                             </button>
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple-cartoon-spider" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-rx-cSd" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
@@ -536,7 +536,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYh-nP-xIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="ZGK-my-WEJ" userLabel="Add spider photo">
                     <connections>
-                        <action selector="addSpiderPhoto" destination="rRl-Im-cEt" id="b7O-X5-rQ2"/>
+                        <action selector="addSpiderPhoto:" destination="rRl-Im-cEt" id="UPO-Xw-saU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

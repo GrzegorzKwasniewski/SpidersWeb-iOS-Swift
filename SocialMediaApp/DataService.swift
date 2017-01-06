@@ -25,6 +25,7 @@ class DataService {
     private var _REF_POSTS = DB_BASE.child("posts")
     
     // STORAGE references
+    private var _REF_SPIDERS_IMAGES = STORAGE_BASE.child("spiders-images")
     private var _REF_POST_IMAGES = STORAGE_BASE.child("posts-pictures")
     private var _REF_USERS_AVATARS = STORAGE_BASE.child("users-avatars")
     
@@ -56,6 +57,10 @@ class DataService {
         //let uid = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID)
         let user = REF_USERS.child(uid!)
         return user
+    }
+    
+    var REF_SPIDERS_IMAGES: FIRStorageReference {
+        return _REF_SPIDERS_IMAGES
     }
     
     var REF_POST_IMAGES: FIRStorageReference {

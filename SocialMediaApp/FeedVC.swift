@@ -134,7 +134,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let imageData = UIImageJPEGRepresentation(image, 0.2) {
             let imageUid = NSUUID().uuidString
-            // it' good to tell Firebase what data we want to store
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/jpeg"
             

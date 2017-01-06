@@ -42,15 +42,15 @@ class AddSpiderVC: UIViewController {
         imagePicker.allowsEditing = true
     }
     
-    @IBAction func addSpiderPhoto() {
+    @IBAction func addSpiderPhoto(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func addSpiderToFirebase() {
-        postToFirebase()
+    @IBAction func addSpiderToFirebase(_ sender: AnyObject) {
+        addSpider()
     }
     
-    @IBAction func backButtonTesting() {
+    @IBAction func backButtonTesting(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -63,10 +63,43 @@ extension AddSpiderVC {
             currentUserUid = currentFirebaseUser.uid
         }
     }
-
-    func postToFirebase() {
+    
+    func addSpider() {
         
-        // TODO: Add progress custom sprogress bar when adding spider
+        guard let name = nameField.text, name != "" else {
+            // TODO: Show alert to the user
+            print("README: You need to enter at least name")
+            return
+        }
+        
+        guard let image = spiderImage.image, imageSelected == true else {
+            print("README: You must selcet an image")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.2) {
+            let imageUid = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_SPIDERS_IMAGES.child(imageUid).put(imageData, metadata: metaData, completion: { (metadata, error) in
+                if error != nil {
+                    //TODO: Give response to the user with alert
+                    print("REDAME: There was an error when uploading image to Firebase")
+                } else {
+                    print("README: Imge sucessfully uploaded to Firebase storage")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadUrl {
+                        self.postToFirebase(imageUrl: url)
+                    }
+                }
+            })
+        }
+    }
+
+    func postToFirebase(imageUrl: String) {
+        
+        // TODO: Add custom progress indicator when adding spider
         let post: Dictionary<String, AnyObject> = [
             
             "userUid": currentUserUid as NSString,
@@ -75,9 +108,8 @@ extension AddSpiderVC {
             "species": speciesField.text! as NSString,
             "genus": genusField.text! as NSString,
             "countryOrigin": countryOriginField.text! as NSString,
-            "recivedFrom": recivedFromField.text! as NSString
-            
-            //"imageUrl": imageUrl as NSString,
+            "recivedFrom": recivedFromField.text! as NSString,
+            "imageUrl": imageUrl as NSString
 
         ]
         
