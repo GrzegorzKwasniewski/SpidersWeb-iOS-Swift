@@ -22,13 +22,6 @@ class SignInVC: UIViewController {
         GIDSignIn.sharedInstance().delegate = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if let _ = KeychainWrapper.stringForKey(KEY_UID) {
-            print("SEGUE: Perform from viewDidAppear")
-            performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
-        }
-    }
-    
     @IBAction func twitterSignInButton(_ sender: AnyObject) {
         TwitterLogin.sharedInstance.signInWithTwitter()
     }

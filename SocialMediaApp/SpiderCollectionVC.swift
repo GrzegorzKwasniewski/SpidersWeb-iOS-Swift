@@ -52,14 +52,9 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
         
         let spider = spiders[indexPath.row]
         
-        print("README: Hej ho")
-
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "spiderCell", for: indexPath) as? CellSpider {
             
-            print("README: Not empty cell")
-            
             if let image = FeedVC.imageCache.object(forKey: spider.imageUrl as NSString) {
-                print("README: Inside Cache")
                 cell.configureCell(spider: spider, image: image)
                 return cell
             } else {
@@ -67,7 +62,6 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
                 return cell
             }
         } else {
-            print("README: Empty cell")
             return CellSpider()
         }
     }
@@ -107,7 +101,6 @@ extension SpiderCollectionVC {
                     print("SNAP: \(snap)")
                     if let snapDictionary = snap.value as? Dictionary<String, AnyObject> {
                         let userUid = snapDictionary["userUid"]
-                        print("README: \(userUid)")
                         if userUid!.isEqual(self.currentUserUid) {
                             let key = snap.key
                             let spider = Spider(spiderId: key, spiderData: snapDictionary)
@@ -116,8 +109,6 @@ extension SpiderCollectionVC {
                     }
                 }
             }
-            print("README: \(self.spiders.count)")
-
             self.collectionView.reloadData()
         })
     }

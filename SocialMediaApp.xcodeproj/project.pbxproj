@@ -40,6 +40,7 @@
 		719BFEA11E1D723D006EB47A /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA01E1D723D006EB47A /* Spider.swift */; };
 		719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */; };
 		719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA71E1FD7D3006EB47A /* CellSpider.swift */; };
+		719BFEAA1E201D9B006EB47A /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA91E201D9B006EB47A /* StartVC.swift */; };
 		71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */; };
 		71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		71CE62511D858C66002C5B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
@@ -117,6 +118,7 @@
 		719BFEA01E1D723D006EB47A /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 		719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpiderVC.swift; sourceTree = "<group>"; };
 		719BFEA71E1FD7D3006EB47A /* CellSpider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSpider.swift; sourceTree = "<group>"; };
+		719BFEA91E201D9B006EB47A /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewVC.swift; sourceTree = "<group>"; };
 		71A9EAE51DAA6887003B08BD /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		71CE62501D858C66002C5B0B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		713B13171D7D82D900AF79C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				719BFEA91E201D9B006EB47A /* StartVC.swift */,
 				715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */,
 				719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */,
 				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
@@ -670,6 +673,7 @@
 				715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */,
 				713B131F1D7EC1E100AF79C3 /* RoundButton.swift in Sources */,
 				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,
+				719BFEAA1E201D9B006EB47A /* StartVC.swift in Sources */,
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
