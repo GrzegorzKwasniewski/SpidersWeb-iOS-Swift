@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddSpiderVC: UIViewController {
     
@@ -18,10 +19,14 @@ class AddSpiderVC: UIViewController {
     @IBOutlet weak var countryOriginField: RoundedBorderTextField!
     @IBOutlet weak var recivedFromField: RoundedBorderTextField!
     
+    var currentUserUid = String()
     var testData = ["Female", "Male", "Unknown"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkForSignInUser()
+        
         pickerView.delegate = self
         pickerView.dataSource = self
         
@@ -40,10 +45,17 @@ class AddSpiderVC: UIViewController {
 // MARK: Handle Firebase
 extension AddSpiderVC {
     
+    func checkForSignInUser() {
+        if let currentFirebaseUser = FIRAuth.auth()?.currentUser {
+            currentUserUid = currentFirebaseUser.uid
+        }
+    }
+
     func postToFirebase() {
         
         let post: Dictionary<String, AnyObject> = [
             
+            "userUid": currentUserUid as NSString,
             "name": nameField.text! as NSString,
             "commonName": commonNameField.text! as NSString,
             "species": speciesField.text! as NSString,
@@ -51,20 +63,21 @@ extension AddSpiderVC {
             "countryOrigin": countryOriginField.text! as NSString,
             "recivedFrom": recivedFromField.text! as NSString
             
-            //"userUid": currentUserUid as NSString
             //"imageUrl": imageUrl as NSString,
 
         ]
         
         // referance for SPIDERS end point
         let firebaseSpider = DataService.ds.REF_SPIDERS.childByAutoId() // generate uniqe ID
-        firebaseSpider.setValue(post)
-        
-        // assign post to current user
-        //        let currentUserPosts = DataService.ds.REF_USER_CURRENT.child("posts")
-        //        currentUserPosts.updateChildValues([firebasePost.key: true])
+        firebaseSpider.setValue(post) { (error, firDatabaseReference) in
+            
+            if error != nil {
+                print("README: Could not save spider to Firebase")
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
-
 }
 
 extension AddSpiderVC: UIPickerViewDelegate, UIPickerViewDataSource {
