@@ -360,7 +360,32 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Wj0-Jn-dvs" secondAttribute="trailing" id="1uE-4K-2us"/>
+                                    <constraint firstAttribute="trailing" secondItem="KM8-AE-Tkd" secondAttribute="trailing" id="SgY-nJ-gDG"/>
+                                    <constraint firstItem="Wj0-Jn-dvs" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="bHW-jG-5z8"/>
+                                    <constraint firstItem="DmD-zQ-W6k" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="dby-bs-PAa"/>
+                                    <constraint firstAttribute="trailing" secondItem="DmD-zQ-W6k" secondAttribute="trailing" id="gtA-Oa-0mA"/>
+                                    <constraint firstAttribute="trailing" secondItem="m30-r2-scS" secondAttribute="trailing" id="iDW-91-ovd"/>
+                                    <constraint firstItem="fnn-dW-HG3" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="jAN-65-Qfc"/>
+                                    <constraint firstAttribute="trailing" secondItem="fnn-dW-HG3" secondAttribute="trailing" id="lK1-yB-zql"/>
+                                    <constraint firstItem="m30-r2-scS" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="rft-4r-Smi"/>
+                                    <constraint firstItem="DF8-ao-Gjo" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="rvc-Wg-Xul"/>
+                                    <constraint firstAttribute="trailing" secondItem="DF8-ao-Gjo" secondAttribute="trailing" id="vu9-bi-I6d"/>
+                                    <constraint firstItem="KM8-AE-Tkd" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="z63-us-ieD"/>
+                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS9-UW-YGt">
+                                <frame key="frameInset" minX="16" minY="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTest:" destination="cV3-Bo-KMB" eventType="touchDown" id="agh-y8-MOs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.32156862749999998" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -373,6 +398,7 @@
                     </view>
                     <connections>
                         <outlet property="nameField" destination="m30-r2-scS" id="6JV-y4-qaH"/>
+                        <outlet property="spiderImage" destination="wN1-kd-v3Y" id="g7s-3U-FwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URs-3k-dat" userLabel="First Responder" sceneMemberID="firstResponder"/>

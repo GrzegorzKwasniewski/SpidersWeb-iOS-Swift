@@ -24,6 +24,14 @@ class SpiderDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let image = FeedVC.imageCache.object(forKey: spider.imageUrl as NSString) {
+            spiderImage.image = image
+        }
+        
         nameField.text = spider.name
+    }
+    
+    @IBAction func backButtonTest(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
