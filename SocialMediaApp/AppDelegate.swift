@@ -12,6 +12,7 @@ import GoogleSignIn
 import FBSDKLoginKit
 import TwitterKit
 import Fabric
+import UserNotifications
 import SlideMenuControllerSwift
 
 @UIApplicationMain
@@ -21,18 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-//        let slideMenuContainer = SlideMenuContainerVC(nibName: "SlideMenuContainerVC", bundle: nil)
-//        self.window?.rootViewController = slideMenuContainer
-//        self.window?.makeKeyAndVisible()
-        
-        FIRApp.configure()
-        
-        FIRDatabase.database().persistenceEnabled = true
+
+        // MARK: Local notification
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (didAllow, error) in
+            if didAllow {
                 
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+            } else {
+                
+            }
+        }
         
+        // MARK: Firebse configuration
+                
+        FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         Fabric.with([Twitter.self])
         
         let key = Bundle.main.object(forInfoDictionaryKey: "consumerKey"),
@@ -41,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             , !key.isEmpty && !secret.isEmpty {
             Twitter.sharedInstance().start(withConsumerKey: key, consumerSecret: secret)
         }
-
         
         return true
     }

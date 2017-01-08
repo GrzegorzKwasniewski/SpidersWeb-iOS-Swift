@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 class AddSpiderVC: UIViewController {
     
@@ -49,6 +50,20 @@ class AddSpiderVC: UIViewController {
     }
     
     @IBAction func backButtonTesting(_ sender: AnyObject) {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Fedd You spider!!!"
+        content.subtitle = "NOW!!!"
+        content.body = "Bugsssss"
+        content.badge = 1
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(year: 2017, month: 1, day:8, hour: 12, minute: 39), repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "feedSpider", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
         self.dismiss(animated: true, completion: nil)
     }
 }
