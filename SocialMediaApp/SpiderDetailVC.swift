@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import UserNotifications
 
-class SpiderDetailVC: UIViewController {
+class SpiderDetailVC: UIViewController, LocalNotifications {
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var nameField: RoundedBorderTextField!
@@ -18,7 +19,9 @@ class SpiderDetailVC: UIViewController {
     @IBOutlet weak var countryOriginField: RoundedBorderTextField!
     @IBOutlet weak var recivedFromField: RoundedBorderTextField!
     @IBOutlet weak var spiderImage: UIImageView!
+    @IBOutlet var datePicker: UIDatePicker!
     
+    // TODO: Change to otional
     var spider: Spider!
 
     override func viewDidLoad() {
@@ -33,5 +36,9 @@ class SpiderDetailVC: UIViewController {
     
     @IBAction func backButtonTest(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func setFeedReminder(_ sender: UIButton) {
+        scheduleFeedNotification(forSpider: nameField.text!, atDate: datePicker.date)
     }
 }

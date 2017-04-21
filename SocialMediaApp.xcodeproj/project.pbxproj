@@ -36,6 +36,7 @@
 		718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C01DC8BE3D00E764C0 /* VCExt.swift */; };
 		718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */; };
 		718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */; };
+		71945C021EAA6BB000F76CD6 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71945C011EAA6BB000F76CD6 /* LocalNotifications.swift */; };
 		719BFE761E0AF97A006EB47A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFE751E0AF97A006EB47A /* Globals.swift */; };
 		719BFEA11E1D723D006EB47A /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA01E1D723D006EB47A /* Spider.swift */; };
 		719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */; };
@@ -115,6 +116,7 @@
 		718BA3C01DC8BE3D00E764C0 /* VCExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExt.swift; sourceTree = "<group>"; };
 		718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
 		718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseLogin.swift; sourceTree = "<group>"; };
+		71945C011EAA6BB000F76CD6 /* LocalNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
 		719BFE751E0AF97A006EB47A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		719BFEA01E1D723D006EB47A /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 		719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpiderVC.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				713B13171D7D82D900AF79C3 /* Controller */,
 				713B13161D7D82CB00AF79C3 /* View */,
 				713B13151D7D82C300AF79C3 /* Model */,
+				71945C001EAA6B7D00F76CD6 /* Protocols */,
 				7111C7EC1DD07A310012D32C /* PopUpVC */,
 				71CE62541D882D2E002C5B0B /* Services */,
 				71EB43491DCBBDF000142783 /* Delegates */,
@@ -307,6 +310,14 @@
 				715F554D1E1E3CE0008DC82B /* VC */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		71945C001EAA6B7D00F76CD6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				71945C011EAA6BB000F76CD6 /* LocalNotifications.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		719BFEA21E1D740D006EB47A /* UI */ = {
@@ -686,6 +697,7 @@
 				718BA3BE1DC8B8D600E764C0 /* PopUpView.swift in Sources */,
 				7127F7821DBF95B500446302 /* SlideMenuContainerVC.swift in Sources */,
 				71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */,
+				71945C021EAA6BB000F76CD6 /* LocalNotifications.swift in Sources */,
 				718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */,
 				719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */,
 				71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */,
