@@ -18,7 +18,7 @@ extension LocalNotifications where Self: UIViewController {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().add(setRequest(forSpider: name, withDate: date)) {(error) in
             if let error = error {
-                print("Uh oh! We had an error: \(error)")
+                print("\(CustomErrorMessages.Error_LocalNotifications.rawValue) \(error)")
             }
         }
     }

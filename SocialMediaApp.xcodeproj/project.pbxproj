@@ -56,6 +56,7 @@
 		71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F9541DB12517009D8A60 /* FirebaseUser.swift */; };
 		71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE20921DAD32D50036FE9F /* TapImageView.swift */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
+		B2A046BD1EBA633300035DB8 /* CustomErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A046BC1EBA633300035DB8 /* CustomErrorMessages.swift */; };
 		C316D6D9CEF06844E23D1227 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		71FE20921DAD32D50036FE9F /* TapImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapImageView.swift; sourceTree = "<group>"; };
 		76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2A046BC1EBA633300035DB8 /* CustomErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomErrorMessages.swift; sourceTree = "<group>"; };
 		C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBBFC757ABB0FFE0093B5D8C /* Pods-SocialMediaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaApp/Pods-SocialMediaApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +285,7 @@
 			children = (
 				713B131C1D7EBE2D00AF79C3 /* Constants.swift */,
 				719BFE751E0AF97A006EB47A /* Globals.swift */,
+				B2A046BC1EBA633300035DB8 /* CustomErrorMessages.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				719BFEAA1E201D9B006EB47A /* StartVC.swift in Sources */,
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
+				B2A046BD1EBA633300035DB8 /* CustomErrorMessages.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
 				715F554B1E1D3AEB008DC82B /* SpiderCollectionVC.swift in Sources */,
 				7111C8251DE1BB8B0012D32C /* ChangeUserSettings.swift in Sources */,

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BD22AD2343ACBF70C22E1A2FADB7388D2BA8EE55",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7307B6184162C31EBF21C042758B0C32CEF8B185" : 9223372036854775807,
+    "BD22AD2343ACBF70C22E1A2FADB7388D2BA8EE55" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "10FC9A72-5F7A-4656-A6C7-117F11AC9757",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7307B6184162C31EBF21C042758B0C32CEF8B185" : "",
+    "BD22AD2343ACBF70C22E1A2FADB7388D2BA8EE55" : "Spider%20Collection\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SocialMediaApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SocialMediaApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com:GrzegorzKwasniewski\/WorldTourRun-iOS-Objective-C.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7307B6184162C31EBF21C042758B0C32CEF8B185"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GrzegorzKwasniewski\/SocialMediaApp-iOS-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD22AD2343ACBF70C22E1A2FADB7388D2BA8EE55"
+    }
+  ]
+}
