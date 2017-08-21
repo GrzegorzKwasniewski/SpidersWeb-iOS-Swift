@@ -188,41 +188,41 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oix-SC-rxY">
-                                <rect key="frame" x="16" y="112" width="343" height="430"/>
+                                <rect key="frame" x="16" y="112" width="343" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="aKP-hF-iDb"/>
+                                    <constraint firstAttribute="height" constant="435" id="aKP-hF-iDb"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jx9-I8-7iK">
-                                    <size key="itemSize" width="163" height="141"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="jx9-I8-7iK">
+                                    <size key="itemSize" width="163" height="145"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="spiderCell" id="4So-p3-0XP" customClass="CellSpider" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="163" height="141"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="163" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="163" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-vG-dYl">
-                                                    <rect key="frame" x="8" y="109.5" width="147" height="23.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-vG-dYl">
+                                                    <rect key="frame" x="8" y="113.5" width="147" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zoQ-vT-JjR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="102.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="103.5"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="Bwk-vG-dYl" secondAttribute="bottom" constant="-1" id="0JA-Rj-enx"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Bwk-vG-dYl" secondAttribute="bottom" id="0JA-Rj-enx"/>
                                             <constraint firstItem="zoQ-vT-JjR" firstAttribute="leading" secondItem="4So-p3-0XP" secondAttribute="leadingMargin" constant="-8" id="9HQ-Ya-aTM"/>
-                                            <constraint firstItem="Bwk-vG-dYl" firstAttribute="top" secondItem="zoQ-vT-JjR" secondAttribute="bottom" constant="7" id="IaP-44-fYd"/>
+                                            <constraint firstItem="Bwk-vG-dYl" firstAttribute="top" secondItem="zoQ-vT-JjR" secondAttribute="bottom" constant="10" id="IaP-44-fYd"/>
                                             <constraint firstItem="Bwk-vG-dYl" firstAttribute="bottom" secondItem="4So-p3-0XP" secondAttribute="bottomMargin" id="NcQ-DO-RzU"/>
                                             <constraint firstItem="Bwk-vG-dYl" firstAttribute="leading" secondItem="4So-p3-0XP" secondAttribute="leadingMargin" id="Xdm-14-Xif"/>
                                             <constraint firstItem="zoQ-vT-JjR" firstAttribute="top" secondItem="4So-p3-0XP" secondAttribute="topMargin" constant="-8" id="aKs-on-CFn"/>
@@ -240,13 +240,22 @@
                                 <rect key="frame" x="0.0" y="59" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-8q-HEW">
-                                <rect key="frame" x="161" y="556" width="52" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-8q-HEW" customClass="RoundedButton" customModule="SocialMediaApp" customModuleProvider="target">
+                                <rect key="frame" x="161" y="556" width="52" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Qke-3A-urJ"/>
+                                    <constraint firstAttribute="width" constant="52" id="ty1-U6-eBq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="customBackgroundColor">
+                                        <color key="value" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="rRl-Im-cEt" kind="show" id="rCR-Dz-SyO"/>
                                 </connections>
@@ -254,13 +263,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FBx-eY-eZC" firstAttribute="top" secondItem="Oix-SC-rxY" secondAttribute="bottom" constant="76" id="4hb-bQ-cQN"/>
+                            <constraint firstItem="FBx-eY-eZC" firstAttribute="top" secondItem="Oix-SC-rxY" secondAttribute="bottom" constant="71" id="4hb-bQ-cQN"/>
                             <constraint firstItem="Oix-SC-rxY" firstAttribute="centerX" secondItem="ksg-8q-HEW" secondAttribute="centerX" id="6gv-Rh-sgw"/>
-                            <constraint firstItem="ksg-8q-HEW" firstAttribute="top" secondItem="Oix-SC-rxY" secondAttribute="bottom" constant="14" id="8S3-Tl-tfq"/>
                             <constraint firstItem="OvL-Qs-fDL" firstAttribute="top" secondItem="BXp-pg-aLG" secondAttribute="top" id="IzI-iO-a3N"/>
                             <constraint firstItem="Oix-SC-rxY" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leadingMargin" id="Ukk-g8-tnc"/>
                             <constraint firstItem="Oix-SC-rxY" firstAttribute="top" secondItem="pBw-9U-l3u" secondAttribute="bottom" constant="9" id="Vrb-do-0fd"/>
                             <constraint firstItem="OvL-Qs-fDL" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leading" id="XKC-fh-Rvp"/>
+                            <constraint firstItem="FBx-eY-eZC" firstAttribute="top" secondItem="ksg-8q-HEW" secondAttribute="bottom" constant="10" id="YZY-jy-LRe"/>
                             <constraint firstItem="pBw-9U-l3u" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leading" id="bOA-AJ-kv2"/>
                             <constraint firstAttribute="trailing" secondItem="OvL-Qs-fDL" secondAttribute="trailing" id="e3e-zw-9K8"/>
                             <constraint firstAttribute="trailing" secondItem="pBw-9U-l3u" secondAttribute="trailing" id="j5P-YW-gwn"/>

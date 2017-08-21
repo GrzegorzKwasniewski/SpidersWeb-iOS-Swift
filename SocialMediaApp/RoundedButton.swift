@@ -108,7 +108,7 @@ class RoundedButton: UIButton {
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        //resizeButtonAnimation()
+        resizeButtonAnimation()
         return true
     }
 }

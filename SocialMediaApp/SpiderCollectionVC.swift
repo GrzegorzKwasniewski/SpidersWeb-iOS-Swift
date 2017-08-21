@@ -67,7 +67,8 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.resizeButtonAnimation()
         let spider = spiders[indexPath.row]
         performSegue(withIdentifier: "showSpiderDetails", sender: spider)
         

@@ -23,6 +23,8 @@ class CellSpider: UICollectionViewCell {
         spiderName.alpha = 1.0
         
         layer.cornerRadius = 5.0
+        
+        dropShadow()
     }
     
     func configureCell(spider: Spider, image: UIImage? = nil) {
