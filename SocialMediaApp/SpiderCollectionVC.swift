@@ -21,11 +21,6 @@ class SpiderCollectionVC: UIViewController {
         super.viewDidLoad()
         
         checkForSignInUser()
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        searchBar.delegate = self
-
         setDelegates()
         getSpidersDataFromFirebase()
         
@@ -34,15 +29,9 @@ class SpiderCollectionVC: UIViewController {
     }
     
     func setDelegates() {
-
-    }
-
-    @IBAction func goToUserSettings(_ sender: AnyObject) {
-        if let slideMenuController = self.slideMenuController() {
-            slideMenuController.openLeft()
-        } else {
-            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
-        }
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        searchBar.delegate = self
     }
 }
 
