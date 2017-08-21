@@ -25,8 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: Tab Bar Properties
         UITabBar.appearance().barTintColor = UIColor.black
-        UITabBar.appearance().tintColor = UIColor.green
-
+        UITabBar.appearance().tintColor = Colors.MAIN_COLOR
+        UITabBar.appearance().unselectedItemTintColor = UIColor.white
+        
         // MARK: Local notification
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (didAllow, error) in
             if didAllow {
