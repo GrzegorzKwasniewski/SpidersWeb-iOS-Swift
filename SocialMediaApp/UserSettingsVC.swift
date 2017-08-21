@@ -23,7 +23,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        popUpView = instantiatePopUpView()
+        //popUpView = instantiatePopUpView()
 
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
@@ -34,14 +34,14 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    self.popUpView.removeAnimate()
+                    //self.popUpView.removeAnimate()
                 }
             } else {
                 DispatchQueue.main.async {
                     self.profileImage.image = firebaseUser.image
                     self.userNameLabel.text = firebaseUser.display_name
                     self.userEmail.text = firebaseUser.email
-                    self.popUpView.removeAnimate()
+                    //self.popUpView.removeAnimate()
                 }
             }
         }
