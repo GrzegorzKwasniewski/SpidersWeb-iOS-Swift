@@ -188,10 +188,10 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oix-SC-rxY">
-                                <rect key="frame" x="16" y="112" width="343" height="435"/>
+                                <rect key="frame" x="16" y="122" width="343" height="425"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="435" id="aKP-hF-iDb"/>
+                                    <constraint firstAttribute="height" constant="425" id="aKP-hF-iDb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="jx9-I8-7iK">
                                     <size key="itemSize" width="163" height="145"/>
@@ -236,10 +236,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" placeholder="search for spider" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-9U-l3u">
-                                <rect key="frame" x="0.0" y="59" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-8q-HEW" customClass="RoundedButton" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="161" y="556" width="52" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -260,6 +256,10 @@
                                     <segue destination="rRl-Im-cEt" kind="show" id="rCR-Dz-SyO"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" placeholder="search for spider" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-9U-l3u">
+                                <rect key="frame" x="0.0" y="59" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -267,7 +267,7 @@
                             <constraint firstItem="Oix-SC-rxY" firstAttribute="centerX" secondItem="ksg-8q-HEW" secondAttribute="centerX" id="6gv-Rh-sgw"/>
                             <constraint firstItem="OvL-Qs-fDL" firstAttribute="top" secondItem="BXp-pg-aLG" secondAttribute="top" id="IzI-iO-a3N"/>
                             <constraint firstItem="Oix-SC-rxY" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leadingMargin" id="Ukk-g8-tnc"/>
-                            <constraint firstItem="Oix-SC-rxY" firstAttribute="top" secondItem="pBw-9U-l3u" secondAttribute="bottom" constant="9" id="Vrb-do-0fd"/>
+                            <constraint firstItem="Oix-SC-rxY" firstAttribute="top" secondItem="pBw-9U-l3u" secondAttribute="bottom" constant="19" id="Vrb-do-0fd"/>
                             <constraint firstItem="OvL-Qs-fDL" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leading" id="XKC-fh-Rvp"/>
                             <constraint firstItem="FBx-eY-eZC" firstAttribute="top" secondItem="ksg-8q-HEW" secondAttribute="bottom" constant="10" id="YZY-jy-LRe"/>
                             <constraint firstItem="pBw-9U-l3u" firstAttribute="leading" secondItem="BXp-pg-aLG" secondAttribute="leading" id="bOA-AJ-kv2"/>
