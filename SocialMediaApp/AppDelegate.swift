@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // MARK: Tab Bar Properties
-        UITabBar.appearance().barTintColor = UIColor.white
-        UITabBar.appearance().tintColor = UIColor.red
+        UITabBar.appearance().barTintColor = UIColor.black
+        UITabBar.appearance().tintColor = UIColor.green
 
         // MARK: Local notification
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (didAllow, error) in
