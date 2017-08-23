@@ -83,6 +83,8 @@ class Spider {
         return _imageUrl
     }
     
+    init() {}
+    
     init(spiderId: String, spiderData: Dictionary<String, AnyObject>) {
         
         _spiderId = spiderId

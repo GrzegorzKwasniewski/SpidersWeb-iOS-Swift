@@ -16,6 +16,9 @@ class SpiderCollectionVC: UIViewController {
     
     var currentUserUid = String()
     var spiders = [Spider]()
+    var filteredSpiders = [Spider]()
+    
+    var inSearchMode = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,13 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let spider = spiders[indexPath.row]
+        var spider = Spider()
+        
+        if inSearchMode {
+            spider = filteredSpiders[indexPath.row]
+        } else {
+            spider = spiders[indexPath.row]
+        }
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "spiderCell", for: indexPath) as? CellSpider {
             
@@ -64,7 +73,11 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return spiders.count
+        if inSearchMode {
+           return filteredSpiders.count
+        } else {
+           return spiders.count
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -110,12 +123,32 @@ extension SpiderCollectionVC {
 // MARK: Handle UISearchBar
 extension SpiderCollectionVC: UISearchBarDelegate {
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchBar.setShowsCancelButton(true, animated: true)
+        
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            collectionView.reloadData()
+            view.endEditing(true)
+        } else {
+            inSearchMode = true
+            
+            let lower = searchBar.text!.lowercased()
+            
+            filteredSpiders = spiders.filter({$0.name.range(of: lower) != nil })
+            
+            collectionView.reloadData()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
     }
 }
 

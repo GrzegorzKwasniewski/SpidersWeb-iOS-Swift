@@ -56,6 +56,4 @@ class SpiderDetailVC: UIViewController, LocalNotifications {
             detailView.isHidden = false
         }
     }
-
-    
 }
