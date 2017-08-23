@@ -11,6 +11,9 @@ import UserNotifications
 
 class SpiderDetailVC: UIViewController, LocalNotifications {
     
+    @IBOutlet weak var generalInfoView: UIView!
+    @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var nameField: RoundedBorderTextField!
     @IBOutlet weak var commonNameField: RoundedBorderTextField!
@@ -41,4 +44,18 @@ class SpiderDetailVC: UIViewController, LocalNotifications {
     @IBAction func setFeedReminder(_ sender: UIButton) {
         scheduleFeedNotification(forSpider: nameField.text!, atDate: datePicker.date)
     }
+    
+    @IBAction func segmentedControlSelection(_ sender: Any) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            generalInfoView.isHidden = false
+            detailView.isHidden = true
+        }
+        
+        if segmentedControl.selectedSegmentIndex == 1 {
+            generalInfoView.isHidden = true
+            detailView.isHidden = false
+        }
+    }
+
+    
 }

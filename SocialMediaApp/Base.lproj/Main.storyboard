@@ -324,79 +324,6 @@
                                     <constraint firstItem="wN1-kd-v3Y" firstAttribute="top" secondItem="Hfs-IX-sXW" secondAttribute="top" constant="18" id="vIN-N5-rGj"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xNj-Ib-in0">
-                                <rect key="frame" x="16" y="300" width="343" height="150"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m30-r2-scS" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="KbO-NP-RZY"/>
-                                        </constraints>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="common name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-Jn-dvs" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30" width="343" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="uta-t8-yGO"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="species" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-zQ-W6k" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="54" width="343" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="0rp-ht-uRm"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="genus" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DF8-ao-Gjo" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="78" width="343" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="xN8-FC-4fI"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="country origin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KM8-AE-Tkd" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="102" width="343" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="whD-Jj-XsP"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="recived from" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnn-dW-HG3" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="126" width="343" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="M6l-Id-Kh2"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Wj0-Jn-dvs" secondAttribute="trailing" id="1uE-4K-2us"/>
-                                    <constraint firstAttribute="trailing" secondItem="KM8-AE-Tkd" secondAttribute="trailing" id="SgY-nJ-gDG"/>
-                                    <constraint firstItem="Wj0-Jn-dvs" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="bHW-jG-5z8"/>
-                                    <constraint firstItem="DmD-zQ-W6k" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="dby-bs-PAa"/>
-                                    <constraint firstAttribute="trailing" secondItem="DmD-zQ-W6k" secondAttribute="trailing" id="gtA-Oa-0mA"/>
-                                    <constraint firstAttribute="trailing" secondItem="m30-r2-scS" secondAttribute="trailing" id="iDW-91-ovd"/>
-                                    <constraint firstItem="fnn-dW-HG3" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="jAN-65-Qfc"/>
-                                    <constraint firstAttribute="trailing" secondItem="fnn-dW-HG3" secondAttribute="trailing" id="lK1-yB-zql"/>
-                                    <constraint firstItem="m30-r2-scS" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="rft-4r-Smi"/>
-                                    <constraint firstItem="DF8-ao-Gjo" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="rvc-Wg-Xul"/>
-                                    <constraint firstAttribute="trailing" secondItem="DF8-ao-Gjo" secondAttribute="trailing" id="vu9-bi-I6d"/>
-                                    <constraint firstItem="KM8-AE-Tkd" firstAttribute="leading" secondItem="xNj-Ib-in0" secondAttribute="leading" id="z63-us-ieD"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS9-UW-YGt">
                                 <rect key="frame" x="16" y="28" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -408,37 +335,131 @@
                                     <action selector="backButtonTest:" destination="cV3-Bo-KMB" eventType="touchDown" id="agh-y8-MOs"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7nW-aA-iXD">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7nW-aA-iXD">
                                 <rect key="frame" x="0.0" y="416" width="375" height="251"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="505827618.30762798">
                                     <!--2017-01-11 11:40:18 +0000-->
                                 </date>
                             </datePicker>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-W1-Uq3">
-                                <rect key="frame" x="16" y="258" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-W1-Uq3">
+                                <rect key="frame" x="16" y="260" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="0i3-ff-2SL"/>
+                                </constraints>
                                 <segments>
                                     <segment title="General"/>
                                     <segment title="Details"/>
                                     <segment title="Feeding"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlSelection:" destination="cV3-Bo-KMB" eventType="valueChanged" id="37q-ah-K3U"/>
+                                </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yN6-3m-c16" userLabel="Detail info">
+                                <rect key="frame" x="16" y="303" width="343" height="315"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e9n-tI-6aD">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="315"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="species" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-zQ-W6k" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="0rp-ht-uRm"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="country origin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KM8-AE-Tkd" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="24" width="343" height="291"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="e9n-tI-6aD" firstAttribute="leading" secondItem="yN6-3m-c16" secondAttribute="leading" id="Hhe-dt-lfV"/>
+                                    <constraint firstAttribute="trailing" secondItem="e9n-tI-6aD" secondAttribute="trailing" id="u5e-ka-Dla"/>
+                                    <constraint firstItem="e9n-tI-6aD" firstAttribute="top" secondItem="yN6-3m-c16" secondAttribute="top" id="uFr-aX-X56"/>
+                                    <constraint firstAttribute="bottom" secondItem="e9n-tI-6aD" secondAttribute="bottom" id="uwf-U5-RAo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQQ-vh-U9u" userLabel="General info">
+                                <rect key="frame" x="0.0" y="303" width="375" height="315"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VsJ-hT-thv">
+                                        <rect key="frame" x="10" y="15" width="355" height="290"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m30-r2-scS" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="72.5"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="genus" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DF8-ao-Gjo" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="72.5" width="355" height="72.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="common name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-Jn-dvs" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="145" width="355" height="72.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="recived from" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnn-dW-HG3" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="217.5" width="355" height="72.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VsJ-hT-thv" firstAttribute="leading" secondItem="rQQ-vh-U9u" secondAttribute="leading" constant="10" id="Brg-Av-QmM"/>
+                                    <constraint firstAttribute="trailing" secondItem="VsJ-hT-thv" secondAttribute="trailing" constant="10" id="On0-3Z-PJc"/>
+                                    <constraint firstItem="VsJ-hT-thv" firstAttribute="top" secondItem="rQQ-vh-U9u" secondAttribute="top" constant="15" id="QLM-7e-BVP"/>
+                                    <constraint firstAttribute="bottom" secondItem="VsJ-hT-thv" secondAttribute="bottom" constant="10" id="Zse-lx-ic4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Hfs-IX-sXW" firstAttribute="top" secondItem="HER-5J-vYw" secondAttribute="top" id="1Ek-yu-HXk"/>
+                            <constraint firstItem="yN6-3m-c16" firstAttribute="trailing" secondItem="HER-5J-vYw" secondAttribute="trailingMargin" id="9Pj-BC-amG"/>
+                            <constraint firstItem="sXo-nH-j0m" firstAttribute="top" secondItem="rQQ-vh-U9u" secondAttribute="bottom" id="Bqk-CK-Rqa"/>
+                            <constraint firstItem="yN6-3m-c16" firstAttribute="top" secondItem="i0z-W1-Uq3" secondAttribute="bottom" constant="15" id="CRQ-eD-NvH"/>
+                            <constraint firstItem="i0z-W1-Uq3" firstAttribute="trailing" secondItem="HER-5J-vYw" secondAttribute="trailingMargin" id="Fhq-XU-Wl7"/>
+                            <constraint firstItem="yN6-3m-c16" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leadingMargin" id="Nfy-3X-lfe"/>
                             <constraint firstItem="Hfs-IX-sXW" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leading" id="Nw4-Rz-rNb"/>
+                            <constraint firstItem="rQQ-vh-U9u" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leading" id="Obm-AC-WsM"/>
+                            <constraint firstItem="sXo-nH-j0m" firstAttribute="top" secondItem="yN6-3m-c16" secondAttribute="bottom" id="QaD-HF-qXC"/>
+                            <constraint firstItem="i0z-W1-Uq3" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leadingMargin" id="STv-81-QoQ"/>
                             <constraint firstAttribute="trailing" secondItem="Hfs-IX-sXW" secondAttribute="trailing" id="Stj-G6-edE"/>
-                            <constraint firstItem="xNj-Ib-in0" firstAttribute="top" secondItem="Hfs-IX-sXW" secondAttribute="bottom" constant="50" id="VGA-vh-6So"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xNj-Ib-in0" secondAttribute="trailing" id="YG7-Jb-MVp"/>
-                            <constraint firstItem="xNj-Ib-in0" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leadingMargin" id="eUv-3h-GFf"/>
+                            <constraint firstAttribute="trailing" secondItem="rQQ-vh-U9u" secondAttribute="trailing" id="Yzm-Vc-BcY"/>
+                            <constraint firstItem="rQQ-vh-U9u" firstAttribute="top" secondItem="i0z-W1-Uq3" secondAttribute="bottom" constant="15" id="cz5-Ju-nG0"/>
+                            <constraint firstItem="i0z-W1-Uq3" firstAttribute="top" secondItem="Hfs-IX-sXW" secondAttribute="bottom" constant="10" id="jR8-ju-ZCR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7nW-aA-iXD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="7nW-aA-iXD" id="Sdn-EB-Ptk"/>
+                        <outlet property="detailView" destination="yN6-3m-c16" id="Aez-Xb-Kts"/>
+                        <outlet property="generalInfoView" destination="rQQ-vh-U9u" id="BVY-uY-J0X"/>
                         <outlet property="nameField" destination="m30-r2-scS" id="6JV-y4-qaH"/>
+                        <outlet property="segmentedControl" destination="i0z-W1-Uq3" id="Gjg-IC-Fvo"/>
                         <outlet property="spiderImage" destination="wN1-kd-v3Y" id="g7s-3U-FwT"/>
                     </connections>
                 </viewController>
