@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 import KRProgressHUD
-import SlideMenuControllerSwift
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -157,13 +156,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
     }
 
-    @IBAction func goToUserSettings(_ sender: AnyObject) {
-        if let slideMenuController = self.slideMenuController() {
-            slideMenuController.openLeft()
-        } else {
-            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
-        }
-    }
+//    @IBAction func goToUserSettings(_ sender: AnyObject) {
+//        if let slideMenuController = self.slideMenuController() {
+//            slideMenuController.openLeft()
+//        } else {
+//            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
+//        }
+//    }
     
     @IBAction func forTestsOnlyAction(_ sender: AnyObject) {
         let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)

@@ -13,7 +13,6 @@ import FBSDKLoginKit
 import TwitterKit
 import Fabric
 import UserNotifications
-import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

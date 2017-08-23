@@ -325,7 +325,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xNj-Ib-in0">
-                                <rect key="frame" x="16" y="260" width="343" height="150"/>
+                                <rect key="frame" x="16" y="300" width="343" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m30-r2-scS" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -415,13 +415,23 @@
                                     <!--2017-01-11 11:40:18 +0000-->
                                 </date>
                             </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-W1-Uq3">
+                                <rect key="frame" x="16" y="258" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="General"/>
+                                    <segment title="Details"/>
+                                    <segment title="Feeding"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Hfs-IX-sXW" firstAttribute="top" secondItem="HER-5J-vYw" secondAttribute="top" id="1Ek-yu-HXk"/>
                             <constraint firstItem="Hfs-IX-sXW" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leading" id="Nw4-Rz-rNb"/>
                             <constraint firstAttribute="trailing" secondItem="Hfs-IX-sXW" secondAttribute="trailing" id="Stj-G6-edE"/>
-                            <constraint firstItem="xNj-Ib-in0" firstAttribute="top" secondItem="Hfs-IX-sXW" secondAttribute="bottom" constant="10" id="VGA-vh-6So"/>
+                            <constraint firstItem="xNj-Ib-in0" firstAttribute="top" secondItem="Hfs-IX-sXW" secondAttribute="bottom" constant="50" id="VGA-vh-6So"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xNj-Ib-in0" secondAttribute="trailing" id="YG7-Jb-MVp"/>
                             <constraint firstItem="xNj-Ib-in0" firstAttribute="leading" secondItem="HER-5J-vYw" secondAttribute="leadingMargin" id="eUv-3h-GFf"/>
                         </constraints>

@@ -97,16 +97,16 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    @IBAction func BackButton(_ sender: AnyObject) {
-        if let slideMenuController = self.slideMenuController() {
-            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "SpiderCollection") {
-                let mainViewController = controller
-                slideMenuController.changeMainViewController(mainViewController, close: true)
-            }
-        }  else {
-            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
-        }
-    }
+//    @IBAction func BackButton(_ sender: AnyObject) {
+//        if let slideMenuController = self.slideMenuController() {
+//            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "SpiderCollection") {
+//                let mainViewController = controller
+//                slideMenuController.changeMainViewController(mainViewController, close: true)
+//            }
+//        }  else {
+//            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
+//        }
+//    }
     
     @IBAction func selectAvatarAction(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
