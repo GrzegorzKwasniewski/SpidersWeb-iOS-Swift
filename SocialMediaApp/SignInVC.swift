@@ -15,11 +15,17 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
         FirebaseLogin.sharedInstance.delegate = self
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.stringForKey(KEY_UID) {
+            print("SEGUE: Perform from viewDidAppear")
+            performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
+        }
     }
     
     @IBAction func twitterSignInButton(_ sender: AnyObject) {
