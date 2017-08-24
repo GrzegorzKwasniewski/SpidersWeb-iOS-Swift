@@ -1033,30 +1033,6 @@
                                     <outletCollection property="gestureRecognizers" destination="K4f-jE-hrK" appends="YES" id="NpA-nz-JJ6"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lf5-8f-rRy">
-                                <rect key="frame" x="244" y="286" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change Name"/>
-                                <connections>
-                                    <action selector="changeUserData:" destination="fUf-KF-t9b" eventType="touchUpInside" id="PSf-r9-Y6n"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aJ-p8-RuT" userLabel="ReAuth">
-                                <rect key="frame" x="83" y="381" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ReAuth"/>
-                                <connections>
-                                    <action selector="reAuth:" destination="fUf-KF-t9b" eventType="touchUpInside" id="n4r-sR-2ad"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="je1-en-3uD">
-                                <rect key="frame" x="232" y="380" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change Email"/>
-                                <connections>
-                                    <action selector="changeUserEmail:" destination="fUf-KF-t9b" eventType="touchUpInside" id="jBx-Fe-hRL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR1-LL-Ck9">
                                 <rect key="frame" x="126" y="502" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

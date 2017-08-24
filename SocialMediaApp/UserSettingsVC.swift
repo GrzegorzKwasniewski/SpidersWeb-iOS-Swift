@@ -53,30 +53,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func changeUserData(_ sender: AnyObject) {
-        let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "changeUserName") as! ChangeUserNamePopUpVC
-        self.addChildViewController(popUpView)
-        popUpView.view.frame = self.view.frame
-        self.view.addSubview(popUpView.view)
-        popUpView.didMove(toParentViewController: self)
-    }
-    
-    @IBAction func reAuth(_ sender: AnyObject) {
-        let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reAuthenticateUser") as! ReAuthenticateUserVC
-        self.addChildViewController(popUpView)
-        popUpView.view.frame = self.view.frame
-        self.view.addSubview(popUpView.view)
-        popUpView.didMove(toParentViewController: self)
-    }
-    
-    @IBAction func changeUserEmail(_ sender: AnyObject) {
-        let popUpView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "changeUserEmail") as! ChangeUserEmailVC
-        self.addChildViewController(popUpView)
-        popUpView.view.frame = self.view.frame
-        self.view.addSubview(popUpView.view)
-        popUpView.didMove(toParentViewController: self)
-    }
-    
     @IBAction func resetUserPassword(_ sender: AnyObject) {
         if let user = FIRAuth.auth()?.currentUser {
             if let email = user.email {
