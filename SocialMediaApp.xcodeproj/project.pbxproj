@@ -40,7 +40,6 @@
 		719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */; };
 		719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA71E1FD7D3006EB47A /* CellSpider.swift */; };
 		719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */; };
-		71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */; };
 		71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		71CE62511D858C66002C5B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
 		71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62521D8692C5002C5B0B /* CellFeed.swift */; };
@@ -121,7 +120,6 @@
 		719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpiderVC.swift; sourceTree = "<group>"; };
 		719BFEA71E1FD7D3006EB47A /* CellSpider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSpider.swift; sourceTree = "<group>"; };
 		719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderDetailVC.swift; sourceTree = "<group>"; };
-		71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewVC.swift; sourceTree = "<group>"; };
 		71A9EAE51DAA6887003B08BD /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		71CE62501D858C66002C5B0B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		71CE62521D8692C5002C5B0B /* CellFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellFeed.swift; sourceTree = "<group>"; };
@@ -257,9 +255,8 @@
 				719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */,
 				719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */,
 				715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */,
-				71578F321D841DA5004B56AE /* FeedVC.swift */,
 				7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */,
-				71A2E6EA1DB795AE009061D4 /* PopUpViewVC.swift */,
+				71578F321D841DA5004B56AE /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -751,7 +748,6 @@
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
 				71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
 				7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */,
-				71A2E6EB1DB795AE009061D4 /* PopUpViewVC.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,
 				7111C7E71DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift in Sources */,
 				713B13231D7EC94800AF79C3 /* ShadowButton.swift in Sources */,

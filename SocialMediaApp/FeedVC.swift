@@ -15,7 +15,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
-    var popUpView = PopUpViewVC()
     var currentUserUid = String()
     var posts = [Post]()
     var imagePicker = UIImagePickerController()

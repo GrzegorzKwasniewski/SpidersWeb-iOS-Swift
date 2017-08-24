@@ -12,7 +12,6 @@ import KRProgressHUD
 
 class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var popUpView = PopUpViewVC()
     var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var profileImage: ProfileImage!
