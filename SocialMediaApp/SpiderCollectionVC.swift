@@ -125,8 +125,6 @@ extension SpiderCollectionVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        searchBar.setShowsCancelButton(true, animated: true)
-        
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             collectionView.reloadData()
@@ -144,11 +142,6 @@ extension SpiderCollectionVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        searchBar.setShowsCancelButton(false, animated: true)
     }
 }
 
