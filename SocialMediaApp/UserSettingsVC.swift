@@ -41,25 +41,8 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let selectedAvatar = info[UIImagePickerControllerEditedImage] as? UIImage {
             profileImage.image = selectedAvatar
             
-            if let imageData = UIImageJPEGRepresentation(selectedAvatar, 0.2) {
-                let imageUid = NSUUID().uuidString
-                // it' good to tell Firebase what data we want to store
-                let metaData = FIRStorageMetadata()
-                metaData.contentType = "image/jpeg"
-                
-                DataService.ds.REF_USERS_AVATARS.child(imageUid).put(imageData, metadata: metaData, completion: { (metadata, error) in
-                    if error != nil {
-                        print("REDAME: There was an error when uploading image to Firebase")
-                    } else {
-                        // give response to the user
-                        print("README: Imge sucessfully uploaded to Firebase storage")
-                        let downloadUrl = metadata?.downloadURL()?.absoluteString
-                        if let url = downloadUrl {
-                            self.assignAvatarToFirebaseUser(imageUrl: url)
-                        }
-                    }
-                })
-            }
+            DataService.ds.uploadUserImage(selectedAvatar: selectedAvatar)
+            
         } else {
             print("README: Valid image was not selected")
         }

@@ -148,6 +148,46 @@ class DataService {
         return UIImage(named: DEFAULT_AVATAR)!
     }
     
+    func uploadUserImage(selectedAvatar: UIImage) {
+        if let imageData = UIImageJPEGRepresentation(selectedAvatar, 0.2) {
+            let imageUid = NSUUID().uuidString
+            // it' good to tell Firebase what data we want to store
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            REF_USERS_AVATARS.child(imageUid).put(imageData, metadata: metaData, completion: { (metadata, error) in
+                if error != nil {
+                    print("REDAME: There was an error when uploading image to Firebase")
+                } else {
+                    // give response to the user
+                    print("README: Imge sucessfully uploaded to Firebase storage")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadUrl {
+                        self.assignAvatarToFirebaseUser(imageUrl: url)
+                    }
+                }
+            })
+        }
+    }
+    
+    func assignAvatarToFirebaseUser(imageUrl: String) {
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let currentUser = user {
+                let changeRequest = currentUser.profileChangeRequest()
+                changeRequest.photoURL = URL(string: imageUrl)
+                changeRequest.commitChanges { error in
+                    if let error = error {
+                        print("README: Error while trying to change user data")
+                    } else {
+                        // Profile updated.
+                    }
+                }
+            } else {
+                print("README: There's no user signed in")
+            }
+        }
+    }
+    
     func storeUserImageInCache(userImage image: UIImage, forKey key: NSString) {
         FeedVC.imageCache.setObject(image, forKey: key)
     }
