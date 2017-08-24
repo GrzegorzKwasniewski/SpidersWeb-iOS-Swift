@@ -15,7 +15,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     var popUpView = PopUpViewVC()
     var imagePicker = UIImagePickerController()
     
-    
     @IBOutlet weak var profileImage: ProfileImage!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmail: UILabel!
@@ -45,9 +44,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -96,17 +92,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
-    
-//    @IBAction func BackButton(_ sender: AnyObject) {
-//        if let slideMenuController = self.slideMenuController() {
-//            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "SpiderCollection") {
-//                let mainViewController = controller
-//                slideMenuController.changeMainViewController(mainViewController, close: true)
-//            }
-//        }  else {
-//            print("README: There's no slideMenuController - check if You have container ViewController for slide menu")
-//        }
-//    }
     
     @IBAction func selectAvatarAction(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
