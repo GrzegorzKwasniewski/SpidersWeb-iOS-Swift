@@ -188,6 +188,20 @@ class DataService {
         }
     }
     
+    func resetUserPassword() {
+        if let user = FIRAuth.auth()?.currentUser {
+            if let email = user.email {
+                FIRAuth.auth()?.sendPasswordReset(withEmail: email) { error in
+                    if let error = error {
+                        print("README: Can't send reset email")
+                    } else {
+                        print("README: Reset email was sent")
+                    }
+                }
+            }
+        }
+    }
+
     func storeUserImageInCache(userImage image: UIImage, forKey key: NSString) {
         FeedVC.imageCache.setObject(image, forKey: key)
     }

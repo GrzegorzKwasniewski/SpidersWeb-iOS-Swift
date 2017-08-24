@@ -39,6 +39,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selectedAvatar = info[UIImagePickerControllerEditedImage] as? UIImage {
+            
             profileImage.image = selectedAvatar
             
             DataService.ds.uploadUserImage(selectedAvatar: selectedAvatar)
@@ -46,6 +47,7 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         } else {
             print("README: Valid image was not selected")
         }
+        
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
@@ -54,16 +56,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func resetUserPassword(_ sender: AnyObject) {
-        if let user = FIRAuth.auth()?.currentUser {
-            if let email = user.email {
-                FIRAuth.auth()?.sendPasswordReset(withEmail: email) { error in
-                    if let error = error {
-                        print("README: Can't send reset email")
-                    } else {
-                        print("README: Reset email was sent")
-                    }
-                }
-            }
-        }
+        DataService.ds.resetUserPassword()
     }
 }
