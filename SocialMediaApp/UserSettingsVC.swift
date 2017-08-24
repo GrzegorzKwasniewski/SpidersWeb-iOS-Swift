@@ -49,24 +49,6 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
-    func assignAvatarToFirebaseUser(imageUrl: String) {
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let currentUser = user {
-                let changeRequest = currentUser.profileChangeRequest()
-                changeRequest.photoURL = URL(string: imageUrl)
-                changeRequest.commitChanges { error in
-                    if let error = error {
-                        print("README: Error while trying to change user data")
-                    } else {
-                        // Profile updated.
-                    }
-                }
-            } else {
-                print("README: There's no user signed in")
-            }
-        }
-    }
-    
     @IBAction func selectAvatarAction(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
     }
