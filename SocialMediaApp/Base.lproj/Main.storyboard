@@ -1022,7 +1022,7 @@
                                     <constraint firstAttribute="height" constant="151" id="cD6-Bg-Raq"/>
                                 </constraints>
                             </view>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-0E-JRQ" userLabel="ProfileImage" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="115.5" y="101" width="144" height="145"/>
                                 <gestureRecognizers/>
                                 <constraints>

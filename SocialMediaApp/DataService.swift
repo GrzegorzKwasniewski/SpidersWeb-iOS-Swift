@@ -77,7 +77,7 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
-    func getFirebaseDBUserData(firebaseUser: @escaping (FirebaseUser, Bool) -> Void) {
+    func getFirebaseDBUserData(firebaseUser: @escaping (FirebaseUser) -> Void) {
         
         if let currentUser = FIRAuth.auth()?.currentUser {
             
@@ -94,21 +94,21 @@ class DataService {
                 
                 if let userImageFromCache = FeedVC.imageCache.object(forKey: keyForStoringInCache) {
                     userImage = userImageFromCache
-                    firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), true)
+                    firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage))
                 } else {
                     getUserImage(fromUrl: currentUserPhotoUrl, completion: { (userImage) in
                         
-                        firebaseUser(FirebaseUser(userUid: self.currentUserUid, userDisplayName: self.userName, userEmail: self.userEmail, userImage: userImage), false)
+                        firebaseUser(FirebaseUser(userUid: self.currentUserUid, userDisplayName: self.userName, userEmail: self.userEmail, userImage: userImage))
                         
                         self.storeUserImageInCache(userImage: userImage, forKey: keyForStoringInCache)
                     })
                 }
             } else {
                 userImage = UIImage(named: DEFAULT_AVATAR)
-                firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage), false)
+                firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage))
             }
         } else {
-            firebaseUser(FirebaseUser(), false)
+            firebaseUser(FirebaseUser())
         }
     }
     

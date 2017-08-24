@@ -22,26 +22,17 @@ class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //popUpView = instantiatePopUpView()
-
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
-        DataService.ds.getFirebaseDBUserData { (firebaseUser, succes) in
-            if succes {
-                DispatchQueue.main.async {
-                    self.profileImage.image = firebaseUser.image
-                    self.userNameLabel.text = firebaseUser.display_name
-                    self.userEmail.text = firebaseUser.email
-                    //self.popUpView.removeAnimate()
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self.profileImage.image = firebaseUser.image
-                    self.userNameLabel.text = firebaseUser.display_name
-                    self.userEmail.text = firebaseUser.email
-                    //self.popUpView.removeAnimate()
-                }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        DataService.ds.getFirebaseDBUserData { (firebaseUser) in
+            DispatchQueue.main.async {
+                self.profileImage.image = firebaseUser.image
+                self.userNameLabel.text = firebaseUser.display_name
+                self.userEmail.text = firebaseUser.email
             }
         }
     }
