@@ -123,12 +123,15 @@ extension SpiderCollectionVC {
 // MARK: Handle UISearchBar
 extension SpiderCollectionVC: UISearchBarDelegate {
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             collectionView.reloadData()
-            view.endEditing(true)
         } else {
             inSearchMode = true
             
@@ -141,6 +144,18 @@ extension SpiderCollectionVC: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        inSearchMode = true
+        collectionView.reloadData()
+        searchBar.showsCancelButton = false
+        //searchBar.text = nil
+        view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        inSearchMode = false
+        collectionView.reloadData()
+        searchBar.showsCancelButton = false
+        searchBar.text = nil
         view.endEditing(true)
     }
 }
