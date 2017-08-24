@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 class Spider {
 
+    private var _spiderUid: String = ""
     private var _spiderId: String = ""
     private var _name: String = ""
     private var _genus: String = ""
@@ -42,6 +44,10 @@ class Spider {
     var pre_molt
     var life_stages
     var notes */
+    
+    var spiderUid: String {
+        return _spiderUid
+    }
     
     var spiderId: String {
         return _spiderId
@@ -88,6 +94,10 @@ class Spider {
     init(spiderId: String, spiderData: Dictionary<String, AnyObject>) {
         
         _spiderId = spiderId
+        
+        if let spiderUid = spiderData["spiderUid"] as? String {
+            _spiderUid = spiderUid
+        }
         
         if let name = spiderData["name"] as? String {
             _name = name

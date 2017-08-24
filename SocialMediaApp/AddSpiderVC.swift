@@ -97,9 +97,14 @@ extension AddSpiderVC {
 
     func postToFirebase(imageUrl: String) {
         
+        let spiderUid = generateUniqueID()
+        
+        let firebaseSpiderReference = DataService.ds.REF_SPIDERS.child(spiderUid)
+        
         // TODO: Add custom progress indicator when adding spider
         let post: Dictionary<String, AnyObject> = [
             
+            "spiderUid": spiderUid as NSString,
             "userUid": currentUserUid as NSString,
             "name": nameField.text! as NSString,
             "commonName": commonNameField.text! as NSString,
@@ -107,12 +112,12 @@ extension AddSpiderVC {
             "genus": genusField.text! as NSString,
             "countryOrigin": countryOriginField.text! as NSString,
             "recivedFrom": recivedFromField.text! as NSString,
-            "imageUrl": imageUrl as NSString
-
+            "imageUrl": imageUrl as NSString,
+            "databaseReference": "\(firebaseSpiderReference)" as NSString
+            
         ]
         
-        let firebaseSpider = DataService.ds.REF_SPIDERS.childByAutoId()
-        firebaseSpider.setValue(post) { (error, firDatabaseReference) in
+        firebaseSpiderReference.setValue(post) { (error, firDatabaseReference) in
             
             if error != nil {
                 print("README: Could not save spider to Firebase")
@@ -120,6 +125,16 @@ extension AddSpiderVC {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+    func generateUniqueID() -> String {
+        let uuid = NSUUID().uuidString
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "ddMMyyyy"
+        let result = formatter.string(from: date)
+        
+        return uuid + result
     }
 }
 

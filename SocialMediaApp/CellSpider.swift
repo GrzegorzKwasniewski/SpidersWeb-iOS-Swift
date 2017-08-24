@@ -24,7 +24,13 @@ class CellSpider: UICollectionViewCell {
         
         layer.cornerRadius = 5.0
         
-        dropShadow()
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = Colors.GREY_SHADOW_COLOR.cgColor
+        self.layer.shadowOpacity = 0.9
+        self.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.layer.shadowRadius = 2
+        
+        //dropShadow()
     }
     
     func configureCell(spider: Spider, image: UIImage? = nil) {

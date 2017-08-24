@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import UserNotifications
 
 class SpiderDetailVC: UIViewController, LocalNotifications {
@@ -24,6 +25,8 @@ class SpiderDetailVC: UIViewController, LocalNotifications {
     @IBOutlet weak var spiderImage: UIImageView!
     @IBOutlet var datePicker: UIDatePicker!
     
+    var spiderDatabaseReference: FIRDatabaseReference!
+    
     // TODO: Change to otional
     var spider: Spider!
 
@@ -35,6 +38,14 @@ class SpiderDetailVC: UIViewController, LocalNotifications {
         }
         
         nameField.text = spider.name
+        spiderDatabaseReference = DataService.ds.REF_SPIDERS.child(spider.spiderUid)
+        
+        print("README: \(spiderDatabaseReference!)")
+    }
+    
+    @IBAction func removeSpider(_ sender: AnyObject) {
+        spiderDatabaseReference.removeValue()
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backButtonTest(_ sender: AnyObject) {
