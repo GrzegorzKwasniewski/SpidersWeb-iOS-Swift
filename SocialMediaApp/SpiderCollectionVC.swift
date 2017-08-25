@@ -33,7 +33,7 @@ class SpiderCollectionVC: UIViewController {
     }
     
     @IBAction func logoutUser(_ sender: UIButton) {
-        let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
+        _ = KeychainWrapper.removeObjectForKey(KEY_UID)
         try! FIRAuth.auth()?.signOut()
         self.dismiss(animated: true, completion: nil)
     }
