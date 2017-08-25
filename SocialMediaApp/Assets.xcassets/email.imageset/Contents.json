@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "10733786_10153724275652080_2484068215396140645_o copy.png",
+      "filename" : "email.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "10733786_10153724275652080_2484068215396140645_o copy@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "10733786_10153724275652080_2484068215396140645_o copy@3x.png",
       "scale" : "3x"
     }
   ],
