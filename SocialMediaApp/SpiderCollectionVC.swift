@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SpiderCollectionVC: UIViewController {
     
@@ -30,6 +31,13 @@ class SpiderCollectionVC: UIViewController {
         searchBar.returnKeyType = UIReturnKeyType.done
 
     }
+    
+    @IBAction func logoutUser(_ sender: UIButton) {
+        let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
+        try! FIRAuth.auth()?.signOut()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     func setDelegates() {
         collectionView.delegate = self
