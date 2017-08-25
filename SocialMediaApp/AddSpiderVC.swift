@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import UserNotifications
 
-class AddSpiderVC: UIViewController {
+class AddSpiderVC: BaseVC {
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var nameField: RoundedBorderTextField!

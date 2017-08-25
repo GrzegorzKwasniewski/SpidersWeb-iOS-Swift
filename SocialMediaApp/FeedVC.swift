@@ -11,7 +11,7 @@ import Firebase
 import SwiftKeychainWrapper
 import KRProgressHUD
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class FeedVC: BaseVC, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     

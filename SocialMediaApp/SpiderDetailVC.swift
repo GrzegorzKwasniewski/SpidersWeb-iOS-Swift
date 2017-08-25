@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 import UserNotifications
 
-class SpiderDetailVC: UIViewController, LocalNotifications {
+class SpiderDetailVC: BaseVC, LocalNotifications {
     
     @IBOutlet weak var generalInfoView: UIView!
     @IBOutlet weak var detailView: UIView!

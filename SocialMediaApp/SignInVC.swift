@@ -11,7 +11,7 @@ import Firebase
 import GoogleSignIn
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()

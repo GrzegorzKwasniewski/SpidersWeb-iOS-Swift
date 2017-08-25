@@ -53,6 +53,7 @@
 		B29EDB641F4B7E9000846AB3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */; };
 		B29EDB661F4B7F0600846AB3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */; };
 		B2A046BD1EBA633300035DB8 /* CustomErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A046BC1EBA633300035DB8 /* CustomErrorMessages.swift */; };
+		B2DC43871F50170700AAECC9 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DC43861F50170700AAECC9 /* BaseVC.swift */; };
 		C316D6D9CEF06844E23D1227 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B2A046BC1EBA633300035DB8 /* CustomErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomErrorMessages.swift; sourceTree = "<group>"; };
+		B2DC43861F50170700AAECC9 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBBFC757ABB0FFE0093B5D8C /* Pods-SocialMediaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaApp/Pods-SocialMediaApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 				715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */,
 				7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */,
 				71578F321D841DA5004B56AE /* FeedVC.swift */,
+				B2DC43861F50170700AAECC9 /* BaseVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				7111C8251DE1BB8B0012D32C /* ChangeUserSettings.swift in Sources */,
 				71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */,
 				71945C021EAA6BB000F76CD6 /* LocalNotifications.swift in Sources */,
+				B2DC43871F50170700AAECC9 /* BaseVC.swift in Sources */,
 				718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */,
 				719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */,
 				71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */,

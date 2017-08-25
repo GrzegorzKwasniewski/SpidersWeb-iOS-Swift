@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SigInWithEmailVC: UIViewController {
+class SigInWithEmailVC: BaseVC {
     
     @IBOutlet var emailField: RoundedBorderTextField!
     @IBOutlet var passwordField: RoundedBorderTextField!

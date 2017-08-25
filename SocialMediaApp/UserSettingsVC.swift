@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import KRProgressHUD
 
-class UserSettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UserSettingsVC: BaseVC, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var imagePicker = UIImagePickerController()
     
