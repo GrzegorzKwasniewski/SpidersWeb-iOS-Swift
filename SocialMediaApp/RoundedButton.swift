@@ -101,8 +101,10 @@ class RoundedButton: UIButton {
         
         if addBorder == true {
             layer.cornerRadius = 5
-        } else {
+        } else if customCornerRadius == 0 {
             layer.cornerRadius = self.bounds.size.height / 2
+        } else {
+            layer.cornerRadius = customCornerRadius
         }
         
     }
