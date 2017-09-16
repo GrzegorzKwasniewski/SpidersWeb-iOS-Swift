@@ -115,7 +115,7 @@ extension UIView {
     
     func borderAnimatioTest(layer: CALayer) {
         
-        layer.borderColor = Colors.ACENT_COLOR.cgColor
+        layer.borderColor = Colors.MAIN_COLOR_LIGHTER.cgColor
         
         let resize = CABasicAnimation(keyPath: "borderWidth")
         resize.fromValue = 0

@@ -34,7 +34,7 @@ class RoundedButton: UIButton {
         }
         
         if addBorder == true {
-            layer.borderColor = Colors.ACENT_COLOR.cgColor
+            layer.borderColor = Colors.MAIN_COLOR_LIGHTER.cgColor
             layer.borderWidth = 2
             imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         }
@@ -53,7 +53,7 @@ class RoundedButton: UIButton {
         }
         
         if addBorder == true {
-            layer.borderColor = Colors.ACENT_COLOR.cgColor
+            layer.borderColor = Colors.MAIN_COLOR_LIGHTER.cgColor
             layer.borderWidth = 2
             imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         }
@@ -68,7 +68,7 @@ class RoundedButton: UIButton {
         setAttributedTitle(attributedString, for: .normal)
         
         self.layer.masksToBounds = false
-        self.layer.shadowColor = Colors.SECOND_COLOR.cgColor
+        self.layer.shadowColor = Colors.MAIN_COLOR_LIGHTER.cgColor
         self.layer.shadowOpacity = 0.7
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
         self.layer.shadowRadius = 2
@@ -85,7 +85,7 @@ class RoundedButton: UIButton {
         }
         
         if addBorder == true {
-            layer.borderColor = Colors.ACENT_COLOR.cgColor
+            layer.borderColor = Colors.MAIN_COLOR_LIGHTER.cgColor
             layer.borderWidth = 2
             imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         }
