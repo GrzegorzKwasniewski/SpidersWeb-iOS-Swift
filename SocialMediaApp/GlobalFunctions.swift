@@ -8,7 +8,7 @@
 
 import Foundation
 
-func createQuestionAnsweredPopUp(withDelegate vc: UIViewController) -> AuthenticationFailedPopUp {
+func createAuthenticationFailedPopUp(withDelegate vc: UIViewController) -> AuthenticationFailedPopUp {
     let questionAnsweredPopUp = AuthenticationFailedPopUp(frame: vc.view.frame)
     
     questionAnsweredPopUp.delegate = vc as? ShowPopUp
@@ -16,10 +16,9 @@ func createQuestionAnsweredPopUp(withDelegate vc: UIViewController) -> Authentic
     return questionAnsweredPopUp
 }
 
-func setupViewForGoodAnswer(withDelegate vc: UIViewController) -> AuthenticationFailedPopUp {
-    let popUp = createQuestionAnsweredPopUp(withDelegate: vc)
-    popUp.message.text = PopUpMessages.goodAnswer.rawValue
-    popUp.nextQuestionButton.isHidden = false
+func setupViewForAuthenticationFailed(withMessage message: String, withDelegate vc: UIViewController) -> AuthenticationFailedPopUp {
+    let popUp = createAuthenticationFailedPopUp(withDelegate: vc)
+    popUp.message.text = message
     
     return popUp
 }
