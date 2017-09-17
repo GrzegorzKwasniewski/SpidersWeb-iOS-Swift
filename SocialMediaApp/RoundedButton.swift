@@ -49,29 +49,20 @@ class RoundedButton: UIButton {
         if let customBgColor = bgColor {
             layer.backgroundColor = customBgColor.cgColor
         } else {
-            layer.backgroundColor = Colors.MAIN_COLOR.cgColor
+            layer.backgroundColor = UIColor.white.cgColor
         }
         
-        if addBorder == true {
-            layer.borderColor = Colors.MAIN_COLOR_LIGHTER.cgColor
-            layer.borderWidth = 2
-            imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        }
+        layer.borderColor = Colors.GREY_TEXT_COLOR.cgColor
+        layer.borderWidth = 2
         
         let fontAttributes = [
             NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 18.0)!,
-            NSForegroundColorAttributeName: titleColor ?? UIColor.white
+            NSForegroundColorAttributeName: Colors.GREY_TEXT_COLOR
         ]
         
         let attributedString = NSAttributedString(string: title, attributes: fontAttributes)
         
         setAttributedTitle(attributedString, for: .normal)
-        
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = Colors.MAIN_COLOR_LIGHTER.cgColor
-        self.layer.shadowOpacity = 0.7
-        self.layer.shadowOffset = CGSize(width: 3, height: 3)
-        self.layer.shadowRadius = 2
         
     }
     
@@ -89,8 +80,6 @@ class RoundedButton: UIButton {
             layer.borderWidth = 2
             imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         }
-        
-        dropShadow()
     }
     
     required init?(coder aDecoder: NSCoder) {
