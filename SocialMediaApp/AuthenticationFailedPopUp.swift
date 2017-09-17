@@ -54,10 +54,7 @@ class AuthenticationFailedPopUp: UIView {
         message.heightAnchor.constraint(equalToConstant: 85).isActive = true
         
         
-        dismissButton = RoundedButton(frame: CGRect.zero)
-        dismissButton.setTitle("Dismiss", for: .normal)
-        dismissButton.setTitleColor(Colors.GREY_TEXT_COLOR, for: .normal)
-        dismissButton.layer.backgroundColor = Colors.MAIN_COLOR_DARKER.cgColor
+        dismissButton = RoundedButton(withTitle: "Dismiss")
         dismissButton.addTarget(self, action: #selector(nextQuestion(_:)), for: .touchUpInside)
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
         popUpView.addSubview(dismissButton)
