@@ -472,7 +472,7 @@
                                     <constraint firstAttribute="height" constant="30" id="MGi-rg-vnz"/>
                                     <constraint firstAttribute="width" constant="210" id="izK-qr-UaE"/>
                                 </constraints>
-                                <color key="textColor" red="0.0" green="0.53725490196078429" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -501,7 +501,7 @@
                                     <constraint firstAttribute="height" constant="36" id="P8h-mo-Jiz"/>
                                     <constraint firstAttribute="width" constant="210" id="PMN-Na-1Sh"/>
                                 </constraints>
-                                <color key="textColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>

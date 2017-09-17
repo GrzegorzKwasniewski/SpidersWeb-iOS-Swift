@@ -16,7 +16,9 @@ struct Colors {
     
     static let MAIN_COLOR_LIGHTER = UIColor(red: 0.0 / 255.0, green: 191.0 / 255.0, blue: 154.0 / 255.0, alpha: 1)
     
-    static let GREY_TEXT_COLOR = UIColor(red: 179.0 / 255.0, green: 179.0 / 255.0, blue: 179.0 / 255.0, alpha: 1)
+    static let GREY_TEXT_COLOR = UIColor(red: 51.0 / 255.0, green: 51.0 / 255.0, blue: 51.0 / 255.0, alpha: 1)
+    
+    static let GREY_TEXT_COLOR_LIGHT = UIColor(red: 153.0 / 255.0, green: 153.0 / 255.0, blue: 153.0 / 255.0, alpha: 1)
     
     static let GREY_SHADOW_COLOR = UIColor(red: 179.0 / 255.0, green: 179.0 / 255.0, blue: 179.0 / 255.0, alpha: 1)
     

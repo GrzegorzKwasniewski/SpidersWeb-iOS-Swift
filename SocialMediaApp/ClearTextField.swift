@@ -15,13 +15,13 @@ class ClearTextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        textColor = Colors.MAIN_COLOR_DARKER
+        textColor = Colors.GREY_TEXT_COLOR
         
         backgroundColor = UIColor.clear
         borderStyle = .none
         layer.masksToBounds = false
 
-        self.attributedPlaceholder = NSAttributedString(string: customString, attributes: [NSForegroundColorAttributeName: Colors.GREY_TEXT_COLOR])
+        self.attributedPlaceholder = NSAttributedString(string: customString, attributes: [NSForegroundColorAttributeName: Colors.GREY_TEXT_COLOR_LIGHT])
 
     }
     

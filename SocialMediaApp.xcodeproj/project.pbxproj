@@ -286,7 +286,6 @@
 		715F554C1E1E3CDA008DC82B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */,
 				715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */,
 				B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */,
 			);
@@ -329,6 +328,7 @@
 				713B13191D7EBD5700AF79C3 /* ShadowView.swift */,
 				71FE20921DAD32D50036FE9F /* TapImageView.swift */,
 				B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */,
+				B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
