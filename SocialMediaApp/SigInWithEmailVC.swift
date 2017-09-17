@@ -12,22 +12,40 @@ import SwiftKeychainWrapper
 
 class SigInWithEmailVC: BaseVC {
     
+    // MARK: Class Properties
+    
     @IBOutlet var emailField: RoundedBorderTextField!
     @IBOutlet var passwordField: RoundedBorderTextField!
 
+    // MARK: View State
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        EmailLogin.sharedInstance.delegate = self
+        
+        setDelegates()
+        
     }
     
-    @IBAction func signInWithEmail(_ sender: AnyObject) {
+    // MARK: Actions
+    
+    @IBAction func signInWithEmail(_ sender: UIButton) {
         EmailLogin.sharedInstance.signInWithEmail(emailField: emailField, passwordField: passwordField)
     }
     
     @IBAction func backButtonForTests(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: Custom Functions
+    
+    func setDelegates() {
+        EmailLogin.sharedInstance.delegate = self
+        passwordField.delegate = self
+        emailField.delegate = self
+    }
 }
+
+// MARK: Delegate For SignIn
 
 extension SigInWithEmailVC: CompleteSignInWthFirebaseDelegate {
     
@@ -37,5 +55,21 @@ extension SigInWithEmailVC: CompleteSignInWthFirebaseDelegate {
         print("KEYCHAIN: Data was saved to Keychain - \(keychainResult)")
         print("SEGUE: Perform")
         performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
+    }
+}
+
+// MARK: Delegate For UITextFieldDelegate
+
+extension SigInWithEmailVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        // only call if password text field was used
+        if textField.tag == 1 {
+            self.signInWithEmail(UIButton())
+        }
+        
+        self.view.endEditing(true)
+        return true
     }
 }

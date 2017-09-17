@@ -495,7 +495,7 @@
                                     <constraint firstAttribute="width" constant="210" id="gXs-2p-PiK"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6RJ-gl-qIf" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6RJ-gl-qIf" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="82" y="297" width="210" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="P8h-mo-Jiz"/>
@@ -503,7 +503,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="customString" value="password"/>
                                 </userDefinedRuntimeAttributes>
@@ -1193,7 +1193,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tH-aX-930" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="122.78860569715144"/>
+            <point key="canvasLocation" x="876" y="100"/>
         </scene>
     </scenes>
     <resources>
