@@ -52,6 +52,7 @@
                                 <rect key="frame" x="210" y="197" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="twitter_icon">
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1211,6 +1212,6 @@
         <image name="twitter_icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bus-7h-WNy"/>
+        <segue reference="dSh-Yi-1va"/>
     </inferredMetricsTieBreakers>
 </document>
