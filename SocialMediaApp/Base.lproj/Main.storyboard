@@ -552,6 +552,9 @@
                                 <state key="normal" title="Don't have account?">
                                     <color key="titleColor" red="0.0" green="0.45202269709999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="d9t-a3-7O6" kind="show" id="0rY-ZB-ahY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1189,10 +1192,10 @@
             </objects>
             <point key="canvasLocation" x="876" y="100"/>
         </scene>
-        <!--Sig In With EmailVC-->
+        <!--Create New AccountVC-->
         <scene sceneID="MKF-xz-jXz">
             <objects>
-                <viewController id="d9t-a3-7O6" customClass="SigInWithEmailVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d9t-a3-7O6" customClass="CreateNewAccountVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yMm-iS-7ls"/>
                         <viewControllerLayoutGuide type="bottom" id="AU0-LY-sAc"/>
@@ -1256,7 +1259,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="signInWithEmail:" destination="d9t-a3-7O6" eventType="touchDown" id="YWN-lU-097"/>
+                                    <action selector="createNewAccount:" destination="d9t-a3-7O6" eventType="touchUpInside" id="5DQ-Tt-AVa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F77-w9-lDA">
@@ -1275,6 +1278,9 @@
                                 <state key="normal" title="Go back to log in screen">
                                     <color key="titleColor" red="0.0" green="0.45202269709999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBackToLoginScreen:" destination="d9t-a3-7O6" eventType="touchUpInside" id="XYb-yI-3jI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1298,8 +1304,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="eTf-lg-UyQ" id="vjc-ww-LYb"/>
-                        <outlet property="passwordField" destination="loe-au-eXQ" id="lxp-qr-vKg"/>
+                        <outlet property="emailField" destination="eTf-lg-UyQ" id="DUo-bS-ZiQ"/>
+                        <outlet property="passwordField" destination="loe-au-eXQ" id="KgH-oV-Ndv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQ6-si-efO" userLabel="First Responder" sceneMemberID="firstResponder"/>
