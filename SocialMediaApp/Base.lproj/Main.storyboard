@@ -522,24 +522,15 @@
                                     <action selector="signInWithEmail:" destination="3tq-k7-810" eventType="touchDown" id="4yL-f0-t5K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with emial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-Cn-16u">
-                                <rect key="frame" x="16" y="92" width="343" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="fI5-rH-hoL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
-                                <color key="textColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-4a-BC6">
-                                <rect key="frame" x="16" y="38" width="51" height="27"/>
+                                <rect key="frame" x="16" y="38" width="66" height="27"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="9C6-jj-VcE"/>
+                                    <constraint firstAttribute="width" constant="66" id="9C6-jj-VcE"/>
                                     <constraint firstAttribute="height" constant="27" id="b0c-F3-qW4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                 <state key="normal" title="&lt; BACK">
-                                    <color key="titleColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="backButtonForTests:" destination="3tq-k7-810" eventType="touchDown" id="2OK-lt-xFl"/>
@@ -550,16 +541,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="Don't have account?">
-                                    <color key="titleColor" red="0.0" green="0.45202269709999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="d9t-a3-7O6" kind="show" id="0rY-ZB-ahY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with emial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-Cn-16u">
+                                <rect key="frame" x="16" y="117" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fI5-rH-hoL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kf1-Cn-16u" firstAttribute="top" secondItem="NvX-V4-x8D" secondAttribute="bottom" constant="72" id="4YL-Fl-mZz"/>
+                            <constraint firstItem="kf1-Cn-16u" firstAttribute="top" secondItem="NvX-V4-x8D" secondAttribute="bottom" constant="97" id="4YL-Fl-mZz"/>
                             <constraint firstItem="R2f-Xi-hES" firstAttribute="top" secondItem="NvX-V4-x8D" secondAttribute="bottom" constant="213" id="65g-Bk-iA4"/>
                             <constraint firstItem="LMY-4a-BC6" firstAttribute="leading" secondItem="hIX-Lr-7c6" secondAttribute="leadingMargin" id="6dq-PB-9u3"/>
                             <constraint firstItem="ScL-sT-0pH" firstAttribute="centerX" secondItem="hIX-Lr-7c6" secondAttribute="centerX" id="Edl-Iy-qCm"/>
@@ -1276,7 +1276,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="Go back to log in screen">
-                                    <color key="titleColor" red="0.0" green="0.45202269709999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="goBackToLoginScreen:" destination="d9t-a3-7O6" eventType="touchUpInside" id="XYb-yI-3jI"/>
