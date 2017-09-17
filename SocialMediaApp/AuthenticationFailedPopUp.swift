@@ -11,8 +11,7 @@ class AuthenticationFailedPopUp: UIView {
     // MARK: Class Properties
     
     var message: UILabel!
-    var nextQuestionButton: RoundedButton!
-    var summaryButton: RoundedButton!
+    var dismissButton: RoundedButton!
     var popUpView: RoundedView!
     var blurView: UIVisualEffectView!
     
@@ -43,6 +42,8 @@ class AuthenticationFailedPopUp: UIView {
         message.textColor = UIColor.white
         message.font = UIFont(name: "Avenir-Heavy", size: 18.0)
         message.textAlignment = .center
+        message.numberOfLines = 2
+        message.minimumScaleFactor = 0.5
         message.translatesAutoresizingMaskIntoConstraints = false
         popUpView.addSubview(message)
         
@@ -52,38 +53,23 @@ class AuthenticationFailedPopUp: UIView {
         message.trailingAnchor.constraint(equalTo: popUpView.trailingAnchor, constant: 0).isActive = true
         message.heightAnchor.constraint(equalToConstant: 85).isActive = true
         
-        summaryButton = RoundedButton(frame: CGRect.zero)
-        summaryButton.setTitle("Summary", for: .normal)
-        summaryButton.setTitleColor(Colors.GREY_TEXT_COLOR, for: .normal)
-        summaryButton.layer.backgroundColor = Colors.MAIN_COLOR_DARKER.cgColor
-        summaryButton.addTarget(self, action: #selector(showSummary(_:)), for: .touchUpInside)
-        summaryButton.translatesAutoresizingMaskIntoConstraints = false
-        popUpView.addSubview(summaryButton)
         
-        summaryButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
-        summaryButton.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 8).isActive = true
-        summaryButton.widthAnchor.constraint(equalToConstant: 162).isActive = true
-        summaryButton.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        dismissButton = RoundedButton(frame: CGRect.zero)
+        dismissButton.setTitle("Dismiss", for: .normal)
+        dismissButton.setTitleColor(Colors.GREY_TEXT_COLOR, for: .normal)
+        dismissButton.layer.backgroundColor = Colors.MAIN_COLOR_DARKER.cgColor
+        dismissButton.addTarget(self, action: #selector(nextQuestion(_:)), for: .touchUpInside)
+        dismissButton.translatesAutoresizingMaskIntoConstraints = false
+        popUpView.addSubview(dismissButton)
         
-        nextQuestionButton = RoundedButton(frame: CGRect.zero)
-        nextQuestionButton.setTitle("Next question", for: .normal)
-        nextQuestionButton.setTitleColor(Colors.GREY_TEXT_COLOR, for: .normal)
-        nextQuestionButton.layer.backgroundColor = Colors.MAIN_COLOR_DARKER.cgColor
-        nextQuestionButton.addTarget(self, action: #selector(nextQuestion(_:)), for: .touchUpInside)
-        nextQuestionButton.translatesAutoresizingMaskIntoConstraints = false
-        popUpView.addSubview(nextQuestionButton)
-        
-        nextQuestionButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
-        nextQuestionButton.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 8).isActive = true
-        nextQuestionButton.widthAnchor.constraint(equalToConstant: 162).isActive = true
-        nextQuestionButton.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        dismissButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
+        dismissButton.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 8).isActive = true
+        dismissButton.widthAnchor.constraint(equalToConstant: 162).isActive = true
+        dismissButton.heightAnchor.constraint(equalToConstant: 36).isActive = true
         
         
         blurView.opacityAnimation(reverse: false, withDuration: 0.1)
         popUpView.opacityAnimation(reverse: false, withDuration: 0.1)
-        
-        nextQuestionButton.isHidden = true
-        summaryButton.isHidden = true
         
     }
     
