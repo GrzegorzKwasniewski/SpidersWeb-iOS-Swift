@@ -50,6 +50,9 @@
 		71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE20921DAD32D50036FE9F /* TapImageView.swift */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
 		B206E1BC1F6D1888004A21A6 /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */; };
+		B21493541F6E961D001D5C4D /* TestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493531F6E961D001D5C4D /* TestLogin.swift */; };
+		B21493561F6E96AD001D5C4D /* ShowPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493551F6E96AD001D5C4D /* ShowPopUp.swift */; };
+		B21493581F6E9863001D5C4D /* UserMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493571F6E9863001D5C4D /* UserMessages.swift */; };
 		B29EDB621F4B7C7200846AB3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
 		B29EDB641F4B7E9000846AB3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */; };
 		B29EDB661F4B7F0600846AB3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */; };
@@ -130,6 +133,9 @@
 		76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
+		B21493531F6E961D001D5C4D /* TestLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLogin.swift; sourceTree = "<group>"; };
+		B21493551F6E96AD001D5C4D /* ShowPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPopUp.swift; sourceTree = "<group>"; };
+		B21493571F6E9863001D5C4D /* UserMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessages.swift; sourceTree = "<group>"; };
 		B29EDB611F4B7C7200846AB3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 				719BFEA01E1D723D006EB47A /* Spider.swift */,
 				71CE62571D893323002C5B0B /* Post.swift */,
 				71F1F9541DB12517009D8A60 /* FirebaseUser.swift */,
+				B21493571F6E9863001D5C4D /* UserMessages.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				71945C011EAA6BB000F76CD6 /* LocalNotifications.swift */,
+				B21493551F6E96AD001D5C4D /* ShowPopUp.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 				7111C80B1DD4DC530012D32C /* RegEx.swift */,
 				7111C8241DE1BB8B0012D32C /* ChangeUserSettings.swift */,
 				B29EDB611F4B7C7200846AB3 /* Colors.swift */,
+				B21493531F6E961D001D5C4D /* TestLogin.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -722,6 +731,7 @@
 				71CE62511D858C66002C5B0B /* CircleView.swift in Sources */,
 				71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */,
 				7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */,
+				B21493561F6E96AD001D5C4D /* ShowPopUp.swift in Sources */,
 				713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */,
 				715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */,
 				71CE62581D893323002C5B0B /* Post.swift in Sources */,
@@ -744,9 +754,11 @@
 				719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
 				71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
+				B21493581F6E9863001D5C4D /* UserMessages.swift in Sources */,
 				7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,
 				7111C7E71DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift in Sources */,
+				B21493541F6E961D001D5C4D /* TestLogin.swift in Sources */,
 				713B131D1D7EBE2D00AF79C3 /* Constants.swift in Sources */,
 				719BFEA11E1D723D006EB47A /* Spider.swift in Sources */,
 			);

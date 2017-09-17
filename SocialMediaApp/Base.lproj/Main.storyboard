@@ -70,9 +70,6 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="customCornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="customBackgroundColor">
-                                        <color key="value" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="addBorder" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -525,15 +522,6 @@
                                     <action selector="signInWithEmail:" destination="3tq-k7-810" eventType="touchDown" id="4yL-f0-t5K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If don't have an account, it will be created automatically for You." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mTS-cu-LXq">
-                                <rect key="frame" x="16" y="582" width="343" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="rr3-vP-Bu7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with emial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-Cn-16u">
                                 <rect key="frame" x="16" y="92" width="343" height="44"/>
                                 <constraints>
@@ -557,12 +545,19 @@
                                     <action selector="backButtonForTests:" destination="3tq-k7-810" eventType="touchDown" id="2OK-lt-xFl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyD-LF-syQ">
+                                <rect key="frame" x="16" y="588" width="343" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                                <state key="normal" title="Don't have account?">
+                                    <color key="titleColor" red="0.0" green="0.45202269709999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kf1-Cn-16u" firstAttribute="top" secondItem="NvX-V4-x8D" secondAttribute="bottom" constant="72" id="4YL-Fl-mZz"/>
                             <constraint firstItem="R2f-Xi-hES" firstAttribute="top" secondItem="NvX-V4-x8D" secondAttribute="bottom" constant="213" id="65g-Bk-iA4"/>
-                            <constraint firstItem="mTS-cu-LXq" firstAttribute="trailing" secondItem="hIX-Lr-7c6" secondAttribute="trailingMargin" id="6Gg-xm-x9P"/>
                             <constraint firstItem="LMY-4a-BC6" firstAttribute="leading" secondItem="hIX-Lr-7c6" secondAttribute="leadingMargin" id="6dq-PB-9u3"/>
                             <constraint firstItem="ScL-sT-0pH" firstAttribute="centerX" secondItem="hIX-Lr-7c6" secondAttribute="centerX" id="Edl-Iy-qCm"/>
                             <constraint firstItem="q63-0b-hiX" firstAttribute="top" secondItem="6RJ-gl-qIf" secondAttribute="bottom" constant="10" id="IqT-TA-23x"/>
@@ -571,7 +566,6 @@
                             <constraint firstItem="6RJ-gl-qIf" firstAttribute="centerX" secondItem="hIX-Lr-7c6" secondAttribute="centerX" id="Ozi-IX-gNq"/>
                             <constraint firstItem="kf1-Cn-16u" firstAttribute="centerX" secondItem="hIX-Lr-7c6" secondAttribute="centerX" id="Pex-xy-gS2"/>
                             <constraint firstItem="QeI-6a-Efl" firstAttribute="leading" secondItem="hIX-Lr-7c6" secondAttribute="leadingMargin" constant="66" id="Q8f-cu-Iza"/>
-                            <constraint firstItem="oaO-NT-41t" firstAttribute="top" secondItem="mTS-cu-LXq" secondAttribute="bottom" constant="10" id="SgU-hE-9DL"/>
                             <constraint firstItem="6RJ-gl-qIf" firstAttribute="top" secondItem="R2f-Xi-hES" secondAttribute="bottom" constant="34" id="UUC-LE-xpb"/>
                             <constraint firstItem="ScL-sT-0pH" firstAttribute="top" secondItem="R2f-Xi-hES" secondAttribute="bottom" constant="10" id="Ut5-R6-wYX"/>
                             <constraint firstItem="q63-0b-hiX" firstAttribute="centerX" secondItem="hIX-Lr-7c6" secondAttribute="centerX" id="bpx-dK-0Mg"/>
@@ -580,7 +574,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QeI-6a-Efl" secondAttribute="trailing" constant="67" id="hDC-WM-mo8"/>
                             <constraint firstItem="QeI-6a-Efl" firstAttribute="centerX" secondItem="hIX-Lr-7c6" secondAttribute="centerX" id="hbX-eL-aaH"/>
                             <constraint firstItem="kf1-Cn-16u" firstAttribute="trailing" secondItem="hIX-Lr-7c6" secondAttribute="trailingMargin" id="lFR-Sb-bSB"/>
-                            <constraint firstItem="mTS-cu-LXq" firstAttribute="leading" secondItem="hIX-Lr-7c6" secondAttribute="leadingMargin" id="nFk-16-oOb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1196,6 +1189,123 @@
             </objects>
             <point key="canvasLocation" x="876" y="100"/>
         </scene>
+        <!--Sig In With EmailVC-->
+        <scene sceneID="MKF-xz-jXz">
+            <objects>
+                <viewController id="d9t-a3-7O6" customClass="SigInWithEmailVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yMm-iS-7ls"/>
+                        <viewControllerLayoutGuide type="bottom" id="AU0-LY-sAc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yfv-gk-qDr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTf-lg-UyQ" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                <rect key="frame" x="82" y="233" width="210" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="3vH-i8-obn"/>
+                                    <constraint firstAttribute="height" constant="30" id="brF-LW-bKy"/>
+                                </constraints>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="customString" value="email"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYD-it-zGb">
+                                <rect key="frame" x="82" y="273" width="210" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="Yg3-bP-17P"/>
+                                    <constraint firstAttribute="height" constant="1" id="cck-op-FYW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzj-uZ-yEW">
+                                <rect key="frame" x="82" y="343" width="210" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="148-tF-N3k"/>
+                                    <constraint firstAttribute="width" constant="210" id="qH5-gK-nkw"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="loe-au-eXQ" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
+                                <rect key="frame" x="82" y="297" width="210" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="mRY-dx-wP9"/>
+                                    <constraint firstAttribute="width" constant="210" id="uIW-Z1-XwX"/>
+                                </constraints>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="customString" value="password"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-qd-jB1" customClass="RoundedButton" customModule="SocialMediaApp" customModuleProvider="target">
+                                <rect key="frame" x="82" y="406" width="210" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="customBackgroundColor">
+                                        <color key="value" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInWithEmail:" destination="d9t-a3-7O6" eventType="touchDown" id="YWN-lU-097"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F77-w9-lDA">
+                                <rect key="frame" x="16" y="92" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9lB-06-4yh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7s-6B-vni">
+                                <rect key="frame" x="16" y="588" width="343" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                                <state key="normal" title="Go back to log in screen">
+                                    <color key="titleColor" red="0.0" green="0.45202269709999998" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="loe-au-eXQ" firstAttribute="top" secondItem="eTf-lg-UyQ" secondAttribute="bottom" constant="34" id="5e1-Ku-G3j"/>
+                            <constraint firstItem="eTf-lg-UyQ" firstAttribute="centerX" secondItem="yfv-gk-qDr" secondAttribute="centerX" id="7iV-HD-zk3"/>
+                            <constraint firstItem="ZPi-qd-jB1" firstAttribute="centerX" secondItem="yfv-gk-qDr" secondAttribute="centerX" id="Ai8-2E-6kW"/>
+                            <constraint firstItem="pzj-uZ-yEW" firstAttribute="centerX" secondItem="yfv-gk-qDr" secondAttribute="centerX" id="Emf-4T-NZa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZPi-qd-jB1" secondAttribute="trailing" constant="67" id="GCg-fj-BJr"/>
+                            <constraint firstItem="F77-w9-lDA" firstAttribute="centerX" secondItem="yfv-gk-qDr" secondAttribute="centerX" id="SSj-vQ-lfw"/>
+                            <constraint firstItem="loe-au-eXQ" firstAttribute="centerX" secondItem="yfv-gk-qDr" secondAttribute="centerX" id="VCd-BS-Sl7"/>
+                            <constraint firstItem="iYD-it-zGb" firstAttribute="top" secondItem="eTf-lg-UyQ" secondAttribute="bottom" constant="10" id="VyW-Qd-fd9"/>
+                            <constraint firstItem="F77-w9-lDA" firstAttribute="top" secondItem="yMm-iS-7ls" secondAttribute="bottom" constant="72" id="YCq-bK-JGQ"/>
+                            <constraint firstItem="pzj-uZ-yEW" firstAttribute="top" secondItem="loe-au-eXQ" secondAttribute="bottom" constant="10" id="Zfr-98-E6O"/>
+                            <constraint firstItem="F77-w9-lDA" firstAttribute="trailing" secondItem="yfv-gk-qDr" secondAttribute="trailingMargin" id="a1k-Yp-sQM"/>
+                            <constraint firstItem="ZPi-qd-jB1" firstAttribute="leading" secondItem="yfv-gk-qDr" secondAttribute="leadingMargin" constant="66" id="b6Y-Sh-ywW"/>
+                            <constraint firstItem="F77-w9-lDA" firstAttribute="leading" secondItem="yfv-gk-qDr" secondAttribute="leadingMargin" id="do1-So-e70"/>
+                            <constraint firstItem="eTf-lg-UyQ" firstAttribute="top" secondItem="yMm-iS-7ls" secondAttribute="bottom" constant="213" id="jrx-DH-Arc"/>
+                            <constraint firstItem="iYD-it-zGb" firstAttribute="centerX" secondItem="yfv-gk-qDr" secondAttribute="centerX" id="py3-LN-VW8"/>
+                            <constraint firstItem="ZPi-qd-jB1" firstAttribute="top" secondItem="loe-au-eXQ" secondAttribute="bottom" constant="73" id="uqQ-3U-sfF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="eTf-lg-UyQ" id="vjc-ww-LYb"/>
+                        <outlet property="passwordField" destination="loe-au-eXQ" id="lxp-qr-vKg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQ6-si-efO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="809"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add-image" width="37" height="26"/>
@@ -1212,6 +1322,6 @@
         <image name="twitter_icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dSh-Yi-1va"/>
+        <segue reference="bus-7h-WNy"/>
     </inferredMetricsTieBreakers>
 </document>
