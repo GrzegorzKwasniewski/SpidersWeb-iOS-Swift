@@ -10,8 +10,12 @@ import UIKit
 
 class CreateNewAccountVC: BaseVC {
     
+    // MARK: Class Properties
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    // MARK: View State
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,17 +23,21 @@ class CreateNewAccountVC: BaseVC {
         passwordField.delegate = self
         emailField.delegate = self
         
-        EmailLogin2.sharedInstance.popUpDelegate = self
+        EmailLogin.sharedInstance.popUpDelegate = self
     }
     
+    // MARK: Actions
+    
     @IBAction func createNewAccount(_ sender: Any) {
-        EmailLogin2.sharedInstance.createUserWithEmail(emailField: emailField, passwordField: passwordField)
+        EmailLogin.sharedInstance.createUserWithEmail(emailField: emailField, passwordField: passwordField)
     }
     
     @IBAction func goBackToLoginScreen(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 }
+
+// MARK: Delegate For ShowPopUp
 
 extension CreateNewAccountVC: ShowPopUp {
     
@@ -56,6 +64,8 @@ extension CreateNewAccountVC: ShowPopUp {
         self.dismiss(animated: true, completion: nil)
     }
 }
+
+// MARK: Delegate For UITextFieldDelegate
 
 extension CreateNewAccountVC: UITextFieldDelegate {
     
