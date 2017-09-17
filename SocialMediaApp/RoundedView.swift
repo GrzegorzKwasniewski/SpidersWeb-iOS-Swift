@@ -10,9 +10,9 @@ import UIKit
 
 class RoundedView: UIView {
     
-    @IBInspectable var customBackgroundColor: UIColor?
-    @IBInspectable var customCornerRadius: CGFloat = 0
-    @IBInspectable var customBorderRadius: CGFloat = 0
+    var customBackgroundColor: UIColor?
+    var customCornerRadius: CGFloat = 5
+    var customBorderRadius: CGFloat = 0
     
     override init(frame: CGRect){
         super.init(frame: frame)
