@@ -27,13 +27,6 @@ extension ShowPopUp where Self: UIViewController {
     func showPopUp() {}
     func showPopUp(withMainMessage message: String, andErrorMessage error: String? = "") {}
     
-    func showResetPasswordPopUp() {
-        //let resetPasswordPopUp = self.instantiatePopUpView(fromStoryboard: PopUpSettings.popUpStoryboardID.rawValue, withIdentifier: PopUpSettings.resetPasswordPopUpID.rawValue) as! ResetPassword_PopUp
-        
-        //self.addPopUpView(popUpView: resetPasswordPopUp)
-        
-    }
-    
     func showSummaryPopUp(quizCompleted: Bool) {}
     
     func authenticationFailed(withMessage message: String? = "") {}
