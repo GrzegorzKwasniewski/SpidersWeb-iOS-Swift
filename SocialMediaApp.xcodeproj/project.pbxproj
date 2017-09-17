@@ -53,6 +53,9 @@
 		B21493561F6E96AD001D5C4D /* ShowPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493551F6E96AD001D5C4D /* ShowPopUp.swift */; };
 		B21493581F6E9863001D5C4D /* StringsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493571F6E9863001D5C4D /* StringsConstants.swift */; };
 		B214935A1F6E9B5C001D5C4D /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */; };
+		B214935C1F6E9F2C001D5C4D /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */; };
+		B214935F1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214935E1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift */; };
+		B21493611F6EA064001D5C4D /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493601F6EA064001D5C4D /* RoundedView.swift */; };
 		B29EDB621F4B7C7200846AB3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
 		B29EDB641F4B7E9000846AB3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */; };
 		B29EDB661F4B7F0600846AB3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */; };
@@ -136,6 +139,9 @@
 		B21493551F6E96AD001D5C4D /* ShowPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPopUp.swift; sourceTree = "<group>"; };
 		B21493571F6E9863001D5C4D /* StringsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsConstants.swift; sourceTree = "<group>"; };
 		B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAccountVC.swift; sourceTree = "<group>"; };
+		B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		B214935E1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFailedPopUp.swift; sourceTree = "<group>"; };
+		B21493601F6EA064001D5C4D /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		B29EDB611F4B7C7200846AB3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -246,6 +252,7 @@
 		713B13161D7D82CB00AF79C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B214935D1F6E9FE3001D5C4D /* PopUps */,
 				719BFEA61E1FD7A3006EB47A /* Cells */,
 				719BFEA21E1D740D006EB47A /* UI */,
 			);
@@ -338,6 +345,7 @@
 				71FE20921DAD32D50036FE9F /* TapImageView.swift */,
 				B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */,
 				B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */,
+				B21493601F6EA064001D5C4D /* RoundedView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 				7111C80B1DD4DC530012D32C /* RegEx.swift */,
 				7111C8241DE1BB8B0012D32C /* ChangeUserSettings.swift */,
 				B29EDB611F4B7C7200846AB3 /* Colors.swift */,
+				B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -372,6 +381,14 @@
 				71EB434A1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		B214935D1F6E9FE3001D5C4D /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				B214935E1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift */,
+			);
+			name = PopUps;
 			sourceTree = "<group>";
 		};
 		C7F5CD63918F0EBC28ED6835 /* Pods */ = {
@@ -724,6 +741,7 @@
 				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
 				B29EDB641F4B7E9000846AB3 /* RoundedButton.swift in Sources */,
 				B29EDB661F4B7F0600846AB3 /* UIViewExtension.swift in Sources */,
+				B21493611F6EA064001D5C4D /* RoundedView.swift in Sources */,
 				719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */,
 				719BFE761E0AF97A006EB47A /* Globals.swift in Sources */,
 				7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */,
@@ -754,6 +772,8 @@
 				71578F331D841DA5004B56AE /* FeedVC.swift in Sources */,
 				719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
+				B214935C1F6E9F2C001D5C4D /* GlobalFunctions.swift in Sources */,
+				B214935F1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift in Sources */,
 				71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
 				B21493581F6E9863001D5C4D /* StringsConstants.swift in Sources */,
 				7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */,
