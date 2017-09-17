@@ -41,13 +41,13 @@ class CreateNewAccountVC: BaseVC {
 
 extension CreateNewAccountVC: ShowPopUp {
     
-    func authenticationFailed(withMessage message: String? = "") {
+    func authenticationFailed(withMessage message: String = "") {
         
-        //let authenticationFailedPopUp = self.instantiatePopUpView(fromStoryboard: PopUpSettings.popUpStoryboardID.rawValue, withIdentifier: PopUpSettings.customPopUpID.rawValue) as! Custom_PopUp
+        view.addSubview(setupViewForAuthenticationFailed(
+            withMessage: message,
+            withDelegate: self
+        ))
         
-        //self.addPopUpView(popUpView: authenticationFailedPopUp)
-        
-        //authenticationFailedPopUp.customMessage.text = message
     }
     
     func authenticationSuccess() {
