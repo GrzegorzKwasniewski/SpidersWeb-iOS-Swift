@@ -13,7 +13,7 @@ protocol ShowPopUp: class {
     func showPopUp(withMainMessage message: String, andErrorMessage error: String?)
     func showSummaryPopUp(quizCompleted: Bool)
     
-    func authenticationFailed(withMessage message: String?)
+    func authenticationFailed(withMessage message: String)
     func authenticationSuccess()
     func hidePopUp()
     func dismissSuperView()
@@ -28,7 +28,7 @@ extension ShowPopUp where Self: UIViewController {
     
     func showSummaryPopUp(quizCompleted: Bool) {}
     
-    func authenticationFailed(withMessage message: String? = "") {}
+    func authenticationFailed(withMessage message: String = "") {}
     func authenticationSuccess() {}
     func hidePopUp() {}
     func dismissSuperView() {}
