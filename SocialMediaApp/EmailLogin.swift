@@ -10,83 +10,110 @@ import Foundation
 import Firebase
 
 class EmailLogin {
-
+    
+    // MARK: Fields ++++++++++++++++++++++++++++++++++++++++
+    
     static let sharedInstance = EmailLogin()
+    
     weak var delegate: CompleteSignInWthFirebaseDelegate?
+    weak var popUpDelegate: ShowPopUp?
+    
+    // MARK: Custom Functions ++++++++++++++++++++++++++++++++++++++++
     
     func signInWithEmail(emailField: UITextField, passwordField: UITextField) {
-            if let email = emailField.text, let password = passwordField.text {
-                FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-                if error == nil {
-                    
-                    authProvider = .Firebase
-                    
-                    print("README: Email user authenticated with Firebase")
-                    if let firebaseUser = user {
-                        
-                        // DO I NEED TO PROVIDE ONCE MORE THAT DATA???
-                        
-                        var firebaseUserName = ""
-                        var userPhotoUrl: String!
-                        
-                        if let userName = firebaseUser.displayName {
-                            firebaseUserName = userName
-                        } else {
-                            firebaseUserName = "New user"
-                        }
-                        
-                        if let photoUrl = firebaseUser.photoURL {
-                            userPhotoUrl = "\(photoUrl)"
-                        } else {
-                            userPhotoUrl = defaultAvatarUrl
-                        }
-                        
-                        let userData: Dictionary<String, String> = [
-                            "provider": firebaseUser.providerID,
-                            "userName": firebaseUserName,
-                            "photoUrl": userPhotoUrl
-                        ]
-                        
-                        self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
-                    }
-                } else {
-                    
-                    authProvider = .Firebase
-                    
-                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-                        if error != nil {
-                            print("README: Unable to authenticate with Firebase using email")
-                            print("README: \(error)")
-                        } else {
-                            print("README: Created user with new email")
-                            if let firebaseUser = user {
-                                var firebaseUserName = ""
-                                var userPhotoUrl = ""
-                                
-                                if let userName = firebaseUser.displayName {
-                                    firebaseUserName = userName
-                                } else {
-                                    firebaseUserName = "New user"
-                                }
-                                
-                                if let photoUrl = firebaseUser.photoURL {
-                                    userPhotoUrl = "\(photoUrl)"
-                                } else {
-                                    userPhotoUrl = defaultAvatarUrl
-                                }
-                                
-                                let userData: Dictionary<String, String> = [
-                                    "provider": firebaseUser.providerID,
-                                    "userName": firebaseUserName,
-                                    "photoUrl": userPhotoUrl
-                                ]
-                                
-                                self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
-                            }
-                        }
-                    })
+        
+        if let email = emailField.text, let password = passwordField.text {
+            
+            // Authtenticate user with email
+            
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                
+                if let error = error {
+                    self.popUpDelegate?.authenticationFailed(withMessage: error.localizedDescription)
+                    return
+                }
+                
+                if let firebaseUser = user {
+                    self.delegate?.completeSignIn(id: firebaseUser.uid, userData: self.assignDataToUser(firebaseUser: firebaseUser, isNewUser: false))
                 }
             })
         }
     }
+    
+    func createUserWithEmail(emailField: UITextField, passwordField: UITextField) {
+        
+        if let email = emailField.text, let password = passwordField.text {
+            
+            FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                
+                if let error = error {
+                    self.popUpDelegate?.authenticationFailed(withMessage: error.localizedDescription)
+                    return
+                }
+                
+                guard let newUser = user else {
+                    return
+                }
+                
+                DataService.ds.createFirebaseDBUser(uid: newUser.uid, userData: self.assignDataToUser(firebaseUser: newUser, isNewUser: true))
+                
+                self.popUpDelegate?.authenticationSuccess()
+                
+            })
+        }
+    }
+    
+    func assignDataToUser(firebaseUser user: FIRUser, isNewUser newUser: Bool) -> [String: String] {
+        
+        if newUser {
+            
+            // TODO: Move this block to separate function
+            let newUserName = UserMessages.userName
+            let photoUrl = URLS.defaultAvatar
+            
+            // assign new data to Firebase bulit in user
+            setValuesForNewUserProfile(withName: newUserName, photoUrl: photoUrl)
+            
+            let newUserData: [String: String] = [
+                "provider": user.providerID,
+                "userName": newUserName,
+                "photoUrl": photoUrl
+            ]
+            
+            return newUserData
+            
+        } else {
+            
+            // TODO: Move this block to separate function
+            var firebaseUserName = ""
+            var userPhotoUrl = ""
+            
+            if let userName = user.displayName {
+                firebaseUserName = userName
+            }
+            
+            if let photoUrl = user.photoURL {
+                userPhotoUrl = "\(photoUrl)"
+            }
+            
+            let existingUserData: [String: String] = [
+                "provider": user.providerID,
+                "userName": firebaseUserName,
+                "photoUrl": userPhotoUrl
+            ]
+            
+            return existingUserData
+            
+        }
+    }
+    
+    func setValuesForNewUserProfile(withName name: String, photoUrl url: String) {
+        let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest()
+        changeRequest?.displayName = name
+        changeRequest?.photoURL = URL(fileURLWithPath: url)
+        changeRequest?.commitChanges { (error) in
+            print(error?.localizedDescription ?? "User Data Updated")
+        }
+    }
 }
+
