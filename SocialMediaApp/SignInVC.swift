@@ -13,6 +13,8 @@ import SwiftKeychainWrapper
 
 class SignInVC: BaseVC {
     
+    // MARK: View State
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         FirebaseLogin.sharedInstance.delegate = self
@@ -27,6 +29,8 @@ class SignInVC: BaseVC {
             performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
         }
     }
+    
+    // MARK: IBActions
     
     @IBAction func twitterSignInButton(_ sender: AnyObject) {
         TwitterLogin.sharedInstance.signInWithTwitter()
@@ -45,6 +49,8 @@ class SignInVC: BaseVC {
     }
 }
 
+// MARK: GID Delegate
+
 extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
     
     // [START headless_google_auth]
@@ -59,6 +65,8 @@ extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
         FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
     }
 }
+
+// MARK: Firebase Delegate
 
 extension SignInVC: CompleteSignInWthFirebaseDelegate {
     
