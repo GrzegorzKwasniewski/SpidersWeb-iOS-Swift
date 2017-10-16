@@ -20,12 +20,10 @@ target 'SocialMediaApp' do
 
   target 'SocialMediaAppTests' do
     inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'SocialMediaAppUITests' do
-    inherit! :search_paths
-    # Pods for testing
+    
+    pod 'Quick'
+    pod 'Nimble'
+    
   end
 
 end
