@@ -56,7 +56,9 @@
 		B214935C1F6E9F2C001D5C4D /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */; };
 		B214935F1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214935E1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift */; };
 		B21493611F6EA064001D5C4D /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493601F6EA064001D5C4D /* RoundedView.swift */; };
-		B27C1CF81F953A480069C400 /* SocialMediaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1CF71F953A480069C400 /* SocialMediaAppTests.swift */; };
+		B27C1D011F953D450069C400 /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* FirstTest.swift */; };
+		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
+		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
 		B29EDB621F4B7C7200846AB3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
 		B29EDB641F4B7E9000846AB3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */; };
 		B29EDB661F4B7F0600846AB3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */; };
@@ -134,8 +136,11 @@
 		B214935E1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFailedPopUp.swift; sourceTree = "<group>"; };
 		B21493601F6EA064001D5C4D /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B27C1CF71F953A480069C400 /* SocialMediaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaAppTests.swift; sourceTree = "<group>"; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B27C1D001F953D450069C400 /* FirstTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTest.swift; sourceTree = "<group>"; };
+		B27C1D021F953E2F0069C400 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Pods/../build/Debug-iphoneos/Quick/Quick.framework"; sourceTree = "<group>"; };
+		B27C1D041F953E3A0069C400 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Pods/../build/Debug-iphoneos/Nimble/Nimble.framework"; sourceTree = "<group>"; };
 		B29EDB611F4B7C7200846AB3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B29EDB651F4B7F0600846AB3 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -158,6 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */,
+				B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */,
 				84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +175,8 @@
 		1043D33C3FB9A992212A0BD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B27C1D041F953E3A0069C400 /* Nimble.framework */,
+				B27C1D021F953E2F0069C400 /* Quick.framework */,
 				0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */,
 				C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */,
 				76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */,
@@ -380,8 +389,9 @@
 		B27C1CF61F953A480069C400 /* SocialMediaAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B27C1CF71F953A480069C400 /* SocialMediaAppTests.swift */,
 				B27C1CF91F953A480069C400 /* Info.plist */,
+				B27C1D001F953D450069C400 /* FirstTest.swift */,
+				B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */,
 			);
 			path = SocialMediaAppTests;
 			sourceTree = "<group>";
@@ -468,6 +478,7 @@
 					B27C1CF41F953A480069C400 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7K692Z62S3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 713B12E11D7D713F00AF79C3;
 					};
@@ -697,7 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B27C1CF81F953A480069C400 /* SocialMediaAppTests.swift in Sources */,
+				B27C1D011F953D450069C400 /* FirstTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,13 +876,21 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = 7K692Z62S3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Quick",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Nimble",
+				);
 				INFOPLIST_FILE = SocialMediaAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = incodewebelieve.com.SocialMediaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SocialMediaAppTests/SocialMediaAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp.app/SocialMediaApp";
 			};
@@ -883,13 +902,20 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = 7K692Z62S3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Quick",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Nimble",
+				);
 				INFOPLIST_FILE = SocialMediaAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = incodewebelieve.com.SocialMediaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SocialMediaAppTests/SocialMediaAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp.app/SocialMediaApp";
 			};
@@ -923,6 +949,7 @@
 				B27C1CFE1F953A480069C400 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,6 +24,8 @@ target 'SocialMediaApp' do
     pod 'Quick'
     pod 'Nimble'
     
+    pod 'Firebase'
+    
   end
 
 end
