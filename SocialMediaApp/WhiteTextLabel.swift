@@ -22,6 +22,7 @@ class WhiteTextLabel: UILabel {
         
         font = UIFont(name: "Avenir-Heavy", size: 18.0)
         textAlignment = .left
+        numberOfLines = 2
         
         translatesAutoresizingMaskIntoConstraints = false
         
