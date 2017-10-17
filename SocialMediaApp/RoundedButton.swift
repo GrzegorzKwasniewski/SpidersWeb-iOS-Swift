@@ -22,6 +22,27 @@ class RoundedButton: UIButton {
     @IBInspectable var customCornerRadius: CGFloat = 0
     @IBInspectable var addBorder: Bool = false
     
+    init(frame: CGRect, withTitle title: String) {
+        super.init(frame: frame)
+        
+        layer.backgroundColor = UIColor.white.cgColor
+        
+        layer.borderColor = Colors.GREY_TEXT_COLOR.cgColor
+        layer.borderWidth = 2
+        
+        let fontAttributes = [
+            NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 18.0)!,
+            NSForegroundColorAttributeName: Colors.GREY_TEXT_COLOR
+        ]
+        
+        let attributedString = NSAttributedString(string: title, attributes: fontAttributes)
+        
+        setAttributedTitle(attributedString, for: .normal)
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

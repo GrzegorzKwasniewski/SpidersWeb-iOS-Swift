@@ -10,9 +10,7 @@ import Foundation
 
 func createAuthenticationFailedPopUp(withDelegate vc: UIViewController) -> AuthenticationFailedPopUp {
     let questionAnsweredPopUp = AuthenticationFailedPopUp(frame: vc.view.frame)
-    
-    questionAnsweredPopUp.delegate = vc as? ShowPopUp
-    
+        
     return questionAnsweredPopUp
 }
 

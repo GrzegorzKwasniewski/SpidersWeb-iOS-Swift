@@ -8,10 +8,15 @@
 
 class AuthenticationFailedPopUp: UIView {
     
-    // MARK: Class Properties
+    // MARK: Custom Views
     
     var blurView: BlurView = {
         return BlurView()
+    }()
+    
+    var popUpView: RoundedView = {
+        let view = RoundedView(frame: CGRect.zero)
+        return view
     }()
     
     var message: WhiteTextLabel = {
@@ -20,51 +25,27 @@ class AuthenticationFailedPopUp: UIView {
         return label
     }()
     
-    var dismissButton: RoundedButton!
-    var popUpView: RoundedView!
-    
-    weak var delegate: ShowPopUp?
+    var dismissButton: RoundedButton = {
+        let button = RoundedButton(frame: CGRect.zero,
+                                   withTitle: "Dismiss")
+        button.accessibilityLabel = "dismissButton"
+        button.addTarget(self, action: #selector(dismissPopUpView(_:)), for: .touchUpInside)
+        return button
+    }()
     
     // MARK: Initializers
     
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        popUpView = RoundedView(frame: self.frame)
-        popUpView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(popUpView)
+        addAllSubviews()
         
-        addSubview(blurView)
-        popUpView.addSubview(message)
+        setupBlurView()
+        setupPopUpView()
+        setupMessageLabel()
+        setupDismissButton()
         
-        popUpView.widthAnchor.constraint(equalToConstant: 254).isActive = true
-        popUpView.heightAnchor.constraint(equalToConstant: 170).isActive = true
-        popUpView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        popUpView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-                
-        
-        message.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
-        message.topAnchor.constraint(equalTo: popUpView.topAnchor, constant: 21).isActive = true
-        message.leadingAnchor.constraint(equalTo: popUpView.leadingAnchor, constant: 0).isActive = true
-        message.trailingAnchor.constraint(equalTo: popUpView.trailingAnchor, constant: 0).isActive = true
-        message.heightAnchor.constraint(equalToConstant: 85).isActive = true
-        
-        
-        dismissButton = RoundedButton(withTitle: "Dismiss")
-        dismissButton.accessibilityLabel = "dismissButton"
-        dismissButton.addTarget(self, action: #selector(nextQuestion(_:)), for: .touchUpInside)
-        dismissButton.translatesAutoresizingMaskIntoConstraints = false
-        popUpView.addSubview(dismissButton)
-        
-        dismissButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
-        dismissButton.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 8).isActive = true
-        dismissButton.widthAnchor.constraint(equalToConstant: 162).isActive = true
-        dismissButton.heightAnchor.constraint(equalToConstant: 36).isActive = true
-        
-        
-        blurView.opacityAnimation(reverse: false, withDuration: 0.1)
-        popUpView.opacityAnimation(reverse: false, withDuration: 0.1)
-        
+        runStartAnimation()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -73,14 +54,86 @@ class AuthenticationFailedPopUp: UIView {
     
     // MARK: Custom Functions
     
-    func nextQuestion(_ sender: Any) {
+    /**
+     Add views to their's super views
+     */
+    
+    func addAllSubviews() {
+        addSubview(blurView)
+        addSubview(popUpView)
+        popUpView.addSubview(message)
+        popUpView.addSubview(dismissButton)
+
+    }
+    
+    /**
+     Add constraints to blur view
+    */
+    
+    func setupBlurView() {
+        blurView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        blurView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        blurView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        blurView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+    }
+    
+    /**
+     Add constraints to pop up view
+    */
+    
+    func setupPopUpView() {
+        popUpView.widthAnchor.constraint(equalToConstant: 254).isActive = true
+        popUpView.heightAnchor.constraint(equalToConstant: 170).isActive = true
+        popUpView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        popUpView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    }
+    
+    /**
+     Add constraints to message label
+    */
+    
+    func setupMessageLabel() {
+        message.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
+        message.topAnchor.constraint(equalTo: popUpView.topAnchor, constant: 21).isActive = true
+        message.leadingAnchor.constraint(equalTo: popUpView.leadingAnchor, constant: 20).isActive = true
+        message.trailingAnchor.constraint(equalTo: popUpView.trailingAnchor, constant: -20).isActive = true
+        message.heightAnchor.constraint(equalToConstant: 85).isActive = true
+    }
+    
+    /**
+     Add constraints to dismiss button
+    */
+    
+    func setupDismissButton() {
+        dismissButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
+        dismissButton.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 8).isActive = true
+        dismissButton.widthAnchor.constraint(equalToConstant: 162).isActive = true
+        dismissButton.heightAnchor.constraint(equalToConstant: 36).isActive = true
+    }
+    
+    /**
+     Function for starting animation on views
+     */
+    
+    func runStartAnimation() {
+        blurView.opacityAnimation(reverse: false, withDuration: 0.1)
+        popUpView.opacityAnimation(reverse: false, withDuration: 0.1)
+    }
+
+    
+    /**
+    Target function for dissmis button
+     
+    - Parameter sender: UIButton object that will call this method
+    */
+    
+    func dismissPopUpView(_ sender: UIButton) {
         removeWithAnimation()
     }
     
-    func showSummary(_ sender: Any) {
-        delegate?.showSummaryPopUp(quizCompleted: false)
-        removeWithAnimation()
-    }
+    /**
+     Function for removing pop up view from super view
+    */
     
     func removeWithAnimation() {
         self.blurView.opacityAnimation(reverse: true)

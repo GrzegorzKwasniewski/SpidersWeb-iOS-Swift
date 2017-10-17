@@ -17,6 +17,8 @@ class RoundedView: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
+        translatesAutoresizingMaskIntoConstraints = false
+        
         if let customColor = customBackgroundColor {
             layer.backgroundColor = customColor.cgColor
         } else {
