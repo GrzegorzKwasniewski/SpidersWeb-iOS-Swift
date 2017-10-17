@@ -56,7 +56,9 @@
 		B214935C1F6E9F2C001D5C4D /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */; };
 		B214935F1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214935E1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift */; };
 		B21493611F6EA064001D5C4D /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493601F6EA064001D5C4D /* RoundedView.swift */; };
-		B27C1D011F953D450069C400 /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* FirstTest.swift */; };
+		B248B8671F962FE000338C5F /* WhiteTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8661F962FE000338C5F /* WhiteTextLabel.swift */; };
+		B248B8691F9630E400338C5F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8681F9630E400338C5F /* BlurView.swift */; };
+		B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */; };
 		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
 		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
 		B29EDB621F4B7C7200846AB3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
@@ -135,10 +137,12 @@
 		B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		B214935E1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFailedPopUp.swift; sourceTree = "<group>"; };
 		B21493601F6EA064001D5C4D /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		B248B8661F962FE000338C5F /* WhiteTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteTextLabel.swift; sourceTree = "<group>"; };
+		B248B8681F9630E400338C5F /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		B27C1D001F953D450069C400 /* FirstTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTest.swift; sourceTree = "<group>"; };
+		B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFailedPopUpTest.swift; sourceTree = "<group>"; };
 		B27C1D021F953E2F0069C400 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Pods/../build/Debug-iphoneos/Quick/Quick.framework"; sourceTree = "<group>"; };
 		B27C1D041F953E3A0069C400 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Pods/../build/Debug-iphoneos/Nimble/Nimble.framework"; sourceTree = "<group>"; };
 		B29EDB611F4B7C7200846AB3 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -341,6 +345,8 @@
 				B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */,
 				B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */,
 				B21493601F6EA064001D5C4D /* RoundedView.swift */,
+				B248B8661F962FE000338C5F /* WhiteTextLabel.swift */,
+				B248B8681F9630E400338C5F /* BlurView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -390,7 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				B27C1CF91F953A480069C400 /* Info.plist */,
-				B27C1D001F953D450069C400 /* FirstTest.swift */,
+				B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */,
 				B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */,
 			);
 			path = SocialMediaAppTests;
@@ -680,6 +686,7 @@
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				B2A046BD1EBA633300035DB8 /* CustomErrorMessages.swift in Sources */,
 				B206E1BC1F6D1888004A21A6 /* ClearTextField.swift in Sources */,
+				B248B8671F962FE000338C5F /* WhiteTextLabel.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
 				715F554B1E1D3AEB008DC82B /* SpiderCollectionVC.swift in Sources */,
 				7111C8251DE1BB8B0012D32C /* ChangeUserSettings.swift in Sources */,
@@ -689,6 +696,7 @@
 				718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */,
 				719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */,
 				71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */,
+				B248B8691F9630E400338C5F /* BlurView.swift in Sources */,
 				71578F331D841DA5004B56AE /* FeedVC.swift in Sources */,
 				719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
@@ -708,7 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B27C1D011F953D450069C400 /* FirstTest.swift in Sources */,
+				B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

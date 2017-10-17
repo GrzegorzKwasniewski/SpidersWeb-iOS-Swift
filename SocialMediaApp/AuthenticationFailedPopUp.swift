@@ -10,10 +10,18 @@ class AuthenticationFailedPopUp: UIView {
     
     // MARK: Class Properties
     
-    var message: UILabel!
+    var blurView: BlurView = {
+        return BlurView()
+    }()
+    
+    var message: WhiteTextLabel = {
+        let label = WhiteTextLabel(frame: CGRect.zero)
+        label.text = "Wrong answer"
+        return label
+    }()
+    
     var dismissButton: RoundedButton!
     var popUpView: RoundedView!
-    var blurView: UIVisualEffectView!
     
     weak var delegate: ShowPopUp?
     
@@ -22,30 +30,18 @@ class AuthenticationFailedPopUp: UIView {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-        blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = bounds
-        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(blurView)
-        
         popUpView = RoundedView(frame: self.frame)
         popUpView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(popUpView)
+        
+        addSubview(blurView)
+        popUpView.addSubview(message)
         
         popUpView.widthAnchor.constraint(equalToConstant: 254).isActive = true
         popUpView.heightAnchor.constraint(equalToConstant: 170).isActive = true
         popUpView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         popUpView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        
-        message = UILabel(frame: CGRect.zero)
-        message.text = "Wrong answer"
-        message.textColor = UIColor.white
-        message.font = UIFont(name: "Avenir-Heavy", size: 18.0)
-        message.textAlignment = .center
-        message.numberOfLines = 2
-        message.minimumScaleFactor = 0.5
-        message.translatesAutoresizingMaskIntoConstraints = false
-        popUpView.addSubview(message)
+                
         
         message.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
         message.topAnchor.constraint(equalTo: popUpView.topAnchor, constant: 21).isActive = true
@@ -55,6 +51,7 @@ class AuthenticationFailedPopUp: UIView {
         
         
         dismissButton = RoundedButton(withTitle: "Dismiss")
+        dismissButton.accessibilityLabel = "dismissButton"
         dismissButton.addTarget(self, action: #selector(nextQuestion(_:)), for: .touchUpInside)
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
         popUpView.addSubview(dismissButton)
