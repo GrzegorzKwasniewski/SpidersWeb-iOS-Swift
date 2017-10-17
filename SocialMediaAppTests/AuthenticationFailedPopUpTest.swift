@@ -35,6 +35,7 @@ class AuthenticationFailedPopUpTest: QuickSpec {
                     let expectedAccessibilityLabel = "dismissButton"
                     
                     expect(dismissButton.accessibilityLabel).to(equal(expectedAccessibilityLabel))
+                    expect(dismissButton.titleLabel?.text).to(equal("Dismiss"))
                     
                 }
             }
