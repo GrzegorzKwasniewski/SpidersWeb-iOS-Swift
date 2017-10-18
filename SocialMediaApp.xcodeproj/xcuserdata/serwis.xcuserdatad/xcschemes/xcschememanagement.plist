@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SocialMediaApp-Dev.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>SocialMediaApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>713B13001D7D713F00AF79C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>795D35491F97CC6A000BB7C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B27C1CF41F953A480069C400</key>
 		<dict>
 			<key>primary</key>
 			<true/>

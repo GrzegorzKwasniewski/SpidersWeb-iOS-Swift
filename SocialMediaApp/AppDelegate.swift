@@ -14,6 +14,14 @@ import TwitterKit
 import Fabric
 import UserNotifications
 
+#if DEVELOPMENT
+let SERVER_URL = "dev"
+let API_TOKEN = ""
+#else
+let SERVER_URL = "production"
+let API_TOKEN = ""
+#endif
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        print("README: \(SERVER_URL)")
         
         // MARK: Tab Bar Properties
         UITabBar.appearance().barTintColor = UIColor.black
