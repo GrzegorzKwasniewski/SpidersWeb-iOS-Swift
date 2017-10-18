@@ -65,6 +65,7 @@ PODS:
   - Nimble (7.0.0)
   - Quick (1.1.0)
   - SwiftKeychainWrapper (1.0.11)
+  - SwiftLint (0.21.0)
   - TwitterCore (2.3.0):
     - Fabric
   - TwitterKit (2.3.0):
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - SwiftKeychainWrapper
+  - SwiftLint
   - TwitterKit
 
 SPEC CHECKSUMS:
@@ -108,9 +110,10 @@ SPEC CHECKSUMS:
   Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SwiftKeychainWrapper: 011a6946923948ffa49708014dd691164d7621d1
+  SwiftLint: 6de8b2d15f43c482bdec2953b8cfd696faa876e8
   TwitterCore: 817eae3e291fa4125b47789e26a4f6f024115c1f
   TwitterKit: 8a383da8d9c21b0423716381ea8bbfce20622d91
 
-PODFILE CHECKSUM: 61fd4f3e3e577fcb2f294aa4077c653e90639902
+PODFILE CHECKSUM: b223e8754b771e4ceddaaed7f9b55e7c83d9b592
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
