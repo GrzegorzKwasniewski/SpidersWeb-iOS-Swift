@@ -4,8 +4,10 @@
 target 'SocialMediaApp' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  
+  link_with 'SocialMediaApp', 'SocialMediaApp-Dev'
 
-  # Pods for SocialMediaApp
+  # Pods for SocialMediaApp and SocialMediaApp-Dev
   pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
@@ -24,7 +26,6 @@ target 'SocialMediaApp' do
     
     pod 'Quick'
     pod 'Nimble'
-    
     pod 'Firebase'
     
   end
