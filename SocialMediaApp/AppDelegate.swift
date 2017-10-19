@@ -27,17 +27,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        print("README: \(SERVER_URL)")
+        setupUITabBar()
+        setupLocalNotification()
+        setupFirebase(withAplication: application, andLaunchOptions: launchOptions)
         
-        // MARK: Tab Bar Properties
-        UITabBar.appearance().barTintColor = UIColor.black
-        UITabBar.appearance().tintColor = Colors.MAIN_COLOR
-        UITabBar.appearance().unselectedItemTintColor = UIColor.white
-        
-        // MARK: Local notification
+        return true
+    }
+    
+    /// Function for configuring properties for UITabBar
+    
+    func setupUITabBar() {
+        UITabBar.appearance().barTintColor = UIColor.white
+        UITabBar.appearance().layer.borderColor = Colors.GREY_TEXT_COLOR.cgColor
+        UITabBar.appearance().layer.borderWidth = 2
+        UITabBar.appearance().tintColor = Colors.MAIN_COLOR_DARKER
+        UITabBar.appearance().unselectedItemTintColor = Colors.GREY_TEXT_COLOR
+    }
+    
+    /// Function for asking permission about local notifications
+    
+    func setupLocalNotification() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (didAllow, error) in
             if didAllow {
                 
@@ -45,9 +56,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             }
         }
-        
-        // MARK: Firebse configuration
-                
+    }
+    
+    /// Function for configuring Firebase
+    
+    func setupFirebase(withAplication application: UIApplication, andLaunchOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -59,8 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             , !key.isEmpty && !secret.isEmpty {
             Twitter.sharedInstance().start(withConsumerKey: key, consumerSecret: secret)
         }
-        
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
