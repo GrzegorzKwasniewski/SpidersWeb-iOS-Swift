@@ -40,6 +40,7 @@ class SigInWithEmailVC: BaseVC {
     
     func setDelegates() {
         EmailLogin.sharedInstance.delegate = self
+        EmailLogin.sharedInstance.popUpDelegate = self
         passwordField.delegate = self
         emailField.delegate = self
     }
@@ -57,6 +58,19 @@ extension SigInWithEmailVC: CompleteSignInWthFirebaseDelegate {
         performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
     }
 }
+
+// MARK: Delegate For ShowPopUp
+
+extension SigInWithEmailVC: ShowPopUp {
+    
+    func authenticationFailed(withMessage message: String = "") {
+        view.addSubview(setupViewForAuthenticationFailed(
+            withMessage: message,
+            withDelegate: self
+        ))
+    }
+}
+
 
 // MARK: Delegate For UITextFieldDelegate
 

@@ -129,6 +129,7 @@ extension SpiderCollectionVC {
 }
 
 // MARK: Handle UISearchBar
+
 extension SpiderCollectionVC: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
