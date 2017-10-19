@@ -11,6 +11,8 @@ import Foundation
 struct Name {
     
     static let emailLoginButton = "emailLoginButton"
+    static let twitterLoginButton = "twitterLoginButton"
+    
     static let signInLabel = "signInLabel"
     static let backButton = "backButton"
     static let loginWithEmailButton = "loginWithEmailButton"
