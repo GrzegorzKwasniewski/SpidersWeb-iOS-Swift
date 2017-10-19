@@ -49,6 +49,16 @@
                ReferencedContainer = "container:SocialMediaApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B248B86D1F988AC700338C5F"
+               BuildableName = "SocialMediaAppIntegrationTest.xctest"
+               BlueprintName = "SocialMediaAppIntegrationTest"
+               ReferencedContainer = "container:SocialMediaApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
