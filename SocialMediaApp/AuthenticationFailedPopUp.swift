@@ -21,7 +21,7 @@ class AuthenticationFailedPopUp: UIView {
     
     var message: WhiteTextLabel = {
         let label = WhiteTextLabel(frame: CGRect.zero)
-        label.text = "Wrong answer"
+        label.accessibilityLabel = "errorMessage"
         return label
     }()
     

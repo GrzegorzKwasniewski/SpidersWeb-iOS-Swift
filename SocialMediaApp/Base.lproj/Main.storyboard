@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,6 +62,7 @@
                                 <rect key="frame" x="68" y="197" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="emailLoginButton"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="email">
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -367,13 +368,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="common name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-Jn-dvs" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="110" width="355" height="48"/>
+                                                <rect key="frame" x="0.0" y="110" width="355" height="47.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1a-sN-F28">
-                                                <rect key="frame" x="0.0" y="158" width="355" height="84"/>
+                                                <rect key="frame" x="0.0" y="157.5" width="355" height="84.5"/>
                                                 <state key="normal" title="Remove spider"/>
                                                 <connections>
                                                     <action selector="removeSpider:" destination="cV3-Bo-KMB" eventType="touchUpInside" id="pOH-5a-aHx"/>
@@ -509,6 +510,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeI-6a-Efl" customClass="RoundedButton" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="82" y="406" width="210" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="loginWithEmailButton"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -524,6 +526,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-4a-BC6">
                                 <rect key="frame" x="16" y="38" width="66" height="27"/>
+                                <accessibility key="accessibilityConfiguration" label="backButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="9C6-jj-VcE"/>
                                     <constraint firstAttribute="height" constant="27" id="b0c-F3-qW4"/>
@@ -549,6 +552,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with emial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-Cn-16u">
                                 <rect key="frame" x="16" y="117" width="343" height="44"/>
+                                <accessibility key="accessibilityConfiguration" label="signInLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fI5-rH-hoL"/>
                                 </constraints>
@@ -839,7 +843,7 @@
                                                 </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="add post text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwZ-sA-re8" customClass="RoundedBorderTextField" customModule="SocialMediaApp" customModuleProvider="target">
-                                                <rect key="frame" x="64" y="0.0" width="200" height="33"/>
+                                                <rect key="frame" x="63.5" y="0.0" width="200" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="46U-wF-mpA"/>
                                                 </constraints>
@@ -880,20 +884,20 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="349"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erS-e9-Jbl" id="EfZ-hV-I2Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="348.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19w-eV-FwP" customClass="RoundedContentView" customModule="SocialMediaApp" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="8" width="343" height="332"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="GTD-OY-Qf7">
-                                                            <rect key="frame" x="14" y="5" width="315" height="291"/>
+                                                            <rect key="frame" x="14" y="5" width="315" height="291.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AKA-q5-7d5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="91"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="91.5"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Rry-q4-sWb" userLabel="SmallPicture" customClass="ProfileImage" customModule="SocialMediaApp" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="16" width="59" height="59"/>
+                                                                            <rect key="frame" x="0.0" y="16.5" width="59" height="59"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="59" id="EaS-iZ-bOk"/>
                                                                                 <constraint firstAttribute="height" constant="59" id="i6Z-XM-9v9"/>
@@ -939,13 +943,13 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NNY-pA-qId">
-                                                                    <rect key="frame" x="0.0" y="102" width="315" height="138"/>
+                                                                    <rect key="frame" x="0.0" y="102.5" width="315" height="138"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="138" id="SId-0i-azK"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="some text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="adW-Rh-rbj" customClass="RoundedTextView" customModule="SocialMediaApp" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="251" width="315" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="251.5" width="315" height="40"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="315" id="rqV-GH-TYR"/>
@@ -958,16 +962,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J4E-oY-xko">
-                                                            <rect key="frame" x="249" y="305" width="86" height="24"/>
+                                                            <rect key="frame" x="249.5" y="305.5" width="85.5" height="23.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtu-UT-oWa">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="24"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="23.5"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                                     <color key="textColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94J-OX-Joz">
-                                                                    <rect key="frame" x="48" y="0.0" width="38" height="24"/>
+                                                                    <rect key="frame" x="47.5" y="0.0" width="38" height="23.5"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                                     <color key="textColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
