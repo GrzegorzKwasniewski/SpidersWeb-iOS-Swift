@@ -66,7 +66,7 @@ extension SigInWithEmailVC: ShowPopUp {
     func authenticationFailed(withMessage message: String = "") {
         view.addSubview(setupViewForAuthenticationFailed(
             withMessage: message,
-            withDelegate: self
+            forVC: self
         ))
     }
 }

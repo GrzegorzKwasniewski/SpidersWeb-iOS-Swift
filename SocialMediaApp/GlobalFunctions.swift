@@ -8,14 +8,9 @@
 
 import Foundation
 
-func createAuthenticationFailedPopUp(withDelegate vc: UIViewController) -> AuthenticationFailedPopUp {
-    let questionAnsweredPopUp = AuthenticationFailedPopUp(frame: vc.view.frame)
-        
-    return questionAnsweredPopUp
-}
-
-func setupViewForAuthenticationFailed(withMessage message: String, withDelegate vc: UIViewController) -> AuthenticationFailedPopUp {
-    let popUp = createAuthenticationFailedPopUp(withDelegate: vc)
+func setupViewForAuthenticationFailed(withMessage message: String, forVC vc: UIViewController) -> AuthenticationFailedPopUp {
+    
+    let popUp = AuthenticationFailedPopUp(frame: vc.view.frame)
     popUp.message.text = message
     
     return popUp

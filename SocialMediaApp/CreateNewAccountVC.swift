@@ -45,7 +45,7 @@ extension CreateNewAccountVC: ShowPopUp {
         
         view.addSubview(setupViewForAuthenticationFailed(
             withMessage: message,
-            withDelegate: self
+            forVC: self
         ))
         
     }

@@ -42,13 +42,13 @@ extension BaseUITests {
      Use to check if SigInWithEmailVC is now in front
      */
     
-    func expectToSeeSigInWithEmailVC() {
+    func expectToSeeSignInWithEmailVC() {
         tester().waitForView(withAccessibilityLabel: Name.SIGN_IN_LABEL)
         tester().waitForView(withAccessibilityLabel: Name.EMAIL_FIELD)
         tester().waitForView(withAccessibilityLabel: Name.PASSWORD_FIELD)
     }
     
-    func expectToSeeSigInVC() {
+    func expectToSeeSignInVC() {
         tester().waitForView(withAccessibilityLabel: Name.EMAIL_LOGIN_BUTTON)
     }
     
@@ -56,7 +56,7 @@ extension BaseUITests {
      Use to check if SigInWithEmailVC was hidden
      */
     
-    func expectToHideSigInWithEmailVC() {
+    func expectToHideSignInWithEmailVC() {
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.BACK_BUTTON)
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.SIGN_IN_LABEL)
     }

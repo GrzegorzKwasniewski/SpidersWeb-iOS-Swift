@@ -29,7 +29,6 @@ class AuthenticationFailedPopUp: UIView {
         let button = RoundedButton(frame: CGRect.zero,
                                    withTitle: "Dismiss")
         button.accessibilityLabel = "dismissButton"
-        button.addTarget(self, action: #selector(dismissPopUpView(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -37,7 +36,7 @@ class AuthenticationFailedPopUp: UIView {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        
+
         addAllSubviews()
         
         setupBlurView()
@@ -105,6 +104,9 @@ class AuthenticationFailedPopUp: UIView {
     */
     
     func setupDismissButton() {
+        
+        dismissButton.addTarget(self, action: #selector(dismissPopUpView(_:)), for: .touchUpInside)
+        
         dismissButton.centerXAnchor.constraint(equalTo: popUpView.centerXAnchor).isActive = true
         dismissButton.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 8).isActive = true
         dismissButton.widthAnchor.constraint(equalToConstant: 162).isActive = true

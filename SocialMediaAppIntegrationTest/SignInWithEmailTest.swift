@@ -13,16 +13,17 @@ class SignInWithEmailTest : BaseUITests {
     
     override func beforeAll() {
         tapButton(buttonName: Name.EMAIL_LOGIN_BUTTON)
-        expectToSeeSigInWithEmailVC()
+        expectToSeeSignInWithEmailVC()
     }
     
     override func afterAll() {
         tapButton(buttonName: Name.BACK_BUTTON)
-        expectToHideSigInWithEmailVC()
-        expectToSeeSigInVC()
+        expectToHideSignInWithEmailVC()
+        expectToSeeSignInVC()
     }
     
     override func beforeEach() {
+        clearOutAllFields()
     }
     
     
@@ -34,7 +35,7 @@ class SignInWithEmailTest : BaseUITests {
         tapButton(buttonName: Name.LOGIN_WITH_EMAIL_BUTTON)
         expectToSeeAlert(text: Name.ERROR_MESSAGE)
         tapButton(buttonName: Name.DISMISS_BUTTON)
-        expectToSeeSigInWithEmailVC()
+        expectToSeeSignInWithEmailVC()
     }
     
     /**
@@ -42,12 +43,11 @@ class SignInWithEmailTest : BaseUITests {
      */
     
     func testInvalidEmailAndPasswordData_ShowAlert() {
-        clearOutAllFields()
         provideInvalidEmail()
         provideInvalidPassword()
         tapButton(buttonName: Name.LOGIN_WITH_EMAIL_BUTTON)
         expectToSeeAlert(text: Name.ERROR_MESSAGE)
         tapButton(buttonName: Name.DISMISS_BUTTON)
-        expectToSeeSigInWithEmailVC()
+        expectToSeeSignInWithEmailVC()
     }
 }
