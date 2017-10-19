@@ -10,9 +10,14 @@ import Foundation
 
 struct Name {
     
-    static let VALIDATE_BUTTON = "validateButton"
-    static let WARNING_MESSAGE_LABEL = "warningMessageLabel"
+    static let EMAIL_LOGIN_BUTTON = "emailLoginButton"
+    static let SIGN_IN_LABEL = "signInLabel"
+    static let BACK_BUTTON = "backButton"
+    static let LOGIN_WITH_EMAIL_BUTTON = "loginWithEmailButton"
+    static let ERROR_MESSAGE = "errorMessage"
     static let DISMISS_BUTTON = "dismissButton"
+    
+    
     static let RESULT_VIEW_MESSAGE = "resultViewMessage"
     static let CLEAR_BUTTON = "clearButton"
     static let CARD_NUMBER_FIELD = "cardNumberField"

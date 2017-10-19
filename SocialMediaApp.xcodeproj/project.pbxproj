@@ -118,6 +118,7 @@
 		B248B8851F988D7D00338C5F /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8841F988D7D00338C5F /* KIF+Extensions.swift */; };
 		B248B88A1F988E4500338C5F /* BaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8891F988E4500338C5F /* BaseUITests.swift */; };
 		B248B88C1F988E7500338C5F /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B88B1F988E7500338C5F /* Name.swift */; };
+		B248B88E1F98902A00338C5F /* SignInWithEmailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B88D1F98902A00338C5F /* SignInWithEmailTest.swift */; };
 		B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */; };
 		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
 		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
@@ -233,6 +234,7 @@
 		B248B8871F988E0200338C5F /* SocialMediaAppIntegrationTest-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppIntegrationTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		B248B8891F988E4500338C5F /* BaseUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITests.swift; sourceTree = "<group>"; };
 		B248B88B1F988E7500338C5F /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		B248B88D1F98902A00338C5F /* SignInWithEmailTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithEmailTest.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 		B248B8881F988E3700338C5F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B248B88D1F98902A00338C5F /* SignInWithEmailTest.swift */,
 				B248B8891F988E4500338C5F /* BaseUITests.swift */,
 			);
 			name = Tests;
@@ -683,14 +686,14 @@
 						DevelopmentTeam = 7K692Z62S3;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 795D35491F97CC6A000BB7C0;
+						TestTargetID = 713B12E11D7D713F00AF79C3;
 					};
 					B27C1CF41F953A480069C400 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7K692Z62S3;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 795D35491F97CC6A000BB7C0;
+						TestTargetID = 713B12E11D7D713F00AF79C3;
 					};
 				};
 			};
@@ -1134,6 +1137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B248B88E1F98902A00338C5F /* SignInWithEmailTest.swift in Sources */,
 				B248B88C1F988E7500338C5F /* Name.swift in Sources */,
 				B248B88A1F988E4500338C5F /* BaseUITests.swift in Sources */,
 				B248B8851F988D7D00338C5F /* KIF+Extensions.swift in Sources */,
@@ -1379,7 +1383,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialMediaAppIntegrationTest/SocialMediaAppIntegrationTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp-Dev.app/SocialMediaApp-Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp.app/SocialMediaApp";
 			};
 			name = Debug;
 		};
@@ -1400,7 +1404,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialMediaAppIntegrationTest/SocialMediaAppIntegrationTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp-Dev.app/SocialMediaApp-Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp.app/SocialMediaApp";
 			};
 			name = Release;
 		};
@@ -1426,7 +1430,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialMediaAppTests/SocialMediaAppTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp-Dev.app/SocialMediaApp-Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp.app/SocialMediaApp";
 			};
 			name = Debug;
 		};
@@ -1451,7 +1455,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialMediaAppTests/SocialMediaAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp-Dev.app/SocialMediaApp-Dev";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialMediaApp.app/SocialMediaApp";
 			};
 			name = Release;
 		};

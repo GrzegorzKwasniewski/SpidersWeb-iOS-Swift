@@ -25,14 +25,6 @@ extension BaseUITests {
     }
     
     /**
-     Use to fill card number field with invalid card number
-     */
-    
-    func provideInvalidCardNumber() {
-        tester().enterText("93588374", intoViewWithAccessibilityLabel: Name.CARD_NUMBER_FIELD)
-    }
-    
-    /**
      Use to fill card number field with valid card number
      */
     
@@ -49,30 +41,26 @@ extension BaseUITests {
     }
     
     /**
-     Use to check if card validation view is now in front
+     Use to check if SigInWithEmailVC is now in front
      */
     
-    func expectToSeeCardValidationView() {
-        tester().waitForView(withAccessibilityLabel: Name.VALIDATE_BUTTON)
+    func expectToSeeSigInWithEmailVC() {
+        tester().waitForView(withAccessibilityLabel: Name.SIGN_IN_LABEL)
+    }
+    
+    func expectToSeeSigInVC() {
+        tester().waitForView(withAccessibilityLabel: Name.EMAIL_LOGIN_BUTTON)
     }
     
     /**
-     Use to check if result alert view was hidden
+     Use to check if SigInWithEmailVC was hidden
      */
     
-    func expectToHideResultAlert() {
-        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.RESULT_VIEW_MESSAGE)
-        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.DISMISS_BUTTON)
+    func expectToHideSigInWithEmailVC() {
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.BACK_BUTTON)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.SIGN_IN_LABEL)
     }
     
-    /**
-     Use to check if warning alert was hidden
-     */
-    
-    func expectToHideWarningAlert() {
-        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.WARNING_MESSAGE_LABEL)
-        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.DISMISS_BUTTON)
-    }
     
     /**
      Use to interact with button
