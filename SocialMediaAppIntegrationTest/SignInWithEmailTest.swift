@@ -39,7 +39,7 @@ class SignInWithEmailTest : BaseUITests {
     }
     
     /**
-     Test if warning alert will be shown when user will not provide INVALID    email login data on login screen
+     Test if warning alert will be shown when user will provide INVALID    email login data on login screen
      */
     
     func testInvalidEmailAndPasswordData_ShowAlert() {
