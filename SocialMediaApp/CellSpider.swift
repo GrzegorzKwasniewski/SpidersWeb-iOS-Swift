@@ -11,10 +11,14 @@ import Firebase
 
 class CellSpider: UICollectionViewCell {
     
+    // MARK: Fields
+    
     @IBOutlet weak var spiderImage: UIImageView!
     @IBOutlet weak var spiderName: UILabel!
     
-    var spider: Spider!
+    private var spider: Spider!
+    
+    // MARK: View State
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,23 +26,25 @@ class CellSpider: UICollectionViewCell {
         spiderImage.alpha = 0.0
         spiderName.alpha = 1.0
         
+        layer.borderColor = Colors.GREY_TEXT_COLOR.cgColor
+        layer.borderWidth = 2
+        
         layer.cornerRadius = 5.0
         
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = Colors.GREY_SHADOW_COLOR.cgColor
-        self.layer.shadowOpacity = 0.9
-        self.layer.shadowOffset = CGSize(width: 5, height: 5)
-        self.layer.shadowRadius = 2
-        
-        //dropShadow()
     }
+    
+    // MARK: Custom Functions
+    
+    /// Function for configuring spider cell
+    ///     - Parameter spider: spider object that will provide data for configuration
+    ///     - Parameter image: optional parameter containing spider image
     
     func configureCell(spider: Spider, image: UIImage? = nil) {
 
         self.spider = spider
         self.spiderName.text = spider.name
         
-        // SPIDER image
+        // spider image
         if image != nil {
             self.spiderImage.image = image
             UIView.animate(withDuration: 0.2, animations: {
