@@ -344,14 +344,11 @@
 				713B13161D7D82CB00AF79C3 /* View */,
 				713B13151D7D82C300AF79C3 /* Model */,
 				71945C001EAA6B7D00F76CD6 /* Protocols */,
-				7111C7EC1DD07A310012D32C /* PopUpVC */,
 				71CE62541D882D2E002C5B0B /* Services */,
 				71EB43491DCBBDF000142783 /* Delegates */,
 				713B131B1D7EBE0800AF79C3 /* Utilities */,
 				718BA3BF1DC8BDE900E764C0 /* Extensions */,
-				712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */,
-				713B13241D803C8000AF79C3 /* SocialMediaApp.entitlements */,
-				713B13181D7D844800AF79C3 /* Defaults */,
+				713B13181D7D844800AF79C3 /* Assets */,
 			);
 			path = SocialMediaApp;
 			sourceTree = "<group>";
@@ -370,6 +367,7 @@
 		713B13161D7D82CB00AF79C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7111C7EC1DD07A310012D32C /* PopUpVC */,
 				B214935D1F6E9FE3001D5C4D /* PopUps */,
 				719BFEA61E1FD7A3006EB47A /* Cells */,
 				719BFEA21E1D740D006EB47A /* UI */,
@@ -393,18 +391,19 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		713B13181D7D844800AF79C3 /* Defaults */ = {
+		713B13181D7D844800AF79C3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				713B13241D803C8000AF79C3 /* SocialMediaApp.entitlements */,
+				712C334B1DA182C1006DD610 /* SocialMediaApp-Bridging-Header.h */,
 				713B12E91D7D713F00AF79C3 /* Main.storyboard */,
 				713B12EE1D7D713F00AF79C3 /* LaunchScreen.storyboard */,
-				713B12E51D7D713F00AF79C3 /* AppDelegate.swift */,
 				712C33551DA2A481006DD610 /* Assets.xcassets */,
 				713B12F11D7D713F00AF79C3 /* Info.plist */,
 				795D358C1F97CC6A000BB7C0 /* Dev-Info.plist */,
 				713B13131D7D733700AF79C3 /* GoogleService-Info.plist */,
 			);
-			name = Defaults;
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		713B131B1D7EBE0800AF79C3 /* Utilities */ = {
@@ -455,18 +454,11 @@
 		719BFEA21E1D740D006EB47A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				71CE62501D858C66002C5B0B /* CircleView.swift */,
-				71A9EAE51DAA6887003B08BD /* ProfileImage.swift */,
-				713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */,
-				71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */,
-				71EF4ABD1DAE5AAC00076B56 /* RoundedTextView.swift */,
-				713B13191D7EBD5700AF79C3 /* ShadowView.swift */,
-				71FE20921DAD32D50036FE9F /* TapImageView.swift */,
-				B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */,
-				B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */,
-				B21493601F6EA064001D5C4D /* RoundedView.swift */,
-				B248B8661F962FE000338C5F /* WhiteTextLabel.swift */,
-				B248B8681F9630E400338C5F /* BlurView.swift */,
+				796C3CE41F992A4B00CC7F60 /* BasicViews */,
+				796C3CE51F992A8700CC7F60 /* ImageViews */,
+				796C3CE71F992AB700CC7F60 /* Buttons */,
+				796C3CE81F992ACB00CC7F60 /* Labels */,
+				796C3CE61F992A9900CC7F60 /* TextFields */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -499,9 +491,57 @@
 		71EB43491DCBBDF000142783 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				713B12E51D7D713F00AF79C3 /* AppDelegate.swift */,
 				71EB434A1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		796C3CE41F992A4B00CC7F60 /* BasicViews */ = {
+			isa = PBXGroup;
+			children = (
+				B248B8681F9630E400338C5F /* BlurView.swift */,
+				B21493601F6EA064001D5C4D /* RoundedView.swift */,
+				71FE20921DAD32D50036FE9F /* TapImageView.swift */,
+				713B13191D7EBD5700AF79C3 /* ShadowView.swift */,
+				71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */,
+				71CE62501D858C66002C5B0B /* CircleView.swift */,
+			);
+			name = BasicViews;
+			sourceTree = "<group>";
+		};
+		796C3CE51F992A8700CC7F60 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				71A9EAE51DAA6887003B08BD /* ProfileImage.swift */,
+			);
+			name = ImageViews;
+			sourceTree = "<group>";
+		};
+		796C3CE61F992A9900CC7F60 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				71EF4ABD1DAE5AAC00076B56 /* RoundedTextView.swift */,
+				713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */,
+				B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */,
+			);
+			name = TextFields;
+			sourceTree = "<group>";
+		};
+		796C3CE71F992AB700CC7F60 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B29EDB631F4B7E9000846AB3 /* RoundedButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		796C3CE81F992ACB00CC7F60 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				B248B8661F962FE000338C5F /* WhiteTextLabel.swift */,
+			);
+			name = Labels;
 			sourceTree = "<group>";
 		};
 		B214935D1F6E9FE3001D5C4D /* PopUps */ = {
