@@ -10,14 +10,14 @@ import Foundation
 
 struct Name {
     
-    static let EMAIL_LOGIN_BUTTON = "emailLoginButton"
-    static let SIGN_IN_LABEL = "signInLabel"
-    static let BACK_BUTTON = "backButton"
-    static let LOGIN_WITH_EMAIL_BUTTON = "loginWithEmailButton"
-    static let ERROR_MESSAGE = "errorMessage"
-    static let DISMISS_BUTTON = "dismissButton"
-    static let EMAIL_FIELD = "emailField"
-    static let PASSWORD_FIELD = "passwordField"
+    static let emailLoginButton = "emailLoginButton"
+    static let signInLabel = "signInLabel"
+    static let backButton = "backButton"
+    static let loginWithEmailButton = "loginWithEmailButton"
+    static let errorMessage = "errorMessage"
+    static let dismissButton = "dismissButton"
+    static let emailField = "emailField"
+    static let passwordField = "passwordField"
     
     
     static let RESULT_VIEW_MESSAGE = "resultViewMessage"

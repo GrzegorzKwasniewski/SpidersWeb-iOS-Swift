@@ -18,8 +18,8 @@ extension BaseUITests {
      */
     
     func clearOutAllFields() {
-        tester().clearTextFromView(withAccessibilityLabel: Name.EMAIL_FIELD)
-        tester().clearTextFromView(withAccessibilityLabel: Name.PASSWORD_FIELD)
+        tester().clearTextFromView(withAccessibilityLabel: Name.emailField)
+        tester().clearTextFromView(withAccessibilityLabel: Name.passwordField)
     }
     
     /**
@@ -27,7 +27,7 @@ extension BaseUITests {
      */
     
     func provideInvalidEmail() {
-        tester().enterText("user.com", intoViewWithAccessibilityLabel: Name.EMAIL_FIELD)
+        tester().enterText("user.com", intoViewWithAccessibilityLabel: Name.emailField)
     }
     
     /**
@@ -35,7 +35,7 @@ extension BaseUITests {
      */
     
     func provideInvalidPassword() {
-        tester().enterText("rt", intoViewWithAccessibilityLabel: Name.PASSWORD_FIELD)
+        tester().enterText("rt", intoViewWithAccessibilityLabel: Name.passwordField)
     }
     
     /**
@@ -43,13 +43,13 @@ extension BaseUITests {
      */
     
     func expectToSeeSignInWithEmailVC() {
-        tester().waitForView(withAccessibilityLabel: Name.SIGN_IN_LABEL)
-        tester().waitForView(withAccessibilityLabel: Name.EMAIL_FIELD)
-        tester().waitForView(withAccessibilityLabel: Name.PASSWORD_FIELD)
+        tester().waitForView(withAccessibilityLabel: Name.signInLabel)
+        tester().waitForView(withAccessibilityLabel: Name.emailField)
+        tester().waitForView(withAccessibilityLabel: Name.passwordField)
     }
     
     func expectToSeeSignInVC() {
-        tester().waitForView(withAccessibilityLabel: Name.EMAIL_LOGIN_BUTTON)
+        tester().waitForView(withAccessibilityLabel: Name.emailLoginButton)
     }
     
     /**
@@ -57,8 +57,8 @@ extension BaseUITests {
      */
     
     func expectToHideSignInWithEmailVC() {
-        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.BACK_BUTTON)
-        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.SIGN_IN_LABEL)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.backButton)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.signInLabel)
     }
     
     
@@ -90,28 +90,6 @@ extension BaseUITests {
         let cardNumberField = tester().waitForView(withAccessibilityLabel: Name.CARD_NUMBER_FIELD) as! UITextField
         
         expect(cardNumberField.text) != ""
-    }
-    
-    /**
-     Use to check if card number filed is empty
-     */
-    
-    func checkIfCardNumberFieldIsEmpty() {
-        let cardNumberField = tester().waitForView(withAccessibilityLabel: Name.CARD_NUMBER_FIELD) as! UITextField
-        
-        expect(cardNumberField.text) == ""
-    }
-    
-    /**
-     Use to check if proper message is displyed when user provide invalid credit card number
-     */
-    
-    func checkIfInvalidCardMessageIsDisplayed() {
-        let message = tester().waitForView(withAccessibilityLabel: Name.RESULT_VIEW_MESSAGE) as! UILabel
-        
-        // binocode can change their error message so we check if diplayed message
-        // is not indicating success
-        expect(message.text) != Name.CARD_CONFIRMED
     }
 }
 

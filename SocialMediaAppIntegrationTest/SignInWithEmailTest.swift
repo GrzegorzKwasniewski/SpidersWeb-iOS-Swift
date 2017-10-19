@@ -9,15 +9,15 @@
 import KIF
 import Nimble
 
-class SignInWithEmailTest : BaseUITests {
+class SignInWithEmailTest: BaseUITests {
     
     override func beforeAll() {
-        tapButton(buttonName: Name.EMAIL_LOGIN_BUTTON)
+        tapButton(buttonName: Name.emailLoginButton)
         expectToSeeSignInWithEmailVC()
     }
     
     override func afterAll() {
-        tapButton(buttonName: Name.BACK_BUTTON)
+        tapButton(buttonName: Name.backButton)
         expectToHideSignInWithEmailVC()
         expectToSeeSignInVC()
     }
@@ -32,9 +32,9 @@ class SignInWithEmailTest : BaseUITests {
      */
     
     func testEmptyEmailAndPasswordField_ShowAlert() {
-        tapButton(buttonName: Name.LOGIN_WITH_EMAIL_BUTTON)
-        expectToSeeAlert(text: Name.ERROR_MESSAGE)
-        tapButton(buttonName: Name.DISMISS_BUTTON)
+        tapButton(buttonName: Name.loginWithEmailButton)
+        expectToSeeAlert(text: Name.errorMessage)
+        tapButton(buttonName: Name.dismissButton)
         expectToSeeSignInWithEmailVC()
     }
     
@@ -45,9 +45,9 @@ class SignInWithEmailTest : BaseUITests {
     func testInvalidEmailAndPasswordData_ShowAlert() {
         provideInvalidEmail()
         provideInvalidPassword()
-        tapButton(buttonName: Name.LOGIN_WITH_EMAIL_BUTTON)
-        expectToSeeAlert(text: Name.ERROR_MESSAGE)
-        tapButton(buttonName: Name.DISMISS_BUTTON)
+        tapButton(buttonName: Name.loginWithEmailButton)
+        expectToSeeAlert(text: Name.errorMessage)
+        tapButton(buttonName: Name.dismissButton)
         expectToSeeSignInWithEmailVC()
     }
 }
