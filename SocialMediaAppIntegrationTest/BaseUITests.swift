@@ -18,26 +18,24 @@ extension BaseUITests {
      */
     
     func clearOutAllFields() {
-        tester().clearTextFromView(withAccessibilityLabel: Name.CARD_NUMBER_FIELD)
-        tester().clearTextFromView(withAccessibilityLabel: Name.CARD_VALID_MONTH_FIELD)
-        tester().clearTextFromView(withAccessibilityLabel: Name.CARD_VALID_YEAR_FIELD)
-        tester().clearTextFromView(withAccessibilityLabel: Name.CARD_CVC_FIELD)
+        tester().clearTextFromView(withAccessibilityLabel: Name.EMAIL_FIELD)
+        tester().clearTextFromView(withAccessibilityLabel: Name.PASSWORD_FIELD)
     }
     
     /**
-     Use to fill card number field with valid card number
+     Use to fill email field with invalid email
      */
     
-    func provideValidCardNumber() {
-        tester().enterText("4028930493049304", intoViewWithAccessibilityLabel: Name.CARD_NUMBER_FIELD)
+    func provideInvalidEmail() {
+        tester().enterText("user.com", intoViewWithAccessibilityLabel: Name.EMAIL_FIELD)
     }
     
     /**
-     Use to fill card number field with invalid data
+     Use to fill email field with invalid email
      */
     
-    func provideOtherValuesThanNumber() {
-        tester().enterText("Sflocldls", intoViewWithAccessibilityLabel: Name.CARD_NUMBER_FIELD)
+    func provideInvalidPassword() {
+        tester().enterText("rt", intoViewWithAccessibilityLabel: Name.PASSWORD_FIELD)
     }
     
     /**
@@ -46,6 +44,8 @@ extension BaseUITests {
     
     func expectToSeeSigInWithEmailVC() {
         tester().waitForView(withAccessibilityLabel: Name.SIGN_IN_LABEL)
+        tester().waitForView(withAccessibilityLabel: Name.EMAIL_FIELD)
+        tester().waitForView(withAccessibilityLabel: Name.PASSWORD_FIELD)
     }
     
     func expectToSeeSigInVC() {

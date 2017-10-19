@@ -467,13 +467,14 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R2f-Xi-hES" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="82" y="233" width="210" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="emailField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MGi-rg-vnz"/>
                                     <constraint firstAttribute="width" constant="210" id="izK-qr-UaE"/>
                                 </constraints>
                                 <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="customString" value="email"/>
                                 </userDefinedRuntimeAttributes>
@@ -496,6 +497,7 @@
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6RJ-gl-qIf" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="82" y="297" width="210" height="36"/>
+                                <accessibility key="accessibilityConfiguration" label="passwordField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="P8h-mo-Jiz"/>
                                     <constraint firstAttribute="width" constant="210" id="PMN-Na-1Sh"/>

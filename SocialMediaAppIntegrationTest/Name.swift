@@ -16,6 +16,8 @@ struct Name {
     static let LOGIN_WITH_EMAIL_BUTTON = "loginWithEmailButton"
     static let ERROR_MESSAGE = "errorMessage"
     static let DISMISS_BUTTON = "dismissButton"
+    static let EMAIL_FIELD = "emailField"
+    static let PASSWORD_FIELD = "passwordField"
     
     
     static let RESULT_VIEW_MESSAGE = "resultViewMessage"

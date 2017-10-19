@@ -11,22 +11,40 @@ import Nimble
 
 class SignInWithEmailTest : BaseUITests {
     
-    override func beforeEach() {
+    override func beforeAll() {
         tapButton(buttonName: Name.EMAIL_LOGIN_BUTTON)
         expectToSeeSigInWithEmailVC()
     }
     
-    override func afterEach() {
+    override func afterAll() {
         tapButton(buttonName: Name.BACK_BUTTON)
         expectToHideSigInWithEmailVC()
         expectToSeeSigInVC()
     }
     
+    override func beforeEach() {
+    }
+    
+    
     /**
-     Test if warning alert will be shown when user will not provide valid email login data on login screen
+     Test if warning alert will be shown when user will not provide ANY email login data on login screen
      */
     
-    func testEmptyCardNumberField() {
+    func testEmptyEmailAndPasswordField_ShowAlert() {
+        tapButton(buttonName: Name.LOGIN_WITH_EMAIL_BUTTON)
+        expectToSeeAlert(text: Name.ERROR_MESSAGE)
+        tapButton(buttonName: Name.DISMISS_BUTTON)
+        expectToSeeSigInWithEmailVC()
+    }
+    
+    /**
+     Test if warning alert will be shown when user will not provide INVALID    email login data on login screen
+     */
+    
+    func testInvalidEmailAndPasswordData_ShowAlert() {
+        clearOutAllFields()
+        provideInvalidEmail()
+        provideInvalidPassword()
         tapButton(buttonName: Name.LOGIN_WITH_EMAIL_BUTTON)
         expectToSeeAlert(text: Name.ERROR_MESSAGE)
         tapButton(buttonName: Name.DISMISS_BUTTON)
