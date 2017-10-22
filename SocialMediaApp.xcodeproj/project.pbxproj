@@ -24,7 +24,6 @@
 		713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13191D7EBD5700AF79C3 /* ShadowView.swift */; };
 		713B131D1D7EBE2D00AF79C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B131C1D7EBE2D00AF79C3 /* Constants.swift */; };
 		713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */; };
-		71578F331D841DA5004B56AE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71578F321D841DA5004B56AE /* FeedVC.swift */; };
 		715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */; };
 		715F554B1E1D3AEB008DC82B /* SpiderCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */; };
 		715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */; };
@@ -39,9 +38,7 @@
 		719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */; };
 		71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		71CE62511D858C66002C5B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
-		71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62521D8692C5002C5B0B /* CellFeed.swift */; };
 		71CE62561D882D6A002C5B0B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* DataService.swift */; };
-		71CE62581D893323002C5B0B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62571D893323002C5B0B /* Post.swift */; };
 		71DEBBA11DCBC47B001A8588 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
 		71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EB434A1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift */; };
 		71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */; };
@@ -63,12 +60,10 @@
 		795D35581F97CC6A000BB7C0 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */; };
 		795D35591F97CC6A000BB7C0 /* RoundedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4ABD1DAE5AAC00076B56 /* RoundedTextView.swift */; };
 		795D355A1F97CC6A000BB7C0 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
-		795D355B1F97CC6A000BB7C0 /* CellFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62521D8692C5002C5B0B /* CellFeed.swift */; };
 		795D355C1F97CC6A000BB7C0 /* ReAuthenticateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C7EA1DCDFEED0012D32C /* ReAuthenticateUserVC.swift */; };
 		795D355D1F97CC6A000BB7C0 /* ShowPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493551F6E96AD001D5C4D /* ShowPopUp.swift */; };
 		795D355E1F97CC6A000BB7C0 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13191D7EBD5700AF79C3 /* ShadowView.swift */; };
 		795D355F1F97CC6A000BB7C0 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */; };
-		795D35601F97CC6A000BB7C0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62571D893323002C5B0B /* Post.swift */; };
 		795D35611F97CC6A000BB7C0 /* SigInWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */; };
 		795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E71D7D713F00AF79C3 /* SignInVC.swift */; };
 		795D35631F97CC6A000BB7C0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* DataService.swift */; };
@@ -86,7 +81,6 @@
 		795D356F1F97CC6A000BB7C0 /* CellSpider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA71E1FD7D3006EB47A /* CellSpider.swift */; };
 		795D35701F97CC6A000BB7C0 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		795D35711F97CC6A000BB7C0 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8681F9630E400338C5F /* BlurView.swift */; };
-		795D35721F97CC6A000BB7C0 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71578F321D841DA5004B56AE /* FeedVC.swift */; };
 		795D35731F97CC6A000BB7C0 /* AddSpiderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */; };
 		795D35741F97CC6A000BB7C0 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F9541DB12517009D8A60 /* FirebaseUser.swift */; };
 		795D35751F97CC6A000BB7C0 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */; };
@@ -190,7 +184,6 @@
 		713B131C1D7EBE2D00AF79C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		713B13201D7EC46800AF79C3 /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
 		713B13241D803C8000AF79C3 /* SocialMediaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMediaApp.entitlements; sourceTree = "<group>"; };
-		71578F321D841DA5004B56AE /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigInWithEmailVC.swift; sourceTree = "<group>"; };
 		715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVC.swift; sourceTree = "<group>"; };
 		715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
@@ -205,9 +198,7 @@
 		719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderDetailVC.swift; sourceTree = "<group>"; };
 		71A9EAE51DAA6887003B08BD /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		71CE62501D858C66002C5B0B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		71CE62521D8692C5002C5B0B /* CellFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellFeed.swift; sourceTree = "<group>"; };
 		71CE62551D882D6A002C5B0B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		71CE62571D893323002C5B0B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLogin.swift; sourceTree = "<group>"; };
 		71EB434A1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteSignInWthFirebaseDelegate.swift; sourceTree = "<group>"; };
 		71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedContentView.swift; sourceTree = "<group>"; };
@@ -360,7 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				719BFEA01E1D723D006EB47A /* Spider.swift */,
-				71CE62571D893323002C5B0B /* Post.swift */,
 				71F1F9541DB12517009D8A60 /* FirebaseUser.swift */,
 				B21493571F6E9863001D5C4D /* StringsConstants.swift */,
 			);
@@ -387,7 +377,6 @@
 				719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */,
 				715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */,
 				7104B2161DA8D9D50077CE84 /* UserSettingsVC.swift */,
-				71578F321D841DA5004B56AE /* FeedVC.swift */,
 				B2DC43861F50170700AAECC9 /* BaseVC.swift */,
 				B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */,
 			);
@@ -468,7 +457,6 @@
 			isa = PBXGroup;
 			children = (
 				719BFEA71E1FD7D3006EB47A /* CellSpider.swift */,
-				71CE62521D8692C5002C5B0B /* CellFeed.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1089,12 +1077,10 @@
 				718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */,
 				71EF4ABE1DAE5AAC00076B56 /* RoundedTextView.swift in Sources */,
 				71CE62511D858C66002C5B0B /* CircleView.swift in Sources */,
-				71CE62531D8692C5002C5B0B /* CellFeed.swift in Sources */,
 				7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */,
 				B21493561F6E96AD001D5C4D /* ShowPopUp.swift in Sources */,
 				713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */,
 				715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */,
-				71CE62581D893323002C5B0B /* Post.swift in Sources */,
 				715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */,
 				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,
 				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
@@ -1112,7 +1098,6 @@
 				719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */,
 				71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */,
 				B248B8691F9630E400338C5F /* BlurView.swift in Sources */,
-				71578F331D841DA5004B56AE /* FeedVC.swift in Sources */,
 				719BFEA41E1D9E3F006EB47A /* AddSpiderVC.swift in Sources */,
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
 				B214935C1F6E9F2C001D5C4D /* GlobalFunctions.swift in Sources */,
@@ -1146,12 +1131,10 @@
 				795D35581F97CC6A000BB7C0 /* TwitterLogin.swift in Sources */,
 				795D35591F97CC6A000BB7C0 /* RoundedTextView.swift in Sources */,
 				795D355A1F97CC6A000BB7C0 /* CircleView.swift in Sources */,
-				795D355B1F97CC6A000BB7C0 /* CellFeed.swift in Sources */,
 				795D355C1F97CC6A000BB7C0 /* ReAuthenticateUserVC.swift in Sources */,
 				795D355D1F97CC6A000BB7C0 /* ShowPopUp.swift in Sources */,
 				795D355E1F97CC6A000BB7C0 /* ShadowView.swift in Sources */,
 				795D355F1F97CC6A000BB7C0 /* UITextFieldExt.swift in Sources */,
-				795D35601F97CC6A000BB7C0 /* Post.swift in Sources */,
 				795D35611F97CC6A000BB7C0 /* SigInWithEmailVC.swift in Sources */,
 				795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */,
 				795D35631F97CC6A000BB7C0 /* DataService.swift in Sources */,
@@ -1169,7 +1152,6 @@
 				795D356F1F97CC6A000BB7C0 /* CellSpider.swift in Sources */,
 				795D35701F97CC6A000BB7C0 /* ProfileImage.swift in Sources */,
 				795D35711F97CC6A000BB7C0 /* BlurView.swift in Sources */,
-				795D35721F97CC6A000BB7C0 /* FeedVC.swift in Sources */,
 				795D35731F97CC6A000BB7C0 /* AddSpiderVC.swift in Sources */,
 				795D35741F97CC6A000BB7C0 /* FirebaseUser.swift in Sources */,
 				795D35751F97CC6A000BB7C0 /* GlobalFunctions.swift in Sources */,
