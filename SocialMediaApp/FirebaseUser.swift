@@ -9,41 +9,24 @@
 import Foundation
 import Firebase
 
-class FirebaseUser {
+public struct FirebaseUser {
 
-    private var _uid: String!
-    private var _display_name: String!
-    private var _email: String!
-    private var _image: UIImage!
-    private var _photo_url: URL!
+    private(set) var uid: String
+    private(set) var display_name: String
+    private(set) var email: String
+    private(set) var image: UIImage
     
-    var uid: String {
-        return _uid
+    init() {
+        self.uid = ""
+        self.display_name = ""
+        self.email = ""
+        self.image = #imageLiteral(resourceName: "default-avatar")
     }
-
-    var display_name: String {
-        return _display_name
-    }
-    
-    var email: String {
-        return _email
-    }
-    
-    var image: UIImage {
-        return _image
-    }
-    
-    var photo_url: URL {
-        return _photo_url
-    }
-    
-    init() {}
     
     init(userUid uid: String, userDisplayName name: String, userEmail email: String, userImage image: UIImage) {
-        _uid = uid
-        _display_name = name
-        _email = email
-        _image = image
+        self.uid = uid
+        self.display_name = name
+        self.email = email
+        self.image = image
     }
-
 }
