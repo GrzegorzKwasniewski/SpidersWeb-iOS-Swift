@@ -63,7 +63,7 @@ class CellSpider: UICollectionViewCell {
                             UIView.animate(withDuration: 2.0, animations: {
                                 self.spiderImage.alpha = 1.0
                             })
-                            FeedVC.imageCache.setObject(imageFromData, forKey: spider.imageUrl as NSString)
+                            SignInVC.imageCache.setObject(imageFromData, forKey: spider.imageUrl as NSString)
                         }
                     }
                 }

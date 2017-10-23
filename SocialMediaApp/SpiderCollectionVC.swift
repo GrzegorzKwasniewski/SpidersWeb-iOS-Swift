@@ -60,7 +60,7 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "spiderCell", for: indexPath) as? CellSpider {
             
-            if let image = FeedVC.imageCache.object(forKey: spider.imageUrl as NSString) {
+            if let image = SignInVC.imageCache.object(forKey: spider.imageUrl as NSString) {
                 cell.configureCell(spider: spider, image: image)
                 return cell
             } else {
