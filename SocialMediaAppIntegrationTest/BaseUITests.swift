@@ -48,8 +48,22 @@ extension BaseUITests {
         tester().waitForView(withAccessibilityLabel: Name.passwordField)
     }
     
+    /**
+     Use to check if SigInVC is now in front
+     */
+    
     func expectToSeeSignInVC() {
         tester().waitForView(withAccessibilityLabel: Name.emailLoginButton)
+    }
+    
+    /**
+     Use to check if SigInWithEmailVC is now in front
+     */
+    
+    func expectToSeeCreateAccountVC() {
+        tester().waitForView(withAccessibilityLabel: Name.emailField)
+        tester().waitForView(withAccessibilityLabel: Name.passwordField)
+        tester().waitForView(withAccessibilityLabel: Name.createAccountButton)
     }
     
     /**
@@ -59,6 +73,17 @@ extension BaseUITests {
     func expectToHideSignInWithEmailVC() {
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.backButton)
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.signInLabel)
+    }
+    
+    /**
+     Use to check if CreateNewAccountVC was hidden
+     */
+    
+    func expectToHideCreateNewAccountVC() {
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.emailField)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.passwordField)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.createAccountButton)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.goBackToLoginScreen)
     }
     
     

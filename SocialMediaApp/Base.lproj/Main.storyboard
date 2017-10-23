@@ -547,6 +547,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyD-LF-syQ">
                                 <rect key="frame" x="16" y="588" width="343" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="dontHaveAccount"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="Don't have account?">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1215,13 +1216,14 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTf-lg-UyQ" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="82" y="233" width="210" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="emailField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="3vH-i8-obn"/>
                                     <constraint firstAttribute="height" constant="30" id="brF-LW-bKy"/>
                                 </constraints>
                                 <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="customString" value="email"/>
                                 </userDefinedRuntimeAttributes>
@@ -1244,6 +1246,7 @@
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="loe-au-eXQ" customClass="ClearTextField" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="82" y="297" width="210" height="36"/>
+                                <accessibility key="accessibilityConfiguration" label="passwordField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="mRY-dx-wP9"/>
                                     <constraint firstAttribute="width" constant="210" id="uIW-Z1-XwX"/>
@@ -1258,8 +1261,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-qd-jB1" customClass="RoundedButton" customModule="SocialMediaApp" customModuleProvider="target">
                                 <rect key="frame" x="82" y="406" width="210" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="createAccountButton"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="LOGIN">
+                                <state key="normal" title="CREATE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1283,6 +1287,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7s-6B-vni">
                                 <rect key="frame" x="16" y="588" width="343" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="goBackToLoginScreen"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="Go back to log in screen">
                                     <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1337,6 +1342,6 @@
         <image name="twitter_icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dSh-Yi-1va"/>
+        <segue reference="bus-7h-WNy"/>
     </inferredMetricsTieBreakers>
 </document>
