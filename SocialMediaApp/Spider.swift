@@ -22,52 +22,21 @@ public struct Spider {
     private(set) var recivedFrom: String = ""
     private(set) var dateRecived: Date = Date()
     private(set) var imageUrl: String = ""
-    
-    init() {}
-    
-    init(spiderId: String, spiderData: [String: Any]) {
         
-        self.spiderId = spiderId
+    init(spiderId: String?, spiderData: [String: Any]) {
         
-        if let spiderUid = spiderData["spiderUid"] as? String {
-            self.spiderUid = spiderUid
-        }
+        self.spiderId = spiderId ?? "no data"
         
-        if let name = spiderData["name"] as? String {
-            self.name = name
-        }
-        
-        if let genus = spiderData["genus"] as? String {
-            self.genus = genus
-        }
-        
-        if let species = spiderData["species"] as? String {
-            self.species = species
-        }
-        
-        if let commonName = spiderData["commonName"] as? String {
-            self.commonName = commonName
-        }
-        
-        if let countryOrigin = spiderData["countryOrigin"] as? String {
-            self.countryOrigin = countryOrigin
-        }
-        
-        if let group = spiderData["group"] as? String {
-            self.group = group
-        }
-        
-        if let recivedFrom = spiderData["recivedFrom"] as? String {
-            self.recivedFrom = recivedFrom
-        }
-        
-        if let dateRecived = spiderData["dateRecived"] as? Date {
-            self.dateRecived = dateRecived
-        }
-        
-        if let imageUrl = spiderData["imageUrl"] as? String {
-            self.imageUrl = imageUrl
-        }
+        self.spiderUid = spiderData["spiderUid"] as? String ?? "no data"
+        self.name = spiderData["name"] as? String ?? "no data"
+        self.genus = spiderData["genus"] as? String ?? "no data"
+        self.species = spiderData["species"] as? String ?? "no data"
+        self.commonName = spiderData["commonName"] as? String ?? "no data"
+        self.countryOrigin = spiderData["countryOrigin"] as? String ?? "no data"
+        self.group = spiderData["group"] as? String ?? "no data"
+        self.recivedFrom = spiderData["recivedFrom"] as? String ?? "no data"
+        self.dateRecived = spiderData["dateRecived"] as? Date ?? Spider.generateDefaultDate()
+        self.imageUrl = spiderData["imageUrl"] as? String ?? "no data"
     }
 }
 
@@ -84,12 +53,12 @@ extension Spider {
             "countryOrigin": "testCountryOrigin",
             "group": "testGroup",
             "recivedFrom": "testRecivedFrom",
-            "dateRecived": generateTestDate(),
+            "dateRecived": generateDefaultDate(),
             "imageUrl": "testImageUrl"
         ]
     }
     
-    static func generateTestDate() -> Date {
+    static func generateDefaultDate() -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
         return formatter.date(from: "20170101")!

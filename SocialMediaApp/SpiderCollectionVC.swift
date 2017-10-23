@@ -50,7 +50,7 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var spider = Spider()
+        var spider = Spider(spiderId: nil, spiderData: [:])
         
         if inSearchMode {
             spider = filteredSpiders[indexPath.row]
