@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias JsonObject = [String: Any]
+
 struct UserMessages {
 
     public static var userName = "New user"

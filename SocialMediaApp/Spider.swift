@@ -25,7 +25,7 @@ public struct Spider {
     
     init() {}
     
-    init(spiderId: String, spiderData: Dictionary<String, AnyObject>) {
+    init(spiderId: String, spiderData: [String: Any]) {
         
         self.spiderId = spiderId
         
@@ -70,3 +70,29 @@ public struct Spider {
         }
     }
 }
+
+extension Spider {
+    
+    static func validJson() -> JsonObject {
+        
+        return [
+            "spiderUid": "testUid",
+            "name": "testName",
+            "genus": "testGenus",
+            "species": "testSpecies",
+            "commonName": "testCommonName",
+            "countryOrigin": "testCountryOrigin",
+            "group": "testGroup",
+            "recivedFrom": "testRecivedFrom",
+            "dateRecived": generateTestDate(),
+            "imageUrl": "testImageUrl"
+        ]
+    }
+    
+    static func generateTestDate() -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        return formatter.date(from: "20170101")!
+    }
+}
+
