@@ -17,9 +17,9 @@ public struct FirebaseUser {
     private(set) var image: UIImage
     
     init() {
-        self.uid = ""
-        self.displayName = ""
-        self.email = ""
+        self.uid = "no data"
+        self.displayName = "no data"
+        self.email = "no data"
         self.image = #imageLiteral(resourceName: "default-avatar")
     }
     
