@@ -27,7 +27,6 @@ class SignInVC: BaseVC {
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.stringForKey(KEY_UID) {
-            print("SEGUE: Perform from viewDidAppear")
             performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
         }
     }
@@ -57,8 +56,8 @@ extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
     
     // [START headless_google_auth]
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        if let error = error {
-            print("README: Error when sign in with Google")
+        if let googleError = error {
+            print("README: Error when sign in with Google \(googleError)")
             return
         }
         authProvider = .Google
@@ -75,8 +74,6 @@ extension SignInVC: CompleteSignInWthFirebaseDelegate {
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
-        print("KEYCHAIN: Data was saved to Keychain - \(keychainResult)")
-        print("SEGUE: Perform")
         performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
     }
 }
