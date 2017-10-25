@@ -30,7 +30,7 @@ class UserSettingsVC: BaseVC, UIImagePickerControllerDelegate, UINavigationContr
         DataService.ds.getFirebaseDBUserData { (firebaseUser) in
             DispatchQueue.main.async {
                 self.profileImage.image = firebaseUser.image
-                self.userNameLabel.text = firebaseUser.display_name
+                self.userNameLabel.text = firebaseUser.displayName
                 self.userEmail.text = firebaseUser.email
             }
         }

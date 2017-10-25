@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias JsonObject = [String: Any]
+public typealias JsonObject = [String: Any]
 
 struct UserMessages {
 
