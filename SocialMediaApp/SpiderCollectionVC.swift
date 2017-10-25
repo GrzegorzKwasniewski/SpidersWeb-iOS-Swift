@@ -12,6 +12,8 @@ import SwiftKeychainWrapper
 
 class SpiderCollectionVC: BaseVC {
     
+    // MARK: Properties
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -20,6 +22,8 @@ class SpiderCollectionVC: BaseVC {
     var filteredSpiders = [Spider]()
     
     var inSearchMode = false
+    
+    // MARK: View State
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +36,15 @@ class SpiderCollectionVC: BaseVC {
 
     }
     
+    // MARK: Actions
+    
     @IBAction func logoutUser(_ sender: UIButton) {
         _ = KeychainWrapper.removeObjectForKey(KEY_UID)
         try! FIRAuth.auth()?.signOut()
         self.dismiss(animated: true, completion: nil)
     }
     
+    // MARK: Custom Functions
     
     func setDelegates() {
         collectionView.delegate = self
@@ -45,6 +52,8 @@ class SpiderCollectionVC: BaseVC {
         searchBar.delegate = self
     }
 }
+
+// MARK: Delegate For Collection View
 
 extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -91,21 +100,21 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
-    /* func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 105, height: 105)
-    } */
-
 }
 
-// MARK: Handle Firebase
+// MARK: Firebase Delegate
+
 extension SpiderCollectionVC {
+    
+    /// Check if current user is signed in. Use bulid in Firebase method to check that
     
     func checkForSignInUser() {
         if let currentFirebaseUser = FIRAuth.auth()?.currentUser {
             currentUserUid = currentFirebaseUser.uid
         }
     }
+    
+    /// Download all data about spiders for current user from Firebase server
     
     func getSpidersDataFromFirebase() {
         DataService.ds.REF_SPIDERS.observe(.value, with: {(snapshot) in
@@ -128,7 +137,7 @@ extension SpiderCollectionVC {
     }
 }
 
-// MARK: Handle UISearchBar
+// MARK: UISearchBar Delegate
 
 extension SpiderCollectionVC: UISearchBarDelegate {
     
@@ -156,7 +165,6 @@ extension SpiderCollectionVC: UISearchBarDelegate {
         inSearchMode = true
         collectionView.reloadData()
         searchBar.showsCancelButton = false
-        //searchBar.text = nil
         view.endEditing(true)
     }
     
@@ -169,7 +177,8 @@ extension SpiderCollectionVC: UISearchBarDelegate {
     }
 }
 
-// MARK: Handle segue
+// MARK: Segue Delegate
+
 extension SpiderCollectionVC {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

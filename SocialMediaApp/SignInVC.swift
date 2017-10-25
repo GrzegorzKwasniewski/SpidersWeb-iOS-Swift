@@ -13,6 +13,8 @@ import SwiftKeychainWrapper
 
 class SignInVC: BaseVC {
     
+    // MARK: Fields
+    
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     // MARK: View State
@@ -77,4 +79,3 @@ extension SignInVC: CompleteSignInWthFirebaseDelegate {
         performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
     }
 }
-
