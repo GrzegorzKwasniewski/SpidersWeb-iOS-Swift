@@ -11,17 +11,17 @@ import FirebaseDatabase
 
 public struct Spider {
     
-    private(set) var spiderUid: String = ""
-    private(set) var spiderId: String = ""
-    private(set) var name: String = ""
-    private(set) var genus: String = ""
-    private(set) var species: String = ""
-    private(set) var commonName: String = ""
-    private(set) var countryOrigin: String = ""
-    private(set) var group: String = ""
-    private(set) var recivedFrom: String = ""
-    private(set) var dateRecived: Date = Date()
-    private(set) var imageUrl: String = ""
+    private(set) var spiderUid: String
+    private(set) var spiderId: String
+    private(set) var name: String
+    private(set) var genus: String
+    private(set) var species: String
+    private(set) var commonName: String
+    private(set) var countryOrigin: String
+    private(set) var group: String
+    private(set) var recivedFrom: String
+    private(set) var dateRecived: Date
+    private(set) var imageUrl: String
         
     init(spiderId: String?, spiderData: [String: Any]) {
         
