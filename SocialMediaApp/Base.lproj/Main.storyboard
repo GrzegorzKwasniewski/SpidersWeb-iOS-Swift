@@ -125,7 +125,7 @@
         <!--SpiderCollectionVC-->
         <scene sceneID="wlN-iq-AaZ">
             <objects>
-                <viewController storyboardIdentifier="SpiderCollection" title="SpiderCollectionVC" id="XK1-vv-uSi" customClass="SpiderCollectionVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpiderCollectionVC" title="SpiderCollectionVC" id="XK1-vv-uSi" customClass="SpiderCollectionVC" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h5l-52-lXA"/>
                         <viewControllerLayoutGuide type="bottom" id="FBx-eY-eZC"/>
