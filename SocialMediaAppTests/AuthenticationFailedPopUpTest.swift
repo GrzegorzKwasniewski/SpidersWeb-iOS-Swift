@@ -40,6 +40,9 @@ class AuthenticationFailedPopUpTest: QuickSpec {
                 }
             }
         }
+        
+        it("zzz"){} // workaround to prevent real tests from disappearing from navigator
+
     }
 }
 
