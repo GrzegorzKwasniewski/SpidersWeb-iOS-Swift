@@ -58,6 +58,22 @@ extension Spider {
         ]
     }
     
+    static func invalidJson() -> JsonObject {
+        
+        return [
+            "spiderInvalid": "testUid",
+            "nameInvalid": "testName",
+            "genusInvalid": "testGenus",
+            "speciesInvalid": "testSpecies",
+            "commonNameInvalid": "testCommonName",
+            "countryOriginInvalid": "testCountryOrigin",
+            "groupInvalid": "testGroup",
+            "recivedFromInvalid": "testRecivedFrom",
+            "dateRecivedInvalid": generateDefaultDate(),
+            "imageUrlInvalid": "testImageUrl"
+        ]
+    }
+    
     static func generateDefaultDate() -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
