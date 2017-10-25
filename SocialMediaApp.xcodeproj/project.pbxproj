@@ -46,6 +46,7 @@
 		71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F9541DB12517009D8A60 /* FirebaseUser.swift */; };
 		71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE20921DAD32D50036FE9F /* TapImageView.swift */; };
 		790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */; };
+		790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */; };
 		795D354C1F97CC6A000BB7C0 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
 		795D354D1F97CC6A000BB7C0 /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */; };
 		795D354E1F97CC6A000BB7C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
@@ -210,6 +211,7 @@
 		71FE20921DAD32D50036FE9F /* TapImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapImageView.swift; sourceTree = "<group>"; };
 		76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseUserTest.swift; sourceTree = "<group>"; };
+		790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCTest.swift; sourceTree = "<group>"; };
 		795D358B1F97CC6A000BB7C0 /* SocialMediaApp-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialMediaApp-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		795D358C1F97CC6A000BB7C0 /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "/Users/serwis/SpidersWeb-iOS-Swift/Dev-Info.plist"; sourceTree = "<absolute>"; };
 		796C3CE91F992D7800CC7F60 /* SignInVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCTest.swift; sourceTree = "<group>"; };
@@ -495,9 +497,8 @@
 		790AEB0D1FA0B30400DCD30E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */,
-				799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */,
-				790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */,
+				790AEB121FA0F5CE00DCD30E /* Views */,
+				790AEB111FA0F5C300DCD30E /* Models */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -509,6 +510,24 @@
 				B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		790AEB111FA0F5C300DCD30E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */,
+				799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		790AEB121FA0F5CE00DCD30E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */,
+				790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		796C3CE41F992A4B00CC7F60 /* BasicViews */ = {
@@ -1210,6 +1229,7 @@
 			files = (
 				799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */,
 				790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */,
+				790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */,
 				B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
