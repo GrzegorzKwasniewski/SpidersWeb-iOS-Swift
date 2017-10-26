@@ -34,6 +34,13 @@ class SpiderCollectionVCTest: QuickSpec {
                     expect(spiderCollectionVC.searchBar.delegate).to(beAKindOf(SpiderCollectionVC.self))
                 }
             }
+            
+            describe("collection view") {
+                
+                it("collectionView should have proper number of sections") {
+                    expect(spiderCollectionVC.collectionView.numberOfSections).to(equal(1))
+                }
+            }
         }
     }
 }

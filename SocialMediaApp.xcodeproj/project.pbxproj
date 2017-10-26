@@ -119,6 +119,7 @@
 		B248B88A1F988E4500338C5F /* BaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8891F988E4500338C5F /* BaseUITests.swift */; };
 		B248B88C1F988E7500338C5F /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B88B1F988E7500338C5F /* Name.swift */; };
 		B248B88E1F98902A00338C5F /* SignInWithEmailVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B88D1F98902A00338C5F /* SignInWithEmailVCTest.swift */; };
+		B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */; };
 		B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */; };
 		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
 		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
@@ -238,6 +239,7 @@
 		B248B8891F988E4500338C5F /* BaseUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITests.swift; sourceTree = "<group>"; };
 		B248B88B1F988E7500338C5F /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		B248B88D1F98902A00338C5F /* SignInWithEmailVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithEmailVCTest.swift; sourceTree = "<group>"; };
+		B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollecionViewDelegateTest.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			children = (
 				790AEB121FA0F5CE00DCD30E /* Views */,
 				790AEB111FA0F5C300DCD30E /* Models */,
+				B248B88F1FA1E7AE00338C5F /* Delegates */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -626,6 +629,14 @@
 				B248B8891F988E4500338C5F /* BaseUITests.swift */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		B248B88F1FA1E7AE00338C5F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		B27C1CF61F953A480069C400 /* SocialMediaAppTests */ = {
@@ -1233,6 +1244,7 @@
 				799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */,
 				790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */,
 				790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */,
+				B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */,
 				790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */,
 				B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */,
 			);
