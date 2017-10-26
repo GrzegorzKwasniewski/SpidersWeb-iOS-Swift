@@ -201,6 +201,29 @@ class DataService {
             }
         }
     }
+    
+    func downloadSpidersData(forUser userUID: String, completion: @escaping (_ spiderCollection: [Spider]) -> Void) {
+        
+        REF_SPIDERS.observe(.value, with: {(snapshot) in
+            
+            var spiders = [Spider]()
+            
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let snapDictionary = snap.value as? [String: AnyObject] {
+                        let userUid = snapDictionary["userUid"]
+                        if userUid!.isEqual(userUID) {
+                            let key = snap.key
+                            let spider = Spider(spiderId: key, spiderData: snapDictionary)
+                            spiders.append(spider)
+                        }
+                    }
+                }
+                
+                completion(spiders)
+            }
+        })
+    }
 
     func storeUserImageInCache(userImage image: UIImage, forKey key: NSString) {
         SignInVC.imageCache.setObject(image, forKey: key)
