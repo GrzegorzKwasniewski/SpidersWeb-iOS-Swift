@@ -10,18 +10,49 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SpiderCollectionVC: BaseVC {
+final class SpiderCollectionVC: BaseVC {
     
     // MARK: Properties
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var dataService: DataService
+    
     var currentUserUid = String()
     var spiders = [Spider]()
     var filteredSpiders = [Spider]()
     
     var inSearchMode = false
+    
+    // MARK: Initializers
+    
+    /**
+     
+     Custom initializer with dependency injection
+     
+     */
+    
+    init(withDataService dataService: DataService) {
+        self.dataService = dataService
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    /**
+     
+     Default initializer for testing
+     
+     */
+    
+    init() {
+        self.dataService = DataService.ds
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.dataService = DataService.ds
+        super.init(coder: aDecoder)
+    }
     
     // MARK: View State
 
