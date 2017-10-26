@@ -106,7 +106,11 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension SpiderCollectionVC {
     
-    /// Check if current user is signed in. Use bulid in Firebase method to check that
+    /**
+     
+    Check if current user is signed in. Use bulid in Firebase method to check that
+     
+    */
     
     func checkForSignInUser() {
         if let currentFirebaseUser = FIRAuth.auth()?.currentUser {
@@ -114,26 +118,20 @@ extension SpiderCollectionVC {
         }
     }
     
-    /// Download all data about spiders for current user from Firebase server
+    /**
+ 
+    Download all data about spiders for current user from Firebase server
+ 
+    */
     
     func getSpidersDataFromFirebase() {
-        DataService.ds.REF_SPIDERS.observe(.value, with: {(snapshot) in
-            self.spiders = []
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for snap in snapshots {
-                    print("SNAP: \(snap)")
-                    if let snapDictionary = snap.value as? Dictionary<String, AnyObject> {
-                        let userUid = snapDictionary["userUid"]
-                        if userUid!.isEqual(self.currentUserUid) {
-                            let key = snap.key
-                            let spider = Spider(spiderId: key, spiderData: snapDictionary)
-                            self.spiders.append(spider)
-                        }
-                    }
-                }
+        
+        DataService.ds.downloadSpidersData(forUser: currentUserUid) { (spiders) in
+            DispatchQueue.main.async {
+                self.spiders = spiders
+                self.collectionView.reloadData()
             }
-            self.collectionView.reloadData()
-        })
+        }
     }
 }
 
