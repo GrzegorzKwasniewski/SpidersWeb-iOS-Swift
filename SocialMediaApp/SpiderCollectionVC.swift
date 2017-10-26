@@ -45,12 +45,12 @@ final class SpiderCollectionVC: BaseVC {
      */
     
     init() {
-        self.dataService = DataService.ds
+        self.dataService = FirebaseDataService.ds
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.dataService = DataService.ds
+        self.dataService = FirebaseDataService.ds
         super.init(coder: aDecoder)
     }
     
@@ -157,7 +157,7 @@ extension SpiderCollectionVC {
     
     func getSpidersDataFromFirebase() {
         
-        DataService.ds.downloadSpidersData(forUser: currentUserUid) { (spiders) in
+        FirebaseDataService.ds.downloadSpidersData(forUser: currentUserUid) { (spiders) in
             DispatchQueue.main.async {
                 self.spiders = spiders
                 self.collectionView.reloadData()

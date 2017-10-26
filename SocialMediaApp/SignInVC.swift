@@ -74,7 +74,7 @@ extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
 extension SignInVC: CompleteSignInWthFirebaseDelegate {
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
-        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        FirebaseDataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
     }

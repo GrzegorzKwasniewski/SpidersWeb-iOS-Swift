@@ -80,7 +80,7 @@ extension AddSpiderVC {
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/jpeg"
             
-            DataService.ds.REF_SPIDERS_IMAGES.child(imageUid).put(imageData, metadata: metaData, completion: { (metadata, error) in
+            FirebaseDataService.ds.REF_SPIDERS_IMAGES.child(imageUid).put(imageData, metadata: metaData, completion: { (metadata, error) in
                 if error != nil {
                     //TODO: Give response to the user with alert
                     print("REDAME: There was an error when uploading image to Firebase")
@@ -99,7 +99,7 @@ extension AddSpiderVC {
         
         let spiderUid = generateUniqueID()
         
-        let firebaseSpiderReference = DataService.ds.REF_SPIDERS.child(spiderUid)
+        let firebaseSpiderReference = FirebaseDataService.ds.REF_SPIDERS.child(spiderUid)
         
         // TODO: Add custom progress indicator when adding spider
         let post: Dictionary<String, AnyObject> = [

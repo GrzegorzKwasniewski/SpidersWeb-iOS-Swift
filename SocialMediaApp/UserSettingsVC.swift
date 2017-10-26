@@ -27,7 +27,7 @@ class UserSettingsVC: BaseVC, UIImagePickerControllerDelegate, UINavigationContr
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        DataService.ds.getFirebaseDBUserData { (firebaseUser) in
+        FirebaseDataService.ds.getFirebaseDBUserData { (firebaseUser) in
             DispatchQueue.main.async {
                 self.profileImage.image = firebaseUser.image
                 self.userNameLabel.text = firebaseUser.displayName
@@ -41,7 +41,7 @@ class UserSettingsVC: BaseVC, UIImagePickerControllerDelegate, UINavigationContr
             
             profileImage.image = selectedAvatar
             
-            DataService.ds.uploadUserImage(selectedAvatar: selectedAvatar)
+            FirebaseDataService.ds.uploadUserImage(selectedAvatar: selectedAvatar)
             
         } else {
             print("README: Valid image was not selected")
@@ -55,6 +55,6 @@ class UserSettingsVC: BaseVC, UIImagePickerControllerDelegate, UINavigationContr
     }
     
     @IBAction func resetUserPassword(_ sender: AnyObject) {
-        DataService.ds.resetUserPassword()
+        FirebaseDataService.ds.resetUserPassword()
     }
 }

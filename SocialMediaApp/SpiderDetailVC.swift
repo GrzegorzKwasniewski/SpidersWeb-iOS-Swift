@@ -38,7 +38,7 @@ class SpiderDetailVC: BaseVC, LocalNotifications {
         }
         
         nameField.text = spider.name
-        spiderDatabaseReference = DataService.ds.REF_SPIDERS.child(spider.spiderUid)
+        spiderDatabaseReference = FirebaseDataService.ds.REF_SPIDERS.child(spider.spiderUid)
         
         print("README: \(spiderDatabaseReference!)")
     }

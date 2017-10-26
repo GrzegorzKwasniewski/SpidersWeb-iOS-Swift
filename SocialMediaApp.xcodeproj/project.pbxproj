@@ -38,7 +38,7 @@
 		719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */; };
 		71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9EAE51DAA6887003B08BD /* ProfileImage.swift */; };
 		71CE62511D858C66002C5B0B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62501D858C66002C5B0B /* CircleView.swift */; };
-		71CE62561D882D6A002C5B0B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* DataService.swift */; };
+		71CE62561D882D6A002C5B0B /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* FirebaseDataService.swift */; };
 		71DEBBA11DCBC47B001A8588 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
 		71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EB434A1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift */; };
 		71EF4ABC1DAE569200076B56 /* RoundedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */; };
@@ -69,7 +69,7 @@
 		795D355F1F97CC6A000BB7C0 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */; };
 		795D35611F97CC6A000BB7C0 /* SigInWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */; };
 		795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E71D7D713F00AF79C3 /* SignInVC.swift */; };
-		795D35631F97CC6A000BB7C0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* DataService.swift */; };
+		795D35631F97CC6A000BB7C0 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* FirebaseDataService.swift */; };
 		795D35641F97CC6A000BB7C0 /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE20921DAD32D50036FE9F /* TapImageView.swift */; };
 		795D35651F97CC6A000BB7C0 /* CustomErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A046BC1EBA633300035DB8 /* CustomErrorMessages.swift */; };
 		795D35661F97CC6A000BB7C0 /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B206E1BB1F6D1888004A21A6 /* ClearTextField.swift */; };
@@ -122,6 +122,8 @@
 		B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */; };
 		B248B8951FA2149A00338C5F /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8931FA211F300338C5F /* DataServiceMock.swift */; };
 		B248B8961FA2149B00338C5F /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8931FA211F300338C5F /* DataServiceMock.swift */; };
+		B248B89B1FA21D2200338C5F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89A1FA21D2200338C5F /* DataService.swift */; };
+		B248B89C1FA21D2200338C5F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89A1FA21D2200338C5F /* DataService.swift */; };
 		B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */; };
 		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
 		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
@@ -206,7 +208,7 @@
 		719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderDetailVC.swift; sourceTree = "<group>"; };
 		71A9EAE51DAA6887003B08BD /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		71CE62501D858C66002C5B0B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		71CE62551D882D6A002C5B0B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		71CE62551D882D6A002C5B0B /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLogin.swift; sourceTree = "<group>"; };
 		71EB434A1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteSignInWthFirebaseDelegate.swift; sourceTree = "<group>"; };
 		71EF4ABB1DAE569200076B56 /* RoundedContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedContentView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		B248B88D1F98902A00338C5F /* SignInWithEmailVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithEmailVCTest.swift; sourceTree = "<group>"; };
 		B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollecionViewDelegateTest.swift; sourceTree = "<group>"; };
 		B248B8931FA211F300338C5F /* DataServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServiceMock.swift; sourceTree = "<group>"; };
+		B248B89A1FA21D2200338C5F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -452,6 +455,7 @@
 			children = (
 				71945C011EAA6BB000F76CD6 /* LocalNotifications.swift */,
 				B21493551F6E96AD001D5C4D /* ShowPopUp.swift */,
+				B248B89A1FA21D2200338C5F /* DataService.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -480,7 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				B248B8921FA211BE00338C5F /* Mocks */,
-				71CE62551D882D6A002C5B0B /* DataService.swift */,
+				71CE62551D882D6A002C5B0B /* FirebaseDataService.swift */,
 				718BA3C21DC8C93D00E764C0 /* TwitterLogin.swift */,
 				718BA3C41DC8CA2800E764C0 /* FirebaseLogin.swift */,
 				71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */,
@@ -1141,6 +1145,7 @@
 				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
 				B29EDB641F4B7E9000846AB3 /* RoundedButton.swift in Sources */,
 				B29EDB661F4B7F0600846AB3 /* UIViewExtension.swift in Sources */,
+				B248B89B1FA21D2200338C5F /* DataService.swift in Sources */,
 				B21493611F6EA064001D5C4D /* RoundedView.swift in Sources */,
 				719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */,
 				719BFE761E0AF97A006EB47A /* Globals.swift in Sources */,
@@ -1154,7 +1159,7 @@
 				715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */,
 				715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */,
 				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,
-				71CE62561D882D6A002C5B0B /* DataService.swift in Sources */,
+				71CE62561D882D6A002C5B0B /* FirebaseDataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				B2A046BD1EBA633300035DB8 /* CustomErrorMessages.swift in Sources */,
 				B206E1BC1F6D1888004A21A6 /* ClearTextField.swift in Sources */,
@@ -1196,6 +1201,7 @@
 				795D35511F97CC6A000BB7C0 /* FirebaseLogin.swift in Sources */,
 				795D35521F97CC6A000BB7C0 /* RoundedButton.swift in Sources */,
 				795D35531F97CC6A000BB7C0 /* UIViewExtension.swift in Sources */,
+				B248B89C1FA21D2200338C5F /* DataService.swift in Sources */,
 				795D35541F97CC6A000BB7C0 /* RoundedView.swift in Sources */,
 				795D35551F97CC6A000BB7C0 /* SpiderDetailVC.swift in Sources */,
 				795D35561F97CC6A000BB7C0 /* Globals.swift in Sources */,
@@ -1209,7 +1215,7 @@
 				795D355F1F97CC6A000BB7C0 /* UITextFieldExt.swift in Sources */,
 				795D35611F97CC6A000BB7C0 /* SigInWithEmailVC.swift in Sources */,
 				795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */,
-				795D35631F97CC6A000BB7C0 /* DataService.swift in Sources */,
+				795D35631F97CC6A000BB7C0 /* FirebaseDataService.swift in Sources */,
 				795D35641F97CC6A000BB7C0 /* TapImageView.swift in Sources */,
 				795D35651F97CC6A000BB7C0 /* CustomErrorMessages.swift in Sources */,
 				795D35661F97CC6A000BB7C0 /* ClearTextField.swift in Sources */,

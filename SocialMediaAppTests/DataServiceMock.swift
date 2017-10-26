@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import SwiftKeychainWrapper
 
-class DataServiceMock {
+class DataServiceMock: DataService {
     
     static let ds = DataServiceMock()
     

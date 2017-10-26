@@ -1,5 +1,5 @@
 //
-//  DataService.swift
+//  DataServiceM.swift
 //  SocialMediaApp
 //
 //  Created by Grzegorz on 26/10/2017.
@@ -7,7 +7,3 @@
 //
 
 import Foundation
-
-protocol DataService {
-    
-}

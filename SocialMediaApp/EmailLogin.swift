@@ -55,7 +55,7 @@ class EmailLogin {
                     return
                 }
                 
-                DataService.ds.createFirebaseDBUser(uid: newUser.uid, userData: self.assignDataToUser(firebaseUser: newUser, isNewUser: true))
+                FirebaseDataService.ds.createFirebaseDBUser(uid: newUser.uid, userData: self.assignDataToUser(firebaseUser: newUser, isNewUser: true))
                 
                 self.popUpDelegate?.authenticationSuccess()
                 
