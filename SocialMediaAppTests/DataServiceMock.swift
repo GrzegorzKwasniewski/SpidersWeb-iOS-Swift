@@ -11,10 +11,10 @@ import Firebase
 import SwiftKeychainWrapper
 
 class DataServiceMock: DataService {
-    
-    static let ds = DataServiceMock()
-    
+        
     func downloadSpidersData(forUser userUID: String, completion: @escaping (_ spiderCollection: [Spider]) -> Void) {
+        
+        print("README: mock")
         
         var spiderData = [String: AnyObject]()
         spiderData["spiderUid"] = "uid" as AnyObject

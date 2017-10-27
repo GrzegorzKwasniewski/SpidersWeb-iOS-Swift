@@ -10,4 +10,6 @@ import Foundation
 
 protocol DataService {
     
+    func downloadSpidersData(forUser userUID: String, completion: @escaping (_ spiderCollection: [Spider]) -> Void)
+    
 }

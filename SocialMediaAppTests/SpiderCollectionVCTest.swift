@@ -18,34 +18,50 @@ class SpiderCollectionVCTest: QuickSpec {
         
         var spiderCollectionVC: SpiderCollectionVC!
         
+        beforeEach { exampleMetadata in
+            print("README: Example number \(exampleMetadata.exampleIndex) is about to be run.")
+        }
+        
+        beforeEach {
+            spiderCollectionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SpiderCollectionVC") as! SpiderCollectionVC
+            
+            spiderCollectionVC.dataService = DataServiceMock()
+            
+            _ = spiderCollectionVC.view
+
+        }
+        
+        afterEach { exampleMetadata in
+            print("README Example number \(exampleMetadata.exampleIndex) has run.")
+        }
+        
         describe("SpiderCollectionVC") {
             
-            beforeEach {
-                
-            }
-            
-            describe("did load") {
+            context("did load") {
                 
                 it("should set all delegates") {
-                    
-                    spiderCollectionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SpiderCollectionVC") as! SpiderCollectionVC
-                    
-                    _ = spiderCollectionVC.view
-                    
+   
                     expect(spiderCollectionVC.collectionView.delegate).to(beAKindOf(SpiderCollectionVC.self))
                     expect(spiderCollectionVC.collectionView.dataSource).to(beAKindOf(SpiderCollectionVC.self))
                     expect(spiderCollectionVC.searchBar.delegate).to(beAKindOf(SpiderCollectionVC.self))
                 }
-            }
-            
-            describe("collection view") {
                 
-                it("collectionView should have proper number of sections") {
+                it("should have proper number of spiders") {
                     
-                    let mockDataService = 
+                    expect(spiderCollectionVC.spiders.count).toEventually(equal(5))
                     
-                    spiderCollectionVC = SpiderCollectionVC(withDataService: <#T##DataService#>)
+                }
+                
+                it("should have proper number of sections") {
+                    
                     expect(spiderCollectionVC.collectionView.numberOfSections).to(equal(1))
+                    
+                }
+                
+                it("should have proper number of items in first section") {
+                    
+                    expect(spiderCollectionVC.collectionView.numberOfItems(inSection: 0)).toEventually(equal(5))
+                    
                 }
             }
         }

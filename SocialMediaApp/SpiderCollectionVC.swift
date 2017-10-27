@@ -157,7 +157,7 @@ extension SpiderCollectionVC {
     
     func getSpidersDataFromFirebase() {
         
-        FirebaseDataService.ds.downloadSpidersData(forUser: currentUserUid) { (spiders) in
+        dataService.downloadSpidersData(forUser: currentUserUid) { (spiders) in
             DispatchQueue.main.async {
                 self.spiders = spiders
                 self.collectionView.reloadData()
