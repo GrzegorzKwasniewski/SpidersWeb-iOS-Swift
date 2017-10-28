@@ -23,6 +23,22 @@ extension BaseUITests {
     }
     
     /**
+     Use to fill email field with valid email
+     */
+    
+    func provideValidEmail() {
+        tester().enterText("g5@wp.pl", intoViewWithAccessibilityLabel: Name.emailField)
+    }
+    
+    /**
+     Use to fill password field with valid password
+     */
+    
+    func provideValidPassword() {
+        tester().enterText("Coding56", intoViewWithAccessibilityLabel: Name.passwordField)
+    }
+    
+    /**
      Use to fill email field with invalid email
      */
     
@@ -67,6 +83,15 @@ extension BaseUITests {
     }
     
     /**
+     Use to check if CreateNewAccountVC was hidden
+     */
+    
+    func expectToSeeSpiderScollectionVC() {
+        tester().waitForView(withAccessibilityLabel: Name.userAvatarImage)
+        tester().waitForView(withAccessibilityLabel: Name.addSpiderButton)
+    }
+    
+    /**
      Use to check if SigInWithEmailVC was hidden
      */
     
@@ -85,7 +110,6 @@ extension BaseUITests {
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.createAccountButton)
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.goBackToLoginScreen)
     }
-    
     
     /**
      Use to interact with button

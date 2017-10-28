@@ -50,4 +50,15 @@ class SignInWithEmailVCTest: BaseUITests {
         tapButton(buttonName: Name.dismissButton)
         expectToSeeSignInWithEmailVC()
     }
+    
+    /**
+     Test if user will be loged in to the app when valid data will be provided
+     */
+    
+    func testValidEmailAndPasswordData_ShowAlert() {
+        provideValidEmail()
+        provideValidPassword()
+        tapButton(buttonName: Name.loginWithEmailButton)
+        expectToSeeSpiderScollectionVC()
+    }
 }

@@ -23,6 +23,8 @@ struct Name {
     static let dismissButton = "dismissButton"
     static let emailField = "emailField"
     static let passwordField = "passwordField"
+    static let addSpiderButton = "addSpiderButton"
+    static let userAvatarImage = "userAvatarImage"
     
     
     static let RESULT_VIEW_MESSAGE = "resultViewMessage"

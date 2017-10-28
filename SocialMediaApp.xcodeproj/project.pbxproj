@@ -125,6 +125,8 @@
 		B248B89B1FA21D2200338C5F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89A1FA21D2200338C5F /* DataService.swift */; };
 		B248B89C1FA21D2200338C5F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89A1FA21D2200338C5F /* DataService.swift */; };
 		B248B89E1FA46E0300338C5F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89D1FA46E0300338C5F /* String.swift */; };
+		B248B8A11FA4725E00338C5F /* SpidersCollectionVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A01FA4725E00338C5F /* SpidersCollectionVCTest.swift */; };
+		B248B8A21FA474C100338C5F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89D1FA46E0300338C5F /* String.swift */; };
 		B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */; };
 		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
 		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
@@ -248,6 +250,7 @@
 		B248B8931FA211F300338C5F /* DataServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServiceMock.swift; sourceTree = "<group>"; };
 		B248B89A1FA21D2200338C5F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B248B89D1FA46E0300338C5F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B248B8A01FA4725E00338C5F /* SpidersCollectionVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpidersCollectionVCTest.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -637,6 +640,7 @@
 				796C3CE91F992D7800CC7F60 /* SignInVCTest.swift */,
 				B248B88D1F98902A00338C5F /* SignInWithEmailVCTest.swift */,
 				799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCTest.swift */,
+				B248B8A01FA4725E00338C5F /* SpidersCollectionVCTest.swift */,
 				B248B8891F988E4500338C5F /* BaseUITests.swift */,
 			);
 			name = Tests;
@@ -1247,6 +1251,7 @@
 				795D35741F97CC6A000BB7C0 /* FirebaseUser.swift in Sources */,
 				795D35751F97CC6A000BB7C0 /* GlobalFunctions.swift in Sources */,
 				795D35761F97CC6A000BB7C0 /* AuthenticationFailedPopUp.swift in Sources */,
+				B248B8A21FA474C100338C5F /* String.swift in Sources */,
 				795D35771F97CC6A000BB7C0 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
 				795D35781F97CC6A000BB7C0 /* StringsConstants.swift in Sources */,
 				795D35791F97CC6A000BB7C0 /* ChangeUserEmailVC.swift in Sources */,
@@ -1263,6 +1268,7 @@
 			files = (
 				B248B88E1F98902A00338C5F /* SignInWithEmailVCTest.swift in Sources */,
 				B248B88C1F988E7500338C5F /* Name.swift in Sources */,
+				B248B8A11FA4725E00338C5F /* SpidersCollectionVCTest.swift in Sources */,
 				B248B88A1F988E4500338C5F /* BaseUITests.swift in Sources */,
 				799178CB1F9E49C700E8C6C9 /* CreateNewAccountVCTest.swift in Sources */,
 				B248B8851F988D7D00338C5F /* KIF+Extensions.swift in Sources */,
