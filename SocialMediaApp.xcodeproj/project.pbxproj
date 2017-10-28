@@ -124,6 +124,7 @@
 		B248B8961FA2149B00338C5F /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8931FA211F300338C5F /* DataServiceMock.swift */; };
 		B248B89B1FA21D2200338C5F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89A1FA21D2200338C5F /* DataService.swift */; };
 		B248B89C1FA21D2200338C5F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89A1FA21D2200338C5F /* DataService.swift */; };
+		B248B89E1FA46E0300338C5F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89D1FA46E0300338C5F /* String.swift */; };
 		B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */; };
 		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
 		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
@@ -246,6 +247,7 @@
 		B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollecionViewDelegateTest.swift; sourceTree = "<group>"; };
 		B248B8931FA211F300338C5F /* DataServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServiceMock.swift; sourceTree = "<group>"; };
 		B248B89A1FA21D2200338C5F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B248B89D1FA46E0300338C5F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 		718BA3BF1DC8BDE900E764C0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B248B89F1FA46E0900338C5F /* Foundation */,
 				715F554C1E1E3CDA008DC82B /* UI */,
 				715F554D1E1E3CE0008DC82B /* VC */,
 			);
@@ -655,6 +658,14 @@
 			name = Mocks;
 			path = SocialMediaAppTests;
 			sourceTree = SOURCE_ROOT;
+		};
+		B248B89F1FA46E0900338C5F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B248B89D1FA46E0300338C5F /* String.swift */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
 		};
 		B27C1CF61F953A480069C400 /* SocialMediaAppTests */ = {
 			isa = PBXGroup;
@@ -1179,6 +1190,7 @@
 				71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */,
 				B214935C1F6E9F2C001D5C4D /* GlobalFunctions.swift in Sources */,
 				B214935F1F6EA01F001D5C4D /* AuthenticationFailedPopUp.swift in Sources */,
+				B248B89E1FA46E0300338C5F /* String.swift in Sources */,
 				71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
 				B21493581F6E9863001D5C4D /* StringsConstants.swift in Sources */,
 				7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */,

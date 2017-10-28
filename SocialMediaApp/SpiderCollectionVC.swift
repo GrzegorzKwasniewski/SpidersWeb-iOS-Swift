@@ -176,7 +176,7 @@ extension SpiderCollectionVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        if searchBar.text == nil || searchBar.text == "" {
+        if searchBar.text.isNilOrEmpty() {
             inSearchMode = false
             collectionView.reloadData()
         } else {
