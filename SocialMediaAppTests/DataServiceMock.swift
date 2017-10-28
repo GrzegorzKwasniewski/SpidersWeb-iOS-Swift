@@ -16,7 +16,7 @@ class DataServiceMock: DataService {
         
         print("README: mock")
         
-        let spiders = DataServiceMock.crateSpidersTestData()
+        let spiders = DataServiceMock.crateSpidersCollectionTestData()
         
         completion(spiders)
         
@@ -27,18 +27,9 @@ class DataServiceMock: DataService {
 
 extension DataServiceMock {
 
-    static func crateSpidersTestData() -> [Spider] {
-        var spiderData = [String: AnyObject]()
-        spiderData["spiderUid"] = "uid" as AnyObject
-        spiderData["name"] = "name" as AnyObject
-        spiderData["genus"] = "genus" as AnyObject
-        spiderData["species"] = "species" as AnyObject
-        spiderData["commonName"] = "commonName" as AnyObject
-        spiderData["countryOrigin"] = "countryOrigin" as AnyObject
-        spiderData["group"] = "group" as AnyObject
-        spiderData["recivedFrom"] = "recivedFrom" as AnyObject
-        spiderData["dateRecived"] = Spider.generateDefaultDate() as AnyObject
-        spiderData["imageUrl"] = "imageUrl" as AnyObject
+    static func crateSpidersCollectionTestData() -> [Spider] {
+        
+        let spiderData = DataServiceMock.generateSpiderData()
         
         let spiders = [
             Spider(spiderId: "1", spiderData: spiderData),
@@ -49,5 +40,31 @@ extension DataServiceMock {
         ]
         
         return spiders
+    }
+    
+    static func crateSingleSpiderTestData() -> Spider {
+        
+        let spiderData = DataServiceMock.generateSpiderData()
+        
+        let spider = Spider(spiderId: "1", spiderData: spiderData)
+
+        return spider
+    }
+    
+    static func generateSpiderData() -> [String: AnyObject] {
+        
+        var spiderData = [String: AnyObject]()
+        spiderData["spiderUid"] = "uid" as AnyObject
+        spiderData["name"] = "testName" as AnyObject
+        spiderData["genus"] = "genus" as AnyObject
+        spiderData["species"] = "species" as AnyObject
+        spiderData["commonName"] = "commonName" as AnyObject
+        spiderData["countryOrigin"] = "countryOrigin" as AnyObject
+        spiderData["group"] = "group" as AnyObject
+        spiderData["recivedFrom"] = "recivedFrom" as AnyObject
+        spiderData["dateRecived"] = Spider.generateDefaultDate() as AnyObject
+        spiderData["imageUrl"] = "imageUrl" as AnyObject
+        
+        return spiderData
     }
 }

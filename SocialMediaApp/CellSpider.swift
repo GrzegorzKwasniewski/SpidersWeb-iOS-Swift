@@ -16,7 +16,7 @@ class CellSpider: UICollectionViewCell {
     @IBOutlet weak var spiderImage: UIImageView!
     @IBOutlet weak var spiderName: UILabel!
     
-    private var spider: Spider!
+    private var spider: Spider = Spider(spiderId: "", spiderData: [:])
     
     // MARK: View State
     

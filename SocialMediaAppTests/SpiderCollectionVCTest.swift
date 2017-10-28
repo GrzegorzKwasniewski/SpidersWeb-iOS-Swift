@@ -69,7 +69,7 @@ class SpiderCollectionVCTest: QuickSpec {
                 
                 it("should set new number of itemes in collection view") {
                     
-                    spiderCollectionVC.filteredSpiders = DataServiceMock.crateSpidersTestData()
+                    spiderCollectionVC.filteredSpiders = DataServiceMock.crateSpidersCollectionTestData()
                     
                     spiderCollectionVC.filteredSpiders.removeFirst()
 

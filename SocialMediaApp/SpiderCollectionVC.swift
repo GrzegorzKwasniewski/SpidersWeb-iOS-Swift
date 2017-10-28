@@ -98,21 +98,23 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
             spider = spiders[indexPath.row]
         }
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "spiderCell", for: indexPath) as? CellSpider {
-            
-            if let image = SignInVC.imageCache.object(forKey: spider.imageUrl as NSString) {
-                cell.configureCell(spider: spider, image: image)
-                return cell
-            } else {
-                
-                dataService.downloadSpiderImage(fromURL: spider.imageUrl, completion: { (image) in
-                        cell.configureCell(spider: spider, image: image)
-                })
-                
-                return cell
-            }
-        } else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "spiderCell", for: indexPath) as? CellSpider else {
             return CellSpider()
+        }
+
+            
+        if let image = SignInVC.imageCache.object(forKey: spider.imageUrl as NSString) {
+            
+            cell.configureCell(spider: spider, image: image)
+            return cell
+            
+        } else {
+                
+            dataService.downloadSpiderImage(fromURL: spider.imageUrl, completion: { (image) in
+                        cell.configureCell(spider: spider, image: image)
+            })
+                
+            return cell
         }
     }
     
