@@ -104,7 +104,11 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
                 cell.configureCell(spider: spider, image: image)
                 return cell
             } else {
-                cell.configureCell(spider: spider)
+                
+                dataService.downloadSpiderImage(fromURL: spider.imageUrl, completion: { (image) in
+                        cell.configureCell(spider: spider, image: image)
+                })
+                
                 return cell
             }
         } else {

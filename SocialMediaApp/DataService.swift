@@ -12,4 +12,5 @@ protocol DataService {
     
     func downloadSpidersData(forUser userUID: String, completion: @escaping (_ spiderCollection: [Spider]) -> Void)
     
+    func downloadSpiderImage(fromURL url: String, completion: @escaping (UIImage) -> Void)
 }

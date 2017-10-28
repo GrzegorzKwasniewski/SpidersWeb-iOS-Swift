@@ -224,6 +224,24 @@ public final class FirebaseDataService: DataService {
             }
         })
     }
+    
+    func downloadSpiderImage(fromURL url: String, completion: @escaping (UIImage) -> Void) {
+        
+        let ref = FIRStorage.storage().reference(forURL: url as String)
+        ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data ,error) in
+            
+            if error != nil {
+                print("README: Unable to dwonload image from Firebase storage - error \(error)")
+            } else {
+                print("README: Image downloaded from Firebase storage")
+                if let imageData = data {
+                    if let imageFromData = UIImage(data: imageData) {
+                        completion(imageFromData)
+                    }
+                }
+            }
+        })
+    }
 
     func storeUserImageInCache(userImage image: UIImage, forKey key: NSString) {
         SignInVC.imageCache.setObject(image, forKey: key)

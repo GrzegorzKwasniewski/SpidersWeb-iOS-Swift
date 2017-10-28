@@ -21,6 +21,8 @@ class DataServiceMock: DataService {
         completion(spiders)
         
     }
+    
+    func downloadSpiderImage(fromURL url: String, completion: @escaping (UIImage) -> Void) {}
 }
 
 extension DataServiceMock {
