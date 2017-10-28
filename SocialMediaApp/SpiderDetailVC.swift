@@ -12,6 +12,8 @@ import UserNotifications
 
 class SpiderDetailVC: BaseVC, LocalNotifications {
     
+    // MARK: Fields
+    
     @IBOutlet weak var generalInfoView: UIView!
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -27,6 +29,8 @@ class SpiderDetailVC: BaseVC, LocalNotifications {
     
     var spiderDatabaseReference: FIRDatabaseReference!
     
+    // MARK: View State
+    
     // TODO: Change to otional
     var spider: Spider!
 
@@ -38,23 +42,48 @@ class SpiderDetailVC: BaseVC, LocalNotifications {
         }
         
         nameField.text = spider.name
-        spiderDatabaseReference = FirebaseDataService.ds.REF_SPIDERS.child(spider.spiderUid)
         
-        print("README: \(spiderDatabaseReference!)")
+        spiderDatabaseReference = FirebaseDataService.ds.REF_SPIDERS.child(spider.spiderUid)
     }
     
-    @IBAction func removeSpider(_ sender: AnyObject) {
+    // MARK: Actions
+    
+    /**
+ 
+    Function for removing spider from Firebase database
+     
+    */
+    
+    @IBAction func removeSpider(_ sender: UIButton) {
         spiderDatabaseReference.removeValue()
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func backButtonTest(_ sender: AnyObject) {
+    /**
+     
+     Function for dismissing current view controller
+     
+     */
+    
+    @IBAction func backButtonTest(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    /**
+     
+     Function for setting feed reminder for currently viewed spider
+     
+     */
     
     @IBAction func setFeedReminder(_ sender: UIButton) {
         scheduleFeedNotification(forSpider: nameField.text!, atDate: datePicker.date)
     }
+    
+    /**
+     
+     Function for setting segmented controll
+     
+     */
     
     @IBAction func segmentedControlSelection(_ sender: Any) {
         if segmentedControl.selectedSegmentIndex == 0 {
