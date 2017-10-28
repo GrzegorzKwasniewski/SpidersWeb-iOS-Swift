@@ -12,6 +12,7 @@ import Nimble
 class SignInWithEmailVCUITest: BaseUITests {
     
     override func beforeAll() {
+                
         tapButton(buttonName: Name.emailLoginButton)
         expectToSeeSignInWithEmailVC()
     }

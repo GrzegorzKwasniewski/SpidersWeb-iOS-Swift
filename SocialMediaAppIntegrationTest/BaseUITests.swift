@@ -89,6 +89,7 @@ extension BaseUITests {
     func expectToSeeSpiderScollectionVC() {
         tester().waitForView(withAccessibilityLabel: Name.userAvatarImage)
         tester().waitForView(withAccessibilityLabel: Name.addSpiderButton)
+        tester().waitForView(withAccessibilityLabel: Name.logoutButton)
     }
     
     /**
@@ -109,6 +110,16 @@ extension BaseUITests {
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.passwordField)
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.createAccountButton)
         tester().waitForAbsenceOfView(withAccessibilityLabel: Name.goBackToLoginScreen)
+    }
+    
+    /**
+     Use to check if SpiderSCollectionVC was hidden
+     */
+    
+    func expectToHideSpidersCollectionVC() {
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.userAvatarImage)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.addSpiderButton)
+        tester().waitForAbsenceOfView(withAccessibilityLabel: Name.logoutButton)
     }
     
     /**
@@ -139,6 +150,12 @@ extension BaseUITests {
         let cardNumberField = tester().waitForView(withAccessibilityLabel: Name.CARD_NUMBER_FIELD) as! UITextField
         
         expect(cardNumberField.text) != ""
+    }
+    
+    func logoutFromApp() {
+        if let _ = tester().waitForView(withAccessibilityLabel: Name.logoutButton) as? UIButton {
+            tester().tapView(withAccessibilityLabel: Name.logoutButton)
+        }
     }
 }
 
