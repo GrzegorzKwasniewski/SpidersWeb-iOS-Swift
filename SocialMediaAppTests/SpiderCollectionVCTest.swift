@@ -64,6 +64,21 @@ class SpiderCollectionVCTest: QuickSpec {
                     
                 }
             }
+            
+            context("spiders were filtered") {
+                
+                it("should set new number of itemes in collection view") {
+                    
+                    spiderCollectionVC.filteredSpiders = DataServiceMock.crateSpidersTestData()
+                    
+                    spiderCollectionVC.filteredSpiders.removeFirst()
+
+                    spiderCollectionVC.inSearchMode = true
+                    spiderCollectionVC.collectionView.reloadData()
+                    
+                    expect(spiderCollectionVC.collectionView.numberOfItems(inSection: 0)).toEventually(equal(4))
+                }
+            }
         }
     }
 }

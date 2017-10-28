@@ -16,6 +16,16 @@ class DataServiceMock: DataService {
         
         print("README: mock")
         
+        let spiders = DataServiceMock.crateSpidersTestData()
+        
+        completion(spiders)
+        
+    }
+}
+
+extension DataServiceMock {
+
+    static func crateSpidersTestData() -> [Spider] {
         var spiderData = [String: AnyObject]()
         spiderData["spiderUid"] = "uid" as AnyObject
         spiderData["name"] = "name" as AnyObject
@@ -36,7 +46,6 @@ class DataServiceMock: DataService {
             Spider(spiderId: "5", spiderData: spiderData)
         ]
         
-        completion(spiders)
-        
+        return spiders
     }
 }
