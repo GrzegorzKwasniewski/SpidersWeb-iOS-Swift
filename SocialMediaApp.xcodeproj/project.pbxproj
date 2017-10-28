@@ -100,8 +100,8 @@
 		795D35821F97CC6A000BB7C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713B12E91D7D713F00AF79C3 /* Main.storyboard */; };
 		795D35831F97CC6A000BB7C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 713B13131D7D733700AF79C3 /* GoogleService-Info.plist */; };
 		795D35841F97CC6A000BB7C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712C33551DA2A481006DD610 /* Assets.xcassets */; };
-		796C3CEA1F992D7800CC7F60 /* SignInVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C3CE91F992D7800CC7F60 /* SignInVCTest.swift */; };
-		799178CB1F9E49C700E8C6C9 /* CreateNewAccountVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCTest.swift */; };
+		796C3CEA1F992D7800CC7F60 /* SignInVCUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */; };
+		799178CB1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift */; };
 		799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
@@ -118,7 +118,7 @@
 		B248B8851F988D7D00338C5F /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8841F988D7D00338C5F /* KIF+Extensions.swift */; };
 		B248B88A1F988E4500338C5F /* BaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8891F988E4500338C5F /* BaseUITests.swift */; };
 		B248B88C1F988E7500338C5F /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B88B1F988E7500338C5F /* Name.swift */; };
-		B248B88E1F98902A00338C5F /* SignInWithEmailVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B88D1F98902A00338C5F /* SignInWithEmailVCTest.swift */; };
+		B248B88E1F98902A00338C5F /* SignInWithEmailVCUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B88D1F98902A00338C5F /* SignInWithEmailVCUITest.swift */; };
 		B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */; };
 		B248B8951FA2149A00338C5F /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8931FA211F300338C5F /* DataServiceMock.swift */; };
 		B248B8961FA2149B00338C5F /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8931FA211F300338C5F /* DataServiceMock.swift */; };
@@ -224,8 +224,8 @@
 		790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVCTest.swift; sourceTree = "<group>"; };
 		795D358B1F97CC6A000BB7C0 /* SocialMediaApp-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialMediaApp-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		795D358C1F97CC6A000BB7C0 /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "/Users/serwis/SpidersWeb-iOS-Swift/Dev-Info.plist"; sourceTree = "<absolute>"; };
-		796C3CE91F992D7800CC7F60 /* SignInVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCTest.swift; sourceTree = "<group>"; };
-		799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAccountVCTest.swift; sourceTree = "<group>"; };
+		796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCUITest.swift; sourceTree = "<group>"; };
+		799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAccountVCUITest.swift; sourceTree = "<group>"; };
 		799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderModelTest.swift; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 		B248B8871F988E0200338C5F /* SocialMediaAppIntegrationTest-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppIntegrationTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		B248B8891F988E4500338C5F /* BaseUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITests.swift; sourceTree = "<group>"; };
 		B248B88B1F988E7500338C5F /* Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
-		B248B88D1F98902A00338C5F /* SignInWithEmailVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithEmailVCTest.swift; sourceTree = "<group>"; };
+		B248B88D1F98902A00338C5F /* SignInWithEmailVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithEmailVCUITest.swift; sourceTree = "<group>"; };
 		B248B8901FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollecionViewDelegateTest.swift; sourceTree = "<group>"; };
 		B248B8931FA211F300338C5F /* DataServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServiceMock.swift; sourceTree = "<group>"; };
 		B248B89A1FA21D2200338C5F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -637,9 +637,9 @@
 		B248B8881F988E3700338C5F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				796C3CE91F992D7800CC7F60 /* SignInVCTest.swift */,
-				B248B88D1F98902A00338C5F /* SignInWithEmailVCTest.swift */,
-				799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCTest.swift */,
+				796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */,
+				B248B88D1F98902A00338C5F /* SignInWithEmailVCUITest.swift */,
+				799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift */,
 				B248B8A01FA4725E00338C5F /* SpidersCollectionVCTest.swift */,
 				B248B8891F988E4500338C5F /* BaseUITests.swift */,
 			);
@@ -1266,13 +1266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B248B88E1F98902A00338C5F /* SignInWithEmailVCTest.swift in Sources */,
+				B248B88E1F98902A00338C5F /* SignInWithEmailVCUITest.swift in Sources */,
 				B248B88C1F988E7500338C5F /* Name.swift in Sources */,
 				B248B8A11FA4725E00338C5F /* SpidersCollectionVCTest.swift in Sources */,
 				B248B88A1F988E4500338C5F /* BaseUITests.swift in Sources */,
-				799178CB1F9E49C700E8C6C9 /* CreateNewAccountVCTest.swift in Sources */,
+				799178CB1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift in Sources */,
 				B248B8851F988D7D00338C5F /* KIF+Extensions.swift in Sources */,
-				796C3CEA1F992D7800CC7F60 /* SignInVCTest.swift in Sources */,
+				796C3CEA1F992D7800CC7F60 /* SignInVCUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

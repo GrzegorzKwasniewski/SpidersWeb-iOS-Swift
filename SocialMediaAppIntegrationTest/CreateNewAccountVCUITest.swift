@@ -9,7 +9,7 @@
 import KIF
 import Nimble
 
-class CreateNewAccountVCTest: BaseUITests {
+class CreateNewAccountVCUITest: BaseUITests {
     
     override func beforeAll() {
         tapButton(buttonName: Name.emailLoginButton)

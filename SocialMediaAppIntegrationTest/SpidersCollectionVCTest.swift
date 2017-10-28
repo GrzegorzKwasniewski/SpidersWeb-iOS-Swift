@@ -9,7 +9,7 @@
 import KIF
 import Nimble
 
-class SpidersCollectionVCTest: BaseUITests {
+class SpidersCollectionVCUITest: BaseUITests {
 
     override func beforeAll() {
         tapButton(buttonName: Name.emailLoginButton)
@@ -25,5 +25,4 @@ class SpidersCollectionVCTest: BaseUITests {
     override func beforeEach() {
         clearOutAllFields()
     }
-
 }

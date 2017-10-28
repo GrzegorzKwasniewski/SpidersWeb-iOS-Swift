@@ -9,7 +9,7 @@
 import KIF
 import Nimble
 
-class SignInVCTest: BaseUITests {
+class SignInVCUITest: BaseUITests {
 //    
 //    //let app = XCUIApplication()
 //    
