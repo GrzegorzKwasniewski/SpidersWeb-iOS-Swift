@@ -33,7 +33,7 @@ class SpiderDetailVC: BaseVC, LocalNotifications {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let image = SignInVC.imageCache.object(forKey: spider.imageUrl as NSString) {
+        if let image = CacheStore.imageCache.object(forKey: spider.imageUrl as NSString) {
             spiderImage.image = image
         }
         

@@ -90,7 +90,7 @@ public final class FirebaseDataService: DataService {
 
                 photoUrlForFirebase = "\(currentUserPhotoUrl)"
                 
-                if let userImageFromCache = SignInVC.imageCache.object(forKey: keyForStoringInCache) {
+                if let userImageFromCache = CacheStore.imageCache.object(forKey: keyForStoringInCache) {
                     userImage = userImageFromCache
                     firebaseUser(FirebaseUser(userUid: currentUserUid, userDisplayName: userName, userEmail: userEmail, userImage: userImage))
                 } else {
@@ -244,6 +244,6 @@ public final class FirebaseDataService: DataService {
     }
 
     func storeUserImageInCache(userImage image: UIImage, forKey key: NSString) {
-        SignInVC.imageCache.setObject(image, forKey: key)
+        CacheStore.imageCache.setObject(image, forKey: key)
     }
 }

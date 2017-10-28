@@ -128,6 +128,7 @@
 		B248B8A11FA4725E00338C5F /* SpidersCollectionVCUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A01FA4725E00338C5F /* SpidersCollectionVCUITest.swift */; };
 		B248B8A21FA474C100338C5F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B89D1FA46E0300338C5F /* String.swift */; };
 		B248B8A41FA4A56800338C5F /* CellSpiderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A31FA4A56800338C5F /* CellSpiderTest.swift */; };
+		B248B8A61FA4C33E00338C5F /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A51FA4C33E00338C5F /* CacheStore.swift */; };
 		B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */; };
 		B27C1D031F953E2F0069C400 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D021F953E2F0069C400 /* Quick.framework */; };
 		B27C1D051F953E3A0069C400 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C1D041F953E3A0069C400 /* Nimble.framework */; };
@@ -253,6 +254,7 @@
 		B248B89D1FA46E0300338C5F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B248B8A01FA4725E00338C5F /* SpidersCollectionVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpidersCollectionVCUITest.swift; sourceTree = "<group>"; };
 		B248B8A31FA4A56800338C5F /* CellSpiderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSpiderTest.swift; sourceTree = "<group>"; };
+		B248B8A51FA4C33E00338C5F /* CacheStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
 		B27C1CF51F953A480069C400 /* SocialMediaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27C1CF91F953A480069C400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27C1CFF1F953D450069C400 /* SocialMediaAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialMediaAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 				7111C8241DE1BB8B0012D32C /* ChangeUserSettings.swift */,
 				B29EDB611F4B7C7200846AB3 /* Colors.swift */,
 				B214935B1F6E9F2C001D5C4D /* GlobalFunctions.swift */,
+				B248B8A51FA4C33E00338C5F /* CacheStore.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -1174,6 +1177,7 @@
 				7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */,
 				B21493561F6E96AD001D5C4D /* ShowPopUp.swift in Sources */,
 				713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */,
+				B248B8A61FA4C33E00338C5F /* CacheStore.swift in Sources */,
 				715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */,
 				715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */,
 				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,

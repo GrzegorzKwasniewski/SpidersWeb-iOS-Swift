@@ -13,10 +13,6 @@ import SwiftKeychainWrapper
 
 class SignInVC: BaseVC {
     
-    // MARK: Fields
-    
-    static var imageCache: NSCache<NSString, UIImage> = NSCache()
-    
     // MARK: View State
     
     override func viewDidLoad() {

@@ -49,6 +49,6 @@ class CellSpider: UICollectionViewCell {
             self.spiderImage.alpha = 1.0
         })
         
-        SignInVC.imageCache.setObject(image, forKey: spider.imageUrl as NSString)
+        CacheStore.imageCache.setObject(image, forKey: spider.imageUrl as NSString)
     }
 }
