@@ -63,6 +63,25 @@ class CustomTextLabelText: QuickSpec {
                         }.to(throwAssertion())
                 }
             })
+            
+            context("initialized with custom init", closure: {
+                
+                beforeEach {
+                    customLabel = CustomTextLabel(withMessage: "testValue", textColor: Colors.GREY_TEXT_COLOR)
+                }
+                
+                it("should call default init") {
+                    expect(customLabel.backgroundColor).to(equal(UIColor.clear))
+                }
+                
+                it("should have proper text set") {
+                    expect(customLabel.text).to(equal("testValue"))
+                }
+                
+                it("should have proper text color") {
+                    expect(customLabel.textColor).to(equal(Colors.GREY_TEXT_COLOR))
+                }
+            })
         }
     }
 }

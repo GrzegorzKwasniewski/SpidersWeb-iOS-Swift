@@ -10,6 +10,13 @@ import Foundation
 
 class CustomTextLabel: UILabel {
     
+    convenience init(withMessage message: String, textColor color: UIColor) {
+        self.init(frame: CGRect.zero)
+        
+        text = message
+        textColor = color
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
