@@ -64,6 +64,7 @@ final class SpiderCollectionVC: BaseVC {
         getSpidersDataFromFirebase()
         
         searchBar.returnKeyType = UIReturnKeyType.done
+        searchBar.accessibilityLabel = "searchBar"
 
     }
     
@@ -111,7 +112,7 @@ extension SpiderCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
         } else {
                 
             dataService.downloadSpiderImage(fromURL: spider.imageUrl, completion: { (image) in
-                        cell.configureCell(spider: spider, image: image)
+                    cell.configureCell(spider: spider, image: image)
             })
                 
             return cell

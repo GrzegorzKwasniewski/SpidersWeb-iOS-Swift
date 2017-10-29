@@ -65,6 +65,17 @@ class SpiderCollectionVCTest: QuickSpec {
                 }
             }
             
+            context("UI Views was created") {
+                
+                it("should set proper values for search bar") {
+                    
+                    let searchBar = spiderCollectionVC.searchBar
+                    
+                    expect(searchBar?.accessibilityLabel).to(equal("searchBar"))
+                    expect(searchBar?.returnKeyType).to(equal(UIReturnKeyType.done))
+                }
+            }
+            
             context("spiders were filtered") {
                 
                 it("should set new number of itemes in collection view") {

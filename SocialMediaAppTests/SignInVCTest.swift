@@ -29,7 +29,7 @@ class SignInVCTest: QuickSpec {
             describe("did load") {
                 
                 it("should have NSCache assigned") {
-                    expect(SignInVC.imageCache).notTo(beNil())
+                    expect(CacheStore.imageCache).notTo(beNil())
                 }
             }
         }

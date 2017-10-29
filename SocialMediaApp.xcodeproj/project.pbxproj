@@ -48,6 +48,7 @@
 		790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */; };
 		790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */; };
 		790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */; };
+		790AEB171FA6058C00DCD30E /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A51FA4C33E00338C5F /* CacheStore.swift */; };
 		795D354C1F97CC6A000BB7C0 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
 		795D354D1F97CC6A000BB7C0 /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */; };
 		795D354E1F97CC6A000BB7C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
@@ -1235,6 +1236,7 @@
 				795D355C1F97CC6A000BB7C0 /* ReAuthenticateUserVC.swift in Sources */,
 				795D355D1F97CC6A000BB7C0 /* ShowPopUp.swift in Sources */,
 				795D355E1F97CC6A000BB7C0 /* ShadowView.swift in Sources */,
+				790AEB171FA6058C00DCD30E /* CacheStore.swift in Sources */,
 				795D355F1F97CC6A000BB7C0 /* UITextFieldExt.swift in Sources */,
 				795D35611F97CC6A000BB7C0 /* SigInWithEmailVC.swift in Sources */,
 				795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */,
