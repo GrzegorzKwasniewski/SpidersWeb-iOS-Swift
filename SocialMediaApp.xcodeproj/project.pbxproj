@@ -54,6 +54,8 @@
 		790AEB1C1FA6099900DCD30E /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */; };
 		790AEB1D1FA6099900DCD30E /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */; };
 		790AEB1F1FA60A2A00DCD30E /* CustomTextViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */; };
+		790AEB241FA6446300DCD30E /* MainVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB231FA6446300DCD30E /* MainVCTest.swift */; };
+		790AEB261FA6493100DCD30E /* BaseVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB251FA6493100DCD30E /* BaseVCTest.swift */; };
 		795D354C1F97CC6A000BB7C0 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
 		795D354D1F97CC6A000BB7C0 /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */; };
 		795D354E1F97CC6A000BB7C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
@@ -233,6 +235,8 @@
 		790AEB181FA6079F00DCD30E /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextViewTest.swift; sourceTree = "<group>"; };
+		790AEB231FA6446300DCD30E /* MainVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCTest.swift; sourceTree = "<group>"; };
+		790AEB251FA6493100DCD30E /* BaseVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVCTest.swift; sourceTree = "<group>"; };
 		795D358B1F97CC6A000BB7C0 /* SocialMediaApp-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialMediaApp-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		795D358C1F97CC6A000BB7C0 /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "/Users/serwis/SpidersWeb-iOS-Swift/Dev-Info.plist"; sourceTree = "<absolute>"; };
 		796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCUITest.swift; sourceTree = "<group>"; };
@@ -558,13 +562,39 @@
 		790AEB121FA0F5CE00DCD30E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */,
-				790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */,
+				790AEB201FA643C800DCD30E /* ViewControllers */,
+				790AEB221FA6443C00DCD30E /* CustomView */,
+				790AEB211FA6441C00DCD30E /* UI */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		790AEB201FA643C800DCD30E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				790AEB231FA6446300DCD30E /* MainVCTest.swift */,
 				790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */,
+				790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */,
+				790AEB251FA6493100DCD30E /* BaseVCTest.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		790AEB211FA6441C00DCD30E /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				B248B8A31FA4A56800338C5F /* CellSpiderTest.swift */,
 				790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */,
 			);
-			name = Views;
+			name = UI;
+			sourceTree = "<group>";
+		};
+		790AEB221FA6443C00DCD30E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B27C1D001F953D450069C400 /* AuthenticationFailedPopUpTest.swift */,
+			);
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 		796C3CE41F992A4B00CC7F60 /* BasicViews */ = {
@@ -1305,9 +1335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */,
+				790AEB261FA6493100DCD30E /* BaseVCTest.swift in Sources */,
 				790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */,
 				790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */,
 				B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */,
+				790AEB241FA6446300DCD30E /* MainVCTest.swift in Sources */,
 				B248B8A41FA4A56800338C5F /* CellSpiderTest.swift in Sources */,
 				790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */,
 				790AEB1F1FA60A2A00DCD30E /* CustomTextViewTest.swift in Sources */,

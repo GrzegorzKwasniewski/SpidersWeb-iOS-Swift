@@ -10,6 +10,10 @@ import UIKit
 
 class BaseVC: UIViewController {
     
+    override func viewDidLoad() {
+        view.layer.backgroundColor = Colors.mainBackgroundColor.cgColor
+    }
+    
     // remove keyboard on touch
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with:event)
