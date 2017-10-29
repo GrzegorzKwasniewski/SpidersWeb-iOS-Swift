@@ -1,34 +1,30 @@
 //
-//  WhiteTextLabel.swift
+//  CustomTextLabel.swift
 //  SocialMediaApp
 //
-//  Created by Grzegorz on 17/10/2017.
+//  Created by serwis on 29/10/2017.
 //  Copyright © 2017 Grzegorz Kwaśniewski. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class WhiteTextLabel: UILabel {
+class CustomTextLabel: UILabel {
     
-    override init(frame: CGRect){
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
-        textColor = .white
+        textAlignment = .center
+        backgroundColor = .clear
+        numberOfLines = 2
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.5
-        
-        backgroundColor = UIColor.clear
-        
         font = UIFont(name: Fonts.avenirHeavy, size: 18.0)
-        textAlignment = .center
-        numberOfLines = 2
         
         translatesAutoresizingMaskIntoConstraints = false
         
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
         fatalError("init(coder:) has not been implemented")
     }
 }

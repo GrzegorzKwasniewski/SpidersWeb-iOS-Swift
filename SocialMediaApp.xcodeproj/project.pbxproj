@@ -49,6 +49,11 @@
 		790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */; };
 		790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */; };
 		790AEB171FA6058C00DCD30E /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A51FA4C33E00338C5F /* CacheStore.swift */; };
+		790AEB191FA6079F00DCD30E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB181FA6079F00DCD30E /* MainVC.swift */; };
+		790AEB1A1FA6079F00DCD30E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB181FA6079F00DCD30E /* MainVC.swift */; };
+		790AEB1C1FA6099900DCD30E /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */; };
+		790AEB1D1FA6099900DCD30E /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */; };
+		790AEB1F1FA60A2A00DCD30E /* CustomTextViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */; };
 		795D354C1F97CC6A000BB7C0 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
 		795D354D1F97CC6A000BB7C0 /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */; };
 		795D354E1F97CC6A000BB7C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
@@ -225,6 +230,9 @@
 		790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseUserTest.swift; sourceTree = "<group>"; };
 		790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCTest.swift; sourceTree = "<group>"; };
 		790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVCTest.swift; sourceTree = "<group>"; };
+		790AEB181FA6079F00DCD30E /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
+		790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextViewTest.swift; sourceTree = "<group>"; };
 		795D358B1F97CC6A000BB7C0 /* SocialMediaApp-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialMediaApp-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		795D358C1F97CC6A000BB7C0 /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "/Users/serwis/SpidersWeb-iOS-Swift/Dev-Info.plist"; sourceTree = "<absolute>"; };
 		796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCUITest.swift; sourceTree = "<group>"; };
@@ -399,6 +407,7 @@
 		713B13171D7D82D900AF79C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				790AEB181FA6079F00DCD30E /* MainVC.swift */,
 				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
 				715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */,
 				719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */,
@@ -553,6 +562,7 @@
 				790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */,
 				790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */,
 				B248B8A31FA4A56800338C5F /* CellSpiderTest.swift */,
+				790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -600,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				B248B8661F962FE000338C5F /* WhiteTextLabel.swift */,
+				790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */,
 			);
 			name = Labels;
 			sourceTree = "<group>";
@@ -1184,8 +1195,10 @@
 				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,
 				71CE62561D882D6A002C5B0B /* FirebaseDataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
+				790AEB191FA6079F00DCD30E /* MainVC.swift in Sources */,
 				B2A046BD1EBA633300035DB8 /* CustomErrorMessages.swift in Sources */,
 				B206E1BC1F6D1888004A21A6 /* ClearTextField.swift in Sources */,
+				790AEB1C1FA6099900DCD30E /* CustomTextLabel.swift in Sources */,
 				B248B8671F962FE000338C5F /* WhiteTextLabel.swift in Sources */,
 				713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */,
 				715F554B1E1D3AEB008DC82B /* SpiderCollectionVC.swift in Sources */,
@@ -1242,8 +1255,10 @@
 				795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */,
 				795D35631F97CC6A000BB7C0 /* FirebaseDataService.swift in Sources */,
 				795D35641F97CC6A000BB7C0 /* TapImageView.swift in Sources */,
+				790AEB1A1FA6079F00DCD30E /* MainVC.swift in Sources */,
 				795D35651F97CC6A000BB7C0 /* CustomErrorMessages.swift in Sources */,
 				795D35661F97CC6A000BB7C0 /* ClearTextField.swift in Sources */,
+				790AEB1D1FA6099900DCD30E /* CustomTextLabel.swift in Sources */,
 				795D35671F97CC6A000BB7C0 /* WhiteTextLabel.swift in Sources */,
 				795D35681F97CC6A000BB7C0 /* AppDelegate.swift in Sources */,
 				795D35691F97CC6A000BB7C0 /* SpiderCollectionVC.swift in Sources */,
@@ -1295,6 +1310,7 @@
 				B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */,
 				B248B8A41FA4A56800338C5F /* CellSpiderTest.swift in Sources */,
 				790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */,
+				790AEB1F1FA60A2A00DCD30E /* CustomTextViewTest.swift in Sources */,
 				B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
