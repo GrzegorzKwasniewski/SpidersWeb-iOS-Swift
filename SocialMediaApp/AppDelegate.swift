@@ -35,6 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // ignore storyboards
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        window?.rootViewController = MainVC()
+        
         setupUITabBar()
         setupLocalNotification()
         setupFirebase(withAplication: application, andLaunchOptions: launchOptions)
