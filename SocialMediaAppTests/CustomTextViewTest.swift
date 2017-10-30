@@ -48,7 +48,7 @@ class CustomTextLabelText: QuickSpec {
                 }
                 
                 it("should set proper font") {
-                    let font = UIFont(name: Fonts.avenirHeavy, size: 18.0)
+                    let font = UIFont(name: Fonts.avenirHeavy, size: 28.0)
                     
                     expect(customLabel.font).to(equal(font))
                 }

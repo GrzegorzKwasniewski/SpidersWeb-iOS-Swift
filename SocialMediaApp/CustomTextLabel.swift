@@ -25,7 +25,7 @@ class CustomTextLabel: UILabel {
         numberOfLines = 2
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.5
-        font = UIFont(name: Fonts.avenirHeavy, size: 18.0)
+        font = UIFont(name: Fonts.avenirHeavy, size: 28.0)
         
         translatesAutoresizingMaskIntoConstraints = false
         

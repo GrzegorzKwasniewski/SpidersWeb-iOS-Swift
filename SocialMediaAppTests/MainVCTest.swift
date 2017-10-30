@@ -20,12 +20,12 @@ class MainVCTest: QuickSpec {
         
         describe("Main View Controller") {
             
-            context("created with default init", closure: { 
-                
-                beforeEach {
-                    mainVC = MainVC()
-                }
-                
+            beforeEach {
+                mainVC = MainVC()
+            }
+            
+            context("created with default init", closure: {
+            
                 it("should not be nil") {
                     expect(mainVC).toNot(beNil())
                 }
@@ -33,7 +33,32 @@ class MainVCTest: QuickSpec {
                 it("should trigger fatal error if init with coder") {
                     expect { () -> Void in
                         let _ = MainVC(coder: NSCoder())
-                        }.to(throwAssertion())
+                    }.to(throwAssertion())
+                }
+            })
+            
+            context("Message label was set", closure: {
+                
+                it("view controller should have login message label") {
+                    expect(mainVC.messageLabel).toNot(beNil())
+                }
+                
+                it("view controller should have message label as subview") {
+                    
+                    let mainVCView = mainVC.view
+                    let messageLabelSuperView = mainVC.messageLabel.superview
+                    
+                    expect(mainVCView).to(equal(messageLabelSuperView))
+                    
+                }
+                
+                it("should have constraints set") {
+                    
+                    //let messageLabel = mainVC.messageLabel
+                    
+                    //let constraints = messageLabel.constraintsAffectingLayout(for: .horizontal)
+                    
+                    
                 }
             })
         }
