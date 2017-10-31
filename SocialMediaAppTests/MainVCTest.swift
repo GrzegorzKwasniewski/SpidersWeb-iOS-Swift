@@ -37,13 +37,13 @@ class MainVCTest: QuickSpec {
                 }
             })
             
-            context("Message label was set", closure: {
+            context("Message label was created", closure: {
                 
                 it("view controller should have login message label") {
                     expect(mainVC.messageLabel).toNot(beNil())
                 }
                 
-                it("view controller should have message label as subview") {
+                it("view controller view should have message label as subview") {
                     
                     let mainVCView = mainVC.view
                     let messageLabelSuperView = mainVC.messageLabel.superview

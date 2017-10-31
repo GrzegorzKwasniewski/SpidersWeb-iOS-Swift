@@ -56,6 +56,7 @@
 		790AEB1F1FA60A2A00DCD30E /* CustomTextViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */; };
 		790AEB241FA6446300DCD30E /* MainVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB231FA6446300DCD30E /* MainVCTest.swift */; };
 		790AEB261FA6493100DCD30E /* BaseVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB251FA6493100DCD30E /* BaseVCTest.swift */; };
+		790AEB281FA8AA8000DCD30E /* RoundedButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB271FA8AA8000DCD30E /* RoundedButtonTest.swift */; };
 		795D354C1F97CC6A000BB7C0 /* EmailLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEBBA01DCBC47B001A8588 /* EmailLogin.swift */; };
 		795D354D1F97CC6A000BB7C0 /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21493591F6E9B5C001D5C4D /* CreateNewAccountVC.swift */; };
 		795D354E1F97CC6A000BB7C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29EDB611F4B7C7200846AB3 /* Colors.swift */; };
@@ -237,6 +238,7 @@
 		790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextViewTest.swift; sourceTree = "<group>"; };
 		790AEB231FA6446300DCD30E /* MainVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCTest.swift; sourceTree = "<group>"; };
 		790AEB251FA6493100DCD30E /* BaseVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVCTest.swift; sourceTree = "<group>"; };
+		790AEB271FA8AA8000DCD30E /* RoundedButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButtonTest.swift; sourceTree = "<group>"; };
 		795D358B1F97CC6A000BB7C0 /* SocialMediaApp-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialMediaApp-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		795D358C1F97CC6A000BB7C0 /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "/Users/serwis/SpidersWeb-iOS-Swift/Dev-Info.plist"; sourceTree = "<absolute>"; };
 		796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCUITest.swift; sourceTree = "<group>"; };
@@ -585,6 +587,7 @@
 			children = (
 				B248B8A31FA4A56800338C5F /* CellSpiderTest.swift */,
 				790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */,
+				790AEB271FA8AA8000DCD30E /* RoundedButtonTest.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1337,6 +1340,7 @@
 				799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */,
 				790AEB261FA6493100DCD30E /* BaseVCTest.swift in Sources */,
 				790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */,
+				790AEB281FA8AA8000DCD30E /* RoundedButtonTest.swift in Sources */,
 				790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */,
 				B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */,
 				790AEB241FA6446300DCD30E /* MainVCTest.swift in Sources */,

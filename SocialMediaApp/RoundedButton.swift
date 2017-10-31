@@ -18,9 +18,9 @@ import UIKit
 
 class RoundedButton: UIButton {
     
-    @IBInspectable var customBackgroundColor: UIColor?
-    @IBInspectable var customCornerRadius: CGFloat = 0
-    @IBInspectable var addBorder: Bool = false
+    var customBackgroundColor: UIColor?
+    var customCornerRadius: CGFloat = 0
+    var addBorder: Bool = false
     
     init(frame: CGRect, withTitle title: String) {
         super.init(frame: frame)
@@ -40,27 +40,6 @@ class RoundedButton: UIButton {
         setAttributedTitle(attributedString, for: .normal)
         
         translatesAutoresizingMaskIntoConstraints = false
-        
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-        
-        if let customColor = customBackgroundColor {
-            layer.backgroundColor = customColor.cgColor
-        } else {
-            layer.backgroundColor = Colors.MAIN_COLOR.cgColor
-        }
-        
-        if addBorder == true {
-            layer.borderColor = Colors.MAIN_COLOR_LIGHTER.cgColor
-            layer.borderWidth = 2
-            imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        }
-        
-        dropShadow()
         
     }
     
@@ -90,22 +69,13 @@ class RoundedButton: UIButton {
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        if let customColor = customBackgroundColor {
-            layer.backgroundColor = customColor.cgColor
-        } else {
-            layer.backgroundColor = Colors.MAIN_COLOR.cgColor
-        }
+        layer.backgroundColor = Colors.MAIN_COLOR.cgColor
         
-        if addBorder == true {
-            layer.borderColor = Colors.MAIN_COLOR_LIGHTER.cgColor
-            layer.borderWidth = 2
-            imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        }
+        imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        //fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {

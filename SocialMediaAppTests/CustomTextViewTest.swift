@@ -23,10 +23,10 @@ class CustomTextLabelText: QuickSpec {
             context("initilized with default init", closure: {
                 
                 beforeEach {
-                    customLabel = CustomTextLabel()
+                    customLabel = CustomTextLabel(frame: CGRect.zero)
                 }
                 
-                it("should be not nil") {
+                it("should not be nil") {
                     expect(customLabel).toNot(beNil())
                 }
                 
