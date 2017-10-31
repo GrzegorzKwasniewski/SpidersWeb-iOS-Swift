@@ -54,10 +54,47 @@ class MainVCTest: QuickSpec {
                 
                 it("should have constraints set") {
                     
-                    //let messageLabel = mainVC.messageLabel
+                    let messageLabel = mainVC.messageLabel
+                    let mainView = mainVC.view
+                    let constraints = mainVC.view.constraints
                     
-                    //let constraints = messageLabel.constraintsAffectingLayout(for: .horizontal)
+                    let topConstraint = constraints.filter {
+                        return $0.constant == 40 &&
+                            $0.firstAnchor == messageLabel.topAnchor &&
+                            $0.secondAnchor == mainView?.topAnchor
+                    }
                     
+                    let leadingConstraint = constraints.filter {
+                        return $0.constant == 20 &&
+                            $0.firstAnchor == messageLabel.leadingAnchor &&
+                            $0.secondAnchor == mainView?.leadingAnchor
+                    }
+                    
+                    let trailingConstraint = constraints.filter {
+                        return $0.constant == -20 &&
+                            $0.firstAnchor == messageLabel.trailingAnchor &&
+                            $0.secondAnchor == mainView?.trailingAnchor
+                    }
+                    
+                    // We need to set additional requirements about multiplier because when we set it to 0.2 it will be somethnig around this value (eg. 0.2000040)
+                    
+                    let heightConstraint = constraints.filter {
+                        return $0.multiplier >= 0.2 &&
+                            $0.multiplier <= 0.21 &&
+                            $0.firstAnchor == messageLabel.heightAnchor &&
+                            $0.secondAnchor == mainView?.heightAnchor
+                    }
+                    
+                    let centerXConstraint = constraints.filter {
+                        return $0.firstAnchor == messageLabel.centerXAnchor &&
+                            $0.secondAnchor == mainView?.centerXAnchor
+                    }
+                    
+                    expect(topConstraint.count).to(beGreaterThan(0))
+                    expect(leadingConstraint.count).to(beGreaterThan(0))
+                    expect(trailingConstraint.count).to(beGreaterThan(0))
+                    expect(heightConstraint.count).to(beGreaterThan(0))
+                    expect(centerXConstraint.count).to(beGreaterThan(0))
                     
                 }
             })

@@ -43,36 +43,6 @@ class MainVC: BaseVC {
         messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        constraints = view.constraints
-        
-        // wiesz jak się do nich dostać - ale jak je określić?
-        // no bo przecież wiesz, że pierwszy jest górny constranint bo to ba hama sprawdziłeś
-        // kolejność w tablicy jest taka sama jak kolejność ich dodania
-        
-        for con in constraints where con.constant == 20
-            && con.firstAnchor == messageLabel.leadingAnchor
-            && con.secondAnchor == view.leadingAnchor {
-            print("README: \(con)")
-            print("README: \(con.firstAnchor)")
-        }
-        
-        let some = constraints.filter { return $0.constant == 20 && $0.firstAnchor == messageLabel.leadingAnchor
-        }
-        
-        print("README222: \(some)")
-        
-        print("README: \(constraints.count)")
-        print("README: \(constraints[0].firstItem)")
-        print("README: \(constraints[0].secondItem!)")
-        print("README: \(constraints[0].constant)")
-        
-        print("README: \(constraints[1].firstItem)")
-        print("README: \(constraints[1].secondItem!)")
-        print("README: \(constraints[1].constant)")
-
-    }
 }
 
 extension MainVC: AddSubViews {
