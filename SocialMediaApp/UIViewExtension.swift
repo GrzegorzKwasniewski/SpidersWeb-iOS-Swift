@@ -17,7 +17,7 @@ extension UIView {
         resize.duration = 0.3
         resize.fillMode = kCAFillModeBoth
         
-        layer.add(resize, forKey: nil)
+        layer.add(resize, forKey: "resizeButtonAnimation")
         layer.transform = CATransform3DMakeScale(1, 1, 1)
     }
     

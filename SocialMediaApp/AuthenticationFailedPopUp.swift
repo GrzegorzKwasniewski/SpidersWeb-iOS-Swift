@@ -26,8 +26,7 @@ class AuthenticationFailedPopUp: UIView {
     }()
     
     var dismissButton: RoundedButton = {
-        let button = RoundedButton(frame: CGRect.zero,
-                                   withTitle: "Dismiss")
+        let button = RoundedButton(withTitle: "Dismiss")
         button.accessibilityLabel = "dismissButton"
         return button
     }()

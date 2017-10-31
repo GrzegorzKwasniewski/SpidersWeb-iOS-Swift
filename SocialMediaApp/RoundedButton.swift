@@ -18,51 +18,18 @@ import UIKit
 
 class RoundedButton: UIButton {
     
-    var customBackgroundColor: UIColor?
-    var customCornerRadius: CGFloat = 0
-    var addBorder: Bool = false
-    
-    init(frame: CGRect, withTitle title: String) {
-        super.init(frame: frame)
-        
-        layer.backgroundColor = UIColor.white.cgColor
-        
-        layer.borderColor = Colors.GREY_TEXT_COLOR.cgColor
-        layer.borderWidth = 2
+    convenience init(withTitle title: String) {
+        self.init(frame: CGRect.zero)
         
         let fontAttributes = [
-            NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 18.0)!,
-            NSForegroundColorAttributeName: Colors.GREY_TEXT_COLOR
+            NSFontAttributeName: UIFont(name: Fonts.avenirHeavy, size: 18.0)!
         ]
         
         let attributedString = NSAttributedString(string: title, attributes: fontAttributes)
         
         setAttributedTitle(attributedString, for: .normal)
         
-        translatesAutoresizingMaskIntoConstraints = false
-        
-    }
-    
-    init(withTitle title: String, titleColor: UIColor? = nil, bgColor: UIColor? = nil) {
-        super.init(frame: CGRect.zero)
-        
-        if let customBgColor = bgColor {
-            layer.backgroundColor = customBgColor.cgColor
-        } else {
-            layer.backgroundColor = UIColor.white.cgColor
-        }
-        
-        layer.borderColor = Colors.GREY_TEXT_COLOR.cgColor
-        layer.borderWidth = 2
-        
-        let fontAttributes = [
-            NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 18.0)!,
-            NSForegroundColorAttributeName: Colors.GREY_TEXT_COLOR
-        ]
-        
-        let attributedString = NSAttributedString(string: title, attributes: fontAttributes)
-        
-        setAttributedTitle(attributedString, for: .normal)
+        setTitleColor(Colors.GREY_TEXT_COLOR, for: .normal)
         
     }
     
@@ -72,6 +39,9 @@ class RoundedButton: UIButton {
         layer.backgroundColor = Colors.MAIN_COLOR.cgColor
         
         imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        
+        translatesAutoresizingMaskIntoConstraints = false
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -81,14 +51,8 @@ class RoundedButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        if addBorder == true {
-            layer.cornerRadius = 5
-        } else if customCornerRadius == 0 {
-            layer.cornerRadius = self.bounds.size.height / 2
-        } else {
-            layer.cornerRadius = customCornerRadius
-        }
-        
+        layer.cornerRadius = 5
+
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {

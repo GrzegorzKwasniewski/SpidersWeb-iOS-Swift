@@ -29,12 +29,6 @@ class MainVCTest: QuickSpec {
                 it("should not be nil") {
                     expect(mainVC).toNot(beNil())
                 }
-                
-                it("should trigger fatal error if init with coder") {
-                    expect { () -> Void in
-                        let _ = MainVC(coder: NSCoder())
-                    }.to(throwAssertion())
-                }
             })
             
             context("Message label was created", closure: {
@@ -96,6 +90,15 @@ class MainVCTest: QuickSpec {
                     expect(heightConstraint.count).to(beGreaterThan(0))
                     expect(centerXConstraint.count).to(beGreaterThan(0))
                     
+                }
+            })
+            
+            context("initialized with coder", {
+                
+                it("should trigger fatal error if init with coder") {
+                    expect { () -> Void in
+                        let _ = MainVC(coder: NSCoder())
+                        }.to(throwAssertion())
                 }
             })
         }
