@@ -56,12 +56,6 @@ class CustomTextLabelText: QuickSpec {
                 it("should have enabled auto layout") {
                     expect(customLabel.translatesAutoresizingMaskIntoConstraints).to(equal(false))
                 }
-                
-                it("should trigger fatal error if init with coder") {
-                    expect { () -> Void in
-                        let _ = CustomTextLabel(coder: NSCoder())
-                        }.to(throwAssertion())
-                }
             })
             
             context("initialized with custom init", closure: {
@@ -80,6 +74,15 @@ class CustomTextLabelText: QuickSpec {
                 
                 it("should have proper text color") {
                     expect(customLabel.textColor).to(equal(Colors.GREY_TEXT_COLOR))
+                }
+            })
+            
+            context("initialized with coder", {
+                
+                it("should trigger fatal error if init with coder") {
+                    expect { () -> Void in
+                        let _ = CustomTextLabel(coder: NSCoder())
+                        }.to(throwAssertion())
                 }
             })
         }

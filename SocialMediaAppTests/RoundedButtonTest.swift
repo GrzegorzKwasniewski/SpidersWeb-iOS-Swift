@@ -37,6 +37,9 @@ final class RoundedButtonTest: QuickSpec {
                     expect(roundedButton.layer.backgroundColor).to(equal(expectedBackgroundColor))
                     
                 }
+            })
+            
+            context("initialized with coder", { 
                 
                 it("should trigger fatal error if init with coder") {
                     expect { () -> Void in

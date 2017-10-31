@@ -46,7 +46,6 @@
 		71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F9541DB12517009D8A60 /* FirebaseUser.swift */; };
 		71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE20921DAD32D50036FE9F /* TapImageView.swift */; };
 		790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */; };
-		790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */; };
 		790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */; };
 		790AEB171FA6058C00DCD30E /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A51FA4C33E00338C5F /* CacheStore.swift */; };
 		790AEB191FA6079F00DCD30E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB181FA6079F00DCD30E /* MainVC.swift */; };
@@ -231,7 +230,6 @@
 		71FE20921DAD32D50036FE9F /* TapImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapImageView.swift; sourceTree = "<group>"; };
 		76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseUserTest.swift; sourceTree = "<group>"; };
-		790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCTest.swift; sourceTree = "<group>"; };
 		790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVCTest.swift; sourceTree = "<group>"; };
 		790AEB181FA6079F00DCD30E /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
@@ -576,7 +574,6 @@
 			children = (
 				790AEB231FA6446300DCD30E /* MainVCTest.swift */,
 				790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */,
-				790AEB131FA0F5EE00DCD30E /* SignInVCTest.swift */,
 				790AEB251FA6493100DCD30E /* BaseVCTest.swift */,
 			);
 			name = ViewControllers;
@@ -1341,7 +1338,6 @@
 				790AEB261FA6493100DCD30E /* BaseVCTest.swift in Sources */,
 				790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */,
 				790AEB281FA8AA8000DCD30E /* RoundedButtonTest.swift in Sources */,
-				790AEB141FA0F5EE00DCD30E /* SignInVCTest.swift in Sources */,
 				B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */,
 				790AEB241FA6446300DCD30E /* MainVCTest.swift in Sources */,
 				B248B8A41FA4A56800338C5F /* CellSpiderTest.swift in Sources */,
