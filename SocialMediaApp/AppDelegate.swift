@@ -13,6 +13,7 @@ import FBSDKLoginKit
 import TwitterKit
 import Fabric
 import UserNotifications
+import CoreData
 
 // MARK: Schema Dependent Variables
 
@@ -31,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    // lazy mean that stack won't be set up unitl the first itme You asccess it
+    lazy var coreDataStack = CoreDataStack(modelName: "spiderTest")
+    
     // MARK: Aplication State Functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -41,11 +45,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = MainVC()
         
+        let mainVC = window?.rootViewController as! MainVC
+        
+        // whole Core Data stack will be init here - lazy property will be used
+        mainVC.managedObjectContext = coreDataStack.managedContext
+        
         setupUITabBar()
         setupLocalNotification()
         setupFirebase(withAplication: application, andLaunchOptions: launchOptions)
         
         return true
+    }
+    
+    // we make sure that all data will be saved by Core Data when app will move to the background or will be terminated
+    
+    func applicationDidEnterBackground(
+        _ application: UIApplication) {
+        coreDataStack.saveContext()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        coreDataStack.saveContext()
     }
     
     /// Function for configuring properties for UITabBar

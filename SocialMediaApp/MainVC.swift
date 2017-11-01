@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class MainVC: BaseVC {
     
-    var constraints: [NSLayoutConstraint]!
+    // test fore Core Data
+    var managedObjectContext: NSManagedObjectContext!
     
     // MARK: Properties
     

@@ -111,6 +111,8 @@
 		796C3CEA1F992D7800CC7F60 /* SignInVCUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */; };
 		799178CB1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift */; };
 		799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */; };
+		79CEDBE11FAA02EA00DF42F5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */; };
+		79CEDBE21FAA02EF00DF42F5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -242,6 +244,7 @@
 		796C3CE91F992D7800CC7F60 /* SignInVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVCUITest.swift; sourceTree = "<group>"; };
 		799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAccountVCUITest.swift; sourceTree = "<group>"; };
 		799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderModelTest.swift; sourceTree = "<group>"; };
+		79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -383,6 +386,7 @@
 				718BA3BF1DC8BDE900E764C0 /* Extensions */,
 				796C3CEB1F992E2D00CC7F60 /* Storyboards */,
 				713B13181D7D844800AF79C3 /* Assets */,
+				79CEDBDF1FAA02C200DF42F5 /* Core Data */,
 			);
 			path = SocialMediaApp;
 			sourceTree = "<group>";
@@ -652,6 +656,14 @@
 				713B12EE1D7D713F00AF79C3 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		79CEDBDF1FAA02C200DF42F5 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		B214935D1F6E9FE3001D5C4D /* PopUps */ = {
@@ -1203,6 +1215,7 @@
 				71DEBBA11DCBC47B001A8588 /* EmailLogin.swift in Sources */,
 				B214935A1F6E9B5C001D5C4D /* CreateNewAccountVC.swift in Sources */,
 				B29EDB621F4B7C7200846AB3 /* Colors.swift in Sources */,
+				79CEDBE11FAA02EA00DF42F5 /* CoreDataStack.swift in Sources */,
 				7111C80C1DD4DC530012D32C /* RegEx.swift in Sources */,
 				7111C7E51DCCB3270012D32C /* FacebookLogin.swift in Sources */,
 				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
@@ -1263,6 +1276,7 @@
 				795D354C1F97CC6A000BB7C0 /* EmailLogin.swift in Sources */,
 				795D354D1F97CC6A000BB7C0 /* CreateNewAccountVC.swift in Sources */,
 				795D354E1F97CC6A000BB7C0 /* Colors.swift in Sources */,
+				79CEDBE21FAA02EF00DF42F5 /* CoreDataStack.swift in Sources */,
 				795D354F1F97CC6A000BB7C0 /* RegEx.swift in Sources */,
 				795D35501F97CC6A000BB7C0 /* FacebookLogin.swift in Sources */,
 				795D35511F97CC6A000BB7C0 /* FirebaseLogin.swift in Sources */,
