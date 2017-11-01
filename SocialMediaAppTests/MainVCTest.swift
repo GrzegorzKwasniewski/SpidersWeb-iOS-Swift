@@ -29,11 +29,15 @@ class MainVCTest: QuickSpec {
                 it("should not be nil") {
                     expect(mainVC).toNot(beNil())
                 }
+                
+                it("should conform to ArrangeSubViews protocol") {
+                    expect(mainVC).to(beAKindOf(ArrangeSubViews.self))
+                }
             })
             
-            context("Message label was created", closure: {
+            context("message label was created", closure: {
                 
-                it("view controller should have login message label") {
+                it("and should not be nil") {
                     expect(mainVC.messageLabel).toNot(beNil())
                 }
                 
@@ -90,6 +94,45 @@ class MainVCTest: QuickSpec {
                     expect(heightConstraint.count).to(beGreaterThan(0))
                     expect(centerXConstraint.count).to(beGreaterThan(0))
                     
+                }
+            })
+            
+            context("emial button was created", closure: { 
+                
+                it("should not be nil") {
+                    expect(mainVC.emailButton).toNot(beNil())
+                }
+                
+                it("view controller view should have email button as subview") {
+                    
+                    let mainVCView = mainVC.view
+                    let emailButtonSuperView = mainVC.emailButton.superview
+                    
+                    expect(mainVCView).to(equal(emailButtonSuperView))
+                    
+                }
+                
+                it("should have constraints set") {
+                    
+                    let emailButton = mainVC.emailButton
+                    let messageLabel = mainVC.messageLabel
+                    let mainView = mainVC.view
+                    let mainViewConstraints = mainVC.view.constraints
+                    let emailButtonConstraints = mainVC.emailButton.constraints
+                    
+                    let topConstraint = mainViewConstraints.filter {
+                        return $0.constant == 40 &&
+                            $0.firstAnchor == emailButton.topAnchor &&
+                            $0.secondAnchor == messageLabel.bottomAnchor
+                    }
+                    
+                    let heightConstraint = emailButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == emailButton.heightAnchor
+                    }
+                    
+                    expect(topConstraint.count).to(beGreaterThan(0))
+                    expect(heightConstraint.count).to(beGreaterThan(0))
                 }
             })
             

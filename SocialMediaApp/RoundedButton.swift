@@ -18,6 +18,13 @@ import UIKit
 
 class RoundedButton: UIButton {
     
+    convenience init(withImage image: UIImage) {
+        self.init(frame: CGRect.zero)
+        
+        setImage(image, for: .normal)
+        
+    }
+    
     convenience init(withTitle title: String) {
         self.init(frame: CGRect.zero)
         

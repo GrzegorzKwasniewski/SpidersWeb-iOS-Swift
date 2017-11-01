@@ -97,6 +97,22 @@ final class RoundedButtonTest: QuickSpec {
                 }
             })
             
+            context("initialized with custom init(withImage:)", { 
+                
+                beforeEach {
+                    roundedButton = RoundedButton(withImage: #imageLiteral(resourceName: "purple-cartoon-spider"))
+                }
+                
+                it("should have proper image set") {
+                    
+                    let buttonImage = roundedButton.image(for: .normal)
+                    let expectedImage = #imageLiteral(resourceName: "purple-cartoon-spider")
+                    
+                    expect(buttonImage).to(equal(expectedImage))
+                    
+                }
+            })
+            
             context("user interacted with button", { 
                 
                 beforeEach {
