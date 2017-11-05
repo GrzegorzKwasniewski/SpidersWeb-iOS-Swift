@@ -126,6 +126,7 @@
 		79CEDC121FAF61A700DF42F5 /* CustomStackViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC111FAF61A700DF42F5 /* CustomStackViewTest.swift */; };
 		79CEDC151FAF625B00DF42F5 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */; };
 		79CEDC161FAF625B00DF42F5 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */; };
+		79CEDC181FAF6AB700DF42F5 /* RoundedViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC171FAF6AB700DF42F5 /* RoundedViewTest.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -265,6 +266,7 @@
 		79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		79CEDC111FAF61A700DF42F5 /* CustomStackViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStackViewTest.swift; sourceTree = "<group>"; };
 		79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
+		79CEDC171FAF6AB700DF42F5 /* RoundedViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedViewTest.swift; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -612,6 +614,7 @@
 				790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */,
 				790AEB271FA8AA8000DCD30E /* RoundedButtonTest.swift */,
 				79CEDC111FAF61A700DF42F5 /* CustomStackViewTest.swift */,
+				79CEDC171FAF6AB700DF42F5 /* RoundedViewTest.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1399,6 +1402,7 @@
 				790AEB261FA6493100DCD30E /* BaseVCTest.swift in Sources */,
 				790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */,
 				790AEB281FA8AA8000DCD30E /* RoundedButtonTest.swift in Sources */,
+				79CEDC181FAF6AB700DF42F5 /* RoundedViewTest.swift in Sources */,
 				B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */,
 				790AEB241FA6446300DCD30E /* MainVCTest.swift in Sources */,
 				B248B8A41FA4A56800338C5F /* CellSpiderTest.swift in Sources */,

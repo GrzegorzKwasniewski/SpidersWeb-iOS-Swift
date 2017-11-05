@@ -10,29 +10,22 @@ import UIKit
 
 class RoundedView: UIView {
     
-    var customBackgroundColor: UIColor?
-    var customCornerRadius: CGFloat = 5
-    var customBorderRadius: CGFloat = 0
-    
     override init(frame: CGRect){
         super.init(frame: frame)
         
-        translatesAutoresizingMaskIntoConstraints = false
+        layer.backgroundColor = Colors.MAIN_COLOR.cgColor
         
-        if let customColor = customBackgroundColor {
-            layer.backgroundColor = customColor.cgColor
-        } else {
-            layer.backgroundColor = Colors.MAIN_COLOR.cgColor
-        }
+        translatesAutoresizingMaskIntoConstraints = false
+
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = customCornerRadius
+        layer.cornerRadius = 5
     }
 }
