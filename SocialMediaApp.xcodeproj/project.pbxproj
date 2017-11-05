@@ -115,6 +115,14 @@
 		79CEDBE21FAA02EF00DF42F5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */; };
 		79CEDBEB1FAF566700DF42F5 /* SpidersData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 79CEDBEA1FAF566700DF42F5 /* SpidersData.xcdatamodeld */; };
 		79CEDBEC1FAF566700DF42F5 /* SpidersData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 79CEDBEA1FAF566700DF42F5 /* SpidersData.xcdatamodeld */; };
+		79CEDC091FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC051FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift */; };
+		79CEDC0A1FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC051FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift */; };
+		79CEDC0B1FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC061FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift */; };
+		79CEDC0C1FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC061FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift */; };
+		79CEDC0D1FAF59E400DF42F5 /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC071FAF59E400DF42F5 /* UserModel+CoreDataClass.swift */; };
+		79CEDC0E1FAF59E400DF42F5 /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC071FAF59E400DF42F5 /* UserModel+CoreDataClass.swift */; };
+		79CEDC0F1FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */; };
+		79CEDC101FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -248,6 +256,10 @@
 		799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderModelTest.swift; sourceTree = "<group>"; };
 		79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		79CEDBE91FAF566700DF42F5 /* SpidersData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpidersData.xcdatamodel; sourceTree = "<group>"; };
+		79CEDC051FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpiderModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		79CEDC061FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpiderModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		79CEDC071FAF59E400DF42F5 /* UserModel+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -665,6 +677,10 @@
 		79CEDBDF1FAA02C200DF42F5 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				79CEDC051FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift */,
+				79CEDC061FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift */,
+				79CEDC071FAF59E400DF42F5 /* UserModel+CoreDataClass.swift */,
+				79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */,
 				79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */,
 			);
 			name = "Core Data";
@@ -1226,6 +1242,7 @@
 				7111C7E51DCCB3270012D32C /* FacebookLogin.swift in Sources */,
 				718BA3C51DC8CA2800E764C0 /* FirebaseLogin.swift in Sources */,
 				B29EDB641F4B7E9000846AB3 /* RoundedButton.swift in Sources */,
+				79CEDC0F1FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift in Sources */,
 				B29EDB661F4B7F0600846AB3 /* UIViewExtension.swift in Sources */,
 				B248B89B1FA21D2200338C5F /* DataService.swift in Sources */,
 				B21493611F6EA064001D5C4D /* RoundedView.swift in Sources */,
@@ -1233,9 +1250,11 @@
 				719BFE761E0AF97A006EB47A /* Globals.swift in Sources */,
 				7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */,
 				718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */,
+				79CEDC0D1FAF59E400DF42F5 /* UserModel+CoreDataClass.swift in Sources */,
 				71EF4ABE1DAE5AAC00076B56 /* RoundedTextView.swift in Sources */,
 				71CE62511D858C66002C5B0B /* CircleView.swift in Sources */,
 				7111C7EB1DCDFEED0012D32C /* ReAuthenticateUserVC.swift in Sources */,
+				79CEDC0B1FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift in Sources */,
 				B21493561F6E96AD001D5C4D /* ShowPopUp.swift in Sources */,
 				713B131A1D7EBD5700AF79C3 /* ShadowView.swift in Sources */,
 				B248B8A61FA4C33E00338C5F /* CacheStore.swift in Sources */,
@@ -1256,6 +1275,7 @@
 				71945C021EAA6BB000F76CD6 /* LocalNotifications.swift in Sources */,
 				B2DC43871F50170700AAECC9 /* BaseVC.swift in Sources */,
 				718BA3C11DC8BE3D00E764C0 /* VCExt.swift in Sources */,
+				79CEDC091FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift in Sources */,
 				719BFEA81E1FD7D3006EB47A /* CellSpider.swift in Sources */,
 				71A9EAE61DAA6887003B08BD /* ProfileImage.swift in Sources */,
 				B248B8691F9630E400338C5F /* BlurView.swift in Sources */,
@@ -1287,6 +1307,7 @@
 				795D35501F97CC6A000BB7C0 /* FacebookLogin.swift in Sources */,
 				795D35511F97CC6A000BB7C0 /* FirebaseLogin.swift in Sources */,
 				795D35521F97CC6A000BB7C0 /* RoundedButton.swift in Sources */,
+				79CEDC101FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift in Sources */,
 				795D35531F97CC6A000BB7C0 /* UIViewExtension.swift in Sources */,
 				B248B89C1FA21D2200338C5F /* DataService.swift in Sources */,
 				795D35541F97CC6A000BB7C0 /* RoundedView.swift in Sources */,
@@ -1294,9 +1315,11 @@
 				795D35561F97CC6A000BB7C0 /* Globals.swift in Sources */,
 				795D35571F97CC6A000BB7C0 /* UserSettingsVC.swift in Sources */,
 				795D35581F97CC6A000BB7C0 /* TwitterLogin.swift in Sources */,
+				79CEDC0E1FAF59E400DF42F5 /* UserModel+CoreDataClass.swift in Sources */,
 				795D35591F97CC6A000BB7C0 /* RoundedTextView.swift in Sources */,
 				795D355A1F97CC6A000BB7C0 /* CircleView.swift in Sources */,
 				795D355C1F97CC6A000BB7C0 /* ReAuthenticateUserVC.swift in Sources */,
+				79CEDC0C1FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift in Sources */,
 				795D355D1F97CC6A000BB7C0 /* ShowPopUp.swift in Sources */,
 				795D355E1F97CC6A000BB7C0 /* ShadowView.swift in Sources */,
 				790AEB171FA6058C00DCD30E /* CacheStore.swift in Sources */,
@@ -1317,6 +1340,7 @@
 				795D356C1F97CC6A000BB7C0 /* LocalNotifications.swift in Sources */,
 				795D356D1F97CC6A000BB7C0 /* BaseVC.swift in Sources */,
 				795D356E1F97CC6A000BB7C0 /* VCExt.swift in Sources */,
+				79CEDC0A1FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift in Sources */,
 				795D356F1F97CC6A000BB7C0 /* CellSpider.swift in Sources */,
 				795D35701F97CC6A000BB7C0 /* ProfileImage.swift in Sources */,
 				795D35711F97CC6A000BB7C0 /* BlurView.swift in Sources */,
