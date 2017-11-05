@@ -123,6 +123,9 @@
 		79CEDC0E1FAF59E400DF42F5 /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC071FAF59E400DF42F5 /* UserModel+CoreDataClass.swift */; };
 		79CEDC0F1FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */; };
 		79CEDC101FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */; };
+		79CEDC121FAF61A700DF42F5 /* CustomStackViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC111FAF61A700DF42F5 /* CustomStackViewTest.swift */; };
+		79CEDC151FAF625B00DF42F5 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */; };
+		79CEDC161FAF625B00DF42F5 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -260,6 +263,8 @@
 		79CEDC061FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpiderModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		79CEDC071FAF59E400DF42F5 /* UserModel+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		79CEDC081FAF59E400DF42F5 /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		79CEDC111FAF61A700DF42F5 /* CustomStackViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStackViewTest.swift; sourceTree = "<group>"; };
+		79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -512,6 +517,7 @@
 				796C3CE71F992AB700CC7F60 /* Buttons */,
 				796C3CE81F992ACB00CC7F60 /* Labels */,
 				796C3CE61F992A9900CC7F60 /* TextFields */,
+				79CEDC131FAF624100DF42F5 /* StackViews */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -605,6 +611,7 @@
 				B248B8A31FA4A56800338C5F /* CellSpiderTest.swift */,
 				790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */,
 				790AEB271FA8AA8000DCD30E /* RoundedButtonTest.swift */,
+				79CEDC111FAF61A700DF42F5 /* CustomStackViewTest.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -684,6 +691,14 @@
 				79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		79CEDC131FAF624100DF42F5 /* StackViews */ = {
+			isa = PBXGroup;
+			children = (
+				79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */,
+			);
+			name = StackViews;
 			sourceTree = "<group>";
 		};
 		B214935D1F6E9FE3001D5C4D /* PopUps */ = {
@@ -1290,6 +1305,7 @@
 				7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,
 				7111C7E71DCDF38B0012D32C /* ChangeUserNamePopUpVC.swift in Sources */,
+				79CEDC151FAF625B00DF42F5 /* CustomStackView.swift in Sources */,
 				713B131D1D7EBE2D00AF79C3 /* Constants.swift in Sources */,
 				719BFEA11E1D723D006EB47A /* Spider.swift in Sources */,
 			);
@@ -1355,6 +1371,7 @@
 				795D35791F97CC6A000BB7C0 /* ChangeUserEmailVC.swift in Sources */,
 				795D357A1F97CC6A000BB7C0 /* RoundedBorderTextField.swift in Sources */,
 				795D357B1F97CC6A000BB7C0 /* ChangeUserNamePopUpVC.swift in Sources */,
+				79CEDC161FAF625B00DF42F5 /* CustomStackView.swift in Sources */,
 				795D357C1F97CC6A000BB7C0 /* Constants.swift in Sources */,
 				795D357D1F97CC6A000BB7C0 /* Spider.swift in Sources */,
 			);
@@ -1386,6 +1403,7 @@
 				790AEB241FA6446300DCD30E /* MainVCTest.swift in Sources */,
 				B248B8A41FA4A56800338C5F /* CellSpiderTest.swift in Sources */,
 				790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */,
+				79CEDC121FAF61A700DF42F5 /* CustomStackViewTest.swift in Sources */,
 				790AEB1F1FA60A2A00DCD30E /* CustomTextViewTest.swift in Sources */,
 				B27C1D011F953D450069C400 /* AuthenticationFailedPopUpTest.swift in Sources */,
 			);

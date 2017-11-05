@@ -131,8 +131,21 @@ class MainVCTest: QuickSpec {
                             $0.firstAnchor == emailButton.heightAnchor
                     }
                     
+                    let widthConstraint = emailButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == emailButton.widthAnchor
+                    }
+                    
+                    let leadingConstraint = mainViewConstraints.filter {
+                        return $0.constant == 20 &&
+                            $0.firstAnchor == emailButton.leadingAnchor &&
+                            $0.secondAnchor == mainView?.leadingAnchor
+                    }
+                    
                     expect(topConstraint.count).to(beGreaterThan(0))
                     expect(heightConstraint.count).to(beGreaterThan(0))
+                    expect(widthConstraint.count).to(beGreaterThan(0))
+                    expect(leadingConstraint.count).to(beGreaterThan(0))
                 }
             })
             

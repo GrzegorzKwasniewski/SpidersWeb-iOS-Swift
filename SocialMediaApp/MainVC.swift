@@ -46,6 +46,8 @@ class MainVC: BaseVC {
     
         emailButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 40).isActive = true
         emailButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        emailButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        emailButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         
     }
 }
