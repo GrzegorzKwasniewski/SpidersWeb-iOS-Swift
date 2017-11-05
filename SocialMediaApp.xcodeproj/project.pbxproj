@@ -113,6 +113,8 @@
 		799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */; };
 		79CEDBE11FAA02EA00DF42F5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */; };
 		79CEDBE21FAA02EF00DF42F5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */; };
+		79CEDBEB1FAF566700DF42F5 /* SpidersData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 79CEDBEA1FAF566700DF42F5 /* SpidersData.xcdatamodeld */; };
+		79CEDBEC1FAF566700DF42F5 /* SpidersData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 79CEDBEA1FAF566700DF42F5 /* SpidersData.xcdatamodeld */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -245,6 +247,7 @@
 		799178CA1F9E49C700E8C6C9 /* CreateNewAccountVCUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAccountVCUITest.swift; sourceTree = "<group>"; };
 		799178CC1F9E59F300E8C6C9 /* SpiderModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderModelTest.swift; sourceTree = "<group>"; };
 		79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		79CEDBE91FAF566700DF42F5 /* SpidersData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpidersData.xcdatamodel; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -376,6 +379,7 @@
 		713B12E41D7D713F00AF79C3 /* SocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				79CEDBEA1FAF566700DF42F5 /* SpidersData.xcdatamodeld */,
 				713B13171D7D82D900AF79C3 /* Controller */,
 				713B13161D7D82CB00AF79C3 /* View */,
 				713B13151D7D82C300AF79C3 /* Model */,
@@ -916,6 +920,7 @@
 				713B12EB1D7D713F00AF79C3 /* Main.storyboard in Resources */,
 				713B13141D7D733700AF79C3 /* GoogleService-Info.plist in Resources */,
 				712C33561DA2A481006DD610 /* Assets.xcassets in Resources */,
+				79CEDBEB1FAF566700DF42F5 /* SpidersData.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +932,7 @@
 				795D35821F97CC6A000BB7C0 /* Main.storyboard in Resources */,
 				795D35831F97CC6A000BB7C0 /* GoogleService-Info.plist in Resources */,
 				795D35841F97CC6A000BB7C0 /* Assets.xcassets in Resources */,
+				79CEDBEC1FAF566700DF42F5 /* SpidersData.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1717,6 +1723,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		79CEDBEA1FAF566700DF42F5 /* SpidersData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				79CEDBE91FAF566700DF42F5 /* SpidersData.xcdatamodel */,
+			);
+			currentVersion = 79CEDBE91FAF566700DF42F5 /* SpidersData.xcdatamodel */;
+			name = SpidersData.xcdatamodeld;
+			path = ../Pods/SpidersData.xcdatamodeld;
+			sourceTree = "<group>";
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 713B12DA1D7D713F00AF79C3 /* Project object */;
 }

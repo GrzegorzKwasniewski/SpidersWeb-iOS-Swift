@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     // lazy mean that stack won't be set up unitl the first itme You asccess it
-    lazy var coreDataStack = CoreDataStack(modelName: "spiderTest")
+    lazy var coreDataStack = CoreDataStack(modelName: "SpidersData")
     
     // MARK: Aplication State Functions
 
