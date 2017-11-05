@@ -97,6 +97,49 @@ class MainVCTest: QuickSpec {
                 }
             })
             
+            context("center view was created", closure: {
+                
+                it("should not be nil") {
+                    expect(mainVC.centerView).toNot(beNil())
+                }
+                
+                it("view controller view should have center view as subview") {
+                    
+                    let mainVCView = mainVC.view
+                    let centerViewSuperView = mainVC.centerView.superview
+                    
+                    expect(mainVCView).to(equal(centerViewSuperView))
+                    
+                }
+                
+                it("should have constraints set") {
+                    
+                    let centerView = mainVC.centerView
+                    let mainView = mainVC.view
+                    let mainViewConstraints = mainVC.view.constraints
+                    
+                    let leadingConstraint = mainViewConstraints.filter {
+                        return $0.firstAnchor == centerView.leadingAnchor &&
+                            $0.secondAnchor == mainView?.leadingAnchor
+                    }
+                    
+                    let trailingConstraint = mainViewConstraints.filter {
+                        return $0.firstAnchor == centerView.trailingAnchor &&
+                            $0.secondAnchor == mainView?.trailingAnchor
+                    }
+                    
+                    let centerYConstraint = mainViewConstraints.filter {
+                        return $0.firstAnchor == centerView.centerYAnchor &&
+                            $0.secondAnchor == mainView?.centerYAnchor
+                    }
+                    
+                    expect(leadingConstraint.count).to(beGreaterThan(0))
+                    expect(trailingConstraint.count).to(beGreaterThan(0))
+                    expect(centerYConstraint.count).to(beGreaterThan(0))
+
+                }
+            })
+            
             context("emial button was created", closure: { 
                 
                 it("should not be nil") {
@@ -120,12 +163,6 @@ class MainVCTest: QuickSpec {
                     let mainViewConstraints = mainVC.view.constraints
                     let emailButtonConstraints = mainVC.emailButton.constraints
                     
-                    let topConstraint = mainViewConstraints.filter {
-                        return $0.constant == 40 &&
-                            $0.firstAnchor == emailButton.topAnchor &&
-                            $0.secondAnchor == messageLabel.bottomAnchor
-                    }
-                    
                     let heightConstraint = emailButtonConstraints.filter {
                         return $0.constant == 100 &&
                             $0.firstAnchor == emailButton.heightAnchor
@@ -136,16 +173,8 @@ class MainVCTest: QuickSpec {
                             $0.firstAnchor == emailButton.widthAnchor
                     }
                     
-                    let leadingConstraint = mainViewConstraints.filter {
-                        return $0.constant == 20 &&
-                            $0.firstAnchor == emailButton.leadingAnchor &&
-                            $0.secondAnchor == mainView?.leadingAnchor
-                    }
-                    
-                    expect(topConstraint.count).to(beGreaterThan(0))
                     expect(heightConstraint.count).to(beGreaterThan(0))
                     expect(widthConstraint.count).to(beGreaterThan(0))
-                    expect(leadingConstraint.count).to(beGreaterThan(0))
                 }
             })
             

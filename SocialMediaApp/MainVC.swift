@@ -26,6 +26,11 @@ class MainVC: BaseVC {
         return label
     }()
     
+    let centerView: RoundedView = {
+        let view = RoundedView(frame: CGRect.zero)
+        return view
+    }()
+    
     // MARK: Initializers
     
     init() {
@@ -43,11 +48,10 @@ class MainVC: BaseVC {
         
         addAllSubViews()
         setupMessageLabel()
+        setupCenterView()
     
-        emailButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 40).isActive = true
         emailButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
         emailButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        emailButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         
     }
 }
@@ -61,6 +65,7 @@ extension MainVC: ArrangeSubViews {
     func addAllSubViews() {
         view.addSubview(messageLabel)
         view.addSubview(emailButton)
+        view.addSubview(centerView)
     }
     
     /**
@@ -73,6 +78,16 @@ extension MainVC: ArrangeSubViews {
         messageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         messageLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
         messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
+    /**
+     Add constraints for center view
+     */
+    
+    func setupCenterView() {
+        centerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        centerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        centerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 
