@@ -21,6 +21,21 @@ class MainVC: BaseVC {
         return button
     }()
     
+    let twitterButton: RoundedButton = {
+        let button = RoundedButton(withImage: #imageLiteral(resourceName: "twitter_icon"))
+        return button
+    }()
+    
+    let googleButton: RoundedButton = {
+        let button = RoundedButton(withImage: #imageLiteral(resourceName: "google_icon"))
+        return button
+    }()
+    
+    let facebookButton: RoundedButton = {
+        let button = RoundedButton(withImage: #imageLiteral(resourceName: "facebook_icon"))
+        return button
+    }()
+    
     let messageLabel: CustomTextLabel = {
         let label = CustomTextLabel(withMessage: "Log In", textColor: Colors.GREY_TEXT_COLOR)
         return label
@@ -56,6 +71,9 @@ class MainVC: BaseVC {
         setupCenterXView()
         setupCenterYView()
         setupEmailButton()
+        setupTwitterButton()
+        setupGoogleButton()
+        setupFacebookButton()
         
     }
 }
@@ -69,6 +87,9 @@ extension MainVC: ArrangeSubViews {
     func addAllSubViews() {
         view.addSubview(messageLabel)
         view.addSubview(emailButton)
+        view.addSubview(twitterButton)
+        view.addSubview(googleButton)
+        view.addSubview(facebookButton)
         view.addSubview(centerXView)
         view.addSubview(centerYView)
     }
@@ -112,8 +133,41 @@ extension MainVC: ArrangeSubViews {
     func setupEmailButton() {
         emailButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
         emailButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        emailButton.trailingAnchor.constraint(equalTo: centerXView.leadingAnchor, constant: 10).isActive = true
+        emailButton.trailingAnchor.constraint(equalTo: centerXView.leadingAnchor, constant: -10).isActive = true
         emailButton.bottomAnchor.constraint(equalTo: centerYView.topAnchor, constant: 10).isActive = true
+    }
+    
+    /**
+     Add constraints for twitter button
+     */
+    
+    func setupTwitterButton() {
+        twitterButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        twitterButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        twitterButton.leadingAnchor.constraint(equalTo: centerXView.trailingAnchor, constant: 10).isActive = true
+        twitterButton.bottomAnchor.constraint(equalTo: centerYView.topAnchor, constant: 10).isActive = true
+    }
+    
+    /**
+     Add constraints for google button
+     */
+    
+    func setupGoogleButton() {
+        googleButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        googleButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        googleButton.trailingAnchor.constraint(equalTo: centerXView.leadingAnchor, constant: -10).isActive = true
+        googleButton.topAnchor.constraint(equalTo: centerYView.bottomAnchor, constant: 20).isActive = true
+    }
+    
+    /**
+     Add constraints for facebook button
+     */
+    
+    func setupFacebookButton() {
+        facebookButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        facebookButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        facebookButton.leadingAnchor.constraint(equalTo: centerXView.trailingAnchor, constant: 10).isActive = true
+        facebookButton.topAnchor.constraint(equalTo: centerYView.bottomAnchor, constant: 20).isActive = true
     }
 }
 

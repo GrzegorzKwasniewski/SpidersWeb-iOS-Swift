@@ -114,22 +114,22 @@ class MainVCTest: QuickSpec {
                 
                 it("should have constraints set") {
                     
-                    let centerView = mainVC.centerXView
+                    let centerXView = mainVC.centerXView
                     let mainView = mainVC.view
                     let mainViewConstraints = mainVC.view.constraints
                     
                     let topConstraint = mainViewConstraints.filter {
-                        return $0.firstAnchor == centerView.topAnchor &&
+                        return $0.firstAnchor == centerXView.topAnchor &&
                             $0.secondAnchor == mainView?.topAnchor
                     }
                     
                     let bottomConstraint = mainViewConstraints.filter {
-                        return $0.firstAnchor == centerView.bottomAnchor &&
+                        return $0.firstAnchor == centerXView.bottomAnchor &&
                             $0.secondAnchor == mainView?.bottomAnchor
                     }
                     
                     let centerXConstraint = mainViewConstraints.filter {
-                        return $0.firstAnchor == centerView.centerXAnchor &&
+                        return $0.firstAnchor == centerXView.centerXAnchor &&
                             $0.secondAnchor == mainView?.centerXAnchor
                     }
                     
@@ -217,7 +217,7 @@ class MainVCTest: QuickSpec {
                     }
                     
                     let trailingConstraint = mainViewConstraints.filter {
-                        return $0.constant == 10 &&
+                        return $0.constant == -10 &&
                             $0.firstAnchor == emailButton.trailingAnchor &&
                             $0.secondAnchor == centerXView.leadingAnchor
                     }
@@ -233,6 +233,165 @@ class MainVCTest: QuickSpec {
                     expect(trailingConstraint.count).to(beGreaterThan(0))
                     expect(bottomConstraint.count).to(beGreaterThan(0))
 
+                }
+            })
+            
+            context("twitter button was created", closure: {
+                
+                it("should not be nil") {
+                    expect(mainVC.twitterButton).toNot(beNil())
+                }
+                
+                it("view controller view should have twitter button as subview") {
+                    
+                    let mainVCView = mainVC.view
+                    let twitterButtonSuperView = mainVC.twitterButton.superview
+                    
+                    expect(mainVCView).to(equal(twitterButtonSuperView))
+                    
+                }
+                
+                it("should have constraints set") {
+                    
+                    let twitterButton = mainVC.twitterButton
+                    let centerXView = mainVC.centerXView
+                    let centerYView = mainVC.centerYView
+                    let mainViewConstraints = mainVC.view.constraints
+                    let twitterButtonConstraints = mainVC.twitterButton.constraints
+                    
+                    let heightConstraint = twitterButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == twitterButton.heightAnchor
+                    }
+                    
+                    let widthConstraint = twitterButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == twitterButton.widthAnchor
+                    }
+                    
+                    let leadingConstraint = mainViewConstraints.filter {
+                        return $0.constant == 10 &&
+                            $0.firstAnchor == twitterButton.leadingAnchor &&
+                            $0.secondAnchor == centerXView.trailingAnchor
+                    }
+                    
+                    let bottomConstraint = mainViewConstraints.filter {
+                        return $0.constant == 10 &&
+                            $0.firstAnchor == twitterButton.bottomAnchor &&
+                            $0.secondAnchor == centerYView.topAnchor
+                    }
+                    
+                    expect(heightConstraint.count).to(beGreaterThan(0))
+                    expect(widthConstraint.count).to(beGreaterThan(0))
+                    expect(leadingConstraint.count).to(beGreaterThan(0))
+                    expect(bottomConstraint.count).to(beGreaterThan(0))
+                    
+                }
+            })
+            
+            context("google button was created", closure: {
+                
+                it("should not be nil") {
+                    expect(mainVC.googleButton).toNot(beNil())
+                }
+                
+                it("view controller view should have google button as subview") {
+                    
+                    let mainVCView = mainVC.view
+                    let googleButtonSuperView = mainVC.googleButton.superview
+                    
+                    expect(mainVCView).to(equal(googleButtonSuperView))
+                    
+                }
+                
+                it("should have constraints set") {
+                    
+                    let googleButton = mainVC.googleButton
+                    let centerXView = mainVC.centerXView
+                    let centerYView = mainVC.centerYView
+                    let mainViewConstraints = mainVC.view.constraints
+                    let googleButtonConstraints = mainVC.googleButton.constraints
+                    
+                    let heightConstraint = googleButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == googleButton.heightAnchor
+                    }
+                    
+                    let widthConstraint = googleButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == googleButton.widthAnchor
+                    }
+                    
+                    let trailingConstraint = mainViewConstraints.filter {
+                        return $0.constant == -10 &&
+                            $0.firstAnchor == googleButton.trailingAnchor &&
+                            $0.secondAnchor == centerXView.leadingAnchor
+                    }
+                    
+                    let topConstraint = mainViewConstraints.filter {
+                        return $0.constant == 20 &&
+                            $0.firstAnchor == googleButton.topAnchor &&
+                            $0.secondAnchor == centerYView.bottomAnchor
+                    }
+                    
+                    expect(heightConstraint.count).to(beGreaterThan(0))
+                    expect(widthConstraint.count).to(beGreaterThan(0))
+                    expect(trailingConstraint.count).to(beGreaterThan(0))
+                    expect(topConstraint.count).to(beGreaterThan(0))
+                    
+                }
+            })
+            
+            context("facebook button was created", closure: {
+                
+                it("should not be nil") {
+                    expect(mainVC.facebookButton).toNot(beNil())
+                }
+                
+                it("view controller view should have twitter button as subview") {
+                    
+                    let mainVCView = mainVC.view
+                    let facebookButtonSuperView = mainVC.facebookButton.superview
+                    
+                    expect(mainVCView).to(equal(facebookButtonSuperView))
+                    
+                }
+                
+                it("should have constraints set") {
+                    
+                    let facebookButton = mainVC.facebookButton
+                    let centerXView = mainVC.centerXView
+                    let centerYView = mainVC.centerYView
+                    let mainViewConstraints = mainVC.view.constraints
+                    let facebookButtonConstraints = mainVC.facebookButton.constraints
+                    
+                    let heightConstraint = facebookButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == facebookButton.heightAnchor
+                    }
+                    
+                    let widthConstraint = facebookButtonConstraints.filter {
+                        return $0.constant == 100 &&
+                            $0.firstAnchor == facebookButton.widthAnchor
+                    }
+                    
+                    let leadingConstraint = mainViewConstraints.filter {
+                        return $0.constant == 10 &&
+                            $0.firstAnchor == facebookButton.leadingAnchor &&
+                            $0.secondAnchor == centerXView.trailingAnchor
+                    }
+                    
+                    let topConstraint = mainViewConstraints.filter {
+                        return $0.constant == 20 &&
+                            $0.firstAnchor == facebookButton.topAnchor &&
+                            $0.secondAnchor == centerYView.bottomAnchor
+                    }
+                    
+                    expect(heightConstraint.count).to(beGreaterThan(0))
+                    expect(widthConstraint.count).to(beGreaterThan(0))
+                    expect(leadingConstraint.count).to(beGreaterThan(0))
+                    expect(topConstraint.count).to(beGreaterThan(0))
+                    
                 }
             })
             
