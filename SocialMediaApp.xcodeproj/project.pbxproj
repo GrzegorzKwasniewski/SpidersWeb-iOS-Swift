@@ -127,6 +127,8 @@
 		79CEDC151FAF625B00DF42F5 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */; };
 		79CEDC161FAF625B00DF42F5 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */; };
 		79CEDC181FAF6AB700DF42F5 /* RoundedViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC171FAF6AB700DF42F5 /* RoundedViewTest.swift */; };
+		79CEDC1A1FB0F91900DF42F5 /* CoreDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC191FB0F91900DF42F5 /* CoreDataVC.swift */; };
+		79CEDC1B1FB0F91900DF42F5 /* CoreDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CEDC191FB0F91900DF42F5 /* CoreDataVC.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -267,6 +269,7 @@
 		79CEDC111FAF61A700DF42F5 /* CustomStackViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStackViewTest.swift; sourceTree = "<group>"; };
 		79CEDC141FAF625B00DF42F5 /* CustomStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		79CEDC171FAF6AB700DF42F5 /* RoundedViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedViewTest.swift; sourceTree = "<group>"; };
+		79CEDC191FB0F91900DF42F5 /* CoreDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataVC.swift; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -687,6 +690,7 @@
 		79CEDBDF1FAA02C200DF42F5 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				79CEDC191FB0F91900DF42F5 /* CoreDataVC.swift */,
 				79CEDC051FAF59E400DF42F5 /* SpiderModel+CoreDataClass.swift */,
 				79CEDC061FAF59E400DF42F5 /* SpiderModel+CoreDataProperties.swift */,
 				79CEDC071FAF59E400DF42F5 /* UserModel+CoreDataClass.swift */,
@@ -1252,6 +1256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CEDC1A1FB0F91900DF42F5 /* CoreDataVC.swift in Sources */,
 				71DEBBA11DCBC47B001A8588 /* EmailLogin.swift in Sources */,
 				B214935A1F6E9B5C001D5C4D /* CreateNewAccountVC.swift in Sources */,
 				B29EDB621F4B7C7200846AB3 /* Colors.swift in Sources */,
@@ -1318,6 +1323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CEDC1B1FB0F91900DF42F5 /* CoreDataVC.swift in Sources */,
 				795D354C1F97CC6A000BB7C0 /* EmailLogin.swift in Sources */,
 				795D354D1F97CC6A000BB7C0 /* CreateNewAccountVC.swift in Sources */,
 				795D354E1F97CC6A000BB7C0 /* Colors.swift in Sources */,
