@@ -55,11 +55,7 @@ class MainVC: BaseVC {
         setupMessageLabel()
         setupCenterXView()
         setupCenterYView()
-    
-        emailButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        emailButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        emailButton.trailingAnchor.constraint(equalTo: centerXView.leadingAnchor, constant: 10).isActive = true
-        emailButton.bottomAnchor.constraint(equalTo: centerYView.topAnchor, constant: 10).isActive = true
+        setupEmailButton()
         
     }
 }
@@ -107,6 +103,17 @@ extension MainVC: ArrangeSubViews {
         centerYView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         centerYView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         centerYView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    
+    /**
+     Add constraints for email button
+     */
+    
+    func setupEmailButton() {
+        emailButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        emailButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        emailButton.trailingAnchor.constraint(equalTo: centerXView.leadingAnchor, constant: 10).isActive = true
+        emailButton.bottomAnchor.constraint(equalTo: centerYView.topAnchor, constant: 10).isActive = true
     }
 }
 
