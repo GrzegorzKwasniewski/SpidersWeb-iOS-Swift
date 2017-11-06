@@ -26,7 +26,12 @@ class MainVC: BaseVC {
         return label
     }()
     
-    let centerView: RoundedView = {
+    let centerXView: RoundedView = {
+        let view = RoundedView(frame: CGRect.zero)
+        return view
+    }()
+    
+    let centerYView: RoundedView = {
         let view = RoundedView(frame: CGRect.zero)
         return view
     }()
@@ -48,10 +53,13 @@ class MainVC: BaseVC {
         
         addAllSubViews()
         setupMessageLabel()
-        setupCenterView()
+        setupCenterXView()
+        setupCenterYView()
     
         emailButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
         emailButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        emailButton.trailingAnchor.constraint(equalTo: centerXView.leadingAnchor, constant: 10).isActive = true
+        emailButton.bottomAnchor.constraint(equalTo: centerYView.topAnchor, constant: 10).isActive = true
         
     }
 }
@@ -65,7 +73,8 @@ extension MainVC: ArrangeSubViews {
     func addAllSubViews() {
         view.addSubview(messageLabel)
         view.addSubview(emailButton)
-        view.addSubview(centerView)
+        view.addSubview(centerXView)
+        view.addSubview(centerYView)
     }
     
     /**
@@ -81,13 +90,23 @@ extension MainVC: ArrangeSubViews {
     }
     
     /**
-     Add constraints for center view
+     Add constraints for center X view
      */
     
-    func setupCenterView() {
-        centerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        centerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        centerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    func setupCenterXView() {
+        centerXView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        centerXView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        centerXView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
+    /**
+     Add constraints for center Y view
+     */
+    
+    func setupCenterYView() {
+        centerYView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        centerYView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        centerYView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 

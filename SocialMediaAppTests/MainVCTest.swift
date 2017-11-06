@@ -97,16 +97,16 @@ class MainVCTest: QuickSpec {
                 }
             })
             
-            context("center view was created", closure: {
+            context("center X view was created", closure: {
                 
                 it("should not be nil") {
-                    expect(mainVC.centerView).toNot(beNil())
+                    expect(mainVC.centerXView).toNot(beNil())
                 }
                 
                 it("view controller view should have center view as subview") {
                     
                     let mainVCView = mainVC.view
-                    let centerViewSuperView = mainVC.centerView.superview
+                    let centerViewSuperView = mainVC.centerXView.superview
                     
                     expect(mainVCView).to(equal(centerViewSuperView))
                     
@@ -114,7 +114,50 @@ class MainVCTest: QuickSpec {
                 
                 it("should have constraints set") {
                     
-                    let centerView = mainVC.centerView
+                    let centerView = mainVC.centerXView
+                    let mainView = mainVC.view
+                    let mainViewConstraints = mainVC.view.constraints
+                    
+                    let topConstraint = mainViewConstraints.filter {
+                        return $0.firstAnchor == centerView.topAnchor &&
+                            $0.secondAnchor == mainView?.topAnchor
+                    }
+                    
+                    let bottomConstraint = mainViewConstraints.filter {
+                        return $0.firstAnchor == centerView.bottomAnchor &&
+                            $0.secondAnchor == mainView?.bottomAnchor
+                    }
+                    
+                    let centerXConstraint = mainViewConstraints.filter {
+                        return $0.firstAnchor == centerView.centerXAnchor &&
+                            $0.secondAnchor == mainView?.centerXAnchor
+                    }
+                    
+                    expect(topConstraint.count).to(beGreaterThan(0))
+                    expect(bottomConstraint.count).to(beGreaterThan(0))
+                    expect(centerXConstraint.count).to(beGreaterThan(0))
+                    
+                }
+            })
+            
+            context("center Y view was created", closure: {
+                
+                it("should not be nil") {
+                    expect(mainVC.centerYView).toNot(beNil())
+                }
+                
+                it("view controller view should have center view as subview") {
+                    
+                    let mainVCView = mainVC.view
+                    let centerViewSuperView = mainVC.centerYView.superview
+                    
+                    expect(mainVCView).to(equal(centerViewSuperView))
+                    
+                }
+                
+                it("should have constraints set") {
+                    
+                    let centerView = mainVC.centerYView
                     let mainView = mainVC.view
                     let mainViewConstraints = mainVC.view.constraints
                     
@@ -158,8 +201,8 @@ class MainVCTest: QuickSpec {
                 it("should have constraints set") {
                     
                     let emailButton = mainVC.emailButton
-                    let messageLabel = mainVC.messageLabel
-                    let mainView = mainVC.view
+                    let centerXView = mainVC.centerXView
+                    let centerYView = mainVC.centerYView
                     let mainViewConstraints = mainVC.view.constraints
                     let emailButtonConstraints = mainVC.emailButton.constraints
                     
@@ -173,8 +216,23 @@ class MainVCTest: QuickSpec {
                             $0.firstAnchor == emailButton.widthAnchor
                     }
                     
+                    let trailingConstraint = mainViewConstraints.filter {
+                        return $0.constant == 10 &&
+                            $0.firstAnchor == emailButton.trailingAnchor &&
+                            $0.secondAnchor == centerXView.leadingAnchor
+                    }
+                    
+                    let bottomConstraint = mainViewConstraints.filter {
+                        return $0.constant == 10 &&
+                            $0.firstAnchor == emailButton.bottomAnchor &&
+                            $0.secondAnchor == centerYView.topAnchor
+                    }
+                    
                     expect(heightConstraint.count).to(beGreaterThan(0))
                     expect(widthConstraint.count).to(beGreaterThan(0))
+                    expect(trailingConstraint.count).to(beGreaterThan(0))
+                    expect(bottomConstraint.count).to(beGreaterThan(0))
+
                 }
             })
             
