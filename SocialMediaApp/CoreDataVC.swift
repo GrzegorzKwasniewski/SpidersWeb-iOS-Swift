@@ -60,7 +60,7 @@ class CoreDataVC: UIViewController {
         // cały ten if-let jest pokazany tylko dla demonstracji - możesz go zastąpić poniższą metodą tworzoną dla nas automatycznie podczas tworzenia klas pomocniczych dla naszych managed objects
         //user.addToSpiders(currentSpider)
         
-        // relacja on-to-many jest typu 
+        // relacja on-to-many + ordered jest typu NSOrderedSet i domyślnie jest immutable - stąd tyle z tym zabawy 
         if let spider = currentSpider,
             let spiders = user.spiders?.mutableCopy()
                 as? NSMutableOrderedSet {
@@ -73,6 +73,20 @@ class CoreDataVC: UIViewController {
             try testManagedObject.save()
         } catch let error as NSError {
             print("Save error: \(error),description: \(error.userInfo)")
+        }
+    }
+    
+    func usunSobieCos() {
+        
+        // to tak sobie na próbę bez sensu usuwam
+        testManagedObject.delete(self.currentSpider!)
+        
+        do { //3
+            try testManagedObject.save()
+            //4
+            // jak masz jakąś kolekcję do przechwywania managed objects to możesz sobie z niej teraz usunąć
+        } catch let error as NSError {
+            print("Saving error: \(error), description: \(error.userInfo)")
         }
     }
 }
