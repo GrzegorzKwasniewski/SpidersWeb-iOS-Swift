@@ -14,6 +14,10 @@ class MainVC: BaseVC {
     // test fore Core Data
     var managedObjectContext: NSManagedObjectContext!
     
+    var firebaseLogin: FirebaseLogin
+    var twitterLogin: TwitterLogin
+    var facebookLogin: FacebookLogin
+    
     // MARK: Properties
     
     let emailButton: RoundedButton = {
@@ -53,7 +57,26 @@ class MainVC: BaseVC {
     
     // MARK: Initializers
     
+    /**
+     Initializer with dependencies injection
+     */
+    
+    init(firebaseLogin: FirebaseLogin, twitterLogin: TwitterLogin, facebookLogin: FacebookLogin) {
+        self.firebaseLogin = firebaseLogin
+        self.twitterLogin = twitterLogin
+        self.facebookLogin = facebookLogin
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    /**
+     Initializer with default dependencies
+     */
+    
     init() {
+        self.firebaseLogin = FirebaseLogin.sharedInstance
+        self.twitterLogin = TwitterLogin.sharedInstance
+        self.facebookLogin = FacebookLogin.sharedInstance
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -74,6 +97,19 @@ class MainVC: BaseVC {
         setupTwitterButton()
         setupGoogleButton()
         setupFacebookButton()
+        
+        emailButton.addTarget(self, action: #selector(signinWithEmail), for: .touchUpInside)
+        
+        let cos = emailButton.actions(forTarget: self, forControlEvent: .touchUpInside)
+        
+    }
+    
+    func signinWithEmail() {
+        print("README: Jambooooo")
+        let mainVCC = MainVC()
+        self.present(mainVCC, animated: true, completion: nil)
+        
+        print("README: \(self.presentedViewController)")
         
     }
 }

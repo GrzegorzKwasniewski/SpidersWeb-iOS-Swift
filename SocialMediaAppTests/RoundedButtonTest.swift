@@ -53,6 +53,10 @@ final class RoundedButtonTest: QuickSpec {
                     expect(roundedButton.translatesAutoresizingMaskIntoConstraints).to(beFalse())
                 }
                 
+                it("should have proper value for tint color") {
+                    expect(roundedButton.tintColor).to(equal(UIColor.white))
+                }
+                
                 it("should have proper vaule for corner radius") {
                     roundedButton.layoutSubviews()
                     expect(roundedButton.layer.cornerRadius).to(equal(5))

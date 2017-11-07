@@ -33,6 +33,12 @@ class MainVCTest: QuickSpec {
                 it("should conform to ArrangeSubViews protocol") {
                     expect(mainVC).to(beAKindOf(ArrangeSubViews.self))
                 }
+                
+                it("should have default dependencies set") {
+                    expect(mainVC.firebaseLogin).to(beAnInstanceOf(FirebaseLogin.self))
+                    expect(mainVC.twitterLogin).to(beAnInstanceOf(TwitterLogin.self))
+                    expect(mainVC.facebookLogin).to(beAnInstanceOf(FacebookLogin.self))
+                }
             })
             
             context("message label was created", closure: {
@@ -392,6 +398,17 @@ class MainVCTest: QuickSpec {
                     expect(leadingConstraint.count).to(beGreaterThan(0))
                     expect(topConstraint.count).to(beGreaterThan(0))
                     
+                }
+            })
+            
+            context("email button was tapped", closure: {
+                
+                it("") {
+                    //mainVC.emailButton.sendActions(for: .touchUpInside)
+                    
+                    //mainVC.signinWithEmail()
+                    
+                    expect(mainVC.presentedViewController).toEventually(beAnInstanceOf(MainVC.self))
                 }
             })
             
