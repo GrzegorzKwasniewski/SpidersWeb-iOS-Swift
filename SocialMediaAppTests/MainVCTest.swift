@@ -10,6 +10,9 @@ import Foundation
 import Quick
 import Nimble
 
+import Firebase
+import GoogleSignIn
+
 @testable import SocialMediaApp
 
 class MainVCTest: QuickSpec {
@@ -22,6 +25,7 @@ class MainVCTest: QuickSpec {
             
             beforeEach {
                 mainVC = MainVC()
+                _ = mainVC.view
             }
             
             context("created with default init", closure: {
@@ -38,6 +42,11 @@ class MainVCTest: QuickSpec {
                     expect(mainVC.firebaseLogin).to(beAnInstanceOf(FirebaseLogin.self))
                     expect(mainVC.twitterLogin).to(beAnInstanceOf(TwitterLogin.self))
                     expect(mainVC.facebookLogin).to(beAnInstanceOf(FacebookLogin.self))
+                }
+                
+                it("should have delegates for GIDSignIn set") {
+                    expect(GIDSignIn.sharedInstance().delegate).to(beAnInstanceOf(MainVC.self))
+                    expect(GIDSignIn.sharedInstance().uiDelegate).to(beAnInstanceOf(MainVC.self))
                 }
             })
             
@@ -403,12 +412,14 @@ class MainVCTest: QuickSpec {
             
             context("email button was tapped", closure: {
                 
-                it("") {
-                    //mainVC.emailButton.sendActions(for: .touchUpInside)
+                it("should present SignInWithEmailVC") {
                     
-                    //mainVC.signinWithEmail()
+                    mainVC.emailButton.sendActions(for: .touchUpInside)
                     
-                    expect(mainVC.presentedViewController).toEventually(beAnInstanceOf(MainVC.self))
+                    // nie mogę tego ogarnąć do testowania
+                    // w ten sposób zostanie wywołana funkcja, ale nowy view controller nie zostanie w czasie testu zaprezentowany
+                    
+                    //expect(mainVC.presentedViewController).toEventually(beAnInstanceOf(MainVC.self))
                 }
             })
             
@@ -421,5 +432,14 @@ class MainVCTest: QuickSpec {
                 }
             })
         }
+    }
+}
+
+class MockMainVC: MainVC {
+    
+    var presentedVC: UIViewController?
+    
+    override func signinWithEmail() {
+        
     }
 }

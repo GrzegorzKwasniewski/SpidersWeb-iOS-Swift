@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import Firebase
+import GoogleSignIn
+import SwiftKeychainWrapper
 
 class MainVC: BaseVC {
     
@@ -89,6 +92,8 @@ class MainVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setDelegatesForGoogleSignIn()
+
         addAllSubViews()
         setupMessageLabel()
         setupCenterXView()
@@ -98,19 +103,34 @@ class MainVC: BaseVC {
         setupGoogleButton()
         setupFacebookButton()
         
-        emailButton.addTarget(self, action: #selector(signinWithEmail), for: .touchUpInside)
-        
-        let cos = emailButton.actions(forTarget: self, forControlEvent: .touchUpInside)
+        addButtonsTargets()
         
     }
     
+    /**
+     Set delegates required for Google sign in
+     */
+    
+    func setDelegatesForGoogleSignIn() {
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+    
+    /**
+     Assign targets for all buttons added to view controller
+     */
+    
+    func addButtonsTargets() {
+        emailButton.addTarget(self, action: #selector(signinWithEmail), for: .touchUpInside)
+    }
+    
+    /**
+     Target function for emailButton. Use to show view controller for email login
+     */
+    
     func signinWithEmail() {
-        print("README: Jambooooo")
         let mainVCC = MainVC()
-        self.present(mainVCC, animated: true, completion: nil)
-        
-        print("README: \(self.presentedViewController)")
-        
+        self.present(mainVCC, animated: true)
     }
 }
 
@@ -204,6 +224,24 @@ extension MainVC: ArrangeSubViews {
         facebookButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
         facebookButton.leadingAnchor.constraint(equalTo: centerXView.trailingAnchor, constant: 10).isActive = true
         facebookButton.topAnchor.constraint(equalTo: centerYView.bottomAnchor, constant: 20).isActive = true
+    }
+}
+
+// MARK: Google SignIn Delegate
+
+extension MainVC: GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        
+        if let googleError = error {
+            print("README: Error when sign in with Google \(googleError)")
+            return
+        }
+        
+        let authentication = user.authentication
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
+        
+        FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
     }
 }
 
