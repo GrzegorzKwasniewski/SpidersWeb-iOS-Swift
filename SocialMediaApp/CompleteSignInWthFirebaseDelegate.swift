@@ -6,8 +6,15 @@
 //  Copyright © 2016 Grzegorz Kwaśniewski. All rights reserved.
 //
 
-protocol CompleteSignInWthFirebaseDelegate: class {
+protocol CompleteSignInWithFirebaseDelegate: class {
     
-    func completeSignIn(id: String, userData: [String: String])
+    /**
+     After successful login call this method on delegate for completing sign in to Firebase
+     
+     - Parameter id: user id
+     - Parameter id: data that will be assigned to the user
+     */
+    
+    func completeSignIn(userID id: String, userData data: [String: String])
     
 }

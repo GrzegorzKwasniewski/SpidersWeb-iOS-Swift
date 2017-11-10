@@ -12,7 +12,7 @@ import Firebase
 class FirebaseLogin {
     
     static let sharedInstance = FirebaseLogin()
-    weak var delegate: CompleteSignInWthFirebaseDelegate?
+    weak var delegate: CompleteSignInWithFirebaseDelegate?
     
     func firebaseAuthentication(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
@@ -39,7 +39,7 @@ class FirebaseLogin {
                         "photoUrl": String(describing: firebaseUserPhotoUrl)
                     ]
                     
-                self.delegate?.completeSignIn(id: firebaseUser.uid, userData: userData)
+                self.delegate?.completeSignIn(userID: firebaseUser.uid, userData: userData)
                 }
             }
         })

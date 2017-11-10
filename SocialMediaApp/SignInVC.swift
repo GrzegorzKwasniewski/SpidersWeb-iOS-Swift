@@ -67,11 +67,11 @@ extension SignInVC: GIDSignInDelegate, GIDSignInUIDelegate {
 
 // MARK: Firebase Delegate
 
-extension SignInVC: CompleteSignInWthFirebaseDelegate {
+extension SignInVC: CompleteSignInWithFirebaseDelegate {
     
-    func completeSignIn(id: String, userData: Dictionary<String, String>) {
-        FirebaseDataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-        let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
+    func completeSignIn(userID id: String, userData data: [String: String]) {
+        FirebaseDataService.ds.createFirebaseDBUser(uid: id, userData: data)
+        _ = KeychainWrapper.setString(id, forKey: KEY_UID)
         performSegue(withIdentifier: "goToSpiderCollection", sender: nil)
     }
 }

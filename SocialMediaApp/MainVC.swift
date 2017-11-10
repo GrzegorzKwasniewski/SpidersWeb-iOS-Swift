@@ -233,9 +233,13 @@ extension MainVC: ArrangeSubViews {
 
 // MARK: Firebase login Delegate
 
-extension MainVC: CompleteSignInWthFirebaseDelegate {
+extension MainVC: CompleteSignInWithFirebaseDelegate {
     
-    func completeSignIn(id: String, userData: [String: String]) {
+    func completeSignIn(userID id: String, userData data: [String: String]) {
+        FirebaseDataService.ds.createFirebaseDBUser(uid: id, userData: data)
+        _ = KeychainWrapper.setString(id, forKey: KEY_UID)
+        
+        // pokaż kolekcję Spiderów
         
     }
 }
@@ -243,6 +247,10 @@ extension MainVC: CompleteSignInWthFirebaseDelegate {
 // MARK: Google SignIn Delegate
 
 extension MainVC: GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    /**
+     Callback method invoked after successful authtentication with Google credentials. This is method required form Google sign in framework
+     */
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         
