@@ -8,6 +8,6 @@
 
 protocol CompleteSignInWthFirebaseDelegate: class {
     
-    func completeSignIn(id: String, userData: Dictionary<String, String>)
+    func completeSignIn(id: String, userData: [String: String])
     
 }

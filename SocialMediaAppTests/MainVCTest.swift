@@ -44,7 +44,11 @@ class MainVCTest: QuickSpec {
                     expect(mainVC.facebookLogin).to(beAnInstanceOf(FacebookLogin.self))
                 }
                 
-                it("should have delegates for GIDSignIn set") {
+                it("should have set delegate for Firebase login") {
+                    expect(mainVC.firebaseLogin.delegate).to(beAnInstanceOf(MainVC.self))
+                }
+                
+                it("should have proper delegates for GIDSignIn set") {
                     expect(GIDSignIn.sharedInstance().delegate).to(beAnInstanceOf(MainVC.self))
                     expect(GIDSignIn.sharedInstance().uiDelegate).to(beAnInstanceOf(MainVC.self))
                 }

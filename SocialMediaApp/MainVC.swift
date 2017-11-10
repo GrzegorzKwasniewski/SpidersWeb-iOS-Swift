@@ -92,7 +92,7 @@ class MainVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setDelegatesForGoogleSignIn()
+        setDelegates()
 
         addAllSubViews()
         setupMessageLabel()
@@ -108,10 +108,14 @@ class MainVC: BaseVC {
     }
     
     /**
-     Set delegates required for Google sign in
+     Set delegates for all services
      */
     
-    func setDelegatesForGoogleSignIn() {
+    func setDelegates() {
+        
+        firebaseLogin.delegate = self
+        
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
     }
@@ -227,6 +231,15 @@ extension MainVC: ArrangeSubViews {
     }
 }
 
+// MARK: Firebase login Delegate
+
+extension MainVC: CompleteSignInWthFirebaseDelegate {
+    
+    func completeSignIn(id: String, userData: [String: String]) {
+        
+    }
+}
+
 // MARK: Google SignIn Delegate
 
 extension MainVC: GIDSignInDelegate, GIDSignInUIDelegate {
@@ -241,7 +254,7 @@ extension MainVC: GIDSignInDelegate, GIDSignInUIDelegate {
         let authentication = user.authentication
         let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
         
-        FirebaseLogin.sharedInstance.firebaseAuthentication(credential)
+        firebaseLogin.firebaseAuthentication(credential)
     }
 }
 
