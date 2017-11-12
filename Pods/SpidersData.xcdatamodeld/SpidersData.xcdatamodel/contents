@@ -8,6 +8,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="spiders" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SpiderModel" inverseName="user" inverseEntity="SpiderModel" syncable="YES"/>
     </entity>
+    <fetchRequest name="FetchAllSpiders" entity="SpiderModel"/>
+    <fetchRequest name="FetchAllUsers" entity="UserModel"/>
     <elements>
         <element name="SpiderModel" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="UserModel" positionX="126" positionY="90" width="128" height="73"/>

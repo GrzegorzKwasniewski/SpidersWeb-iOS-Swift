@@ -9,7 +9,8 @@
 import UIKit
 import CoreData
 
-var testManagedObject = CoreDataStack(modelName: "SpidersData").managedContext
+var coreDataStack = CoreDataStack(modelName: "SpidersData")
+var testManagedObjectContext = coreDataStack.managedContext
 
 class CoreDataVC: UIViewController {
     
@@ -27,15 +28,15 @@ class CoreDataVC: UIViewController {
         spiderFetch.predicate = NSPredicate(format: "%K == %@", #keyPath(SpiderModel.name), spiderName)
         
         do {
-            let results = try testManagedObject.fetch(spiderFetch)
+            let results = try testManagedObjectContext.fetch(spiderFetch)
             if results.count > 0 {
                 // Fido found, use Fido
                 currentSpider = results.first
             } else {
                 // Fido not found, create Fido
-                currentSpider = SpiderModel(context: testManagedObject)
+                currentSpider = SpiderModel(context: testManagedObjectContext)
                 currentSpider?.name = spiderName
-                try testManagedObject.save()
+                try testManagedObjectContext.save()
             }
         } catch let error as NSError {
             print("Fetch error: \(error) description: \(error.userInfo)")
@@ -51,7 +52,7 @@ class CoreDataVC: UIViewController {
     func dodajSobieCosNaProbe() {
         
         // Insert a new Walk entity into Core Data
-        let user = UserModel(context: testManagedObject)
+        let user = UserModel(context: testManagedObjectContext)
         
         user.name = "Leszek"
         
@@ -70,7 +71,7 @@ class CoreDataVC: UIViewController {
         
         // Save the managed object context
         do {
-            try testManagedObject.save()
+            try testManagedObjectContext.save()
         } catch let error as NSError {
             print("Save error: \(error),description: \(error.userInfo)")
         }
@@ -79,10 +80,10 @@ class CoreDataVC: UIViewController {
     func usunSobieCos() {
         
         // to tak sobie na próbę bez sensu usuwam
-        testManagedObject.delete(self.currentSpider!)
+        testManagedObjectContext.delete(self.currentSpider!)
         
         do { //3
-            try testManagedObject.save()
+            try testManagedObjectContext.save()
             //4
             // jak masz jakąś kolekcję do przechwywania managed objects to możesz sobie z niej teraz usunąć
         } catch let error as NSError {
