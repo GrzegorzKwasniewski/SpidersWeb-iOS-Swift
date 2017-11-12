@@ -217,6 +217,17 @@ class MainVCTest: QuickSpec {
                     
                 }
                 
+                it("should have proper action set") {
+                    
+                    let expectedAction = "signinWithEmail"
+                    
+                    let actions = mainVC.emailButton.actions(forTarget: mainVC, forControlEvent: .touchUpInside)
+                    
+                    let buttonAction = actions?.first!
+                    
+                    expect(buttonAction).to(equal(expectedAction))
+                }
+                
                 it("should have constraints set") {
                     
                     let emailButton = mainVC.emailButton
@@ -436,14 +447,5 @@ class MainVCTest: QuickSpec {
                 }
             })
         }
-    }
-}
-
-class MockMainVC: MainVC {
-    
-    var presentedVC: UIViewController?
-    
-    override func signinWithEmail() {
-        
     }
 }
