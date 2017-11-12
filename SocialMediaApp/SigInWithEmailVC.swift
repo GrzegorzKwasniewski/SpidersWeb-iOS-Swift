@@ -48,9 +48,9 @@ class SigInWithEmailVC: BaseVC {
 
 // MARK: Delegate For SignIn
 
-extension SigInWithEmailVC: CompleteSignInWthFirebaseDelegate {
+extension SigInWithEmailVC: CompleteSignInWithFirebaseDelegate {
     
-    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+    func completeSignIn(userID id: String, userData: Dictionary<String, String>) {
         FirebaseDataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         print("KEYCHAIN: Data was saved to Keychain - \(keychainResult)")

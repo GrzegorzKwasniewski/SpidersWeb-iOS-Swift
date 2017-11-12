@@ -104,7 +104,7 @@ class MainVC: BaseVC {
         setupFacebookButton()
         
         addButtonsTargets()
-        
+
     }
     
     /**

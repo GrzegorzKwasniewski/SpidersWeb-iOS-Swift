@@ -53,6 +53,7 @@ class TestFetchRequests_2_way: UIViewController {
         func populateExpensiveVenueCountLabel() {
             let fetchRequest: NSFetchRequest<SpiderModel> = SpiderModel.fetchRequest()
             fetchRequest.predicate = someFetchForSpiders
+            
             do {
                 let count =
                     try testManagedObjectContext.count(for: fetchRequest)
