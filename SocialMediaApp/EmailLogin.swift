@@ -15,7 +15,7 @@ class EmailLogin {
     
     static let sharedInstance = EmailLogin()
     
-    weak var delegate: CompleteSignInWthFirebaseDelegate?
+    weak var delegate: CompleteSignInWithFirebaseDelegate?
     weak var popUpDelegate: ShowPopUp?
     
     // MARK: Custom Functions ++++++++++++++++++++++++++++++++++++++++
@@ -34,7 +34,7 @@ class EmailLogin {
                 }
                 
                 if let firebaseUser = user {
-                    self.delegate?.completeSignIn(id: firebaseUser.uid, userData: self.assignDataToUser(firebaseUser: firebaseUser, isNewUser: false))
+                    self.delegate?.completeSignIn(userID: firebaseUser.uid, userData: self.assignDataToUser(firebaseUser: firebaseUser, isNewUser: false))
                 }
             })
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TestFetchRequests_2_way: UIViewController {
     
@@ -27,5 +28,40 @@ class TestFetchRequests_2_way: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    // A tutaj masz funckję, która wykorzystuje drugi sposób pobierania danych, który tylko wylicza ile rekordów spwłnia dany wymog
+    func countObjectsThatMatchPredicate() {
+        // zwroc uwage, ze jak argument generyka podany jest NSNumber, a nie SpiderModel
+        let fetchRequest =
+            NSFetchRequest<NSNumber>(entityName: "SpiderModel")
+        fetchRequest.resultType = .countResultType
+        fetchRequest.predicate = someFetchForSpiders
+        do {
+            let countResult =
+                try testManagedObjectContext.fetch(fetchRequest)
+            let count = countResult.first!.intValue
+            
+            /// i tutaj mozesz cos sobie z ta wartoscia zrobic
+            
+        } catch let error as NSError {
+            print("Count not fetch \(error), \(error.userInfo)")
+        }
+    }
+    
+    func jeszczeInnySposobNaLiczenie() {
+        func populateExpensiveVenueCountLabel() {
+            let fetchRequest: NSFetchRequest<SpiderModel> = SpiderModel.fetchRequest()
+            fetchRequest.predicate = someFetchForSpiders
+            do {
+                let count =
+                    try testManagedObjectContext.count(for: fetchRequest)
+                
+                /// mozesz cos zrobic z count
+                
+            } catch let error as NSError {
+                print("Count not fetch \(error), \(error.userInfo)")
+            }
+        }
     }
 }
