@@ -44,6 +44,17 @@ class MainVCTwitterButtonTest: QuickSpec {
                     
                 }
                 
+                it("should have proper action set") {
+                    
+                    let expectedAction = "signinWithTwitter"
+                    
+                    let actions = mainVC.twitterButton.actions(forTarget: mainVC, forControlEvent: .touchUpInside)
+                    
+                    let buttonAction = actions?.first!
+                    
+                    expect(buttonAction).to(equal(expectedAction))
+                }
+                
                 it("should have constraints set") {
                     
                     let twitterButton = mainVC.twitterButton

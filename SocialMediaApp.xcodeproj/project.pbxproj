@@ -139,6 +139,8 @@
 		79FC5EE41FB8898500FF0C60 /* MainVCTwitterButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EE31FB8898500FF0C60 /* MainVCTwitterButtonTest.swift */; };
 		79FC5EE61FB889E200FF0C60 /* MainVCGoogleButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EE51FB889E200FF0C60 /* MainVCGoogleButtonTest.swift */; };
 		79FC5EE81FB88A2D00FF0C60 /* MainVCFacebookButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EE71FB88A2D00FF0C60 /* MainVCFacebookButtonTest.swift */; };
+		79FC5EEB1FB88CE500FF0C60 /* MainVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */; };
+		79FC5EEC1FB88CE500FF0C60 /* MainVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -288,6 +290,7 @@
 		79FC5EE31FB8898500FF0C60 /* MainVCTwitterButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCTwitterButtonTest.swift; sourceTree = "<group>"; };
 		79FC5EE51FB889E200FF0C60 /* MainVCGoogleButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCGoogleButtonTest.swift; sourceTree = "<group>"; };
 		79FC5EE71FB88A2D00FF0C60 /* MainVCFacebookButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCFacebookButtonTest.swift; sourceTree = "<group>"; };
+		79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCExtension.swift; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -459,7 +462,7 @@
 		713B13171D7D82D900AF79C3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				790AEB181FA6079F00DCD30E /* MainVC.swift */,
+				79FC5EE91FB88CBF00FF0C60 /* MainVC */,
 				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
 				715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */,
 				719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */,
@@ -757,13 +760,22 @@
 			isa = PBXGroup;
 			children = (
 				79FC5EDD1FB887F800FF0C60 /* MainVCLabelsTest.swift */,
-				79FC5EDF1FB8887E00FF0C60 /* MainVCEmailButtonTest.swift */,
 				79FC5EE11FB8890200FF0C60 /* MainVCViewsTest.swift */,
+				79FC5EDF1FB8887E00FF0C60 /* MainVCEmailButtonTest.swift */,
 				79FC5EE31FB8898500FF0C60 /* MainVCTwitterButtonTest.swift */,
 				79FC5EE51FB889E200FF0C60 /* MainVCGoogleButtonTest.swift */,
 				79FC5EE71FB88A2D00FF0C60 /* MainVCFacebookButtonTest.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		79FC5EE91FB88CBF00FF0C60 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				790AEB181FA6079F00DCD30E /* MainVC.swift */,
+				79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */,
+			);
+			name = MainVC;
 			sourceTree = "<group>";
 		};
 		B214935D1F6E9FE3001D5C4D /* PopUps */ = {
@@ -1369,6 +1381,7 @@
 				B248B89E1FA46E0300338C5F /* String.swift in Sources */,
 				71EB434B1DCBBE0C00142783 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
 				B21493581F6E9863001D5C4D /* StringsConstants.swift in Sources */,
+				79FC5EEB1FB88CE500FF0C60 /* MainVCExtension.swift in Sources */,
 				7111C7E91DCDFA080012D32C /* ChangeUserEmailVC.swift in Sources */,
 				713B13211D7EC46800AF79C3 /* RoundedBorderTextField.swift in Sources */,
 				79FC5ED61FB70F1100FF0C60 /* TestFetchRequests_2_way.swift in Sources */,
@@ -1438,6 +1451,7 @@
 				B248B8A21FA474C100338C5F /* String.swift in Sources */,
 				795D35771F97CC6A000BB7C0 /* CompleteSignInWthFirebaseDelegate.swift in Sources */,
 				795D35781F97CC6A000BB7C0 /* StringsConstants.swift in Sources */,
+				79FC5EEC1FB88CE500FF0C60 /* MainVCExtension.swift in Sources */,
 				795D35791F97CC6A000BB7C0 /* ChangeUserEmailVC.swift in Sources */,
 				795D357A1F97CC6A000BB7C0 /* RoundedBorderTextField.swift in Sources */,
 				79FC5ED71FB70F1100FF0C60 /* TestFetchRequests_2_way.swift in Sources */,
