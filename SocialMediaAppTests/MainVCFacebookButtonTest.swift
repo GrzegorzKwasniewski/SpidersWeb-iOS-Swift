@@ -44,6 +44,17 @@ class MainVCFacebookButtonTest: QuickSpec {
                     
                 }
                 
+                it("should have proper action set") {
+                    
+                    let expectedAction = "signinWithFacebook"
+                    
+                    let actions = mainVC.facebookButton.actions(forTarget: mainVC, forControlEvent: .touchUpInside)
+                    
+                    let buttonAction = actions?.first!
+                    
+                    expect(buttonAction).to(equal(expectedAction))
+                }
+                
                 it("should have constraints set") {
                     
                     let facebookButton = mainVC.facebookButton

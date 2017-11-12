@@ -137,6 +137,8 @@ class MainVC: BaseVC {
     func addButtonsTargets() {
         emailButton.addTarget(self, action: #selector(signinWithEmail), for: .touchUpInside)
         twitterButton.addTarget(self, action: #selector(signinWithTwitter), for: .touchUpInside)
+        googleButton.addTarget(self, action: #selector(signinWithGoogle), for: .touchUpInside)
+        facebookButton.addTarget(self, action: #selector(signinWithFacebook), for: .touchUpInside)
     }
 }
 
@@ -152,11 +154,27 @@ extension MainVC: ButtonsActions {
     }
     
     /**
-     Target function for twitterButton. Use to show view controller for twitter login
+     Target function for twitterButton. Use to show view controller for Twitter login
      */
     
     func signinWithTwitter() {
         twitterLogin.signInWithTwitter()
+    }
+    
+    /**
+     Target function for googleButton. Use to show view controller for Google login
+     */
+    
+    func signinWithGoogle() {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    /**
+     Target function for facebookButton. Use to show view controller for Facebook login
+     */
+    
+    func signinWithFacebook() {
+        facebookLogin.signInWithFacebook()
     }
 }
 

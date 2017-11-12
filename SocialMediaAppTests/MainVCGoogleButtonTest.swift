@@ -44,6 +44,17 @@ class MainVCGoogleButtonTest: QuickSpec {
                     
                 }
                 
+                it("should have proper action set") {
+                    
+                    let expectedAction = "signinWithGoogle"
+                    
+                    let actions = mainVC.googleButton.actions(forTarget: mainVC, forControlEvent: .touchUpInside)
+                    
+                    let buttonAction = actions?.first!
+                    
+                    expect(buttonAction).to(equal(expectedAction))
+                }
+                
                 it("should have constraints set") {
                     
                     let googleButton = mainVC.googleButton
