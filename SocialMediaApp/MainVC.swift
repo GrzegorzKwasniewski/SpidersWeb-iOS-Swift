@@ -117,6 +117,15 @@ class MainVC: BaseVC {
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        
+        if let _ = KeychainWrapper.stringForKey(KEY_UID) {
+            // pokaz kolekcje Spiderow
+        }
+    }
+    
     /**
      Set delegates for all services
      */
@@ -125,9 +134,9 @@ class MainVC: BaseVC {
         
         firebaseLogin.delegate = self
         
-        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
+        
     }
     
     /**

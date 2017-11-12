@@ -17,7 +17,6 @@
 		7111C8251DE1BB8B0012D32C /* ChangeUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7111C8241DE1BB8B0012D32C /* ChangeUserSettings.swift */; };
 		712C33561DA2A481006DD610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712C33551DA2A481006DD610 /* Assets.xcassets */; };
 		713B12E61D7D713F00AF79C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E51D7D713F00AF79C3 /* AppDelegate.swift */; };
-		713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E71D7D713F00AF79C3 /* SignInVC.swift */; };
 		713B12EB1D7D713F00AF79C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713B12E91D7D713F00AF79C3 /* Main.storyboard */; };
 		713B12F01D7D713F00AF79C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713B12EE1D7D713F00AF79C3 /* LaunchScreen.storyboard */; };
 		713B13141D7D733700AF79C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 713B13131D7D733700AF79C3 /* GoogleService-Info.plist */; };
@@ -75,7 +74,6 @@
 		795D355E1F97CC6A000BB7C0 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B13191D7EBD5700AF79C3 /* ShadowView.swift */; };
 		795D355F1F97CC6A000BB7C0 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F554E1E1E3D05008DC82B /* UITextFieldExt.swift */; };
 		795D35611F97CC6A000BB7C0 /* SigInWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F55481E1D364C008DC82B /* SigInWithEmailVC.swift */; };
-		795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B12E71D7D713F00AF79C3 /* SignInVC.swift */; };
 		795D35631F97CC6A000BB7C0 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE62551D882D6A002C5B0B /* FirebaseDataService.swift */; };
 		795D35641F97CC6A000BB7C0 /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE20921DAD32D50036FE9F /* TapImageView.swift */; };
 		795D35651F97CC6A000BB7C0 /* CustomErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A046BC1EBA633300035DB8 /* CustomErrorMessages.swift */; };
@@ -228,7 +226,6 @@
 		712C33551DA2A481006DD610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713B12E21D7D713F00AF79C3 /* SocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713B12E51D7D713F00AF79C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		713B12E71D7D713F00AF79C3 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		713B12EA1D7D713F00AF79C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		713B12EF1D7D713F00AF79C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		713B12F11D7D713F00AF79C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -463,7 +460,6 @@
 			isa = PBXGroup;
 			children = (
 				79FC5EE91FB88CBF00FF0C60 /* MainVC */,
-				713B12E71D7D713F00AF79C3 /* SignInVC.swift */,
 				715F554A1E1D3AEB008DC82B /* SpiderCollectionVC.swift */,
 				719BFEAB1E2022CD006EB47A /* SpiderDetailVC.swift */,
 				719BFEA31E1D9E3F006EB47A /* AddSpiderVC.swift */,
@@ -1354,7 +1350,6 @@
 				B248B8A61FA4C33E00338C5F /* CacheStore.swift in Sources */,
 				715F554F1E1E3D05008DC82B /* UITextFieldExt.swift in Sources */,
 				715F55491E1D364C008DC82B /* SigInWithEmailVC.swift in Sources */,
-				713B12E81D7D713F00AF79C3 /* SignInVC.swift in Sources */,
 				71CE62561D882D6A002C5B0B /* FirebaseDataService.swift in Sources */,
 				71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */,
 				790AEB191FA6079F00DCD30E /* MainVC.swift in Sources */,
@@ -1424,7 +1419,6 @@
 				790AEB171FA6058C00DCD30E /* CacheStore.swift in Sources */,
 				795D355F1F97CC6A000BB7C0 /* UITextFieldExt.swift in Sources */,
 				795D35611F97CC6A000BB7C0 /* SigInWithEmailVC.swift in Sources */,
-				795D35621F97CC6A000BB7C0 /* SignInVC.swift in Sources */,
 				795D35631F97CC6A000BB7C0 /* FirebaseDataService.swift in Sources */,
 				795D35641F97CC6A000BB7C0 /* TapImageView.swift in Sources */,
 				790AEB1A1FA6079F00DCD30E /* MainVC.swift in Sources */,
