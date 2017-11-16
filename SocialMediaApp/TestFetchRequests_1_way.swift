@@ -19,6 +19,10 @@ class TestFetchRequests_1_way: UIViewController {
         super.viewDidLoad()
 
         // tutaj sprawdzamy, czy jest w naszym graficznym modelu utworzone fetch request o nazwie FetchAllSpiders
+        
+        // ale podstawowe fetch request możesz utworzyć tak
+        //fetchRequest = SpiderModel.fetchRequest()
+        
         guard let model =
             testManagedObjectContext
                 .persistentStoreCoordinator?.managedObjectModel,

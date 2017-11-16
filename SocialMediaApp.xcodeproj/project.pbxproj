@@ -45,7 +45,6 @@
 		71F1F9551DB12517009D8A60 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F9541DB12517009D8A60 /* FirebaseUser.swift */; };
 		71FE20931DAD32D50036FE9F /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE20921DAD32D50036FE9F /* TapImageView.swift */; };
 		790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */; };
-		790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */; };
 		790AEB171FA6058C00DCD30E /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B248B8A51FA4C33E00338C5F /* CacheStore.swift */; };
 		790AEB191FA6079F00DCD30E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB181FA6079F00DCD30E /* MainVC.swift */; };
 		790AEB1A1FA6079F00DCD30E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEB181FA6079F00DCD30E /* MainVC.swift */; };
@@ -139,6 +138,8 @@
 		79FC5EE81FB88A2D00FF0C60 /* MainVCFacebookButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EE71FB88A2D00FF0C60 /* MainVCFacebookButtonTest.swift */; };
 		79FC5EEB1FB88CE500FF0C60 /* MainVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */; };
 		79FC5EEC1FB88CE500FF0C60 /* MainVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */; };
+		79FC5EEF1FB8949300FF0C60 /* SpiderCollectionVCInititlizersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EEE1FB8949300FF0C60 /* SpiderCollectionVCInititlizersTest.swift */; };
+		79FC5EF11FBE0B2200FF0C60 /* TestFetchRequests_3_way.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC5EF01FBE0B2200FF0C60 /* TestFetchRequests_3_way.swift */; };
 		84980AE9A8A7285B2FCBAE57 /* Pods_SocialMediaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AA5EA03C4ACC502DA33078 /* Pods_SocialMediaAppTests.framework */; };
 		9244A047906C3D1F1BC82C0B /* Pods_SocialMediaAppIntegrationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */; };
 		A710C3FCB0C7313163A7BAE8 /* Pods_SocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0715497FF7BBA031409B8095 /* Pods_SocialMediaApp.framework */; };
@@ -257,7 +258,6 @@
 		71FE20921DAD32D50036FE9F /* TapImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapImageView.swift; sourceTree = "<group>"; };
 		76DA853E3AF51110B6658CCD /* Pods_SocialMediaAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790AEB0F1FA0B34F00DCD30E /* FirebaseUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseUserTest.swift; sourceTree = "<group>"; };
-		790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVCTest.swift; sourceTree = "<group>"; };
 		790AEB181FA6079F00DCD30E /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		790AEB1B1FA6099900DCD30E /* CustomTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		790AEB1E1FA60A2A00DCD30E /* CustomTextViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextViewTest.swift; sourceTree = "<group>"; };
@@ -288,6 +288,8 @@
 		79FC5EE51FB889E200FF0C60 /* MainVCGoogleButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCGoogleButtonTest.swift; sourceTree = "<group>"; };
 		79FC5EE71FB88A2D00FF0C60 /* MainVCFacebookButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCFacebookButtonTest.swift; sourceTree = "<group>"; };
 		79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCExtension.swift; sourceTree = "<group>"; };
+		79FC5EEE1FB8949300FF0C60 /* SpiderCollectionVCInititlizersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderCollectionVCInititlizersTest.swift; sourceTree = "<group>"; };
+		79FC5EF01FBE0B2200FF0C60 /* TestFetchRequests_3_way.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFetchRequests_3_way.swift; sourceTree = "<group>"; };
 		93CCE6F8D2C2C916DFA31947 /* Pods_SocialMediaAppIntegrationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaAppIntegrationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456A95C93947D28FACE026F /* Pods-SocialMediaAppIntegrationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppIntegrationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppIntegrationTest/Pods-SocialMediaAppIntegrationTest.release.xcconfig"; sourceTree = "<group>"; };
 		A2A80B342CC6FFCA4CE04101 /* Pods-SocialMediaAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaAppUITests/Pods-SocialMediaAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -620,8 +622,8 @@
 		790AEB201FA643C800DCD30E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				79FC5EED1FB8945600FF0C60 /* SpiderCollectionVC */,
 				79FC5ED81FB8869100FF0C60 /* MainVC */,
-				790AEB151FA1016100DCD30E /* SpiderCollectionVCTest.swift */,
 				790AEB251FA6493100DCD30E /* BaseVCTest.swift */,
 			);
 			name = ViewControllers;
@@ -712,6 +714,7 @@
 				79CEDBE01FAA02EA00DF42F5 /* CoreDataStack.swift */,
 				79FC5ED21FB70AAA00FF0C60 /* TestFetchRequests_1_way.swift */,
 				79FC5ED51FB70F1100FF0C60 /* TestFetchRequests_2_way.swift */,
+				79FC5EF01FBE0B2200FF0C60 /* TestFetchRequests_3_way.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -772,6 +775,14 @@
 				79FC5EEA1FB88CE500FF0C60 /* MainVCExtension.swift */,
 			);
 			name = MainVC;
+			sourceTree = "<group>";
+		};
+		79FC5EED1FB8945600FF0C60 /* SpiderCollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				79FC5EEE1FB8949300FF0C60 /* SpiderCollectionVCInititlizersTest.swift */,
+			);
+			name = SpiderCollectionVC;
 			sourceTree = "<group>";
 		};
 		B214935D1F6E9FE3001D5C4D /* PopUps */ = {
@@ -1338,6 +1349,7 @@
 				B21493611F6EA064001D5C4D /* RoundedView.swift in Sources */,
 				719BFEAC1E2022CD006EB47A /* SpiderDetailVC.swift in Sources */,
 				719BFE761E0AF97A006EB47A /* Globals.swift in Sources */,
+				79FC5EF11FBE0B2200FF0C60 /* TestFetchRequests_3_way.swift in Sources */,
 				7104B2171DA8D9D50077CE84 /* UserSettingsVC.swift in Sources */,
 				718BA3C31DC8C93D00E764C0 /* TwitterLogin.swift in Sources */,
 				79CEDC0D1FAF59E400DF42F5 /* UserModel+CoreDataClass.swift in Sources */,
@@ -1475,6 +1487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				799178CD1F9E59F300E8C6C9 /* SpiderModelTest.swift in Sources */,
+				79FC5EEF1FB8949300FF0C60 /* SpiderCollectionVCInititlizersTest.swift in Sources */,
 				79FC5EDC1FB8872F00FF0C60 /* MainVCInitializersTests.swift in Sources */,
 				790AEB261FA6493100DCD30E /* BaseVCTest.swift in Sources */,
 				790AEB101FA0B34F00DCD30E /* FirebaseUserTest.swift in Sources */,
@@ -1487,7 +1500,6 @@
 				B248B8911FA1E82200338C5F /* SpiderCollecionViewDelegateTest.swift in Sources */,
 				B248B8A41FA4A56800338C5F /* CellSpiderTest.swift in Sources */,
 				79FC5EE61FB889E200FF0C60 /* MainVCGoogleButtonTest.swift in Sources */,
-				790AEB161FA1016100DCD30E /* SpiderCollectionVCTest.swift in Sources */,
 				79FC5EE21FB8890200FF0C60 /* MainVCViewsTest.swift in Sources */,
 				79CEDC121FAF61A700DF42F5 /* CustomStackViewTest.swift in Sources */,
 				790AEB1F1FA60A2A00DCD30E /* CustomTextViewTest.swift in Sources */,
